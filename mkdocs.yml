@@ -2,7 +2,7 @@ site_name: Tabletop Simulator Scripting Documentation
 theme:
   name: 'material'
   palette:
-    primary: 'red'
+    primary: 'blue grey'
     accent: 'red'
   feature:
     tabs: true
@@ -26,11 +26,10 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 pages:
-  - Home: index.md
-  - About: about.md
   - Getting Started:
-    - Introduction: introduction.md
+    - Introduction: index.md
     - Atom: atom.md
   - Lua API:
     - AssetBundle : assetbundle.md
-  
+  - tempdemo:
+    - About: about.md
