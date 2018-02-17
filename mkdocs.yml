@@ -1,0 +1,8 @@
+site_name: Test
+theme:
+  name: 'material'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+markdown_extensions:
+  - codehilite
