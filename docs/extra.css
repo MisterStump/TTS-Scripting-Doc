@@ -1,0 +1,7 @@
+html body div.md-container div.md-main__inner div.md-content {
+    margin-left: 16rem;
+}
+
+html body div.md-container div.md-main__inner div.md-sidebar {
+    width: 16rem;
+}
