@@ -6,6 +6,8 @@ theme:
     accent: 'red'
   feature:
     tabs: true
+extra_css:
+  - css/base.css
 markdown_extensions:
   - admonition
   - codehilite
