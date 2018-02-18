@@ -1,0 +1,214 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Introduction\n\u00b6\n\n\nWelcome to \nLua Scripting\n in Tabletop Simulator! Scripting is an advanced feature and it\u2019s expected you already know something about it. However, for complete novices, check out this \nbeginners scripting guide to Lua\n created by MrStump, to help you along the way.\n\n\n\n\nA game is composed of one Global Script and zero to many Object Scripts. The Global Script is a script that lives in your game that can run background tasks and do general game management type functions. Object scripts are attached to an individual object. Objects are anything with a physical model in the game - chess piece, dice, decks, cards, bags, custom models, boards, etc. Both types of scripts can call the same functions, but Object scripts have access to a reference of the Object it is attached to with the \nself\n keyword.\n\n\nResources\n\u00b6\n\n\nYou are able to follow the links on the left side of the page for available tools to help utiliz and learn the basics of scripting. When at the top of the page, you will see a link to the Lua API for documentation on all of the available Tabletop Simulator Lua functionality. Links on the right side of the page help navigate the article you are viewing.\n\n\nWriting Lua Scripts\n\u00b6\n\n\nThe Lua code is written via our in-game code editor or via our \nOfficial Plugin for the Atom Text Editor\n. Lua scripts are stored in the .json file of the save game as a plain text string. There is no need for an external internet host for Lua scripts, everything is self-contained in your game\u2019s save file. Workshop uploads work the same way.",
+            "title": "Introduction"
+        },
+        {
+            "location": "/#introduction",
+            "text": "Welcome to  Lua Scripting  in Tabletop Simulator! Scripting is an advanced feature and it\u2019s expected you already know something about it. However, for complete novices, check out this  beginners scripting guide to Lua  created by MrStump, to help you along the way.   A game is composed of one Global Script and zero to many Object Scripts. The Global Script is a script that lives in your game that can run background tasks and do general game management type functions. Object scripts are attached to an individual object. Objects are anything with a physical model in the game - chess piece, dice, decks, cards, bags, custom models, boards, etc. Both types of scripts can call the same functions, but Object scripts have access to a reference of the Object it is attached to with the  self  keyword.",
+            "title": "Introduction"
+        },
+        {
+            "location": "/#resources",
+            "text": "You are able to follow the links on the left side of the page for available tools to help utiliz and learn the basics of scripting. When at the top of the page, you will see a link to the Lua API for documentation on all of the available Tabletop Simulator Lua functionality. Links on the right side of the page help navigate the article you are viewing.",
+            "title": "Resources"
+        },
+        {
+            "location": "/#writing-lua-scripts",
+            "text": "The Lua code is written via our in-game code editor or via our  Official Plugin for the Atom Text Editor . Lua scripts are stored in the .json file of the save game as a plain text string. There is no need for an external internet host for Lua scripts, everything is self-contained in your game\u2019s save file. Workshop uploads work the same way.",
+            "title": "Writing Lua Scripts"
+        },
+        {
+            "location": "/overview/",
+            "text": "Available scripting methods\n\u00b6\n\n\nIn-Game Lua Editor\n\u00b6\n\n\nYou can access the in-game Lua Editor by clicking on \nHost -> Scripting\n or by right clicking on an object, choosing Scripting, and then selecting Lua Editor from the contextual menu. In the Lua Editor, the tabs on the left of the editor let you switch between the Global and the Object scripts. Once your Lua code is written, you can use the \nSave and Play\n button to commit your changes to your save file and reload for quick iteration. \nSave and Play\n will only commit your script changes, any changes made that weren't scripting will be lost.\n\n\nThe advantage of this method is it requires no additional setup. However it lacks many features included in some of the other options.\n\n\n\n\nOfficial Atom Plugin\n\u00b6\n\n\nThe preferred method of writing Lua scripts is using our Official Plugin for the Atom Text Editor. It has all of the functionality of the in-game editor plus line numbers, syntax highlighting, autocomplete, and a modern look. \nClick here for setup instructions.\n\n\n\n\nExternal Editor API\n\u00b6\n\n\nIt is also possible to edit inside of other envionments which are not officially supported. Using the External Editor API it is possible to work in other enviornments (like Notepad++).\n\n\n\n\nWarning\n\n\nThis method does not, by default, include many features that Atom provides, like auto-completion of Tabletop Simulator functions/class members.\n\n\n\n\nLua Standard Libraries\n\u00b6\n\n\nWe include a subset of the Lua standard libraries into our interpreter to provide a safe sandbox for user scripts to run.\n\n\n\n\n\n\n\n\nLibrary\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nBasic\n\n\nThe basic methods. Includes assert, collectgarbage, error, print, select, type, tonumber, and tostring.\n\n\n\n\n\n\nBit32\n\n\nThe bit32 package.\n\n\n\n\n\n\nCoroutine\n\n\nThe coroutine package.\n\n\n\n\n\n\nDynamic\n\n\nThe dynamic package (introduced by MoonSharp).\n\n\n\n\n\n\nErrorHandling\n\n\nThe error handling methods: pcall and xpcall.\n\n\n\n\n\n\nGlobalConsts\n\n\nThe global constants: _G, _VERSION, and _MOONSHARP.\n\n\n\n\n\n\nMath\n\n\nThe math package.\n\n\n\n\n\n\nMetatables\n\n\nThe metatable methods : setmetatable, getmetatable, rawset, rawget, rawequal, and rawlen.\n\n\n\n\n\n\nOS_Time\n\n\nThe time methods of the os package: clock, difftime, date, and time.\n\n\n\n\n\n\nString\n\n\nThe string package.\n\n\n\n\n\n\nTable\n\n\nThe table package.\n\n\n\n\n\n\nTableIterators\n\n\nThe table iterators: next, ipairs, and pairs.\n\n\n\n\n\n\n\n\nFor further information\n\u00b6\n\n\n\n\nOfficial Lua Website\n\n\nMoonSharp\n\n\n\n\nExample Mods\n\u00b6\n\n\n\n\nBlackJack\n\n\nChess Clock\n\n\nRoulette\n\n\nInteractable",
+            "title": "Overview"
+        },
+        {
+            "location": "/overview/#available-scripting-methods",
+            "text": "",
+            "title": "Available scripting methods"
+        },
+        {
+            "location": "/overview/#in-game-lua-editor",
+            "text": "You can access the in-game Lua Editor by clicking on  Host -> Scripting  or by right clicking on an object, choosing Scripting, and then selecting Lua Editor from the contextual menu. In the Lua Editor, the tabs on the left of the editor let you switch between the Global and the Object scripts. Once your Lua code is written, you can use the  Save and Play  button to commit your changes to your save file and reload for quick iteration.  Save and Play  will only commit your script changes, any changes made that weren't scripting will be lost.  The advantage of this method is it requires no additional setup. However it lacks many features included in some of the other options.",
+            "title": "In-Game Lua Editor"
+        },
+        {
+            "location": "/overview/#official-atom-plugin",
+            "text": "The preferred method of writing Lua scripts is using our Official Plugin for the Atom Text Editor. It has all of the functionality of the in-game editor plus line numbers, syntax highlighting, autocomplete, and a modern look.  Click here for setup instructions.",
+            "title": "Official Atom Plugin"
+        },
+        {
+            "location": "/overview/#external-editor-api",
+            "text": "It is also possible to edit inside of other envionments which are not officially supported. Using the External Editor API it is possible to work in other enviornments (like Notepad++).   Warning  This method does not, by default, include many features that Atom provides, like auto-completion of Tabletop Simulator functions/class members.",
+            "title": "External Editor API"
+        },
+        {
+            "location": "/overview/#lua-standard-libraries",
+            "text": "We include a subset of the Lua standard libraries into our interpreter to provide a safe sandbox for user scripts to run.     Library  Description      Basic  The basic methods. Includes assert, collectgarbage, error, print, select, type, tonumber, and tostring.    Bit32  The bit32 package.    Coroutine  The coroutine package.    Dynamic  The dynamic package (introduced by MoonSharp).    ErrorHandling  The error handling methods: pcall and xpcall.    GlobalConsts  The global constants: _G, _VERSION, and _MOONSHARP.    Math  The math package.    Metatables  The metatable methods : setmetatable, getmetatable, rawset, rawget, rawequal, and rawlen.    OS_Time  The time methods of the os package: clock, difftime, date, and time.    String  The string package.    Table  The table package.    TableIterators  The table iterators: next, ipairs, and pairs.",
+            "title": "Lua Standard Libraries"
+        },
+        {
+            "location": "/overview/#for-further-information",
+            "text": "Official Lua Website  MoonSharp",
+            "title": "For further information"
+        },
+        {
+            "location": "/overview/#example-mods",
+            "text": "BlackJack  Chess Clock  Roulette  Interactable",
+            "title": "Example Mods"
+        },
+        {
+            "location": "/atom/",
+            "text": "Atom is a free, open source, and cross-platform text editor created by \nGitHub\n:\n\n\n\n\nAtom is a text editor that's modern, approachable, yet hackable to the core - a tool you can customize to do anything but also use productively without ever touching a config file.\n\n\n\n\nWe created an official plugin for the Atom text editor to make writing Lua scripts for Tabletop Simulator super easy and fun!\n\n\nThis page provides a basic overview of how to install and use the plugin; if you would like a more in-depth explanation of its features and how to install/use it then please \nsee its documentation\n.\n\n\nOur official plugin introduces syntax highlighting, code autocompletion for the Tabletop Simulator Lua API, and functions to interact with the game. The in-game editor will continue to exist for quick access to scripts, but development on it will cease to continue.\n\n\nPrefer another text editor? Take look at our \nExternal Editor API\n to make your own plugin.\n\n\nFeatures\n\u00b6\n\n\nThis is only a summarized list of features Atom offers. Check out a more complete documentation on the plugin specifically in the \nplugin wiki\n.\n\n\nSyntax Highlighting\n\u00b6\n\n\nAll standard Lua syntax is highlighted in multiple colors to help with readability.\n\n\n\n\nCode Autocompletion\n\u00b6\n\n\nThe entire Tabletop Simulator Lua Scripting API (with the exception of the Player class) has been added to the native Atom autocomplete system. Easily see all of the member variables and functions available to you with their parameters, return type, short description, and a link directly to our Knowledge Base with more information for that variable or function. Functions belonging to the Lua standard library classes such as math, coroutine, or os link directly to the official Lua documentation.\n\n\n\n\nTabletop Simulator Interactivity\n\u00b6\n\n\nThe Atom plugin can directly connect to a running instance of Tabletop Simulator to get all of the existing Lua scripts on Objects and to call Save & Play. Both functions can be called directly from the Packages menu or the right click contextual menu. TTS must be running with the game loaded for these functions to work.\n\n\n\n\n\n\n\n\nCommand\n\n\nAction Taken\n\n\n\n\n\n\n\n\n\n\nGet Lua Scripts\n\n\nDownloads all existing scripts in a loaded Tabletop Simulator game with Atom. You will need to call Get Lua Scripts every time you change to a different game in TTS.\n\n\n\n\n\n\nSave & Play\n\n\nSaves all Lua files in Atom, uploads them to a loaded Tabletop Simulator game, and reloads the current game (same as Save & Play in the in-game editor).\n\n\n\n\n\n\n\n\n\n\n\n\n\nEvery time you start up Atom, the cached local *.lua files are deleted.\n\n\n\n\nInstalling Atom\n\u00b6\n\n\nDownload and install Atom \nfrom the official website\n.\n\n\nInstalling the Official Plugin\n\u00b6\n\n\n\n\nClick on File -> Settings\n\n\nSelect the Install tab in Settings\n\n\nType in tabletopsimulator-lua into the search field and press the Enter key or click the Packages button\n\n\nClick the blue Install button for the tabletopsimulator-lua package\n\n\n\n\n\n\nSetting Up Atom\n\u00b6\n\n\nTab Width\n\u00b6\n\n\nBy default, Tabletop Simulator scripts use a tab width of four spaces. You are not required to adhere to this spacing. By default, Atom has a tab width of two spaces. To optionally make Atom default to a tab width of four spaces:\n\n\n\n\nClick on File -> Settings\n\n\nSelect the Settings tab in Settings\n\n\nScroll down to Tab Length\n\n\nSet the Tab Length to 4\n\n\n\n\n\n\nTabls as Pipe Operators\n\u00b6\n\n\nTo enable tabs showing up as pipe operators \"|\" as an indent guide:\n\n\n\n\nClick on File -> Settings\n\n\nSelect the Settings tab in Settings\n\n\nScroll down to Show Indent Guide\n\n\nCheck Show Indent Guide\n\n\n\n\n\n\nUpdating Atom Plugin\n\u00b6\n\n\nThe plugin will automatically check for updates when Atom is started. If a new update is found, it will update itself. You will have to manually restart Atom for the new version of the plugin to be loaded. You can check Atom's console if it found an update (ctrl + alt + i).\n\n\nAtom Tips\n\u00b6\n\n\nThese are just a few basic tips to help get the most out of Atom.\n\n\n\n\nPrint Messages\n\n\nAll print() functions automatically send their messages to Atom's console (ctrl + alt + i).\n\n\n\n\n\n\nError Messages\n\n\nAll Lua errors are automatically sent to Atom's console (ctrl + alt + i).\n\n\n\n\n\n\nQuick Save + Play\n\n\nHitting Ctrl + Shift + S will trigger Save & Play.",
+            "title": "Atom"
+        },
+        {
+            "location": "/atom/#features",
+            "text": "This is only a summarized list of features Atom offers. Check out a more complete documentation on the plugin specifically in the  plugin wiki .",
+            "title": "Features"
+        },
+        {
+            "location": "/atom/#syntax-highlighting",
+            "text": "All standard Lua syntax is highlighted in multiple colors to help with readability.",
+            "title": "Syntax Highlighting"
+        },
+        {
+            "location": "/atom/#code-autocompletion",
+            "text": "The entire Tabletop Simulator Lua Scripting API (with the exception of the Player class) has been added to the native Atom autocomplete system. Easily see all of the member variables and functions available to you with their parameters, return type, short description, and a link directly to our Knowledge Base with more information for that variable or function. Functions belonging to the Lua standard library classes such as math, coroutine, or os link directly to the official Lua documentation.",
+            "title": "Code Autocompletion"
+        },
+        {
+            "location": "/atom/#tabletop-simulator-interactivity",
+            "text": "The Atom plugin can directly connect to a running instance of Tabletop Simulator to get all of the existing Lua scripts on Objects and to call Save & Play. Both functions can be called directly from the Packages menu or the right click contextual menu. TTS must be running with the game loaded for these functions to work.     Command  Action Taken      Get Lua Scripts  Downloads all existing scripts in a loaded Tabletop Simulator game with Atom. You will need to call Get Lua Scripts every time you change to a different game in TTS.    Save & Play  Saves all Lua files in Atom, uploads them to a loaded Tabletop Simulator game, and reloads the current game (same as Save & Play in the in-game editor).       \nEvery time you start up Atom, the cached local *.lua files are deleted.",
+            "title": "Tabletop Simulator Interactivity"
+        },
+        {
+            "location": "/atom/#installing-atom",
+            "text": "Download and install Atom  from the official website .",
+            "title": "Installing Atom"
+        },
+        {
+            "location": "/atom/#installing-the-official-plugin",
+            "text": "Click on File -> Settings  Select the Install tab in Settings  Type in tabletopsimulator-lua into the search field and press the Enter key or click the Packages button  Click the blue Install button for the tabletopsimulator-lua package",
+            "title": "Installing the Official Plugin"
+        },
+        {
+            "location": "/atom/#setting-up-atom",
+            "text": "",
+            "title": "Setting Up Atom"
+        },
+        {
+            "location": "/atom/#tab-width",
+            "text": "By default, Tabletop Simulator scripts use a tab width of four spaces. You are not required to adhere to this spacing. By default, Atom has a tab width of two spaces. To optionally make Atom default to a tab width of four spaces:   Click on File -> Settings  Select the Settings tab in Settings  Scroll down to Tab Length  Set the Tab Length to 4",
+            "title": "Tab Width"
+        },
+        {
+            "location": "/atom/#tabls-as-pipe-operators",
+            "text": "To enable tabs showing up as pipe operators \"|\" as an indent guide:   Click on File -> Settings  Select the Settings tab in Settings  Scroll down to Show Indent Guide  Check Show Indent Guide",
+            "title": "Tabls as Pipe Operators"
+        },
+        {
+            "location": "/atom/#updating-atom-plugin",
+            "text": "The plugin will automatically check for updates when Atom is started. If a new update is found, it will update itself. You will have to manually restart Atom for the new version of the plugin to be loaded. You can check Atom's console if it found an update (ctrl + alt + i).",
+            "title": "Updating Atom Plugin"
+        },
+        {
+            "location": "/atom/#atom-tips",
+            "text": "These are just a few basic tips to help get the most out of Atom.   Print Messages  All print() functions automatically send their messages to Atom's console (ctrl + alt + i).    Error Messages  All Lua errors are automatically sent to Atom's console (ctrl + alt + i).    Quick Save + Play  Hitting Ctrl + Shift + S will trigger Save & Play.",
+            "title": "Atom Tips"
+        },
+        {
+            "location": "/externaleditorapi/",
+            "text": "This page describes how our \nOfficial Atom Plugin\n API works so that you can write your own plugin for your text editor of choice if Atom does not suit your needs. The plugin communicates with Tabletop Simulator via two localhost TCP connections - one for each system acting as a server and the other as a client and vice versa. All communication messages are JSON.\n\n\nTabletop Simulator as the Server\n\u00b6\n\n\n\n\nTTS listens for incoming localhost TCP connections on port 39999.\n\n\n\n\nGet Lua Scripts\n\u00b6\n\n\nAtom sends a JSON message with an ID of 0.\n\n\n{\n\n    \n\"messageID\"\n:\n \n0\n\n\n}\n\n\n\n\n\nTTS sends back a JSON message with an ID of 0 and an array of the Lua Scripts.\n\n\n{\n\n    \n\"messageID\"\n:\n \n0\n,\n\n    \n\"scriptStates\"\n:\n \n[\n\n        \n{\n\n            \n\"name\"\n:\n \n\"Global\"\n,\n\n            \n\"guid\"\n:\n \n\"-1\"\n,\n\n            \n\"script\"\n:\n \n\"...\"\n\n        \n},\n\n        \n{\n\n            \n\"name\"\n:\n \n\"BlackJack Dealer's Deck\"\n,\n\n            \n\"guid\"\n:\n \n\"a0b2d5\"\n,\n\n            \n\"script\"\n:\n \n\"...\"\n\n        \n},\n\n        \n...\n\n    \n]\n\n\n}\n\n\n\n\n\nSave & Play\n\u00b6\n\n\nAtom sends a JSON message with an ID of 1 and an array of the Lua Scripts.\n\n\n{\n\n    \n\"messageID\"\n:\n \n1\n,\n\n    \n\"scriptStates\"\n:\n \n[\n\n        \n{\n\n            \n\"guid\"\n:\n \n\"-1\"\n,\n\n            \n\"script\"\n:\n \n\"...\"\n\n        \n},\n\n        \n{\n\n            \n\"guid\"\n:\n \n\"a0b2d5\"\n,\n\n            \n\"script\"\n:\n \n\"...\"\n\n        \n},\n\n        \n...\n\n    \n]\n\n\n}\n\n\n\n\n\nAtom as the Server\n\u00b6\n\n\n\n\nAtom listens for incoming localhost TCP connections on port 39998.\n\n\n\n\nPushing New Object\n\u00b6\n\n\nWhen clicking on \"Lua Editor\" in the right click contextual menu in-game for an Object that doesn't have a Lua Script yet, it will try to open a new tab in Atom for this Object before falling back to the in-game editor if Atom is not running. TTS sends a JSON message with an ID of 0 and the new Object.\n\n\n{\n\n    \n\"messageID\"\n:\n \n0\n,\n\n    \n\"scriptStates\"\n:\n \n[\n\n        \n{\n\n            \n\"name\"\n:\n \n\"Chess Pawn\"\n,\n\n            \n\"guid\"\n:\n \n\"db3f06\"\n,\n\n            \n\"script\"\n:\n \n\"\"\n\n        \n}\n\n    \n]\n\n\n}\n\n\n\n\n\nLoading a New Game\n\u00b6\n\n\nWhen loading a new game in TTS, TTS will automatically send all the Lua Scripts from the new game to Atom. TTS sends a JSON message with an ID of 1 and an array of the Lua Scripts.\n\n\n{\n\n    \n\"messageID\"\n:\n \n1\n,\n\n    \n\"scriptStates\"\n:\n \n[\n\n        \n{\n\n            \n\"name\"\n:\n \n\"Global\"\n,\n\n            \n\"guid\"\n:\n \n\"-1\"\n,\n\n            \n\"script\"\n:\n \n\"...\"\n\n        \n},\n\n        \n{\n\n            \n\"name\"\n:\n \n\"BlackJack Dealer's Deck\"\n,\n\n            \n\"guid\"\n:\n \n\"a0b2d5\"\n,\n\n            \n\"script\"\n:\n \n\"...\"\n\n        \n},\n\n        \n...\n\n    \n]\n\n\n}\n\n\n\n\n\nPrint/Debug Messages\n\u00b6\n\n\nTTS sends all print() messages to Atom to be displayed in Atom's console (ctrl + alt + i). TTS sends a JSON message with an ID of 2 and the message.\n\n\n{\n\n    \n\"messageID\"\n:\n \n2\n,\n\n    \n\"message\"\n:\n \n\"Hit player! White\"\n\n\n}\n\n\n\n\n\nError Messages\n\u00b6\n\n\nTTS sends all Lua error messages to Atom to be displayed in Atom's console \n(ctrl + alt + i)\n. TTS sends a JSON message with an ID of 3 and the error message.\n\n\n{\n\n    \n\"messageID\"\n:\n \n3\n,\n\n    \n\"error\"\n:\n \n\"chunk_0:(36,4-8): unexpected symbol near 'deck'\"\n,\n\n    \n\"guid\"\n:\n \n\"-1\"\n,\n\n    \n\"errorMessagePrefix\"\n:\n \n\"Error in Global Script: \"\n\n\n}",
+            "title": "External Editor API"
+        },
+        {
+            "location": "/externaleditorapi/#tabletop-simulator-as-the-server",
+            "text": "TTS listens for incoming localhost TCP connections on port 39999.",
+            "title": "Tabletop Simulator as the Server"
+        },
+        {
+            "location": "/externaleditorapi/#get-lua-scripts",
+            "text": "Atom sends a JSON message with an ID of 0.  { \n     \"messageID\" :   0  }   TTS sends back a JSON message with an ID of 0 and an array of the Lua Scripts.  { \n     \"messageID\" :   0 , \n     \"scriptStates\" :   [ \n         { \n             \"name\" :   \"Global\" , \n             \"guid\" :   \"-1\" , \n             \"script\" :   \"...\" \n         }, \n         { \n             \"name\" :   \"BlackJack Dealer's Deck\" , \n             \"guid\" :   \"a0b2d5\" , \n             \"script\" :   \"...\" \n         }, \n         ... \n     ]  }",
+            "title": "Get Lua Scripts"
+        },
+        {
+            "location": "/externaleditorapi/#save-play",
+            "text": "Atom sends a JSON message with an ID of 1 and an array of the Lua Scripts.  { \n     \"messageID\" :   1 , \n     \"scriptStates\" :   [ \n         { \n             \"guid\" :   \"-1\" , \n             \"script\" :   \"...\" \n         }, \n         { \n             \"guid\" :   \"a0b2d5\" , \n             \"script\" :   \"...\" \n         }, \n         ... \n     ]  }",
+            "title": "Save &amp; Play"
+        },
+        {
+            "location": "/externaleditorapi/#atom-as-the-server",
+            "text": "Atom listens for incoming localhost TCP connections on port 39998.",
+            "title": "Atom as the Server"
+        },
+        {
+            "location": "/externaleditorapi/#pushing-new-object",
+            "text": "When clicking on \"Lua Editor\" in the right click contextual menu in-game for an Object that doesn't have a Lua Script yet, it will try to open a new tab in Atom for this Object before falling back to the in-game editor if Atom is not running. TTS sends a JSON message with an ID of 0 and the new Object.  { \n     \"messageID\" :   0 , \n     \"scriptStates\" :   [ \n         { \n             \"name\" :   \"Chess Pawn\" , \n             \"guid\" :   \"db3f06\" , \n             \"script\" :   \"\" \n         } \n     ]  }",
+            "title": "Pushing New Object"
+        },
+        {
+            "location": "/externaleditorapi/#loading-a-new-game",
+            "text": "When loading a new game in TTS, TTS will automatically send all the Lua Scripts from the new game to Atom. TTS sends a JSON message with an ID of 1 and an array of the Lua Scripts.  { \n     \"messageID\" :   1 , \n     \"scriptStates\" :   [ \n         { \n             \"name\" :   \"Global\" , \n             \"guid\" :   \"-1\" , \n             \"script\" :   \"...\" \n         }, \n         { \n             \"name\" :   \"BlackJack Dealer's Deck\" , \n             \"guid\" :   \"a0b2d5\" , \n             \"script\" :   \"...\" \n         }, \n         ... \n     ]  }",
+            "title": "Loading a New Game"
+        },
+        {
+            "location": "/externaleditorapi/#printdebug-messages",
+            "text": "TTS sends all print() messages to Atom to be displayed in Atom's console (ctrl + alt + i). TTS sends a JSON message with an ID of 2 and the message.  { \n     \"messageID\" :   2 , \n     \"message\" :   \"Hit player! White\"  }",
+            "title": "Print/Debug Messages"
+        },
+        {
+            "location": "/externaleditorapi/#error-messages",
+            "text": "TTS sends all Lua error messages to Atom to be displayed in Atom's console  (ctrl + alt + i) . TTS sends a JSON message with an ID of 3 and the error message.  { \n     \"messageID\" :   3 , \n     \"error\" :   \"chunk_0:(36,4-8): unexpected symbol near 'deck'\" , \n     \"guid\" :   \"-1\" , \n     \"errorMessagePrefix\" :   \"Error in Global Script: \"  }",
+            "title": "Error Messages"
+        },
+        {
+            "location": "/luaapi/",
+            "text": "In this section, you will find details on all events/classes/functions specific to Tabletop Simulator's Lua scripting. For more general information on how the scripting language of Lua works and what it does on its own, you can review the \nonline documentation\n. \n\n\n\n\nTODO:\n\n\n\n\nAdd more here on how this docu is set up\n\n\nLink to the tutorial in the top message once I input it\n\n\nInstructions on how to modify if they think changes are needed.",
+            "title": "Introduction"
+        },
+        {
+            "location": "/assetbundle/",
+            "text": "AssetBundle is a special \nObject\n type that has access to assetbundle related functions like looping and trigger effects. Once you have a reference to an Object you can call these functions like this: \nobj.AssetBundle.getLoopingEffects()\n.\n\n\nFunctions\n\u00b6\n\n\n\n\n\n\n\n\nFunction Name\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\ngetLoopingEffectIndex()\n\n\nReturns the index of the currently looping effect.\n\n\n\n\n\n\ngetLoopingEffects()\n\n\nReturns a Table with the keys \"index\" and \"name\" for each looping effect.\n\n\n\n\n\n\ngetTriggerEffects()\n\n\nReturns a Table with the keys \"index\" and \"name\" for each trigger effect.\n\n\n\n\n\n\nplayLoopingEffect(number index)\n\n\nStarts playing a looping effect. Index starts at 0.\n\n\n\n\n\n\nplayTriggerEffect(number index)\n\n\nStarts playing a trigger effect. Index starts at 0.\n\n\n\n\n\n\n\n\n\n\nFunction Details\n\u00b6\n\n\ngetLoopingEffectIndex()\n\u00b6\n\n\nReturns the \nnumber\n of the index of the currently looping effect.\n\n\n    \nobj\n \n=\n \ngetObjectFromGUID\n(\n\"######\"\n)\n\n    \nindex\n \n=\n \nobj\n.\nAssetBundle\n.\ngetLoopingEffectIndex\n()\n\n\n\n\n\n\n\ngetLoopingEffects()\n\u00b6\n\n\nReturns a \ntable\n with the keys \"index\" and \"name\" for each looping effect.\n\n\n    \n#\nExample\n \nusage\n\n    \nobj\n \n=\n \ngetObjectFromGUID\n(\n\"######\"\n)\n\n    \neffectTable\n \n=\n \nobj\n.\nAssetBundle\n.\ngetLoopingEffects\n()\n\n\n\n\n    \n#\nExample\n \nreturned\n \ntable\n\n    \n{\n\n        \n{\nindex\n=\n0\n,\n \nname\n=\n\"Effect Name 1\"\n},\n\n        \n{\nindex\n=\n1\n,\n \nname\n=\n\"Effect Name 2\"\n},\n\n    \n}\n\n\n\n\n\n\ngetTriggerEffects()\n\u00b6\n\n\nReturns a \ntable\n with the keys \"index\" and \"name\" for each trigger effect.\n\n\n    \n#\nExample\n \nusage\n\n    \nobj\n \n=\n \ngetObjectFromGUID\n(\n\"######\"\n)\n\n    \neffectTable\n \n=\n \nobj\n.\nAssetBundle\n.\ngetTriggerEffects\n()\n\n\n\n\n    \n#\nExample\n \nreturned\n \ntable\n\n    \n{\n\n        \n{\nindex\n=\n0\n,\n \nname\n=\n\"Effect Name 1\"\n},\n\n        \n{\nindex\n=\n1\n,\n \nname\n=\n\"Effect Name 2\"\n},\n\n    \n}\n\n\n\n\n\n\nplayLoopingEffect()\n\u00b6\n\n\nStarts playing a looping effect. Indexes for AssetBundles start at 0.\n\n\n    \n#\nExample\n \nusage\n\n    \nobj\n \n=\n \ngetObjectFromGUID\n(\n\"######\"\n)\n\n    \nobj\n.\nAssetBundle\n.\nplayLoopingEffect\n(\n0\n)\n\n\n\n\n\n\n\nplayTriggerEffect()\n\u00b6\n\n\nStarts playing a trigger effect. Indexes for AssetBundles start at 0.\n\n\n    \n#\nExample\n \nusage\n\n    \nobj\n \n=\n \ngetObjectFromGUID\n(\n\"######\"\n)\n\n    \nobj\n.\nAssetBundle\n.\nplayTriggerEffect\n(\n0\n)",
+            "title": "AssetBundle"
+        },
+        {
+            "location": "/assetbundle/#functions",
+            "text": "Function Name  Description      getLoopingEffectIndex()  Returns the index of the currently looping effect.    getLoopingEffects()  Returns a Table with the keys \"index\" and \"name\" for each looping effect.    getTriggerEffects()  Returns a Table with the keys \"index\" and \"name\" for each trigger effect.    playLoopingEffect(number index)  Starts playing a looping effect. Index starts at 0.    playTriggerEffect(number index)  Starts playing a trigger effect. Index starts at 0.",
+            "title": "Functions"
+        },
+        {
+            "location": "/assetbundle/#function-details",
+            "text": "",
+            "title": "Function Details"
+        },
+        {
+            "location": "/assetbundle/#getloopingeffectindex",
+            "text": "Returns the  number  of the index of the currently looping effect.       obj   =   getObjectFromGUID ( \"######\" ) \n     index   =   obj . AssetBundle . getLoopingEffectIndex ()",
+            "title": "getLoopingEffectIndex()"
+        },
+        {
+            "location": "/assetbundle/#getloopingeffects",
+            "text": "Returns a  table  with the keys \"index\" and \"name\" for each looping effect.       # Example   usage \n     obj   =   getObjectFromGUID ( \"######\" ) \n     effectTable   =   obj . AssetBundle . getLoopingEffects ()        # Example   returned   table \n     { \n         { index = 0 ,   name = \"Effect Name 1\" }, \n         { index = 1 ,   name = \"Effect Name 2\" }, \n     }",
+            "title": "getLoopingEffects()"
+        },
+        {
+            "location": "/assetbundle/#gettriggereffects",
+            "text": "Returns a  table  with the keys \"index\" and \"name\" for each trigger effect.       # Example   usage \n     obj   =   getObjectFromGUID ( \"######\" ) \n     effectTable   =   obj . AssetBundle . getTriggerEffects ()        # Example   returned   table \n     { \n         { index = 0 ,   name = \"Effect Name 1\" }, \n         { index = 1 ,   name = \"Effect Name 2\" }, \n     }",
+            "title": "getTriggerEffects()"
+        },
+        {
+            "location": "/assetbundle/#playloopingeffect",
+            "text": "Starts playing a looping effect. Indexes for AssetBundles start at 0.       # Example   usage \n     obj   =   getObjectFromGUID ( \"######\" ) \n     obj . AssetBundle . playLoopingEffect ( 0 )",
+            "title": "playLoopingEffect()"
+        },
+        {
+            "location": "/assetbundle/#playtriggereffect",
+            "text": "Starts playing a trigger effect. Indexes for AssetBundles start at 0.       # Example   usage \n     obj   =   getObjectFromGUID ( \"######\" ) \n     obj . AssetBundle . playTriggerEffect ( 0 )",
+            "title": "playTriggerEffect()"
+        }
+    ]
+}
