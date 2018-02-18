@@ -2,20 +2,27 @@ AssetBundle is a special [Object](object) type that has access to assetbundle re
 
 ##Functions
 
-###Version 1
-Return | Function Name | Description 
--- | -- | -- 
-int  |  getLoopingEffectIndex()  |  Returns the index of the currently looping effect. [**?**](#getloopingeffectindex) 
-Table  |  getLoopingEffects()  |  Returns a Table with the keys "index" and "name" for each looping effect. 
-Table  |  getTriggerEffects()  |  Returns a Table with the keys "index" and "name" for each trigger effect. [**?**](#gettriggereffects)
-void  |  playLoopingEffect(int index)  |  Starts playing a looping effect. Index starts at 0. [**?**](#playloopingeffect)
-void  |  playTriggerEffect(int index)  |  Starts playing a trigger effect. Index starts at 0. [**?**](#playtriggereffect)
+Function Name | Description 
+-- | -- 
+getLoopingEffectIndex()  |  [Returns the index of the currently looping effect.](#getloopingeffectindex) 
+getLoopingEffects()  |  [Returns a Table with the keys "index" and "name" for each looping effect.](#getloopingeffects) 
+getTriggerEffects()  |  [Returns a Table with the keys "index" and "name" for each trigger effect.](#gettriggereffects)
+playLoopingEffect(int index)  |  [Starts playing a looping effect. Index starts at 0.](#playloopingeffect)
+playTriggerEffect(int index)  |  [Starts playing a trigger effect. Index starts at 0.](#playtriggereffect)
 
 
 ###Version 2
 The first 2 are slightly different formatting examples. The other 3 copies are just to show what a collection of these looks like
 
+
+
+
+
+##Function Details (Goes with Version 1)
+
+
 ???abstract "getLoopingEffectIndex()"
+	###getLoopingEffectIndex()
 	* **Return value**
 		* number
 	* **Function Description**
@@ -29,79 +36,60 @@ The first 2 are slightly different formatting examples. The other 3 copies are j
 	!!!Warning
 		Special notes can go in here if needed
 
-???abstract "getLoopingEffectIndex()"
-	* {==Return value==}
-		* number
-	* {==Function Description==}
-	    * Returns the index of the currently looping effect.
-	* {==Example==}
-		```Lua
-			#Code block will go here
-			print("String")
-		```
-	
-	!!!Warning
-		Special notes can go in here if needed
 
-???abstract "getLoopingEffectIndex()"
+???abstract "getLoopingEffects()"
+	###getLoopingEffects()
 	* **Return value**
-		* number
+		* table
 	* **Function Description**
-	    * Returns the index of the currently looping effect.
+	    * Returns a Table with the keys "index" and "name" for each looping effect.
 	* **Example**
 		```Lua
 			#Code block will go here
 			print("String")
 		```
-	
-	!!!Warning
-		Special notes can go in here if needed
 		
-???abstract "getLoopingEffectIndex()"
-	* **Return value**
-		* number
-	* **Function Description**
-	    * Returns the index of the currently looping effect.
-	* **Example**
-		```Lua
-			#Code block will go here
-			print("String")
-		```
-	
-	!!!Warning
-		Special notes can go in here if needed
+###getTriggerEffects()
 
-???abstract "getLoopingEffectIndex()"
-	* **Return value**
-		* number
-	* **Function Description**
-	    * Returns the index of the currently looping effect.
-	* **Example**
-		```Lua
-			#Code block will go here
-			print("String")
-		```
-	
-	!!!Warning
-		Special notes can go in here if needed
+* **Return value**
+	* table
+* **Function Description**
+	* Returns a Table with the keys "index" and "name" for each trigger effect.
+* **Example**
 
+```Lua
+	#Code block will go here
+	print("String")
+```
 
+###playLoopingEffect()
 
-##Details (Goes with Version 1)
+* **Return value**
+	* *none*
+* **Function Description**
+	* Starts playing a looping effect.
+* **Example**
 
-Details were going to go down down here for version 1.
+```Lua
+	#Code block will go here
+	print("String")
+```
 
-###getLoopingEffectIndex
-Function details and examples/warning/notes/etc
+!!!Note
+	Indexes for AssetBundles start at 0!
 
-###getLoopingEffects
-Function details and examples/warning/notes/etc
+###playTriggerEffect()
 
-###getTriggerEffects
-Function details and examples/warning/notes/etc
+* **Return value**
+	* *none*
+* **Function Description**
+	* Starts playing a trigger effect.
+* **Example**
 
-###playLoopingEffect
-Function details and examples/warning/notes/etc
+```Lua
+	#Code block will go here
+	print("String")
+```
 
-###playTriggerEffect
-Function details and examples/warning/notes/etc
+!!!Note
+	Indexes for AssetBundles start at 0!
