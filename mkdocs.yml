@@ -28,8 +28,10 @@ markdown_extensions:
 pages:
   - Getting Started:
     - Introduction: index.md
+    - Overview: overview.md
     - Atom: atom.md
   - Lua API:
+    - Introduction: luaapi.md
     - AssetBundle : assetbundle.md
   - tempdemo:
     - About: about.md
