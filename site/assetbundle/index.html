@@ -56,6 +56,8 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
+      <link rel="stylesheet" href="../css/base.css">
+    
     
   </head>
   
@@ -340,24 +342,11 @@
     Functions
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#version-2" title="Version 2" class="md-nav__link">
-    Version 2
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#function-details-goes-with-version-1" title="Function Details (Goes with Version 1)" class="md-nav__link">
-    Function Details (Goes with Version 1)
+  <a href="#function-details" title="Function Details" class="md-nav__link">
+    Function Details
   </a>
   
     <nav class="md-nav">
@@ -442,24 +431,11 @@
     Functions
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#version-2" title="Version 2" class="md-nav__link">
-    Version 2
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#function-details-goes-with-version-1" title="Function Details (Goes with Version 1)" class="md-nav__link">
-    Function Details (Goes with Version 1)
+  <a href="#function-details" title="Function Details" class="md-nav__link">
+    Function Details
   </a>
   
     <nav class="md-nav">
@@ -547,80 +523,59 @@
 <td><a href="#gettriggereffects">Returns a Table with the keys "index" and "name" for each trigger effect.</a></td>
 </tr>
 <tr>
-<td>playLoopingEffect(int index)</td>
+<td>playLoopingEffect(number index)</td>
 <td><a href="#playloopingeffect">Starts playing a looping effect. Index starts at 0.</a></td>
 </tr>
 <tr>
-<td>playTriggerEffect(int index)</td>
+<td>playTriggerEffect(number index)</td>
 <td><a href="#playtriggereffect">Starts playing a trigger effect. Index starts at 0.</a></td>
 </tr>
 </tbody>
 </table>
-<h3 id="version-2">Version 2<a class="headerlink" href="#version-2" title="Permanent link">&para;</a></h3>
-<p>The first 2 are slightly different formatting examples. The other 3 copies are just to show what a collection of these looks like</p>
-<h2 id="function-details-goes-with-version-1">Function Details (Goes with Version 1)<a class="headerlink" href="#function-details-goes-with-version-1" title="Permanent link">&para;</a></h2>
-<details class="abstract"><summary>getLoopingEffectIndex()</summary><h3 id="getloopingeffectindex">getLoopingEffectIndex()<a class="headerlink" href="#getloopingeffectindex" title="Permanent link">&para;</a></h3><ul><li><strong>Return value</strong><ul><li>number</li></ul></li><li><strong>Function Description</strong><ul><li>Returns the index of the currently looping effect.</li></ul></li><li><strong>Example</strong>
-    <div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Code</span> <span class="n">block</span> <span class="n">will</span> <span class="n">go</span> <span class="n">here</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;String&quot;</span><span class="p">)</span>
-</pre></div></li></ul><div class="admonition warning"><p class="admonition-title">Warning</p><p>Special notes can go in here if needed</p></div></details><details class="abstract"><summary>getLoopingEffects()</summary><h3 id="getloopingeffects">getLoopingEffects()<a class="headerlink" href="#getloopingeffects" title="Permanent link">&para;</a></h3><ul><li><strong>Return value</strong><ul><li>table</li></ul></li><li><strong>Function Description</strong><ul><li>Returns a Table with the keys "index" and "name" for each looping effect.</li></ul></li><li><strong>Example</strong>
-    <div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Code</span> <span class="n">block</span> <span class="n">will</span> <span class="n">go</span> <span class="n">here</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;String&quot;</span><span class="p">)</span>
-</pre></div></li></ul></details><h3 id="gettriggereffects">getTriggerEffects()<a class="headerlink" href="#gettriggereffects" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Return value</strong><ul>
-<li>table</li>
-</ul>
-</li>
-<li><strong>Function Description</strong><ul>
-<li>Returns a Table with the keys "index" and "name" for each trigger effect.</li>
-</ul>
-</li>
-<li><strong>Example</strong></li>
-</ul>
-<div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Code</span> <span class="n">block</span> <span class="n">will</span> <span class="n">go</span> <span class="n">here</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;String&quot;</span><span class="p">)</span>
+<h2 id="function-details">Function Details<a class="headerlink" href="#function-details" title="Permanent link">&para;</a></h2>
+<h3 id="getloopingeffectindex">getLoopingEffectIndex()<a class="headerlink" href="#getloopingeffectindex" title="Permanent link">&para;</a></h3>
+<p>Returns the <code class="codehilite">number</code> of the index of the currently looping effect.</p>
+<div class="codehilite"><pre><span></span>    <span class="n">obj</span> <span class="o">=</span> <span class="n">getObjectFromGUID</span><span class="p">(</span><span class="s2">&quot;######&quot;</span><span class="p">)</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">obj</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">getLoopingEffectIndex</span><span class="p">()</span>
 </pre></div>
 
+<h3 id="getloopingeffects">getLoopingEffects()<a class="headerlink" href="#getloopingeffects" title="Permanent link">&para;</a></h3>
+<p>Returns a <code class="codehilite">table</code> with the keys "index" and "name" for each looping effect.</p>
+<p><div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">usage</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">getObjectFromGUID</span><span class="p">(</span><span class="s2">&quot;######&quot;</span><span class="p">)</span>
+    <span class="n">effectTable</span> <span class="o">=</span> <span class="n">obj</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">getLoopingEffects</span><span class="p">()</span>
+</pre></div>
+<div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">returned</span> <span class="n">table</span>
+    <span class="p">{</span>
+        <span class="p">{</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Effect Name 1&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="n">index</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Effect Name 2&quot;</span><span class="p">},</span>
+    <span class="p">}</span>
+</pre></div></p>
+<h3 id="gettriggereffects">getTriggerEffects()<a class="headerlink" href="#gettriggereffects" title="Permanent link">&para;</a></h3>
+<p>Returns a <code class="codehilite">table</code> with the keys "index" and "name" for each trigger effect.</p>
+<p><div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">usage</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">getObjectFromGUID</span><span class="p">(</span><span class="s2">&quot;######&quot;</span><span class="p">)</span>
+    <span class="n">effectTable</span> <span class="o">=</span> <span class="n">obj</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">getTriggerEffects</span><span class="p">()</span>
+</pre></div>
+<div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">returned</span> <span class="n">table</span>
+    <span class="p">{</span>
+        <span class="p">{</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Effect Name 1&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="n">index</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Effect Name 2&quot;</span><span class="p">},</span>
+    <span class="p">}</span>
+</pre></div></p>
 <h3 id="playloopingeffect">playLoopingEffect()<a class="headerlink" href="#playloopingeffect" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Return value</strong><ul>
-<li><em>none</em></li>
-</ul>
-</li>
-<li><strong>Function Description</strong><ul>
-<li>Starts playing a looping effect.</li>
-</ul>
-</li>
-<li><strong>Example</strong></li>
-</ul>
-<div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Code</span> <span class="n">block</span> <span class="n">will</span> <span class="n">go</span> <span class="n">here</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;String&quot;</span><span class="p">)</span>
+<p>Starts playing a looping effect. Indexes for AssetBundles start at 0.</p>
+<div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">usage</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">getObjectFromGUID</span><span class="p">(</span><span class="s2">&quot;######&quot;</span><span class="p">)</span>
+    <span class="n">obj</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">playLoopingEffect</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Indexes for AssetBundles start at 0!</p>
-</div>
 <h3 id="playtriggereffect">playTriggerEffect()<a class="headerlink" href="#playtriggereffect" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Return value</strong><ul>
-<li><em>none</em></li>
-</ul>
-</li>
-<li><strong>Function Description</strong><ul>
-<li>Starts playing a trigger effect.</li>
-</ul>
-</li>
-<li><strong>Example</strong></li>
-</ul>
-<div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Code</span> <span class="n">block</span> <span class="n">will</span> <span class="n">go</span> <span class="n">here</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;String&quot;</span><span class="p">)</span>
+<p>Starts playing a trigger effect. Indexes for AssetBundles start at 0.</p>
+<div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">usage</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">getObjectFromGUID</span><span class="p">(</span><span class="s2">&quot;######&quot;</span><span class="p">)</span>
+    <span class="n">obj</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">playTriggerEffect</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
-
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Indexes for AssetBundles start at 0!</p>
-</div>
                 
                   
                 
