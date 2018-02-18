@@ -10,9 +10,9 @@ getTriggerEffects()  |  [Returns a Table with the keys "index" and "name" for ea
 playLoopingEffect(number index)  |  [Starts playing a looping effect. Index starts at 0.](#playloopingeffect)
 playTriggerEffect(number index)  |  [Starts playing a trigger effect. Index starts at 0.](#playtriggereffect)
 
+------
 
 ##Function Details
-
 
 ###getLoopingEffectIndex()
 
@@ -22,6 +22,8 @@ Returns the `number` of the index of the currently looping effect.
 	obj = getObjectFromGUID("######")
 	index = obj.AssetBundle.getLoopingEffectIndex()
 ```
+
+------
 
 
 ###getLoopingEffects()
@@ -41,8 +43,11 @@ Returns a `table` with the keys "index" and "name" for each looping effect.
 	}
 ```
 
+------
+
 
 ###getTriggerEffects()
+
 
 Returns a `table` with the keys "index" and "name" for each trigger effect.
 
@@ -59,6 +64,8 @@ Returns a `table` with the keys "index" and "name" for each trigger effect.
 	}
 ```
 
+------
+
 
 ###playLoopingEffect()
 
@@ -69,6 +76,8 @@ Starts playing a looping effect. Indexes for AssetBundles start at 0.
 	obj = getObjectFromGUID("######")
 	obj.AssetBundle.playLoopingEffect(0)
 ```
+
+------
 	
 
 ###playTriggerEffect()
@@ -80,3 +89,5 @@ Starts playing a trigger effect. Indexes for AssetBundles start at 0.
 	obj = getObjectFromGUID("######")
 	obj.AssetBundle.playTriggerEffect(0)
 ```
+
+------
