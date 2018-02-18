@@ -7,89 +7,76 @@ Function Name | Description
 getLoopingEffectIndex()  |  [Returns the index of the currently looping effect.](#getloopingeffectindex)
 getLoopingEffects()  |  [Returns a Table with the keys "index" and "name" for each looping effect.](#getloopingeffects)
 getTriggerEffects()  |  [Returns a Table with the keys "index" and "name" for each trigger effect.](#gettriggereffects)
-playLoopingEffect(int index)  |  [Starts playing a looping effect. Index starts at 0.](#playloopingeffect)
-playTriggerEffect(int index)  |  [Starts playing a trigger effect. Index starts at 0.](#playtriggereffect)
+playLoopingEffect(number index)  |  [Starts playing a looping effect. Index starts at 0.](#playloopingeffect)
+playTriggerEffect(number index)  |  [Starts playing a trigger effect. Index starts at 0.](#playtriggereffect)
 
 
-###Version 2
-The first 2 are slightly different formatting examples. The other 3 copies are just to show what a collection of these looks like
+##Function Details
 
 
+###getLoopingEffectIndex()
+
+Returns the `number` of the index of the currently looping effect.
+
+```Lua
+	obj = getObjectFromGUID("######")
+	index = obj.AssetBundle.getLoopingEffectIndex()
+```
 
 
+###getLoopingEffects()
 
-##Function Details (Goes with Version 1)
+Returns a `table` with the keys "index" and "name" for each looping effect.
 
+``` Lua
+	#Example usage
+	obj = getObjectFromGUID("######")
+	effectTable = obj.AssetBundle.getLoopingEffects()
+```
+``` Lua
+	#Example returned table
+	{
+		{index=0, name="Effect Name 1"},
+		{index=1, name="Effect Name 2"},
+	}
+```
 
-???abstract "getLoopingEffectIndex()"
-	###getLoopingEffectIndex()
-	* **Return value**
-		* number
-	* **Function Description**
-	    * Returns the index of the currently looping effect.
-	* **Example**
-		```Lua
-			#Code block will go here
-			print("String")
-		```
-
-	!!!Warning
-		Special notes can go in here if needed
-
-
-???abstract "getLoopingEffects()"
-	###getLoopingEffects()
-	* **Return value**
-		* table
-	* **Function Description**
-	    * Returns a Table with the keys "index" and "name" for each looping effect.
-	* **Example**
-		```Lua
-			#Code block will go here
-			print("String")
-		```
 
 ###getTriggerEffects()
 
-* **Return value**
-	* table
-* **Function Description**
-	* Returns a Table with the keys "index" and "name" for each trigger effect.
-* **Example**
+Returns a `table` with the keys "index" and "name" for each trigger effect.
 
-```Lua
-	#Code block will go here
-	print("String")
+``` Lua
+	#Example usage
+	obj = getObjectFromGUID("######")
+	effectTable = obj.AssetBundle.getTriggerEffects()
 ```
+``` Lua
+	#Example returned table
+	{
+		{index=0, name="Effect Name 1"},
+		{index=1, name="Effect Name 2"},
+	}
+```
+
 
 ###playLoopingEffect()
 
-* **Return value**
-	* *none*
-* **Function Description**
-	* Starts playing a looping effect.
-* **Example**
+Starts playing a looping effect. Indexes for AssetBundles start at 0.
 
-```Lua
-	#Code block will go here
-	print("String")
+``` Lua
+	#Example usage
+	obj = getObjectFromGUID("######")
+	obj.AssetBundle.playLoopingEffect(0)
 ```
-
-!!!Note
-	Indexes for AssetBundles start at 0!
+	
 
 ###playTriggerEffect()
 
-* **Return value**
-	* *none*
-* **Function Description**
-	* Starts playing a trigger effect.
-* **Example**
+Starts playing a trigger effect. Indexes for AssetBundles start at 0.
 
-```Lua
-	#Code block will go here
-	print("String")
+``` Lua
+	#Example usage
+	obj = getObjectFromGUID("######")
+	obj.AssetBundle.playTriggerEffect(0)
 ```
-
-!!!Note
-	Indexes for AssetBundles start at 0!
