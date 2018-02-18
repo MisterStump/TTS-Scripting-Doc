@@ -344,13 +344,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#version-1" title="Version 1" class="md-nav__link">
-    Version 1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#version-2" title="Version 2" class="md-nav__link">
     Version 2
   </a>
@@ -363,44 +356,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#details-goes-with-version-1" title="Details (Goes with Version 1)" class="md-nav__link">
-    Details (Goes with Version 1)
+  <a href="#function-details-goes-with-version-1" title="Function Details (Goes with Version 1)" class="md-nav__link">
+    Function Details (Goes with Version 1)
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#getloopingeffectindex" title="getLoopingEffectIndex" class="md-nav__link">
-    getLoopingEffectIndex
+  <a href="#getloopingeffectindex" title="getLoopingEffectIndex()" class="md-nav__link">
+    getLoopingEffectIndex()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#getloopingeffects" title="getLoopingEffects" class="md-nav__link">
-    getLoopingEffects
+  <a href="#getloopingeffects" title="getLoopingEffects()" class="md-nav__link">
+    getLoopingEffects()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#gettriggereffects" title="getTriggerEffects" class="md-nav__link">
-    getTriggerEffects
+  <a href="#gettriggereffects" title="getTriggerEffects()" class="md-nav__link">
+    getTriggerEffects()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#playloopingeffect" title="playLoopingEffect" class="md-nav__link">
-    playLoopingEffect
+  <a href="#playloopingeffect" title="playLoopingEffect()" class="md-nav__link">
+    playLoopingEffect()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#playtriggereffect" title="playTriggerEffect" class="md-nav__link">
-    playTriggerEffect
+  <a href="#playtriggereffect" title="playTriggerEffect()" class="md-nav__link">
+    playTriggerEffect()
   </a>
   
 </li>
@@ -453,13 +446,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#version-1" title="Version 1" class="md-nav__link">
-    Version 1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#version-2" title="Version 2" class="md-nav__link">
     Version 2
   </a>
@@ -472,44 +458,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#details-goes-with-version-1" title="Details (Goes with Version 1)" class="md-nav__link">
-    Details (Goes with Version 1)
+  <a href="#function-details-goes-with-version-1" title="Function Details (Goes with Version 1)" class="md-nav__link">
+    Function Details (Goes with Version 1)
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#getloopingeffectindex" title="getLoopingEffectIndex" class="md-nav__link">
-    getLoopingEffectIndex
+  <a href="#getloopingeffectindex" title="getLoopingEffectIndex()" class="md-nav__link">
+    getLoopingEffectIndex()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#getloopingeffects" title="getLoopingEffects" class="md-nav__link">
-    getLoopingEffects
+  <a href="#getloopingeffects" title="getLoopingEffects()" class="md-nav__link">
+    getLoopingEffects()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#gettriggereffects" title="getTriggerEffects" class="md-nav__link">
-    getTriggerEffects
+  <a href="#gettriggereffects" title="getTriggerEffects()" class="md-nav__link">
+    getTriggerEffects()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#playloopingeffect" title="playLoopingEffect" class="md-nav__link">
-    playLoopingEffect
+  <a href="#playloopingeffect" title="playLoopingEffect()" class="md-nav__link">
+    playLoopingEffect()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#playtriggereffect" title="playTriggerEffect" class="md-nav__link">
-    playTriggerEffect
+  <a href="#playtriggereffect" title="playTriggerEffect()" class="md-nav__link">
+    playTriggerEffect()
   </a>
   
 </li>
@@ -540,72 +526,101 @@
                 
                 <p>AssetBundle is a special <a href="../object">Object</a> type that has access to assetbundle related functions like looping and trigger effects. Once you have a reference to an Object you can call these functions like this: <code class="codehilite">obj.AssetBundle.getLoopingEffects()</code>.</p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
-<h3 id="version-1">Version 1<a class="headerlink" href="#version-1" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Return</th>
 <th>Function Name</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>int</td>
 <td>getLoopingEffectIndex()</td>
-<td>Returns the index of the currently looping effect. <a href="#getloopingeffectindex"><strong>?</strong></a></td>
+<td><a href="#getloopingeffectindex">Returns the index of the currently looping effect.</a></td>
 </tr>
 <tr>
-<td>Table</td>
 <td>getLoopingEffects()</td>
-<td>Returns a Table with the keys "index" and "name" for each looping effect.</td>
+<td><a href="#getloopingeffects">Returns a Table with the keys "index" and "name" for each looping effect.</a></td>
 </tr>
 <tr>
-<td>Table</td>
 <td>getTriggerEffects()</td>
-<td>Returns a Table with the keys "index" and "name" for each trigger effect. <a href="#gettriggereffects"><strong>?</strong></a></td>
+<td><a href="#gettriggereffects">Returns a Table with the keys "index" and "name" for each trigger effect.</a></td>
 </tr>
 <tr>
-<td>void</td>
 <td>playLoopingEffect(int index)</td>
-<td>Starts playing a looping effect. Index starts at 0. <a href="#playloopingeffect"><strong>?</strong></a></td>
+<td><a href="#playloopingeffect">Starts playing a looping effect. Index starts at 0.</a></td>
 </tr>
 <tr>
-<td>void</td>
 <td>playTriggerEffect(int index)</td>
-<td>Starts playing a trigger effect. Index starts at 0. <a href="#playtriggereffect"><strong>?</strong></a></td>
+<td><a href="#playtriggereffect">Starts playing a trigger effect. Index starts at 0.</a></td>
 </tr>
 </tbody>
 </table>
 <h3 id="version-2">Version 2<a class="headerlink" href="#version-2" title="Permanent link">&para;</a></h3>
 <p>The first 2 are slightly different formatting examples. The other 3 copies are just to show what a collection of these looks like</p>
-<details class="abstract"><summary>getLoopingEffectIndex()</summary><ul><li><strong>Return value</strong><ul><li>number</li></ul></li><li><strong>Function Description</strong><ul><li>Returns the index of the currently looping effect.</li></ul></li><li><strong>Example</strong>
+<h2 id="function-details-goes-with-version-1">Function Details (Goes with Version 1)<a class="headerlink" href="#function-details-goes-with-version-1" title="Permanent link">&para;</a></h2>
+<details class="abstract"><summary>getLoopingEffectIndex()</summary><h3 id="getloopingeffectindex">getLoopingEffectIndex()<a class="headerlink" href="#getloopingeffectindex" title="Permanent link">&para;</a></h3><ul><li><strong>Return value</strong><ul><li>number</li></ul></li><li><strong>Function Description</strong><ul><li>Returns the index of the currently looping effect.</li></ul></li><li><strong>Example</strong>
     <div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Code</span> <span class="n">block</span> <span class="n">will</span> <span class="n">go</span> <span class="n">here</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;String&quot;</span><span class="p">)</span>
-</pre></div></li></ul><div class="admonition warning"><p class="admonition-title">Warning</p><p>Special notes can go in here if needed</p></div></details><details class="abstract"><summary>getLoopingEffectIndex()</summary><ul><li><mark class="critic">Return value</mark><ul><li>number</li></ul></li><li><mark class="critic">Function Description</mark><ul><li>Returns the index of the currently looping effect.</li></ul></li><li><mark class="critic">Example</mark>
+</pre></div></li></ul><div class="admonition warning"><p class="admonition-title">Warning</p><p>Special notes can go in here if needed</p></div></details><details class="abstract"><summary>getLoopingEffects()</summary><h3 id="getloopingeffects">getLoopingEffects()<a class="headerlink" href="#getloopingeffects" title="Permanent link">&para;</a></h3><ul><li><strong>Return value</strong><ul><li>table</li></ul></li><li><strong>Function Description</strong><ul><li>Returns a Table with the keys "index" and "name" for each looping effect.</li></ul></li><li><strong>Example</strong>
     <div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Code</span> <span class="n">block</span> <span class="n">will</span> <span class="n">go</span> <span class="n">here</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;String&quot;</span><span class="p">)</span>
-</pre></div></li></ul><div class="admonition warning"><p class="admonition-title">Warning</p><p>Special notes can go in here if needed</p></div></details><details class="abstract"><summary>getLoopingEffectIndex()</summary><ul><li><strong>Return value</strong><ul><li>number</li></ul></li><li><strong>Function Description</strong><ul><li>Returns the index of the currently looping effect.</li></ul></li><li><strong>Example</strong>
-    <div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Code</span> <span class="n">block</span> <span class="n">will</span> <span class="n">go</span> <span class="n">here</span>
+</pre></div></li></ul></details><h3 id="gettriggereffects">getTriggerEffects()<a class="headerlink" href="#gettriggereffects" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Return value</strong><ul>
+<li>table</li>
+</ul>
+</li>
+<li><strong>Function Description</strong><ul>
+<li>Returns a Table with the keys "index" and "name" for each trigger effect.</li>
+</ul>
+</li>
+<li><strong>Example</strong></li>
+</ul>
+<div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Code</span> <span class="n">block</span> <span class="n">will</span> <span class="n">go</span> <span class="n">here</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;String&quot;</span><span class="p">)</span>
-</pre></div></li></ul><div class="admonition warning"><p class="admonition-title">Warning</p><p>Special notes can go in here if needed</p></div></details><details class="abstract"><summary>getLoopingEffectIndex()</summary><ul><li><strong>Return value</strong><ul><li>number</li></ul></li><li><strong>Function Description</strong><ul><li>Returns the index of the currently looping effect.</li></ul></li><li><strong>Example</strong>
-    <div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Code</span> <span class="n">block</span> <span class="n">will</span> <span class="n">go</span> <span class="n">here</span>
+</pre></div>
+
+<h3 id="playloopingeffect">playLoopingEffect()<a class="headerlink" href="#playloopingeffect" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Return value</strong><ul>
+<li><em>none</em></li>
+</ul>
+</li>
+<li><strong>Function Description</strong><ul>
+<li>Starts playing a looping effect.</li>
+</ul>
+</li>
+<li><strong>Example</strong></li>
+</ul>
+<div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Code</span> <span class="n">block</span> <span class="n">will</span> <span class="n">go</span> <span class="n">here</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;String&quot;</span><span class="p">)</span>
-</pre></div></li></ul><div class="admonition warning"><p class="admonition-title">Warning</p><p>Special notes can go in here if needed</p></div></details><details class="abstract"><summary>getLoopingEffectIndex()</summary><ul><li><strong>Return value</strong><ul><li>number</li></ul></li><li><strong>Function Description</strong><ul><li>Returns the index of the currently looping effect.</li></ul></li><li><strong>Example</strong>
-    <div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Code</span> <span class="n">block</span> <span class="n">will</span> <span class="n">go</span> <span class="n">here</span>
+</pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Indexes for AssetBundles start at 0!</p>
+</div>
+<h3 id="playtriggereffect">playTriggerEffect()<a class="headerlink" href="#playtriggereffect" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Return value</strong><ul>
+<li><em>none</em></li>
+</ul>
+</li>
+<li><strong>Function Description</strong><ul>
+<li>Starts playing a trigger effect.</li>
+</ul>
+</li>
+<li><strong>Example</strong></li>
+</ul>
+<div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Code</span> <span class="n">block</span> <span class="n">will</span> <span class="n">go</span> <span class="n">here</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;String&quot;</span><span class="p">)</span>
-</pre></div></li></ul><div class="admonition warning"><p class="admonition-title">Warning</p><p>Special notes can go in here if needed</p></div></details><h2 id="details-goes-with-version-1">Details (Goes with Version 1)<a class="headerlink" href="#details-goes-with-version-1" title="Permanent link">&para;</a></h2>
-<p>Details were going to go down down here for version 1.</p>
-<h3 id="getloopingeffectindex">getLoopingEffectIndex<a class="headerlink" href="#getloopingeffectindex" title="Permanent link">&para;</a></h3>
-<p>Function details and examples/warning/notes/etc</p>
-<h3 id="getloopingeffects">getLoopingEffects<a class="headerlink" href="#getloopingeffects" title="Permanent link">&para;</a></h3>
-<p>Function details and examples/warning/notes/etc</p>
-<h3 id="gettriggereffects">getTriggerEffects<a class="headerlink" href="#gettriggereffects" title="Permanent link">&para;</a></h3>
-<p>Function details and examples/warning/notes/etc</p>
-<h3 id="playloopingeffect">playLoopingEffect<a class="headerlink" href="#playloopingeffect" title="Permanent link">&para;</a></h3>
-<p>Function details and examples/warning/notes/etc</p>
-<h3 id="playtriggereffect">playTriggerEffect<a class="headerlink" href="#playtriggereffect" title="Permanent link">&para;</a></h3>
-<p>Function details and examples/warning/notes/etc</p>
+</pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Indexes for AssetBundles start at 0!</p>
+</div>
                 
                   
                 

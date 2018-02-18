@@ -172,53 +172,48 @@
         },
         {
             "location": "/assetbundle/",
-            "text": "AssetBundle is a special \nObject\n type that has access to assetbundle related functions like looping and trigger effects. Once you have a reference to an Object you can call these functions like this: \nobj.AssetBundle.getLoopingEffects()\n.\n\n\nFunctions\n\u00b6\n\n\nVersion 1\n\u00b6\n\n\n\n\n\n\n\n\nReturn\n\n\nFunction Name\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nint\n\n\ngetLoopingEffectIndex()\n\n\nReturns the index of the currently looping effect. \n?\n\n\n\n\n\n\nTable\n\n\ngetLoopingEffects()\n\n\nReturns a Table with the keys \"index\" and \"name\" for each looping effect.\n\n\n\n\n\n\nTable\n\n\ngetTriggerEffects()\n\n\nReturns a Table with the keys \"index\" and \"name\" for each trigger effect. \n?\n\n\n\n\n\n\nvoid\n\n\nplayLoopingEffect(int index)\n\n\nStarts playing a looping effect. Index starts at 0. \n?\n\n\n\n\n\n\nvoid\n\n\nplayTriggerEffect(int index)\n\n\nStarts playing a trigger effect. Index starts at 0. \n?\n\n\n\n\n\n\n\n\nVersion 2\n\u00b6\n\n\nThe first 2 are slightly different formatting examples. The other 3 copies are just to show what a collection of these looks like\n\n\ngetLoopingEffectIndex()\nReturn value\nnumber\nFunction Description\nReturns the index of the currently looping effect.\nExample\n\n    \n    \n#\nCode\n \nblock\n \nwill\n \ngo\n \nhere\n\n    \nprint\n(\n\"String\"\n)\n\n\nWarning\nSpecial notes can go in here if needed\ngetLoopingEffectIndex()\nReturn value\nnumber\nFunction Description\nReturns the index of the currently looping effect.\nExample\n\n    \n    \n#\nCode\n \nblock\n \nwill\n \ngo\n \nhere\n\n    \nprint\n(\n\"String\"\n)\n\n\nWarning\nSpecial notes can go in here if needed\ngetLoopingEffectIndex()\nReturn value\nnumber\nFunction Description\nReturns the index of the currently looping effect.\nExample\n\n    \n    \n#\nCode\n \nblock\n \nwill\n \ngo\n \nhere\n\n    \nprint\n(\n\"String\"\n)\n\n\nWarning\nSpecial notes can go in here if needed\ngetLoopingEffectIndex()\nReturn value\nnumber\nFunction Description\nReturns the index of the currently looping effect.\nExample\n\n    \n    \n#\nCode\n \nblock\n \nwill\n \ngo\n \nhere\n\n    \nprint\n(\n\"String\"\n)\n\n\nWarning\nSpecial notes can go in here if needed\ngetLoopingEffectIndex()\nReturn value\nnumber\nFunction Description\nReturns the index of the currently looping effect.\nExample\n\n    \n    \n#\nCode\n \nblock\n \nwill\n \ngo\n \nhere\n\n    \nprint\n(\n\"String\"\n)\n\n\nWarning\nSpecial notes can go in here if needed\nDetails (Goes with Version 1)\n\u00b6\n\n\nDetails were going to go down down here for version 1.\n\n\ngetLoopingEffectIndex\n\u00b6\n\n\nFunction details and examples/warning/notes/etc\n\n\ngetLoopingEffects\n\u00b6\n\n\nFunction details and examples/warning/notes/etc\n\n\ngetTriggerEffects\n\u00b6\n\n\nFunction details and examples/warning/notes/etc\n\n\nplayLoopingEffect\n\u00b6\n\n\nFunction details and examples/warning/notes/etc\n\n\nplayTriggerEffect\n\u00b6\n\n\nFunction details and examples/warning/notes/etc",
+            "text": "AssetBundle is a special \nObject\n type that has access to assetbundle related functions like looping and trigger effects. Once you have a reference to an Object you can call these functions like this: \nobj.AssetBundle.getLoopingEffects()\n.\n\n\nFunctions\n\u00b6\n\n\n\n\n\n\n\n\nFunction Name\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\ngetLoopingEffectIndex()\n\n\nReturns the index of the currently looping effect.\n\n\n\n\n\n\ngetLoopingEffects()\n\n\nReturns a Table with the keys \"index\" and \"name\" for each looping effect.\n\n\n\n\n\n\ngetTriggerEffects()\n\n\nReturns a Table with the keys \"index\" and \"name\" for each trigger effect.\n\n\n\n\n\n\nplayLoopingEffect(int index)\n\n\nStarts playing a looping effect. Index starts at 0.\n\n\n\n\n\n\nplayTriggerEffect(int index)\n\n\nStarts playing a trigger effect. Index starts at 0.\n\n\n\n\n\n\n\n\nVersion 2\n\u00b6\n\n\nThe first 2 are slightly different formatting examples. The other 3 copies are just to show what a collection of these looks like\n\n\nFunction Details (Goes with Version 1)\n\u00b6\n\n\ngetLoopingEffectIndex()\ngetLoopingEffectIndex()\n\u00b6\nReturn value\nnumber\nFunction Description\nReturns the index of the currently looping effect.\nExample\n\n    \n    \n#\nCode\n \nblock\n \nwill\n \ngo\n \nhere\n\n    \nprint\n(\n\"String\"\n)\n\n\nWarning\nSpecial notes can go in here if needed\ngetLoopingEffects()\ngetLoopingEffects()\n\u00b6\nReturn value\ntable\nFunction Description\nReturns a Table with the keys \"index\" and \"name\" for each looping effect.\nExample\n\n    \n    \n#\nCode\n \nblock\n \nwill\n \ngo\n \nhere\n\n    \nprint\n(\n\"String\"\n)\n\n\ngetTriggerEffects()\n\u00b6\n\n\n\n\nReturn value\n\n\ntable\n\n\n\n\n\n\nFunction Description\n\n\nReturns a Table with the keys \"index\" and \"name\" for each trigger effect.\n\n\n\n\n\n\nExample\n\n\n\n\n    \n#\nCode\n \nblock\n \nwill\n \ngo\n \nhere\n\n    \nprint\n(\n\"String\"\n)\n\n\n\n\n\nplayLoopingEffect()\n\u00b6\n\n\n\n\nReturn value\n\n\nnone\n\n\n\n\n\n\nFunction Description\n\n\nStarts playing a looping effect.\n\n\n\n\n\n\nExample\n\n\n\n\n    \n#\nCode\n \nblock\n \nwill\n \ngo\n \nhere\n\n    \nprint\n(\n\"String\"\n)\n\n\n\n\n\n\n\nNote\n\n\nIndexes for AssetBundles start at 0!\n\n\n\n\nplayTriggerEffect()\n\u00b6\n\n\n\n\nReturn value\n\n\nnone\n\n\n\n\n\n\nFunction Description\n\n\nStarts playing a trigger effect.\n\n\n\n\n\n\nExample\n\n\n\n\n    \n#\nCode\n \nblock\n \nwill\n \ngo\n \nhere\n\n    \nprint\n(\n\"String\"\n)\n\n\n\n\n\n\n\nNote\n\n\nIndexes for AssetBundles start at 0!",
             "title": "AssetBundle"
         },
         {
             "location": "/assetbundle/#functions",
-            "text": "",
+            "text": "Function Name  Description      getLoopingEffectIndex()  Returns the index of the currently looping effect.    getLoopingEffects()  Returns a Table with the keys \"index\" and \"name\" for each looping effect.    getTriggerEffects()  Returns a Table with the keys \"index\" and \"name\" for each trigger effect.    playLoopingEffect(int index)  Starts playing a looping effect. Index starts at 0.    playTriggerEffect(int index)  Starts playing a trigger effect. Index starts at 0.",
             "title": "Functions"
         },
         {
-            "location": "/assetbundle/#version-1",
-            "text": "Return  Function Name  Description      int  getLoopingEffectIndex()  Returns the index of the currently looping effect.  ?    Table  getLoopingEffects()  Returns a Table with the keys \"index\" and \"name\" for each looping effect.    Table  getTriggerEffects()  Returns a Table with the keys \"index\" and \"name\" for each trigger effect.  ?    void  playLoopingEffect(int index)  Starts playing a looping effect. Index starts at 0.  ?    void  playTriggerEffect(int index)  Starts playing a trigger effect. Index starts at 0.  ?",
-            "title": "Version 1"
-        },
-        {
             "location": "/assetbundle/#version-2",
-            "text": "The first 2 are slightly different formatting examples. The other 3 copies are just to show what a collection of these looks like  getLoopingEffectIndex() Return value number Function Description Returns the index of the currently looping effect. Example \n          # Code   block   will   go   here \n     print ( \"String\" )  Warning Special notes can go in here if needed getLoopingEffectIndex() Return value number Function Description Returns the index of the currently looping effect. Example \n          # Code   block   will   go   here \n     print ( \"String\" )  Warning Special notes can go in here if needed getLoopingEffectIndex() Return value number Function Description Returns the index of the currently looping effect. Example \n          # Code   block   will   go   here \n     print ( \"String\" )  Warning Special notes can go in here if needed getLoopingEffectIndex() Return value number Function Description Returns the index of the currently looping effect. Example \n          # Code   block   will   go   here \n     print ( \"String\" )  Warning Special notes can go in here if needed getLoopingEffectIndex() Return value number Function Description Returns the index of the currently looping effect. Example \n          # Code   block   will   go   here \n     print ( \"String\" )  Warning Special notes can go in here if needed",
+            "text": "The first 2 are slightly different formatting examples. The other 3 copies are just to show what a collection of these looks like",
             "title": "Version 2"
         },
         {
-            "location": "/assetbundle/#details-goes-with-version-1",
-            "text": "Details were going to go down down here for version 1.",
-            "title": "Details (Goes with Version 1)"
+            "location": "/assetbundle/#function-details-goes-with-version-1",
+            "text": "getLoopingEffectIndex()",
+            "title": "Function Details (Goes with Version 1)"
         },
         {
             "location": "/assetbundle/#getloopingeffectindex",
-            "text": "Function details and examples/warning/notes/etc",
-            "title": "getLoopingEffectIndex"
+            "text": "Return value number Function Description Returns the index of the currently looping effect. Example \n          # Code   block   will   go   here \n     print ( \"String\" )  Warning Special notes can go in here if needed getLoopingEffects()",
+            "title": "getLoopingEffectIndex()"
         },
         {
             "location": "/assetbundle/#getloopingeffects",
-            "text": "Function details and examples/warning/notes/etc",
-            "title": "getLoopingEffects"
+            "text": "Return value table Function Description Returns a Table with the keys \"index\" and \"name\" for each looping effect. Example \n          # Code   block   will   go   here \n     print ( \"String\" )",
+            "title": "getLoopingEffects()"
         },
         {
             "location": "/assetbundle/#gettriggereffects",
-            "text": "Function details and examples/warning/notes/etc",
-            "title": "getTriggerEffects"
+            "text": "Return value  table    Function Description  Returns a Table with the keys \"index\" and \"name\" for each trigger effect.    Example        # Code   block   will   go   here \n     print ( \"String\" )",
+            "title": "getTriggerEffects()"
         },
         {
             "location": "/assetbundle/#playloopingeffect",
-            "text": "Function details and examples/warning/notes/etc",
-            "title": "playLoopingEffect"
+            "text": "Return value  none    Function Description  Starts playing a looping effect.    Example        # Code   block   will   go   here \n     print ( \"String\" )    Note  Indexes for AssetBundles start at 0!",
+            "title": "playLoopingEffect()"
         },
         {
             "location": "/assetbundle/#playtriggereffect",
-            "text": "Function details and examples/warning/notes/etc",
-            "title": "playTriggerEffect"
+            "text": "Return value  none    Function Description  Starts playing a trigger effect.    Example        # Code   block   will   go   here \n     print ( \"String\" )    Note  Indexes for AssetBundles start at 0!",
+            "title": "playTriggerEffect()"
         }
     ]
 }
