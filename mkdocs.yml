@@ -25,13 +25,14 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - toc:
+      permalink: true
 pages:
   - Getting Started:
     - Introduction: index.md
     - Overview: overview.md
     - Atom: atom.md
+    - External Editor API: externaleditorapi.md
   - Lua API:
     - Introduction: luaapi.md
     - AssetBundle : assetbundle.md
-  - tempdemo:
-    - About: about.md
