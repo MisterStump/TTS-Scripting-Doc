@@ -9,8 +9,3 @@ html body div.md-container div.md-main__inner div.md-sidebar--primary {
 html body div.md-container table tr>td {
     white-space: nowrap;
 }
-
-html body div.md-container table tr>td .return {
-    font-size: 1.0em;
-    font-family: monospace;
-}

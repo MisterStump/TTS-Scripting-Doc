@@ -4,11 +4,11 @@ AssetBundle is a special [Object](object) type that has access to assetbundle re
 
 Function Name | Description
 -- | --
-    <span class="return">number</span> getLoopingEffectIndex()  |  [Returns the index of the currently looping effect.](#getloopingeffectindex)
-    getLoopingEffects()  |  [Returns a Table with the keys "index" and "name" for each looping effect.](#getloopingeffects)
-    getTriggerEffects()  |  [Returns a Table with the keys "index" and "name" for each trigger effect.](#gettriggereffects)
-    playLoopingEffect(int index)  |  [Starts playing a looping effect. Index starts at 0.](#playloopingeffect)
-    playTriggerEffect(int index)  |  [Starts playing a trigger effect. Index starts at 0.](#playtriggereffect)
+getLoopingEffectIndex()  |  [Returns the index of the currently looping effect.](#getloopingeffectindex)
+getLoopingEffects()  |  [Returns a Table with the keys "index" and "name" for each looping effect.](#getloopingeffects)
+getTriggerEffects()  |  [Returns a Table with the keys "index" and "name" for each trigger effect.](#gettriggereffects)
+playLoopingEffect(int index)  |  [Starts playing a looping effect. Index starts at 0.](#playloopingeffect)
+playTriggerEffect(int index)  |  [Starts playing a trigger effect. Index starts at 0.](#playtriggereffect)
 
 
 ###Version 2
