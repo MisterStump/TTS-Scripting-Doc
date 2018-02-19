@@ -2,8 +2,8 @@ site_name: Tabletop Simulator Scripting Documentation
 theme:
   name: 'material'
   palette:
-    primary: 'blue grey'
-    accent: 'red'
+    primary: 'orange'
+    accent: 'orange'
   feature:
     tabs: true
 extra_css:
