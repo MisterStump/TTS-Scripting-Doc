@@ -63,7 +63,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-primary="orange" data-md-color-accent="orange">
   
     <svg class="md-svg">
       <defs>
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#functions" tabindex="1" class="md-skip">
+      <a href="#function-summary" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -338,9 +338,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#functions" title="Functions" class="md-nav__link">
-    Functions
+  <a href="#function-summary" title="Function Summary" class="md-nav__link">
+    Function Summary
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#object-functions" title="Object Functions" class="md-nav__link">
+    Object Functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -427,9 +440,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#functions" title="Functions" class="md-nav__link">
-    Functions
+  <a href="#function-summary" title="Function Summary" class="md-nav__link">
+    Function Summary
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#object-functions" title="Object Functions" class="md-nav__link">
+    Object Functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -501,7 +527,8 @@
                   <h1>AssetBundle</h1>
                 
                 <p>AssetBundle is a special <a href="../object">Object</a> type that has access to assetbundle related functions like looping and trigger effects. Once you have a reference to an Object you can call these functions like this: <code class="codehilite">obj.AssetBundle.getLoopingEffects()</code>.</p>
-<h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h3>
+<h2 id="function-summary">Function Summary<a class="headerlink" href="#function-summary" title="Permanent link">&para;</a></h2>
+<h3 id="object-functions">Object Functions<a class="headerlink" href="#object-functions" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -566,9 +593,11 @@
 <hr />
 <h3 id="playloopingeffect">playLoopingEffect()<a class="headerlink" href="#playloopingeffect" title="Permanent link">&para;</a></h3>
 <p>Starts playing a looping effect. Indexes for AssetBundles start at 0.</p>
-<div class="admonition abstract">
-<p class="admonition-title">Parameters for playLoopingEffect(int index)</p>
-<p><strong>int index</strong>: Numeric index for the trigger.</p>
+<div class="admonition warning">
+<p class="admonition-title">playLoopingEffect(int index)</p>
+<ul>
+<li><strong>int index</strong>: Numeric index for the effect.</li>
+</ul>
 </div>
 <div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">usage</span>
     <span class="n">self</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">playLoopingEffect</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -577,9 +606,11 @@
 <hr />
 <h3 id="playtriggereffect">playTriggerEffect()<a class="headerlink" href="#playtriggereffect" title="Permanent link">&para;</a></h3>
 <p>Starts playing a trigger effect. Indexes for AssetBundles start at 0.</p>
-<div class="admonition abstract">
-<p class="admonition-title">Parameters for playTriggerEffect(int index)</p>
-<p><strong>int index</strong>: Numeric index for the trigger.</p>
+<div class="admonition warning">
+<p class="admonition-title">playTriggerEffect(int index)</p>
+<ul>
+<li><strong>int index</strong>: Numeric index for the effect.</li>
+</ul>
 </div>
 <div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">usage</span>
     <span class="n">self</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">playTriggerEffect</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
