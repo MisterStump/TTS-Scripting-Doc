@@ -523,11 +523,11 @@
 <td><a href="#gettriggereffects">Returns a Table with the keys "index" and "name" for each trigger effect.</a></td>
 </tr>
 <tr>
-<td>playLoopingEffect(number index)</td>
+<td>playLoopingEffect(int index)</td>
 <td><a href="#playloopingeffect">Starts playing a looping effect. Index starts at 0.</a></td>
 </tr>
 <tr>
-<td>playTriggerEffect(number index)</td>
+<td>playTriggerEffect(int index)</td>
 <td><a href="#playtriggereffect">Starts playing a trigger effect. Index starts at 0.</a></td>
 </tr>
 </tbody>
@@ -535,17 +535,15 @@
 <hr />
 <h2 id="function-details">Function Details<a class="headerlink" href="#function-details" title="Permanent link">&para;</a></h2>
 <h3 id="getloopingeffectindex">getLoopingEffectIndex()<a class="headerlink" href="#getloopingeffectindex" title="Permanent link">&para;</a></h3>
-<p>Returns the <code class="codehilite">number</code> of the index of the currently looping effect.</p>
-<div class="codehilite"><pre><span></span>    <span class="n">obj</span> <span class="o">=</span> <span class="n">getObjectFromGUID</span><span class="p">(</span><span class="s2">&quot;######&quot;</span><span class="p">)</span>
-    <span class="n">index</span> <span class="o">=</span> <span class="n">obj</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">getLoopingEffectIndex</span><span class="p">()</span>
+<p>Returns the <code class="codehilite">int</code> of the index of the currently looping effect.</p>
+<div class="codehilite"><pre><span></span>    <span class="n">index</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">getLoopingEffectIndex</span><span class="p">()</span>
 </pre></div>
 
 <hr />
 <h3 id="getloopingeffects">getLoopingEffects()<a class="headerlink" href="#getloopingeffects" title="Permanent link">&para;</a></h3>
 <p>Returns a <code class="codehilite">table</code> with the keys "index" and "name" for each looping effect.</p>
 <p><div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">usage</span>
-    <span class="n">obj</span> <span class="o">=</span> <span class="n">getObjectFromGUID</span><span class="p">(</span><span class="s2">&quot;######&quot;</span><span class="p">)</span>
-    <span class="n">effectTable</span> <span class="o">=</span> <span class="n">obj</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">getLoopingEffects</span><span class="p">()</span>
+    <span class="n">effectTable</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">getLoopingEffects</span><span class="p">()</span>
 </pre></div>
 <div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">returned</span> <span class="n">table</span>
     <span class="p">{</span>
@@ -557,8 +555,7 @@
 <h3 id="gettriggereffects">getTriggerEffects()<a class="headerlink" href="#gettriggereffects" title="Permanent link">&para;</a></h3>
 <p>Returns a <code class="codehilite">table</code> with the keys "index" and "name" for each trigger effect.</p>
 <p><div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">usage</span>
-    <span class="n">obj</span> <span class="o">=</span> <span class="n">getObjectFromGUID</span><span class="p">(</span><span class="s2">&quot;######&quot;</span><span class="p">)</span>
-    <span class="n">effectTable</span> <span class="o">=</span> <span class="n">obj</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">getTriggerEffects</span><span class="p">()</span>
+    <span class="n">effectTable</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">getTriggerEffects</span><span class="p">()</span>
 </pre></div>
 <div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">returned</span> <span class="n">table</span>
     <span class="p">{</span>
@@ -569,17 +566,23 @@
 <hr />
 <h3 id="playloopingeffect">playLoopingEffect()<a class="headerlink" href="#playloopingeffect" title="Permanent link">&para;</a></h3>
 <p>Starts playing a looping effect. Indexes for AssetBundles start at 0.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Parameters for playLoopingEffect(int index)</p>
+<p><strong>int index</strong>: Numeric index for the trigger.</p>
+</div>
 <div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">usage</span>
-    <span class="n">obj</span> <span class="o">=</span> <span class="n">getObjectFromGUID</span><span class="p">(</span><span class="s2">&quot;######&quot;</span><span class="p">)</span>
-    <span class="n">obj</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">playLoopingEffect</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">playLoopingEffect</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
 <hr />
 <h3 id="playtriggereffect">playTriggerEffect()<a class="headerlink" href="#playtriggereffect" title="Permanent link">&para;</a></h3>
 <p>Starts playing a trigger effect. Indexes for AssetBundles start at 0.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Parameters for playTriggerEffect(int index)</p>
+<p><strong>int index</strong>: Numeric index for the trigger.</p>
+</div>
 <div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">usage</span>
-    <span class="n">obj</span> <span class="o">=</span> <span class="n">getObjectFromGUID</span><span class="p">(</span><span class="s2">&quot;######&quot;</span><span class="p">)</span>
-    <span class="n">obj</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">playTriggerEffect</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">playTriggerEffect</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
 <hr />
