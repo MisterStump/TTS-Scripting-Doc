@@ -3,7 +3,7 @@ theme:
   name: 'material'
   palette:
     primary: 'orange'
-    accent: 'orange'
+    accent: 'deep orange'
   feature:
     tabs: true
 extra_css:
@@ -38,3 +38,4 @@ pages:
   - Lua API:
     - Introduction: luaapi.md
     - AssetBundle : assetbundle.md
+    - API: api.md

@@ -32,11 +32,11 @@ Returns the `int` of the index of the currently looping effect.
 Returns a `table` with the keys "index" and "name" for each looping effect.
 
 ``` Lua
-	#Example usage
+	--Example usage
 	effectTable = self.AssetBundle.getLoopingEffects()
 ```
 ``` Lua
-	#Example returned table
+	--Example returned table
 	{
 		{index=0, name="Effect Name 1"},
 		{index=1, name="Effect Name 2"},
@@ -52,11 +52,11 @@ Returns a `table` with the keys "index" and "name" for each looping effect.
 Returns a `table` with the keys "index" and "name" for each trigger effect.
 
 ``` Lua
-	#Example usage
+	--Example usage
 	effectTable = self.AssetBundle.getTriggerEffects()
 ```
 ``` Lua
-	#Example returned table
+	--Example returned table
 	{
 		{index=0, name="Effect Name 1"},
 		{index=1, name="Effect Name 2"},
@@ -74,7 +74,6 @@ Starts playing a looping effect. Indexes for AssetBundles start at 0.
 	* **int index**: Numeric index for the effect.
 
 ``` Lua
-	#Example usage
 	self.AssetBundle.playLoopingEffect(0)
 ```
 
@@ -90,7 +89,6 @@ Starts playing a trigger effect. Indexes for AssetBundles start at 0.
 
 
 ``` Lua
-	#Example usage
 	self.AssetBundle.playTriggerEffect(0)
 ```
 
