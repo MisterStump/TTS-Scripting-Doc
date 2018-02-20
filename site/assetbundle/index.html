@@ -63,7 +63,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="orange" data-md-color-accent="orange">
+    <body dir="ltr" data-md-color-primary="orange" data-md-color-accent="deep-orange">
   
     <svg class="md-svg">
       <defs>
@@ -416,6 +416,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/" title="API" class="md-nav__link">
+      API
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -569,10 +581,10 @@
 <hr />
 <h3 id="getloopingeffects">getLoopingEffects()<a class="headerlink" href="#getloopingeffects" title="Permanent link">&para;</a></h3>
 <p>Returns a <code class="codehilite">table</code> with the keys "index" and "name" for each looping effect.</p>
-<p><div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">usage</span>
+<p><div class="codehilite"><pre><span></span>    <span class="c1">--Example usage</span>
     <span class="n">effectTable</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">getLoopingEffects</span><span class="p">()</span>
 </pre></div>
-<div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">returned</span> <span class="n">table</span>
+<div class="codehilite"><pre><span></span>    <span class="c1">--Example returned table</span>
     <span class="p">{</span>
         <span class="p">{</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Effect Name 1&quot;</span><span class="p">},</span>
         <span class="p">{</span><span class="n">index</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Effect Name 2&quot;</span><span class="p">},</span>
@@ -581,10 +593,10 @@
 <hr />
 <h3 id="gettriggereffects">getTriggerEffects()<a class="headerlink" href="#gettriggereffects" title="Permanent link">&para;</a></h3>
 <p>Returns a <code class="codehilite">table</code> with the keys "index" and "name" for each trigger effect.</p>
-<p><div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">usage</span>
+<p><div class="codehilite"><pre><span></span>    <span class="c1">--Example usage</span>
     <span class="n">effectTable</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">getTriggerEffects</span><span class="p">()</span>
 </pre></div>
-<div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">returned</span> <span class="n">table</span>
+<div class="codehilite"><pre><span></span>    <span class="c1">--Example returned table</span>
     <span class="p">{</span>
         <span class="p">{</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Effect Name 1&quot;</span><span class="p">},</span>
         <span class="p">{</span><span class="n">index</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Effect Name 2&quot;</span><span class="p">},</span>
@@ -599,8 +611,7 @@
 <li><strong>int index</strong>: Numeric index for the effect.</li>
 </ul>
 </div>
-<div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">usage</span>
-    <span class="n">self</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">playLoopingEffect</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span>    <span class="n">self</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">playLoopingEffect</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
 <hr />
@@ -612,8 +623,7 @@
 <li><strong>int index</strong>: Numeric index for the effect.</li>
 </ul>
 </div>
-<div class="codehilite"><pre><span></span>    <span class="o">#</span><span class="n">Example</span> <span class="n">usage</span>
-    <span class="n">self</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">playTriggerEffect</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span>    <span class="n">self</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">playTriggerEffect</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
 <hr />
@@ -649,6 +659,20 @@
             </div>
           </a>
         
+        
+          <a href="../api/" title="API" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                API
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
