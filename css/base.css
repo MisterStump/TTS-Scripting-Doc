@@ -10,6 +10,6 @@ html body div.md-container div.md-main__inner div.md-sidebar--primary {
 }
 */
 
-html body div.md-container table tr>td {
+html body div.md-container table tr td:first-child {
     white-space: nowrap;
 }
