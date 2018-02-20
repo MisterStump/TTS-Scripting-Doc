@@ -1,3 +1,6 @@
+/* 
+Sets the size of the left column
+
 html body div.md-container div.md-main__inner div.md-content {
     margin-left: 16rem;
 }
@@ -5,6 +8,7 @@ html body div.md-container div.md-main__inner div.md-content {
 html body div.md-container div.md-main__inner div.md-sidebar--primary {
     width: 16rem;
 }
+*/
 
 html body div.md-container table tr>td {
     white-space: nowrap;
