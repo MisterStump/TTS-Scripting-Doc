@@ -31,7 +31,7 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../img/pawn_outlined.png">
+      <link rel="shortcut icon" href="../img/TSIcon.png">
       <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.6.2">
     
     
@@ -86,7 +86,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href=".." title="Tabletop Simulator Scripting Documentation" class="md-header-nav__button md-logo">
           
-            <img src="../img/pawn_outlined.png" width="24" height="24">
+            <img src="../img/TSIcon.png" width="24" height="24">
           
         </a>
       </div>
@@ -196,7 +196,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        <img src="../img/pawn_outlined.png" width="24" height="24">
+        <img src="../img/TSIcon.png" width="24" height="24">
       
     </span>
     Tabletop Simulator Scripting Documentation
@@ -704,9 +704,13 @@
 <h2 id="function-details">Function Details<a class="headerlink" href="#function-details" title="Permanent link">&para;</a></h2>
 <h3 id="onchat">onChat(...)<a class="headerlink" href="#onchat" title="Permanent link">&para;</a></h3>
 <p>This function is called when a message is sent through the in-game chat. It does not trigger when global chat messages are sent. Using <code class="codehilite"><span class="kr">return</span> <span class="kc">false</span></code> inside of this function prevents the chat message which triggered it to be supressed.</p>
-<p>!!!info onChat(String message, Player)
-    * <strong>String message</strong>: A String containing the chat message which triggered the function.
-    * <strong>Player</strong>: A reference to the Player which sent the chat message.</p>
+<div class="admonition info">
+<p class="admonition-title">onChat(String message, Player)</p>
+<ul>
+<li><strong>String message</strong>: A String containing the chat message which triggered the function.</li>
+<li><strong>Player</strong>: A reference to the Player which sent the chat message.</li>
+</ul>
+</div>
 <div class="codehilite"><pre><span></span>    <span class="kr">function</span> <span class="nf">onChat</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">player</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="n">color</span><span class="p">)</span>
