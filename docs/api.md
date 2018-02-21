@@ -51,9 +51,9 @@ onFixedUpdate() | Called **every physics tick** (90 times a second). This is a f
 
 This function is called when a message is sent through the in-game chat. It does not trigger when global chat messages are sent. Using `#!lua return false` inside of this function prevents the chat message which triggered it to be supressed.
 
-!!!info onChat(String message, Player)
-	* **String message**: A String containing the chat message which triggered the function.
-	* **Player**: A reference to the Player which sent the chat message.
+!!!info "onChat(String message, Player)"
+    * **String message**: A String containing the chat message which triggered the function.
+    * **Player**: A reference to the Player which sent the chat message.
 
 ``` Lua
     function onChat(message, player)
