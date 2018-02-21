@@ -9,8 +9,8 @@ Function Name | Description
 getLoopingEffectIndex()  |  [Returns the index of the currently looping effect.](#getloopingeffectindex)
 getLoopingEffects()  |  [Returns a Table with the keys "index" and "name" for each looping effect.](#getloopingeffects)
 getTriggerEffects()  |  [Returns a Table with the keys "index" and "name" for each trigger effect.](#gettriggereffects)
-playLoopingEffect(int index)  |  [Starts playing a looping effect. Index starts at 0.](#playloopingeffect)
-playTriggerEffect(int index)  |  [Starts playing a trigger effect. Index starts at 0.](#playtriggereffect)
+playLoopingEffect(Int index)  |  [Starts playing a looping effect. Index starts at 0.](#playloopingeffect)
+playTriggerEffect(Int index)  |  [Starts playing a trigger effect. Index starts at 0.](#playtriggereffect)
 
 ---
 
@@ -70,8 +70,8 @@ Returns a `table` with the keys "index" and "name" for each trigger effect.
 
 Starts playing a looping effect. Indexes for AssetBundles start at 0.
 
-!!!warning "playLoopingEffect(int index)"
-	* **int index**: Numeric index for the effect.
+!!!info "playLoopingEffect(Int index)"
+	* **Int index**: Numeric index for the effect.
 
 ``` Lua
 	self.AssetBundle.playLoopingEffect(0)
@@ -84,8 +84,8 @@ Starts playing a looping effect. Indexes for AssetBundles start at 0.
 
 Starts playing a trigger effect. Indexes for AssetBundles start at 0.
 
-!!!warning "playTriggerEffect(int index)"
-	* **int index**: Numeric index for the effect.
+!!!info "playTriggerEffect(Int index)"
+	* **Int index**: Numeric index for the effect.
 
 
 ``` Lua
