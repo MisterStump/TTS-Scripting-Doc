@@ -63,7 +63,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="orange" data-md-color-accent="deep-orange">
+    <body dir="ltr" data-md-color-primary="cyan" data-md-color-accent="cyan">
   
     <svg class="md-svg">
       <defs>
@@ -425,6 +425,41 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#oncollisionstay" title="onCollisionStay(...)" class="md-nav__link">
+    onCollisionStay(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ondestroy" title="onDestroy()" class="md-nav__link">
+    onDestroy()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ondrop" title="onDrop(...)" class="md-nav__link">
+    onDrop(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onexternalmessage" title="onExternalMessage(...)" class="md-nav__link">
+    onExternalMessage(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onfixedupdate" title="onFixedUpdate()" class="md-nav__link">
+    onFixedUpdate()
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -540,6 +575,41 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#oncollisionstay" title="onCollisionStay(...)" class="md-nav__link">
+    onCollisionStay(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ondestroy" title="onDestroy()" class="md-nav__link">
+    onDestroy()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ondrop" title="onDrop(...)" class="md-nav__link">
+    onDrop(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onexternalmessage" title="onExternalMessage(...)" class="md-nav__link">
+    onExternalMessage(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onfixedupdate" title="onFixedUpdate()" class="md-nav__link">
+    onFixedUpdate()
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -597,22 +667,46 @@
 </thead>
 <tbody>
 <tr>
-<td>onChat(string message, player)</td>
-<td><a href="#onchat">This function is called, if it exists in your script, when a player chats. <code class="codehilite">return false</code> in this event to block the message.</a></td>
+<td>onChat(String message, Player)</td>
+<td>Called when a chat message is sent in game chat. <a href="#onchat">&#8263;</a></td>
 </tr>
 <tr>
-<td>onCollisionEnter(table collision_info)</td>
-<td><a href="#oncollisionenter">This function is called, if it exists in your script, when this object collides with another object. The Global script does not have this event since it is not an object which can collide with other objects.</a></td>
+<td>onCollisionEnter(Table collision_info)</td>
+<td>Called when an Object starts colliding with the Object the function is on. Does not work in Global. <a href="#oncollisionenter">&#8263;</a></td>
 </tr>
 <tr>
-<td>onCollisionExit(table collision_info)</td>
-<td><a href="#oncollisionexit">This function is called, if it exists in your script, when this object stops touching another object. The Global Script does not have this event since it does not have a physical representation that can collide.</a></td>
+<td>onCollisionExit(Table collision_info)</td>
+<td>Called when an Object stops colliding with the Object the function is on. Does not work in Global. <a href="#oncollisionexit">&#8263;</a></td>
+</tr>
+<tr>
+<td>onCollisionStay(Table collision_info)</td>
+<td>Called <strong>every frame</strong> that an Object is colliding with the Object this function is on. Does not work in Global. <a href="#oncollisionstay">&#8263;</a></td>
+</tr>
+<tr>
+<td>onDestroy()</td>
+<td>Called when an Object is destroyed. Does not work in Global. <a href="#ondestroy">&#8263;</a></td>
+</tr>
+<tr>
+<td>onDrop(String <a href="../player">player_color</a>)</td>
+<td>Called when a player releases an Object after picking it up.  Does not work in Global. <a href="#ondrop">&#8263;</a></td>
+</tr>
+<tr>
+<td>onExternalMessage(Table)</td>
+<td>Called when an external script editor (like <a href="../atom">Atom</a>) sends a message back to the game. Used for custom editor functionality. <a href="#onexternalmessage">&#8263;</a></td>
+</tr>
+<tr>
+<td>onFixedUpdate()</td>
+<td>Called <strong>every physics tick</strong> (90 times a second). This is a frame independent onUpdate(). <a href="#onfixedupdate">&#8263;</a></td>
 </tr>
 </tbody>
 </table>
+<hr />
 <h2 id="function-details">Function Details<a class="headerlink" href="#function-details" title="Permanent link">&para;</a></h2>
 <h3 id="onchat">onChat(...)<a class="headerlink" href="#onchat" title="Permanent link">&para;</a></h3>
-<p>This function is called, if it exists in your script, when a player chats. <code class="codehilite">return false</code> in this event to block the message.</p>
+<p>This function is called when a message is sent through the in-game chat. It does not trigger when global chat messages are sent. Using <code class="codehilite"><span class="kr">return</span> <span class="kc">false</span></code> inside of this function prevents the chat message which triggered it to be supressed.</p>
+<p>!!!info onChat(String message, Player)
+    * <strong>String message</strong>: A String containing the chat message which triggered the function.
+    * <strong>Player</strong>: A reference to the Player which sent the chat message.</p>
 <div class="codehilite"><pre><span></span>    <span class="kr">function</span> <span class="nf">onChat</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">player</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="n">color</span><span class="p">)</span>
@@ -621,14 +715,14 @@
 
 <hr />
 <h3 id="oncollisionenter">onCollisionEnter(...)<a class="headerlink" href="#oncollisionenter" title="Permanent link">&para;</a></h3>
-<p>onCollisionEnter(table collision_info) | This function is called, if it exists in your script, when this <a href="../object">object</a> collides with another object. The Global script does not have this event since it is not an object which can collide with other objects.</p>
-<div class="admonition warning">
-<p class="admonition-title">onCollisionEnter(table collision_info)</p>
+<p>This function is called when an Object starts colliding with the Object the function is on. Does not work in Global.</p>
+<div class="admonition info">
+<p class="admonition-title">onCollisionEnter(Table collision_info)</p>
 <ul>
-<li><strong>table collision_info</strong>: A table containing data on colliding object.<ul>
-<li><strong>collision_info.<em>collision_object</em></strong> = <a href="../object">object</a> collision_object</li>
-<li><strong>collision_info.<em>contact_points</em></strong> = table contact_points <span class="critic comment">This is an array (table) of tables. Each contact point is a vector.</span></li>
-<li><strong>collision_info.<em>relative_velocity</em></strong> = <a href="../vector">vector</a></li>
+<li><strong>table collision_info</strong>: A Table containing data on colliding object.<ul>
+<li><strong>collision_info.<em>collision_object</em></strong> = <a href="../object">Object</a> collision_object</li>
+<li><strong>collision_info.<em>contact_points</em></strong> = Table contact_points <span class="critic comment">This is an array (table) of tables. Each contact point is a vector.</span></li>
+<li><strong>collision_info.<em>relative_velocity</em></strong> = <a href="../vector">Vector</a></li>
 </ul>
 </li>
 </ul>
@@ -640,25 +734,23 @@
 </pre></div>
 <div class="codehilite"><pre><span></span>    <span class="c1">--Example returned table</span>
     <span class="p">{</span>
-        <span class="p">{</span>
-            <span class="n">collision_object</span> <span class="o">=</span> <span class="n">objectReference</span>
-            <span class="n">contact_points</span> <span class="o">=</span> <span class="p">{</span>
-                <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">},</span>
-            <span class="p">}</span>
-            <span class="n">relative_velocity</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">}</span>
+        <span class="n">collision_object</span> <span class="o">=</span> <span class="n">objectReference</span>
+        <span class="n">contact_points</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">},</span>
         <span class="p">}</span>
+        <span class="n">relative_velocity</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">}</span>
     <span class="p">}</span>
 </pre></div></p>
 <hr />
 <h3 id="oncollisionexit">onCollisionExit(...)<a class="headerlink" href="#oncollisionexit" title="Permanent link">&para;</a></h3>
-<p>This function is called, if it exists in your script, when this object stops touching another <a href="../object">object</a>. The Global Script does not this event since it does not have a physical representation that can collide.</p>
-<div class="admonition warning">
-<p class="admonition-title">onCollisionExit(table collision_info)</p>
+<p>This function is called when an Object stops colliding with the Object the function is on. Does not work in Global.</p>
+<div class="admonition info">
+<p class="admonition-title">onCollisionExit(Table collision_info)</p>
 <ul>
-<li><strong>table collision_info</strong>: A table containing data on exit-colliding object.<ul>
-<li><strong>collision_info.<em>collision_object</em></strong> = <a href="../object">object</a> collision_object</li>
-<li><strong>collision_info.<em>contact_points</em></strong> = table contact_points <span class="critic comment">This is an array (table) of tables. Each contact point is a vector.</span></li>
-<li><strong>collision_info.<em>relative_velocity</em></strong> = <a href="../vector">vector</a></li>
+<li><strong>table collision_info</strong>: A Table containing data on colliding object.<ul>
+<li><strong>collision_info.<em>collision_object</em></strong> = <a href="../object">Object</a> collision_object</li>
+<li><strong>collision_info.<em>contact_points</em></strong> = Table contact_points <span class="critic comment">This is an array (table) of tables. Each contact point is a vector.</span></li>
+<li><strong>collision_info.<em>relative_velocity</em></strong> = <a href="../vector">Vector</a></li>
 </ul>
 </li>
 </ul>
@@ -670,16 +762,92 @@
 </pre></div>
 <div class="codehilite"><pre><span></span>    <span class="c1">--Example returned table</span>
     <span class="p">{</span>
-        <span class="p">{</span>
-            <span class="n">collision_object</span> <span class="o">=</span> <span class="n">objectReference</span>
-            <span class="n">contact_points</span> <span class="o">=</span> <span class="p">{</span>
-                <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">},</span>
-            <span class="p">}</span>
-            <span class="n">relative_velocity</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">}</span>
+        <span class="n">collision_object</span> <span class="o">=</span> <span class="n">objectReference</span>
+        <span class="n">contact_points</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">},</span>
         <span class="p">}</span>
+        <span class="n">relative_velocity</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">}</span>
     <span class="p">}</span>
 </pre></div></p>
 <hr />
+<h3 id="oncollisionstay">onCollisionStay(...)<a class="headerlink" href="#oncollisionstay" title="Permanent link">&para;</a></h3>
+<p>This function is called <strong>every frame</strong> that an Object is colliding with the Object this function is on. Does not work in Global.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is a very expensive function and can easily slow/crash your game if missused. Use with caution.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">onCollisionStay(Table collision_info)</p>
+<ul>
+<li><strong>table collision_info</strong>: A Table containing data on colliding object.<ul>
+<li><strong>collision_info.<em>collision_object</em></strong> = <a href="../object">Object</a> collision_object</li>
+<li><strong>collision_info.<em>contact_points</em></strong> = Table contact_points <span class="critic comment">This is an array (table) of tables. Each contact point is a vector.</span></li>
+<li><strong>collision_info.<em>relative_velocity</em></strong> = <a href="../vector">Vector</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><div class="codehilite"><pre><span></span>    <span class="c1">--Example Usage</span>
+    <span class="kr">function</span> <span class="nf">onCollisionStay</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="n">collision_object</span><span class="p">)</span>
+    <span class="kr">end</span>
+</pre></div>
+<div class="codehilite"><pre><span></span>    <span class="c1">--Example returned table</span>
+    <span class="p">{</span>
+        <span class="n">collision_object</span> <span class="o">=</span> <span class="n">objectReference</span>
+        <span class="n">contact_points</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">},</span>
+        <span class="p">}</span>
+        <span class="n">relative_velocity</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">}</span>
+    <span class="p">}</span>
+</pre></div></p>
+<hr />
+<h3 id="ondestroy">onDestroy()<a class="headerlink" href="#ondestroy" title="Permanent link">&para;</a></h3>
+<p>This function is called when an <a href="../object">Object</a> is destroyed. When <code class="codehilite">onDestroy()</code> is called, the Object has one frame left to live but its recommended to avoid using it as a reference here. This event fires immediately after <a href="#onobjectdestroy">onObjectDestroy()</a> but their lifetime is the same final frame. Does not work in Global.</p>
+<div class="codehilite"><pre><span></span>    <span class="kr">function</span> <span class="nf">onDestroy</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This object was destroyed!&quot;</span><span class="p">)</span>
+    <span class="kr">end</span>
+</pre></div>
+
+<hr />
+<h3 id="ondrop">onDrop(...)<a class="headerlink" href="#ondrop" title="Permanent link">&para;</a></h3>
+<p>This function is called when this <a href="../object">Object</a> is dropped. Does not work in Global.</p>
+<div class="admonition info">
+<p class="admonition-title">onDrop(String player_color)</p>
+<ul>
+<li><strong>String player_color</strong>: A String of a <a href="../player">Player</a>'s color.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>    <span class="kr">function</span> <span class="nf">onDrop</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+    <span class="kr">end</span>
+</pre></div>
+
+<hr />
+<h3 id="onexternalmessage">onExternalMessage(...)<a class="headerlink" href="#onexternalmessage" title="Permanent link">&para;</a></h3>
+<p>This function is called when an external script editor (like <a href="../atom">Atom</a>) sends a message back to the game. Used for custom editor functionality.</p>
+<div class="admonition info">
+<p class="admonition-title">onExternalMessage(Table)</p>
+<ul>
+<li><strong>Table</strong>: The data returned by the external editor into the game.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>    <span class="kr">function</span> <span class="nf">onExternalMessage</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;External message received&quot;</span><span class="p">)</span>
+    <span class="kr">end</span>
+</pre></div>
+
+<hr />
+<h3 id="onfixedupdate">onFixedUpdate()<a class="headerlink" href="#onfixedupdate" title="Permanent link">&para;</a></h3>
+<p>Called <strong>every physics tick</strong> (90 times a second). This is a frame independent onUpdate(). <a href="#onfixedupdate">&#8263;</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is a very expensive function and can easily slow/crash your game if missused. Use with caution.</p>
+</div>
+<div class="codehilite"><pre><span></span>    <span class="kr">function</span> <span class="nf">onFixedUpdate</span><span class="p">()</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">addTorque</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="kr">end</span>
+</pre></div>
                 
                   
                 
