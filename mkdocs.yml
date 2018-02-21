@@ -6,6 +6,8 @@ theme:
     accent: 'cyan'
   feature:
     tabs: true
+  logo: 'img/pawn_outlined.png'
+  favicon: 'img/pawn_outlined.png'
 extra_css:
   - css/base.css
 markdown_extensions:
