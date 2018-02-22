@@ -2,12 +2,12 @@ site_name: Tabletop Simulator Scripting Documentation
 theme:
   name: 'material'
   palette:
-    primary: 'cyan'
-    accent: 'cyan'
+    primary: 'red'
+    accent: 'red'
   feature:
     tabs: true
-  logo: 'img/TSIcon.png'
-  favicon: 'img/TSIcon.png'
+  logo: 'img/Icon-Dice.png'
+  favicon: 'img/Icon-Dice.png'
 extra_css:
   - css/base.css
 markdown_extensions:
