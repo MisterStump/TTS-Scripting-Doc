@@ -35,7 +35,7 @@ onExternalMessage(Table) | Called when an external script editor (like [Atom](at
 onFixedUpdate() | Called **every physics tick** (90 times a second). This is a frame independent onUpdate(). [&#8263;](#onfixedupdate)
 onLoad(String save_state) | Called when a game save is finished loading every Object. It is where most setup code will go. [&#8263;](#onload)
 onObjectDestroy(Object dying_object) | Called whenever any object is destroyed. [&#8263;](#onobjectdestroy)
-onObjectDrop(string player_color, Object dropped_object) | Called whenever any object is dropped by a player. [&#8263;](#onobjectdrop) 
+onObjectDrop<br>(string player_color, Object dropped_object) | Called whenever any object is dropped by a player. [&#8263;](#onobjectdrop) 
 
 
 
