@@ -31,7 +31,7 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../img/TSIcon.png">
+      <link rel="shortcut icon" href="../img/Icon-Dice.png">
       <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.6.2">
     
     
@@ -63,7 +63,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="cyan" data-md-color-accent="cyan">
+    <body dir="ltr" data-md-color-primary="red" data-md-color-accent="red">
   
     <svg class="md-svg">
       <defs>
@@ -86,7 +86,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href=".." title="Tabletop Simulator Scripting Documentation" class="md-header-nav__button md-logo">
           
-            <img src="../img/TSIcon.png" width="24" height="24">
+            <img src="../img/Icon-Dice.png" width="24" height="24">
           
         </a>
       </div>
@@ -196,7 +196,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        <img src="../img/TSIcon.png" width="24" height="24">
+        <img src="../img/Icon-Dice.png" width="24" height="24">
       
     </span>
     Tabletop Simulator Scripting Documentation
@@ -385,8 +385,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#default-events" title="Default Events" class="md-nav__link">
-    Default Events
+  <a href="#default-events-global-object" title="Default Events (Global &amp; Object)" class="md-nav__link">
+    Default Events (Global &amp; Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-events-object-only" title="Default Events (Object Only)" class="md-nav__link">
+    Default Events (Object Only)
   </a>
   
 </li>
@@ -397,8 +404,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#function-details" title="Function Details" class="md-nav__link">
-    Function Details
+  <a href="#function-details-global-object" title="Function Details (Global &amp; Object)" class="md-nav__link">
+    Function Details (Global &amp; Object)
   </a>
   
     <nav class="md-nav">
@@ -410,6 +417,54 @@
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#onexternalmessage" title="onExternalMessage(...)" class="md-nav__link">
+    onExternalMessage(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onfixedupdate" title="onFixedUpdate()" class="md-nav__link">
+    onFixedUpdate()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onload" title="onLoad(...)" class="md-nav__link">
+    onLoad(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onobjectdestroy" title="onObjectDestroy(...)" class="md-nav__link">
+    onObjectDestroy(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onobjectdrop" title="onObjectDrop(...)" class="md-nav__link">
+    onObjectDrop(...)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-details-object-only" title="Function Details (Object only)" class="md-nav__link">
+    Function Details (Object only)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#oncollisionenter" title="onCollisionEnter(...)" class="md-nav__link">
@@ -442,20 +497,6 @@
           <li class="md-nav__item">
   <a href="#ondrop" title="onDrop(...)" class="md-nav__link">
     onDrop(...)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#onexternalmessage" title="onExternalMessage(...)" class="md-nav__link">
-    onExternalMessage(...)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#onfixedupdate" title="onFixedUpdate()" class="md-nav__link">
-    onFixedUpdate()
   </a>
   
 </li>
@@ -535,8 +576,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#default-events" title="Default Events" class="md-nav__link">
-    Default Events
+  <a href="#default-events-global-object" title="Default Events (Global &amp; Object)" class="md-nav__link">
+    Default Events (Global &amp; Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-events-object-only" title="Default Events (Object Only)" class="md-nav__link">
+    Default Events (Object Only)
   </a>
   
 </li>
@@ -547,8 +595,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#function-details" title="Function Details" class="md-nav__link">
-    Function Details
+  <a href="#function-details-global-object" title="Function Details (Global &amp; Object)" class="md-nav__link">
+    Function Details (Global &amp; Object)
   </a>
   
     <nav class="md-nav">
@@ -560,6 +608,54 @@
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#onexternalmessage" title="onExternalMessage(...)" class="md-nav__link">
+    onExternalMessage(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onfixedupdate" title="onFixedUpdate()" class="md-nav__link">
+    onFixedUpdate()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onload" title="onLoad(...)" class="md-nav__link">
+    onLoad(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onobjectdestroy" title="onObjectDestroy(...)" class="md-nav__link">
+    onObjectDestroy(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onobjectdrop" title="onObjectDrop(...)" class="md-nav__link">
+    onObjectDrop(...)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-details-object-only" title="Function Details (Object only)" class="md-nav__link">
+    Function Details (Object only)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#oncollisionenter" title="onCollisionEnter(...)" class="md-nav__link">
@@ -592,20 +688,6 @@
           <li class="md-nav__item">
   <a href="#ondrop" title="onDrop(...)" class="md-nav__link">
     onDrop(...)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#onexternalmessage" title="onExternalMessage(...)" class="md-nav__link">
-    onExternalMessage(...)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#onfixedupdate" title="onFixedUpdate()" class="md-nav__link">
-    onFixedUpdate()
   </a>
   
 </li>
@@ -656,8 +738,8 @@
 <li><a href="../lighting">Lighting</a></li>
 </ul>
 <h2 id="function-summary">Function Summary<a class="headerlink" href="#function-summary" title="Permanent link">&para;</a></h2>
-<h3 id="default-events">Default Events<a class="headerlink" href="#default-events" title="Permanent link">&para;</a></h3>
-<p>These are functions which are triggered by an event taking place in-game.</p>
+<h3 id="default-events-global-object">Default Events (Global &amp; Object)<a class="headerlink" href="#default-events-global-object" title="Permanent link">&para;</a></h3>
+<p>These are functions which are triggered by an event taking place in-game. They work when within the script of an Object or the Global script.</p>
 <table>
 <thead>
 <tr>
@@ -671,26 +753,6 @@
 <td>Called when a chat message is sent in game chat. <a href="#onchat">&#8263;</a></td>
 </tr>
 <tr>
-<td>onCollisionEnter(Table collision_info)</td>
-<td>Called when an Object starts colliding with the Object the function is on. Does not work in Global. <a href="#oncollisionenter">&#8263;</a></td>
-</tr>
-<tr>
-<td>onCollisionExit(Table collision_info)</td>
-<td>Called when an Object stops colliding with the Object the function is on. Does not work in Global. <a href="#oncollisionexit">&#8263;</a></td>
-</tr>
-<tr>
-<td>onCollisionStay(Table collision_info)</td>
-<td>Called <strong>every frame</strong> that an Object is colliding with the Object this function is on. Does not work in Global. <a href="#oncollisionstay">&#8263;</a></td>
-</tr>
-<tr>
-<td>onDestroy()</td>
-<td>Called when an Object is destroyed. Does not work in Global. <a href="#ondestroy">&#8263;</a></td>
-</tr>
-<tr>
-<td>onDrop(String <a href="../player">player_color</a>)</td>
-<td>Called when a player releases an Object after picking it up.  Does not work in Global. <a href="#ondrop">&#8263;</a></td>
-</tr>
-<tr>
 <td>onExternalMessage(Table)</td>
 <td>Called when an external script editor (like <a href="../atom">Atom</a>) sends a message back to the game. Used for custom editor functionality. <a href="#onexternalmessage">&#8263;</a></td>
 </tr>
@@ -698,19 +760,59 @@
 <td>onFixedUpdate()</td>
 <td>Called <strong>every physics tick</strong> (90 times a second). This is a frame independent onUpdate(). <a href="#onfixedupdate">&#8263;</a></td>
 </tr>
+<tr>
+<td>onLoad(String save_state)</td>
+<td>Called when a game save is finished loading every Object. It is where most setup code will go. <a href="#onload">&#8263;</a></td>
+</tr>
+<tr>
+<td>onObjectDestroy(Object dying_object)</td>
+<td>Called whenever any object is destroyed. <a href="#onobjectdestroy">&#8263;</a></td>
+</tr>
+<tr>
+<td>onObjectDrop(string player_color, Object dropped_object)</td>
+<td>Called whenever any object is dropped by a player. <a href="#onobjectdrop">&#8263;</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="default-events-object-only">Default Events (Object Only)<a class="headerlink" href="#default-events-object-only" title="Permanent link">&para;</a></h3>
+<p>These are functions which are triggered by an event taking place in-game. They only work within scripts that are on Objects, never in Global.</p>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onCollisionEnter(Table collision_info)</td>
+<td>Called when an Object starts colliding with the Object the function is on. <a href="#oncollisionenter">&#8263;</a></td>
+</tr>
+<tr>
+<td>onCollisionExit(Table collision_info)</td>
+<td>Called when an Object stops colliding with the Object the function is on. <a href="#oncollisionexit">&#8263;</a></td>
+</tr>
+<tr>
+<td>onCollisionStay(Table collision_info)</td>
+<td>Called <strong>every frame</strong> that an Object is colliding with the Object this function is on. <a href="#oncollisionstay">&#8263;</a></td>
+</tr>
+<tr>
+<td>onDestroy()</td>
+<td>Called when an Object it is on is destroyed. <a href="#ondestroy">&#8263;</a></td>
+</tr>
+<tr>
+<td>onDrop(String <a href="../player">player_color</a>)</td>
+<td>Called when a player releases an Object after picking it up. <a href="#ondrop">&#8263;</a></td>
+</tr>
 </tbody>
 </table>
 <hr />
-<h2 id="function-details">Function Details<a class="headerlink" href="#function-details" title="Permanent link">&para;</a></h2>
+<h2 id="function-details-global-object">Function Details (Global &amp; Object)<a class="headerlink" href="#function-details-global-object" title="Permanent link">&para;</a></h2>
 <h3 id="onchat">onChat(...)<a class="headerlink" href="#onchat" title="Permanent link">&para;</a></h3>
 <p>This function is called when a message is sent through the in-game chat. It does not trigger when global chat messages are sent. Using <code class="codehilite"><span class="kr">return</span> <span class="kc">false</span></code> inside of this function prevents the chat message which triggered it to be supressed.</p>
-<div class="admonition info">
-<p class="admonition-title">onChat(String message, Player)</p>
-<ul>
-<li><strong>String message</strong>: A String containing the chat message which triggered the function.</li>
-<li><strong>Player</strong>: A reference to the Player which sent the chat message.</li>
-</ul>
-</div>
+<p>!!!info onChat(String message, Player)
+    * <strong>String message</strong>: A String containing the chat message which triggered the function.
+    * <strong>Player</strong>: A reference to the Player which sent the chat message.</p>
 <div class="codehilite"><pre><span></span>    <span class="kr">function</span> <span class="nf">onChat</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">player</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="n">color</span><span class="p">)</span>
@@ -718,6 +820,96 @@
 </pre></div>
 
 <hr />
+<h3 id="onexternalmessage">onExternalMessage(...)<a class="headerlink" href="#onexternalmessage" title="Permanent link">&para;</a></h3>
+<p>This function is called when an external script editor (like <a href="../atom">Atom</a>) sends a message back to the game. Used for custom editor functionality.</p>
+<div class="admonition info">
+<p class="admonition-title">onExternalMessage(Table)</p>
+<ul>
+<li><strong>Table</strong>: The data returned by the external editor into the game.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>    <span class="kr">function</span> <span class="nf">onExternalMessage</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;External message received&quot;</span><span class="p">)</span>
+    <span class="kr">end</span>
+</pre></div>
+
+<hr />
+<h3 id="onfixedupdate">onFixedUpdate()<a class="headerlink" href="#onfixedupdate" title="Permanent link">&para;</a></h3>
+<p>Called <strong>every physics tick</strong> (90 times a second). This is a frame independent onUpdate(). <a href="#onfixedupdate">&#8263;</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is a very expensive function and can easily slow/crash your game if missused. Use with caution.</p>
+</div>
+<div class="codehilite"><pre><span></span>    <span class="kr">function</span> <span class="nf">onFixedUpdate</span><span class="p">()</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">addTorque</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="kr">end</span>
+</pre></div>
+
+<h3 id="onload">onLoad(...)<a class="headerlink" href="#onload" title="Permanent link">&para;</a></h3>
+<p>This function is called when a game save is finished loading every Object. This is where most setup code will go. The fast-forward and rewind feature will also cause this function to activate. If this function is in an Object's script and that Object is spawned, like by removing it from a container, it too will trigger onLoad().</p>
+<div class="admonition info">
+<p class="admonition-title">onLoad(String save_state)</p>
+<ul>
+<li><strong>String save_state</strong>: The encoded string containing any save_state (saved) data.<ul>
+<li><span class="critic comment">If there is no data saved, this returns an empty String.</span></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>    <span class="kr">function</span> <span class="nf">onLoad</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loading complete&quot;</span><span class="p">)</span>
+    <span class="kr">end</span>
+</pre></div>
+
+<details class="example"><summary>Example of onLoad and onSave being used to save/load data</summary><div class="codehilite"><pre><span></span>    <span class="c1">--Runs whenever game is saved/autosaved</span>
+    <span class="kr">function</span> <span class="nf">onSave</span><span class="p">()</span>
+        <span class="kd">local</span> <span class="n">data_to_save</span> <span class="o">=</span> <span class="p">{</span><span class="n">someData</span><span class="o">=</span><span class="mi">50</span><span class="p">}</span>
+        <span class="n">saved_data</span> <span class="o">=</span> <span class="n">JSON</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="n">data_to_save</span><span class="p">)</span>
+        <span class="c1">--saved_data = &quot;&quot; --Remove -- at start &amp; save to clear save data</span>
+        <span class="kr">return</span> <span class="n">saved_data</span>
+    <span class="kr">end</span>
+
+    <span class="c1">--Runs when game is loaded</span>
+    <span class="kr">function</span> <span class="nf">onLoad</span><span class="p">(</span><span class="n">saved_data</span><span class="p">)</span>
+        <span class="c1">--Loads the tracking for if the game has started yet</span>
+        <span class="kr">if</span> <span class="n">saved_data</span> <span class="o">~=</span> <span class="s2">&quot;&quot;</span> <span class="kr">then</span>
+            <span class="kd">local</span> <span class="n">loaded_data</span> <span class="o">=</span> <span class="n">JSON</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="n">saved_data</span><span class="p">)</span>
+            <span class="n">someData</span> <span class="o">=</span> <span class="n">loaded_data</span><span class="p">.</span><span class="n">someData</span>
+        <span class="kr">else</span>
+            <span class="n">someData</span> <span class="o">=</span> <span class="mi">50</span>
+        <span class="kr">end</span>
+    <span class="kr">end</span>
+</pre></div>
+</details><hr />
+<h3 id="onobjectdestroy">onObjectDestroy(...)<a class="headerlink" href="#onobjectdestroy" title="Permanent link">&para;</a></h3>
+<p>Called whenever any object is destroyed. The dying Object has 1 frame left to live. This event fires immediately before the dying Object’s <code class="codehilite">onDestroy()</code> but their lifetime is the same final frame.</p>
+<div class="admonition info">
+<p class="admonition-title">onObjectDestroy(Object dying_object)</p>
+<ul>
+<li><strong>Object dying_object</strong>: The object that was destroyed.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>    <span class="kr">function</span> <span class="nf">onObjectDestroy</span><span class="p">(</span><span class="n">destroyedObj</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">destroyedObj</span><span class="p">.</span><span class="n">getName</span><span class="p">())</span>
+    <span class="kr">end</span>
+</pre></div>
+
+<hr />
+<h3 id="onobjectdrop">onObjectDrop(...)<a class="headerlink" href="#onobjectdrop" title="Permanent link">&para;</a></h3>
+<p>Called whenever any object is dropped by a player.</p>
+<div class="admonition info">
+<p class="admonition-title">onObjectDrop(String player_color, Object dropped_object)</p>
+<ul>
+<li><strong>String player_color</strong>: A String of the color of the player who dropped the object.</li>
+<li><strong>Object dropped_object</strong>: The Object in game which was dropped.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span>    <span class="kr">function</span> <span class="nf">onObjectDrop</span><span class="p">(</span><span class="n">colorName</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">colorName</span> <span class="o">..</span> <span class="s2">&quot; dropped &quot;</span> <span class="o">..</span> <span class="n">obj</span><span class="p">.</span><span class="n">getName</span><span class="p">())</span>
+    <span class="kr">end</span>
+</pre></div>
+
+<h2 id="function-details-object-only">Function Details (Object only)<a class="headerlink" href="#function-details-object-only" title="Permanent link">&para;</a></h2>
 <h3 id="oncollisionenter">onCollisionEnter(...)<a class="headerlink" href="#oncollisionenter" title="Permanent link">&para;</a></h3>
 <p>This function is called when an Object starts colliding with the Object the function is on. Does not work in Global.</p>
 <div class="admonition info">
@@ -725,7 +917,10 @@
 <ul>
 <li><strong>table collision_info</strong>: A Table containing data on colliding object.<ul>
 <li><strong>collision_info.<em>collision_object</em></strong> = <a href="../object">Object</a> collision_object</li>
-<li><strong>collision_info.<em>contact_points</em></strong> = Table contact_points <span class="critic comment">This is an array (table) of tables. Each contact point is a vector.</span></li>
+<li><strong>collision_info.<em>contact_points</em></strong> = Table contact_points<ul>
+<li><span class="critic comment">This is an array (table) of tables. Each contact point is a vector.</span></li>
+</ul>
+</li>
 <li><strong>collision_info.<em>relative_velocity</em></strong> = <a href="../vector">Vector</a></li>
 </ul>
 </li>
@@ -753,7 +948,10 @@
 <ul>
 <li><strong>table collision_info</strong>: A Table containing data on colliding object.<ul>
 <li><strong>collision_info.<em>collision_object</em></strong> = <a href="../object">Object</a> collision_object</li>
-<li><strong>collision_info.<em>contact_points</em></strong> = Table contact_points <span class="critic comment">This is an array (table) of tables. Each contact point is a vector.</span></li>
+<li><strong>collision_info.<em>contact_points</em></strong> = Table contact_points<ul>
+<li><span class="critic comment">This is an array (table) of tables. Each contact point is a vector.</span></li>
+</ul>
+</li>
 <li><strong>collision_info.<em>relative_velocity</em></strong> = <a href="../vector">Vector</a></li>
 </ul>
 </li>
@@ -785,7 +983,10 @@
 <ul>
 <li><strong>table collision_info</strong>: A Table containing data on colliding object.<ul>
 <li><strong>collision_info.<em>collision_object</em></strong> = <a href="../object">Object</a> collision_object</li>
-<li><strong>collision_info.<em>contact_points</em></strong> = Table contact_points <span class="critic comment">This is an array (table) of tables. Each contact point is a vector.</span></li>
+<li><strong>collision_info.<em>contact_points</em></strong> = Table contact_points<ul>
+<li><span class="critic comment">This is an array (table) of tables. Each contact point is a vector.</span></li>
+</ul>
+</li>
 <li><strong>collision_info.<em>relative_velocity</em></strong> = <a href="../vector">Vector</a></li>
 </ul>
 </li>
@@ -807,7 +1008,7 @@
 </pre></div></p>
 <hr />
 <h3 id="ondestroy">onDestroy()<a class="headerlink" href="#ondestroy" title="Permanent link">&para;</a></h3>
-<p>This function is called when an <a href="../object">Object</a> is destroyed. When <code class="codehilite">onDestroy()</code> is called, the Object has one frame left to live but its recommended to avoid using it as a reference here. This event fires immediately after <a href="#onobjectdestroy">onObjectDestroy()</a> but their lifetime is the same final frame. Does not work in Global.</p>
+<p>This function is called when an <a href="../object">Object</a> it is on is destroyed. When <code class="codehilite">onDestroy()</code> is called, the Object has one frame left to live but its recommended to avoid using it as a reference here. This event fires immediately after <a href="#onobjectdestroy">onObjectDestroy()</a> but their lifetime is the same final frame. Does not work in Global.</p>
 <div class="codehilite"><pre><span></span>    <span class="kr">function</span> <span class="nf">onDestroy</span><span class="p">()</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This object was destroyed!&quot;</span><span class="p">)</span>
     <span class="kr">end</span>
@@ -828,30 +1029,6 @@
 </pre></div>
 
 <hr />
-<h3 id="onexternalmessage">onExternalMessage(...)<a class="headerlink" href="#onexternalmessage" title="Permanent link">&para;</a></h3>
-<p>This function is called when an external script editor (like <a href="../atom">Atom</a>) sends a message back to the game. Used for custom editor functionality.</p>
-<div class="admonition info">
-<p class="admonition-title">onExternalMessage(Table)</p>
-<ul>
-<li><strong>Table</strong>: The data returned by the external editor into the game.</li>
-</ul>
-</div>
-<div class="codehilite"><pre><span></span>    <span class="kr">function</span> <span class="nf">onExternalMessage</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;External message received&quot;</span><span class="p">)</span>
-    <span class="kr">end</span>
-</pre></div>
-
-<hr />
-<h3 id="onfixedupdate">onFixedUpdate()<a class="headerlink" href="#onfixedupdate" title="Permanent link">&para;</a></h3>
-<p>Called <strong>every physics tick</strong> (90 times a second). This is a frame independent onUpdate(). <a href="#onfixedupdate">&#8263;</a></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is a very expensive function and can easily slow/crash your game if missused. Use with caution.</p>
-</div>
-<div class="codehilite"><pre><span></span>    <span class="kr">function</span> <span class="nf">onFixedUpdate</span><span class="p">()</span>
-        <span class="n">self</span><span class="p">.</span><span class="n">addTorque</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="kr">end</span>
-</pre></div>
                 
                   
                 
