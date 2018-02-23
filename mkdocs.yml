@@ -39,5 +39,6 @@ pages:
     - External Editor API: externaleditorapi.md
   - Lua API:
     - Introduction: luaapi.md
+    - Event: event.md
+    - Base: base.md
     - AssetBundle : assetbundle.md
-    - API: api.md
