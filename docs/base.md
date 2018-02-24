@@ -24,8 +24,14 @@ log(Var element, String tag, String label) | Returns Bool with result of printin
 logStyle(String tag, Table color,<br> String prefix, String prefix, String postfix) | Returns bool with result of setting style options for the specified tag type for the log. [&#8263;](#logstyle)
 paste(Table parameters) | Returns Table of newly spawned objects that were pasted from the clipboard. Works with [copy(...)](#copy). [&#8263;](#paste)
 print(String message) | Prints a string into chat that only the host is able to see. Used for debugging scripts. [&#8263;](#print)
-
-
+printToAll(String message, Table [color](#color)) | Returns Bool with the result of printing a message into the chat of all connected players. [&#8263;](#printtoall)
+printToColor(String message, String [player_color](#color), Table [color](#color)) | Returns Bool with the result of printing a message to a specific Player. [&#8263;](#printtocolor)
+removeNotebookTab(Int index) | Returns Bool with the result of removing a notebook tab. [&#8263;](#removenotebooktab)
+sendExternalMessage(Table) | Returns Bool with the result of sending the table to your external script editor, most likely Atom. This is for custom editor functionality. [&#8263;](#sendexternalmessage)
+setNotes(String notes) | Returns Bool with the result of replacing the text in the notes window with the string. [&#8263;](#setnotes)
+spawnObject(Table parameters) | Returns Object reference for the object spawned. View the [Spawnable Object](spawnableobject) page for Objects that can be spawned. [&#8263;](#spawnobject)
+startLuaCoroutine(Object function_owner, String function_name) | Returns Bool with the result of starting a coroutine. [&#8263;](#startluacoroutine)
+stringColorToRGB(String player_color) | Returns Table [Color](color) requivilent to the Player Color string. [&#8263;](#stringcolortorgb)
 
 
 
@@ -350,28 +356,168 @@ function onLoad() print("Loading Complete") end
 ---
 
 
+###printToAll(...)
+
+Returns Bool with the result of printing a message into the chat of all connected players.
+
+!!!info "printToAll(String message, Table [color](#color))"
+	* **String message**: A String of the message to place into players chats.
+	* **Table color**: A Table containing r/g/b values for the text's color.
+
+``` Lua
+printToAll("Hello World!", {r=1,g=0,b=0})
+```
+
+---
 
 
+###printToColor(...)
+
+Returns Bool with the result of printing a message to a specific Player.
+
+```info "printToColor(String message, String [player_color](#color), Table [color](#color))"
+	* **String message**: A String of the message to place into the player's chat.
+	* **Straing player_color**: A String of the Player's color that will receive the message.
+	* **Table color**: A Table containing r/g/b values for the text's color.
+
+``` Lua
+printToColor("Hello Red.", "Red", {r=1,g=0,b=0})
+```
+
+---
 
 
+###removeNotebookTab(...)
+
+Returns Bool with the result of removing a notebook tab. Notebook tab indexes begin at 0.
+
+!!!info "removeNotebookTab(Int index)"
+	* **Int index**: The Int of the index for the tab to remove.
+
+``` Lua
+removeNotebookTab(0)
+```
+
+---
 
 
+###sendExternalMessage(...)
+
+Returns Bool with the result of sending the table to your external script editor, most likely Atom. This is for custom editor functionality.
+
+---
 
 
+###setNotes(...)
+
+Returns Bool with the result of replacing the text in the notes window with the string.
+
+!!!info "setNotes(String notes)"
+	* **String notes**: A String which will replace the contents of the notes area.
+
+``` Lua
+setNotes("This appears in the notes section")
+```
+
+---
 
 
+###spawnObject(...)
+
+Returns Object reference for the object spawned. View the [Spawnable Object](spawnableobject) page for Objects that can be spawned.
+
+!!!tip
+	Spawned Objects take a moment to be physically spawned into the game. The purpose of the callback functionality is to allow you to run additional actions after the Object has been initiated fully into the instance. It is also possible to add a delay using a [coroutine](#startluacoroutine).
+
+!!!info "spawnObject(Table parameters)"
+	* **Table parameters**: A Table of parameters used to determine how spawnObject will act.
+		* **parameters.type**: A String of the [Spawnable Object](spawnableobject) type.
+		* **parameters.position**: A Table Vector of the position to place Object.
+			* {>>Optional, defaults to {x=0, y=3, z=0}.<<}
+		* **parameters.rotation**: A Table Vector of the rotation of the Object.
+			* {>>Optional, defaults to {x=0, y=0, z=0}<<}
+		* **parameters.scale**: A Table Vector of the scale of the Object.
+			* {>>Optional, defaults to {x=1, y=1, z=1}<<}
+		* **parameters.sound**: A Bool for if the spawned Object noise is played.
+			* {>>Optional, defaults to true.<<}
+		* **parameters.snap_to_grid**: A Bool for snap-to-grid is active on the Object.
+			* {>>Optional, defaults to false.<<}
+		* **parameters.callback**: A String of the function name you want activated once the Object is initiated.
+			* {>>Optional, no callback is triggered without it.<<}
+		* **parameters.callback_owner**: An Object of what object has the callback function on it. Global is a valid target as well.
+			* {>>Optional, defaults to Global. Serves no purpose if callback is not also used.<<}
+		* **parameters.params**: A Table of data to send to the callback to use as parameters. See example.
+			* {>>Optional, default is to not be used.<<}
+
+``` Lua
+function onLoad()
+	futureName = "Spawned By Script!"
+	spawnParams = {
+		type = "rpg_BEAR",
+		position = {x=0, y=3, z=-5},
+		rotation = {x=0, y=90, z=0},
+		scale = {x=2, y=2, z=2},
+		sound = false,
+		snap_to_grid = true,
+		callback = "spawn_callback",
+		callback_owner = Global,
+		params = {name = futureName}
+	}
+	spawnObject(spawnParams)
+end
+
+function spawn_callback(object_spawned, params)
+	object_spawned.setName(params.name)
+end
+```
+
+---
 
 
+###startLuaCoroutine(...)
+
+Returns Bool with the result of starting a coroutine. A coroutine is similar to a function, but has the unique ability to have its run paused until the next frame of the game using `coroutine.yield(0)`.
+
+!!!Attention
+	You MUST return a 1 at the end of any coroutine or it will throw an error.
+
+!!!info "startLuaCoroutine(Object function_owner, String function_name)"
+	* **Object function_owner**: The Object that the function being called is on. Global is a valid target.
+	* **String function_name**: The String containing the name of the function being called as a coroutine.
+
+``` Lua
+function onLoad()
+	startLuaCoroutine(Global, "print_coroutine")
+end
+
+--Prints a message, waits 250 frames, prints another message
+function print_coroutine()
+	print("Routine has Started")
+	count = 0
+	while count < 250 do
+		count = count + 1
+		coroutine.yield(0)
+	end
+	
+	print("Routine has Finished")
+	
+	return 1
+end
+```
+
+---
 
 
+###stringColorToRGB(...)
 
+Returns Table [Color](color) requivilent to the Player Color string.
 
+!!!info "stringColorToRGB(String player_color)"
+	* **String player_color** A String of a Player [Color](color).
 
+``` Lua
+printToAll("Blue message", stringColorToRGB("Blue"))
+```
 
-
-
-
-
-
-
+---
 
