@@ -390,22 +390,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#property-functions" title="Property Functions" class="md-nav__link">
-    Property Functions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#transform-functions" title="Transform Functions" class="md-nav__link">
     Transform Functions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#material-functions" title="Material Functions" class="md-nav__link">
-    Material Functions
   </a>
   
 </li>
@@ -418,8 +404,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#object-functions" title="Object Functions" class="md-nav__link">
-    Object Functions
+  <a href="#get-functions" title="Get Functions" class="md-nav__link">
+    Get Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-functions" title="Set Functions" class="md-nav__link">
+    Set Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action-function" title="Action Function" class="md-nav__link">
+    Action Function
   </a>
   
 </li>
@@ -511,22 +511,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#property-functions" title="Property Functions" class="md-nav__link">
-    Property Functions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#transform-functions" title="Transform Functions" class="md-nav__link">
     Transform Functions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#material-functions" title="Material Functions" class="md-nav__link">
-    Material Functions
   </a>
   
 </li>
@@ -539,8 +525,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#object-functions" title="Object Functions" class="md-nav__link">
-    Object Functions
+  <a href="#get-functions" title="Get Functions" class="md-nav__link">
+    Get Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-functions" title="Set Functions" class="md-nav__link">
+    Set Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action-function" title="Action Function" class="md-nav__link">
+    Action Function
   </a>
   
 </li>
@@ -585,227 +585,129 @@
 <h2 id="member-variable-summary">Member Variable Summary<a class="headerlink" href="#member-variable-summary" title="Permanent link">&para;</a></h2>
 <h3 id="member-variables">Member Variables<a class="headerlink" href="#member-variables" title="Permanent link">&para;</a></h3>
 <p>These are variables that objects share. They allow for direct access to an Object's property information without a helping function. Some are read-only.</p>
-<p>Examples: <code class="codehilite">isResting = self.resting</code> or <code class="codehilite">self.resting = true</code></p>
+<p>Read Example = <code class="codehilite">isResting = self.resting</code> Write Example = <code class="codehilite">self.resting = true</code></p>
 <table>
 <thead>
 <tr>
-<th>Variable Name</th>
-<th>Var</th>
+<th>Variable</th>
 <th>Description</th>
+<th align="right">Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>angular_drag</td>
-<td>Float</td>
-<td>Angular drag.</td>
+<td>Angular drag. <a href="https://docs.unity3d.com/Manual/class-Rigidbody.html">Unity rigidbody property</a>.</td>
+<td align="right">Float</td>
 </tr>
 <tr>
 <td>auto_raise</td>
-<td>Bool</td>
 <td>If an object should be lifted above other objects to avoid collision when held by a player.</td>
+<td align="right">Bool</td>
 </tr>
 <tr>
 <td>bounciness</td>
-<td>Float</td>
-<td>Bounciness. 0-1.</td>
+<td>Bounciness, value of 0-1. <a href="https://docs.unity3d.com/Manual/class-PhysicMaterial.html">Unity physics material</a>.</td>
+<td align="right">Float</td>
 </tr>
 <tr>
 <td>drag</td>
-<td>Float</td>
-<td>Drag.</td>
+<td>Drag. <a href="https://docs.unity3d.com/Manual/class-Rigidbody.html">Unity rigidbody property</a>.</td>
+<td align="right">Float</td>
 </tr>
 <tr>
 <td>dynamic_friction</td>
-<td>Float</td>
-<td>A Float of dynamic friction.</td>
+<td>Dynamic friction, value of 0-1. <a href="https://docs.unity3d.com/Manual/class-PhysicMaterial.html">Unity physics material</a>.</td>
+<td align="right">Float</td>
 </tr>
 <tr>
 <td>grid_projection</td>
-<td>Bool</td>
-<td>A Bool for if grid lines can appear on the object if visible grids are turned on.</td>
+<td>If grid lines can appear on the Object if visible grids are turned on.</td>
+<td align="right">Bool</td>
 </tr>
 <tr>
 <td>guid</td>
-<td>String</td>
-<td>A String of the GUID, which is a 6 character unique object identifier within Tabletop Simulator.</td>
+<td>The 6 character unique Object identifier within Tabletop Simulator.</td>
+<td align="right">String</td>
 </tr>
 <tr>
 <td>held_by_color</td>
-<td>String</td>
-<td>A String of Color of the Player that is holding the object.</td>
+<td>The Color of the Player that is holding the object.</td>
+<td align="right">String</td>
 </tr>
 <tr>
 <td>interactable</td>
-<td>Bool</td>
-<td>A Bool for if an object can be interacted with by Players. Other object will still be able to interact with it.</td>
+<td>If an object can be interacted with by Players. Other object will still be able to interact with it.</td>
+<td align="right">Bool</td>
 </tr>
 <tr>
 <td>mass</td>
-<td>Float</td>
-<td>A Float of the mass.</td>
+<td>Mass. <a href="https://docs.unity3d.com/Manual/class-Rigidbody.html">Unity rigidbody property</a>.</td>
+<td align="right">Float</td>
 </tr>
 <tr>
 <td>name</td>
-<td>String</td>
-<td>A String of the name. Read only, use <code class="codehilite">setName(&quot;&quot;)</code> to change names.</td>
+<td>The Object's name. Read only, use <code class="codehilite">setName(&quot;&quot;)</code> to write to it.</td>
+<td align="right">String</td>
 </tr>
 <tr>
 <td>resting</td>
-<td>Bool</td>
-<td>A Bool for if an object is at rest.</td>
+<td>If an Object is at rest. <a href="https://docs.unity3d.com/412/Documentation/Components/RigidbodySleeping.html">Unity rigidbody property</a>.</td>
+<td align="right">Bool</td>
 </tr>
 <tr>
 <td>script_code</td>
-<td>String</td>
-<td>A String of the Lua Script on the object.</td>
+<td>The Lua Script on the Object.</td>
+<td align="right">String</td>
 </tr>
 <tr>
 <td>script_state</td>
-<td>String</td>
-<td>A String of the saved data. See <a href="../event#onsave">onSave()</a>.</td>
+<td>The saved data on the object. See <a href="../event#onsave">onSave()</a>.</td>
+<td align="right">String</td>
 </tr>
 <tr>
 <td>static_friction</td>
-<td>Float</td>
-<td>A Float of static friction.</td>
+<td>Static friction, value of 0-1. <a href="https://docs.unity3d.com/Manual/class-PhysicMaterial.html">Unity physics material</a>.</td>
+<td align="right">Float</td>
 </tr>
 <tr>
 <td>sticky</td>
-<td>Bool</td>
-<td>A Bool for if objects on top of this one are also picked up when this one is.</td>
+<td>If other Objects on top of this one are also picked up when this Object is.</td>
+<td align="right">Bool</td>
 </tr>
 <tr>
 <td>tag</td>
-<td></td>
-<td>A String of this object's type. Read only.</td>
+<td>This object's type. Read only.</td>
+<td align="right">String</td>
 </tr>
 <tr>
 <td>tooltip</td>
-<td>Bool</td>
-<td>A Bool for if the tooltip opens when a pointer hovers over the object. Tooltips display name and description.</td>
+<td>If the tooltip opens when a pointer hovers over the object. Tooltips display name and description.</td>
+<td align="right">Bool</td>
 </tr>
 <tr>
 <td>use_gravity</td>
-<td>Bool</td>
-<td>A Bool for if gravity affects this object.</td>
+<td>If gravity affects this object.</td>
+<td align="right">Bool</td>
 </tr>
 <tr>
 <td>use_grid</td>
-<td>Bool</td>
-<td>A Bool for is snapping to grid is enabled or not.</td>
+<td>If snapping to grid is enabled or not.</td>
+<td align="right">Bool</td>
 </tr>
 <tr>
 <td>use_hands</td>
-<td>Bool</td>
-<td>A Bool for if this object can be held in a hand zone.</td>
+<td>If this object can be held in a hand zone.</td>
+<td align="right">Bool</td>
 </tr>
 <tr>
 <td>use_snap_points</td>
-<td>Bool</td>
-<td>A Bool for if snap points are used or ignored.</td>
+<td>If snap points are used or ignored.</td>
+<td align="right">Bool</td>
 </tr>
 </tbody>
 </table>
-<table>
-<thead>
-<tr>
-<th>Variable Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>angular_drag</td>
-<td>A Float of an item's angular drag.</td>
-</tr>
-<tr>
-<td>auto_raise</td>
-<td>A Bool for if an object should be lifted above other objects to avoid collision when held by a player.</td>
-</tr>
-<tr>
-<td>bounciness</td>
-<td>A Float of bounciness.</td>
-</tr>
-<tr>
-<td>drag</td>
-<td>A Float of drag.</td>
-</tr>
-<tr>
-<td>dynamic_friction</td>
-<td>A Float of dynamic friction.</td>
-</tr>
-<tr>
-<td>grid_projection</td>
-<td>A Bool for if grid lines can appear on the object if visible grids are turned on.</td>
-</tr>
-<tr>
-<td>guid</td>
-<td>A String of the GUID, which is a 6 character unique object identifier within Tabletop Simulator.</td>
-</tr>
-<tr>
-<td>held_by_color</td>
-<td>A String of Color of the Player that is holding the object.</td>
-</tr>
-<tr>
-<td>interactable</td>
-<td>A Bool for if an object can be interacted with by Players. Other object will still be able to interact with it.</td>
-</tr>
-<tr>
-<td>mass</td>
-<td>A Float of the mass.</td>
-</tr>
-<tr>
-<td>name</td>
-<td>A String of the name. Read only, use <code class="codehilite">setName(&quot;&quot;)</code> to change names.</td>
-</tr>
-<tr>
-<td>resting</td>
-<td>A Bool for if an object is at rest.</td>
-</tr>
-<tr>
-<td>script_code</td>
-<td>A String of the Lua Script on the object.</td>
-</tr>
-<tr>
-<td>script_state</td>
-<td>A String of the saved data. See <a href="../event#onsave">onSave()</a>.</td>
-</tr>
-<tr>
-<td>static_friction</td>
-<td>A Float of static friction.</td>
-</tr>
-<tr>
-<td>sticky</td>
-<td>A Bool for if objects on top of this one are also picked up when this one is.</td>
-</tr>
-<tr>
-<td>tag</td>
-<td>A String of this object's type. Read only.</td>
-</tr>
-<tr>
-<td>tooltip</td>
-<td>A Bool for if the tooltip opens when a pointer hovers over the object. Tooltips display name and description.</td>
-</tr>
-<tr>
-<td>use_gravity</td>
-<td>A Bool for if gravity affects this object.</td>
-</tr>
-<tr>
-<td>use_grid</td>
-<td>A Bool for is snapping to grid is enabled or not.</td>
-</tr>
-<tr>
-<td>use_hands</td>
-<td>A Bool for if this object can be held in a hand zone.</td>
-</tr>
-<tr>
-<td>use_snap_points</td>
-<td>A Bool for if snap points are used or ignored.</td>
-</tr>
-</tbody>
-</table>
-<p>These member variables are classes of their own, and have their own member variables for controlling specific elements of the type of object they are for.</p>
+<p>These member variables are classes of their own, and have their own member variables. Each one is for a special type of Object.</p>
 <table>
 <thead>
 <tr>
@@ -838,14 +740,43 @@
 </table>
 <hr />
 <h2 id="function-summary">Function Summary<a class="headerlink" href="#function-summary" title="Permanent link">&para;</a></h2>
-<h3 id="property-functions">Property Functions<a class="headerlink" href="#property-functions" title="Permanent link">&para;</a></h3>
 <h3 id="transform-functions">Transform Functions<a class="headerlink" href="#transform-functions" title="Permanent link">&para;</a></h3>
-<p>These functions handle the position/rotation/scale/velocity of items. </p>
-<h3 id="material-functions">Material Functions<a class="headerlink" href="#material-functions" title="Permanent link">&para;</a></h3>
-<p>These functions handle material transformation.</p>
+<p>These functions handle the physical attributes of an Object: Position, Rotation, Scale, Velocity. In other words, moving objects around as well as getting information on how they are moving.</p>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+<th align="right"><i class="material-icons" style="line-height:90%;">info_outline</i></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>addForce(Vector, Int force_type)</td>
+<td>Adds force to an object in a directional Vector.</td>
+<td align="right"><a href="#addforce"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>addTorque(Vector, Int force_type)</td>
+<td>Adds torque to an object in a rotational Vector.</td>
+<td align="right"><a href="#addtorque"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getAngularVelocity()</td>
+<td>Returns a Vector of the current angular velocity.</td>
+<td align="right"><a href="#getangularvelocity"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+</tbody>
+</table>
 <h3 id="ui-functions">UI Functions<a class="headerlink" href="#ui-functions" title="Permanent link">&para;</a></h3>
-<p>These functions allow for the creation/editing/removal of functional buttons and text inputs which themselves can trigger code within your scripts.</p>
-<h3 id="object-functions">Object Functions<a class="headerlink" href="#object-functions" title="Permanent link">&para;</a></h3>
+<p>These functions allow for the creation/editing/removal of functional buttons and text inputs which themselves trigger code within your scripts.</p>
+<h3 id="get-functions">Get Functions<a class="headerlink" href="#get-functions" title="Permanent link">&para;</a></h3>
+<p>These functions obtain information from an object.</p>
+<h3 id="set-functions">Set Functions<a class="headerlink" href="#set-functions" title="Permanent link">&para;</a></h3>
+<p>These functions apply action to an object. They take some property in order to work.</p>
+<h3 id="action-function">Action Function<a class="headerlink" href="#action-function" title="Permanent link">&para;</a></h3>
+<p>These functions perform general actions on objects and do not require any input parameters.</p>
+<p>flip()</p>
 <h2 id="function-details">Function Details<a class="headerlink" href="#function-details" title="Permanent link">&para;</a></h2>
                 
                   
