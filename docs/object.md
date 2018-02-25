@@ -52,7 +52,7 @@ TextTool | A [TextTool](texttool), which is an in-game text display system.
 ##Function Summary
 
 ###Transform Functions
-These functions handle the physical attributes of an Object: Position, Rotation, Scale, Velocity. In other words, moving objects around as well as getting information on how they are moving.
+These functions handle the physical attributes of an Object: Position, Rotation, Scale, Bounds, Velocity. In other words, moving objects around as well as getting information on how they are moving.
 
 
 
@@ -62,7 +62,28 @@ Function Name | Description | <i class="material-icons" style="line-height:90%;"
 addForce(Vector, Int force_type) | Adds force to an object in a directional Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#addforce)
 addTorque(Vector, Int force_type) | Adds torque to an object in a rotational Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#addtorque)
 getAngularVelocity() | Returns a Vector of the current angular velocity. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getangularvelocity)
-
+getBounds() | Returns a Table of Vector information describing the size of an object in Global terms. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getbounds)
+getBoundsNormalized() | Returns a Table of Vector information describing the size of an object in Global terms, as if it was rotated to {0,0,0}. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getboundsnormalized)
+getPosition() | Returns a Vector of the current position. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getposition)
+getRotation() | Returns a Vector of the current rotation. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getrotation)
+getScale() | Returns a Vector of the current scale. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getscale)
+getTransformForward() | Returns a Vector of the forward direction for this object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gettransformforward)
+getTransformRight() | Returns a Vector of the right direction for this object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gettransformright)
+getTransformUp() | Returns a Vector of the up direction for this object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gettransformup)
+getVelocity() | Returns a Vector of the current velocity. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getvelocity)
+isSmoothMoving() | Indicates if an object is traveling as part of a Smooth move (ex. setPositionSmooth). | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#issmoothmoving)
+positionToLocal(Vector) | Returns a Vector after converting a global Vector to a local Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#positiontolocal)
+positionToWorld(Vector) | Returns a Vector after converting a local Vector to a global Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#positiontoworld)
+rotate(Vector) | Rotates Object smoothly in the direction of the given Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#rotate)
+scale(Vector or Float) | Scales Object by a multiple. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#scale)
+setAngularVelocity(Vector) | Sets a Vector as the current angular velocity. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setangularvelocity)
+setPosition(Vector) | Sets a Vector as the current position. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setposition)
+setPositionSmooth<br>(Vector, Bool collide, Bool fast) | Sets a Vector as the position to move to smoothly. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setpositionsmooth)
+setRotation(Vector) | Sets a Vector as the current rotation. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setrotation)
+setRotationSmooth<br>(Vector, Bool collide, Bool fast) | Sets a Vector as the rotation to spin to smoothly. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setrotationsmooth)
+setScale(Vector) | Sets a Vector as the current scale. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setscale)
+setVelocity(Vector) | Sets a Vector as the current velocity. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setvelocity)
+translate(Vector) | Smoothly moves Object by the given Vector offset. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#translate)
 
 
 ###UI Functions
@@ -95,22 +116,3 @@ flip()
 
 
 ##Function Details
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
