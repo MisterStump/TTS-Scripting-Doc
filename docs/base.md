@@ -375,7 +375,7 @@ printToAll("Hello World!", {r=1,g=0,b=0})
 
 Returns Bool with the result of printing a message to a specific Player.
 
-```info "printToColor(String message, String [player_color](#color), Table [color](#color))"
+!!!info "printToColor(String message, String [player_color](color), Table [color](color))"
 	* **String message**: A String of the message to place into the player's chat.
 	* **Straing player_color**: A String of the Player's color that will receive the message.
 	* **Table color**: A Table containing r/g/b values for the text's color.
