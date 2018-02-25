@@ -12,55 +12,30 @@ These are variables that objects share. They allow for direct access to an Objec
 
 Examples: `isResting = self.resting` or `self.resting = true`
 
-Variable Name | Var | Description
+Variable Name | Description | Type
 -- | -- | --
-angular_drag | Float | Angular drag.
-auto_raise | Bool | If an object should be lifted above other objects to avoid collision when held by a player.
-bounciness | Float | Bounciness. 0-1.
-drag | Float | Drag.
-dynamic_friction | Float | A Float of dynamic friction.
-grid_projection | Bool | A Bool for if grid lines can appear on the object if visible grids are turned on.
-guid | String | A String of the GUID, which is a 6 character unique object identifier within Tabletop Simulator.
-held_by_color | String | A String of Color of the Player that is holding the object.
-interactable | Bool | A Bool for if an object can be interacted with by Players. Other object will still be able to interact with it.
-mass | Float | A Float of the mass.
-name | String | A String of the name. Read only, use `setName("")` to change names.
-resting | Bool | A Bool for if an object is at rest.
-script_code | String | A String of the Lua Script on the object.
-script_state | String | A String of the saved data. See [onSave()](event#onsave).
-static_friction | Float | A Float of static friction.
-sticky | Bool | A Bool for if objects on top of this one are also picked up when this one is.
-tag |  | A String of this object's type. Read only.
-tooltip | Bool | A Bool for if the tooltip opens when a pointer hovers over the object. Tooltips display name and description.
-use_gravity | Bool | A Bool for if gravity affects this object.
-use_grid | Bool | A Bool for is snapping to grid is enabled or not.
-use_hands | Bool | A Bool for if this object can be held in a hand zone.
-use_snap_points | Bool | A Bool for if snap points are used or ignored.
-
-Variable Name | Description
--- | --
-angular_drag | A Float of an item's angular drag.
-auto_raise | A Bool for if an object should be lifted above other objects to avoid collision when held by a player.
-bounciness | A Float of bounciness.
-drag | A Float of drag.
-dynamic_friction | A Float of dynamic friction.
-grid_projection | A Bool for if grid lines can appear on the object if visible grids are turned on.
-guid | A String of the GUID, which is a 6 character unique object identifier within Tabletop Simulator.
-held_by_color | A String of Color of the Player that is holding the object.
-interactable | A Bool for if an object can be interacted with by Players. Other object will still be able to interact with it.
-mass | A Float of the mass.
-name | A String of the name. Read only, use `setName("")` to change names.
-resting | A Bool for if an object is at rest.
-script_code | A String of the Lua Script on the object.
-script_state | A String of the saved data. See [onSave()](event#onsave).
-static_friction | A Float of static friction.
-sticky | A Bool for if objects on top of this one are also picked up when this one is.
-tag | A String of this object's type. Read only.
-tooltip | A Bool for if the tooltip opens when a pointer hovers over the object. Tooltips display name and description.
-use_gravity | A Bool for if gravity affects this object.
-use_grid | A Bool for is snapping to grid is enabled or not.
-use_hands | A Bool for if this object can be held in a hand zone.
-use_snap_points | A Bool for if snap points are used or ignored.
+angular_drag | Angular drag. [Unity rigidbody property](https://docs.unity3d.com/Manual/class-Rigidbody.html). | Float
+auto_raise | If an object should be lifted above other objects to avoid collision when held by a player. | Bool
+bounciness | Bounciness, value of 0-1. [Unity physics material](https://docs.unity3d.com/Manual/class-PhysicMaterial.html). | Float
+drag | Drag. [Unity rigidbody property](https://docs.unity3d.com/Manual/class-Rigidbody.html). | Float
+dynamic_friction | Dynamic friction, value of 0-1. [Unity physics material](https://docs.unity3d.com/Manual/class-PhysicMaterial.html). | Float
+grid_projection | If grid lines can appear on the Object if visible grids are turned on. | Bool
+guid | The 6 character unique Object identifier within Tabletop Simulator. | String
+held_by_color | The Color of the Player that is holding the object. | String
+interactable | If an object can be interacted with by Players. Other object will still be able to interact with it. | Bool
+mass | Mass. [Unity rigidbody property](https://docs.unity3d.com/Manual/class-Rigidbody.html). | Float
+name | The Object's name. Read only, use `setName("")` to write to it. | String
+resting | If an Object is at rest. [Unity rigidbody property](https://docs.unity3d.com/412/Documentation/Components/RigidbodySleeping.html). | Bool
+script_code | The Lua Script on the Object. | String
+script_state | The saved data on the object. See [onSave()](event#onsave). | String
+static_friction | Static friction, value of 0-1. [Unity physics material](https://docs.unity3d.com/Manual/class-PhysicMaterial.html). | Float
+sticky | If other Objects on top of this one are also picked up when this Object is. | Bool
+tag | This object's type. Read only. | String
+tooltip | If the tooltip opens when a pointer hovers over the object. Tooltips display name and description. | Bool
+use_gravity | If gravity affects this object. | Bool
+use_grid | If snapping to grid is enabled or not. | Bool
+use_hands | If this object can be held in a hand zone. | Bool
+use_snap_points | If snap points are used or ignored. | Bool
 
 These member variables are classes of their own, and have their own member variables for controlling specific elements of the type of object they are for.
 
