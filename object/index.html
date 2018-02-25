@@ -741,7 +741,7 @@
 <hr />
 <h2 id="function-summary">Function Summary<a class="headerlink" href="#function-summary" title="Permanent link">&para;</a></h2>
 <h3 id="transform-functions">Transform Functions<a class="headerlink" href="#transform-functions" title="Permanent link">&para;</a></h3>
-<p>These functions handle the physical attributes of an Object: Position, Rotation, Scale, Velocity. In other words, moving objects around as well as getting information on how they are moving.</p>
+<p>These functions handle the physical attributes of an Object: Position, Rotation, Scale, Bounds, Velocity. In other words, moving objects around as well as getting information on how they are moving.</p>
 <table>
 <thead>
 <tr>
@@ -765,6 +765,116 @@
 <td>getAngularVelocity()</td>
 <td>Returns a Vector of the current angular velocity.</td>
 <td align="right"><a href="#getangularvelocity"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getBounds()</td>
+<td>Returns a Table of Vector information describing the size of an object in Global terms.</td>
+<td align="right"><a href="#getbounds"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getBoundsNormalized()</td>
+<td>Returns a Table of Vector information describing the size of an object in Global terms, as if it was rotated to {0,0,0}.</td>
+<td align="right"><a href="#getboundsnormalized"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getPosition()</td>
+<td>Returns a Vector of the current position.</td>
+<td align="right"><a href="#getposition"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getRotation()</td>
+<td>Returns a Vector of the current rotation.</td>
+<td align="right"><a href="#getrotation"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getScale()</td>
+<td>Returns a Vector of the current scale.</td>
+<td align="right"><a href="#getscale"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getTransformForward()</td>
+<td>Returns a Vector of the forward direction for this object.</td>
+<td align="right"><a href="#gettransformforward"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getTransformRight()</td>
+<td>Returns a Vector of the right direction for this object.</td>
+<td align="right"><a href="#gettransformright"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getTransformUp()</td>
+<td>Returns a Vector of the up direction for this object.</td>
+<td align="right"><a href="#gettransformup"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getVelocity()</td>
+<td>Returns a Vector of the current velocity.</td>
+<td align="right"><a href="#getvelocity"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>isSmoothMoving()</td>
+<td>Indicates if an object is traveling as part of a Smooth move (ex. setPositionSmooth).</td>
+<td align="right"><a href="#issmoothmoving"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>positionToLocal(Vector)</td>
+<td>Returns a Vector after converting a global Vector to a local Vector.</td>
+<td align="right"><a href="#positiontolocal"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>positionToWorld(Vector)</td>
+<td>Returns a Vector after converting a local Vector to a global Vector.</td>
+<td align="right"><a href="#positiontoworld"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>rotate(Vector)</td>
+<td>Rotates Object smoothly in the direction of the given Vector.</td>
+<td align="right"><a href="#rotate"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>scale(Vector or Float)</td>
+<td>Scales Object by a multiple.</td>
+<td align="right"><a href="#scale"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>setAngularVelocity(Vector)</td>
+<td>Sets a Vector as the current angular velocity.</td>
+<td align="right"><a href="#setangularvelocity"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>setPosition(Vector)</td>
+<td>Sets a Vector as the current position.</td>
+<td align="right"><a href="#setposition"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>setPositionSmooth<br>(Vector, Bool collide, Bool fast)</td>
+<td>Sets a Vector as the position to move to smoothly.</td>
+<td align="right"><a href="#setpositionsmooth"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>setRotation(Vector)</td>
+<td>Sets a Vector as the current rotation.</td>
+<td align="right"><a href="#setrotation"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>setRotationSmooth<br>(Vector, Bool collide, Bool fast)</td>
+<td>Sets a Vector as the rotation to spin to smoothly.</td>
+<td align="right"><a href="#setrotationsmooth"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>setScale(Vector)</td>
+<td>Sets a Vector as the current scale.</td>
+<td align="right"><a href="#setscale"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>setVelocity(Vector)</td>
+<td>Sets a Vector as the current velocity.</td>
+<td align="right"><a href="#setvelocity"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>translate(Vector)</td>
+<td>Smoothly moves Object by the given Vector offset.</td>
+<td align="right"><a href="#translate"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
 </tbody>
 </table>
