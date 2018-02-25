@@ -25,12 +25,12 @@ logStyle(String tag, Table color,<br> String prefix, String prefix, String postf
 paste(Table parameters) | Returns Table of newly spawned objects that were pasted from the clipboard. Works with [copy(...)](#copy). [&#8263;](#paste)
 print(String message) | Prints a string into chat that only the host is able to see. Used for debugging scripts. [&#8263;](#print)
 printToAll(String message, Table [color](#color)) | Returns Bool with the result of printing a message into the chat of all connected players. [&#8263;](#printtoall)
-printToColor(String message, String [player_color](#color), Table [color](#color)) | Returns Bool with the result of printing a message to a specific Player. [&#8263;](#printtocolor)
+printToColor<br>(String message, String [player_color](#color), Table [color](#color)) | Returns Bool with the result of printing a message to a specific Player. [&#8263;](#printtocolor)
 removeNotebookTab(Int index) | Returns Bool with the result of removing a notebook tab. [&#8263;](#removenotebooktab)
 sendExternalMessage(Table) | Returns Bool with the result of sending the table to your external script editor, most likely Atom. This is for custom editor functionality. [&#8263;](#sendexternalmessage)
 setNotes(String notes) | Returns Bool with the result of replacing the text in the notes window with the string. [&#8263;](#setnotes)
 spawnObject(Table parameters) | Returns Object reference for the object spawned. View the [Spawnable Object](spawnableobject) page for Objects that can be spawned. [&#8263;](#spawnobject)
-startLuaCoroutine(Object function_owner, String function_name) | Returns Bool with the result of starting a coroutine. [&#8263;](#startluacoroutine)
+startLuaCoroutine<br>(Object function_owner, String function_name) | Returns Bool with the result of starting a coroutine. [&#8263;](#startluacoroutine)
 stringColorToRGB(String player_color) | Returns Table [Color](color) requivilent to the Player Color string. [&#8263;](#stringcolortorgb)
 
 

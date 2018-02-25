@@ -2,8 +2,8 @@ site_name: Tabletop Simulator Scripting Documentation
 theme:
   name: 'material'
   palette:
-    primary: 'red'
-    accent: 'red'
+    primary: 'indigo'
+    accent: 'indigo'
   feature:
     tabs: true
   logo: 'img/Icon-Dice.png'
@@ -41,4 +41,5 @@ pages:
     - Introduction: luaapi.md
     - Event: event.md
     - Base: base.md
+    - Object: object.md
     - AssetBundle : assetbundle.md
