@@ -1281,10 +1281,14 @@
 <hr />
 <h3 id="printtocolor">printToColor(...)<a class="headerlink" href="#printtocolor" title="Permanent link">&para;</a></h3>
 <p>Returns Bool with the result of printing a message to a specific Player.</p>
-<p>```info "printToColor(String message, String <a href="#color">player_color</a>, Table <a href="#color">color</a>)"
-    * <strong>String message</strong>: A String of the message to place into the player's chat.
-    * <strong>Straing player_color</strong>: A String of the Player's color that will receive the message.
-    * <strong>Table color</strong>: A Table containing r/g/b values for the text's color.</p>
+<div class="admonition info">
+<p class="admonition-title">printToColor(String message, String <a href="../color">player_color</a>, Table <a href="../color">color</a>)</p>
+<ul>
+<li><strong>String message</strong>: A String of the message to place into the player's chat.</li>
+<li><strong>Straing player_color</strong>: A String of the Player's color that will receive the message.</li>
+<li><strong>Table color</strong>: A Table containing r/g/b values for the text's color.</li>
+</ul>
+</div>
 <div class="codehilite"><pre><span></span><span class="n">printToColor</span><span class="p">(</span><span class="s2">&quot;Hello Red.&quot;</span><span class="p">,</span> <span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">r</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">g</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="mi">0</span><span class="p">})</span>
 </pre></div>
 
