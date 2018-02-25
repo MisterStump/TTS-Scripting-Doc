@@ -7,13 +7,12 @@ The Object class represents any entity within tabletop simulator. Once you have 
 ##Member Variable Summary
 
 ###Member Variables
-
 These are variables that objects share. They allow for direct access to an Object's property information without a helping function. Some are read-only.
 
-Examples: `isResting = self.resting` or `self.resting = true`
+Read Example = `isResting = self.resting` Write Example = `self.resting = true`
 
-Variable Name | Description | Type
--- | -- | --
+Variable | Description | Type
+-- | -- | --:
 angular_drag | Angular drag. [Unity rigidbody property](https://docs.unity3d.com/Manual/class-Rigidbody.html). | Float
 auto_raise | If an object should be lifted above other objects to avoid collision when held by a player. | Bool
 bounciness | Bounciness, value of 0-1. [Unity physics material](https://docs.unity3d.com/Manual/class-PhysicMaterial.html). | Float
@@ -37,7 +36,7 @@ use_grid | If snapping to grid is enabled or not. | Bool
 use_hands | If this object can be held in a hand zone. | Bool
 use_snap_points | If snap points are used or ignored. | Bool
 
-These member variables are classes of their own, and have their own member variables for controlling specific elements of the type of object they are for.
+These member variables are classes of their own, and have their own member variables. Each one is for a special type of Object.
 
 Variable Name | Description
 -- | --
@@ -52,26 +51,36 @@ TextTool | A [TextTool](texttool), which is an in-game text display system.
 
 ##Function Summary
 
-
-
-###Property Functions
-
 ###Transform Functions
+These functions handle the physical attributes of an Object: Position, Rotation, Scale, Velocity. In other words, moving objects around as well as getting information on how they are moving.
 
-These functions handle the position/rotation/scale/velocity of items. 
 
-###Material Functions
 
-These functions handle material transformation.
+
+Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
+-- | -- | --:
+addForce(Vector, Int force_type) | Adds force to an object in a directional Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#addforce)
+addTorque(Vector, Int force_type) | Adds torque to an object in a rotational Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#addtorque)
+getAngularVelocity() | Returns a Vector of the current angular velocity. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getangularvelocity)
+
+
 
 ###UI Functions
-
-These functions allow for the creation/editing/removal of functional buttons and text inputs which themselves can trigger code within your scripts.
-
-###Object Functions
+These functions allow for the creation/editing/removal of functional buttons and text inputs which themselves trigger code within your scripts.
 
 
+###Get Functions
+These functions obtain information from an object.
 
+
+###Set Functions
+These functions apply action to an object. They take some property in order to work.
+
+
+###Action Function
+These functions perform general actions on objects and do not require any input parameters.
+
+flip()
 
 
 
