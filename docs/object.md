@@ -64,26 +64,26 @@ Function Name | Description | <i class="material-icons" style="line-height:90%;"
 -- | -- | --:
 addForce(Vector, Int force_type) | Adds force to an object in a directional Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#addforce)
 addTorque(Vector, Int force_type) | Adds torque to an object in a rotational Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#addtorque)
-getAngularVelocity() | Returns a Vector of the current angular velocity. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getangularvelocity)
+getAngularVelocity() | Returns a Vector of the current angular velocity. | 
 getBounds() | Returns a Table of Vector information describing the size of an object in Global terms. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getbounds)
 getBoundsNormalized() | Returns a Table of Vector information describing the size of an object in Global terms, as if it was rotated to {0,0,0}. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getboundsnormalized)
-getPosition() | Returns a Vector of the current position. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getposition)
-getRotation() | Returns a Vector of the current rotation. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getrotation)
+getPosition() | Returns a Vector of the current world position. | 
+getRotation() | Returns a Vector of the current rotation. | 
 getScale() | Returns a Vector of the current scale. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getscale)
 getTransformForward() | Returns a Vector of the forward direction of this object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gettransformforward)
 getTransformRight() | Returns a Vector of the right direction of this object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gettransformright)
 getTransformUp() | Returns a Vector of the up direction of this object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gettransformup)
-getVelocity() | Returns a Vector of the current velocity. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getvelocity)
-isSmoothMoving() | Indicates if an object is traveling as part of a Smooth move (ex. setPositionSmooth). | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#issmoothmoving)
-positionToLocal(Vector) | Returns a Vector after converting a global Vector to a local Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#positiontolocal)
-positionToWorld(Vector) | Returns a Vector after converting a local Vector to a global Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#positiontoworld)
+getVelocity() | Returns a Vector of the current velocity. | 
+isSmoothMoving() | Indicates if an object is traveling as part of a Smooth move. Smooth moving is performed by setPositionSmooth and setRotationSmooth. | 
+positionToLocal(Vector) | Returns a Vector after converting a world Vector to a local Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#positiontolocal)
+positionToWorld(Vector) | Returns a Vector after converting a local Vector to a world Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#positiontoworld)
 rotate(Vector) | Rotates Object smoothly in the direction of the given Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#rotate)
 scale(Vector or Float) | Scales Object by a multiple. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#scale)
 setAngularVelocity(Vector) | Sets a Vector as the current angular velocity. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setangularvelocity)
-setPosition(Vector) | Sets a Vector as the current position. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setposition)
-setPositionSmooth<br>(Vector, Bool collide, Bool fast) | Sets a Vector as the position to move to smoothly. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setpositionsmooth)
-setRotation(Vector) | Sets a Vector as the current rotation. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setrotation)
-setRotationSmooth<br>(Vector, Bool collide, Bool fast) | Sets a Vector as the rotation to spin to smoothly. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setrotationsmooth)
+setPosition(Vector) | Instantly moves an Object to the given Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setposition)
+setPositionSmooth<br>(Vector, Bool collide, Bool fast) | Sets a Vector as the position to move to smoothly. | 
+setRotation(Vector) | Instantly rotates an Object to the given Vector. | 
+setRotationSmooth<br>(Vector, Bool collide, Bool fast) | Sets a Vector as the rotation to face towards smoothly. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setrotationsmooth)
 setScale(Vector) | Sets a Vector as the current scale. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setscale)
 setVelocity(Vector) | Sets a Vector as the current velocity. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setvelocity)
 translate(Vector) | Smoothly moves Object by the given Vector offset. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#translate)
@@ -204,12 +204,6 @@ Adds torque to an object in a rotational Vector.
 ---
 
 
-###getAngularVelocity()
-
-Returns a Vector of the current angular velocity. That is the speed at which it is turning, and in which direction.
-
----
-
 
 ###getBounds()
 
@@ -253,20 +247,6 @@ Returns a Table of Vector information describing the size of an object in Global
 ---
 
 
-###getPosition()
-
-Returns a Vector of the current position. The returned Vector is a world position.
-
----
-
-
-###getRotation()
-
-Returns a Vector of the current rotation.
-
----
-
-
 ###getScale()
 
 Returns a Vector of the current scale. Scale is not an absolute measurement, it is a multiple of the Object's default model size. So {x=2, y=2, z=2} would be a model twice its default size, not 2 units large.
@@ -283,6 +263,28 @@ Returns a Vector of the forward direction of this Object. The direction is relat
 function onLoad()
     distance = 5
     pos_target = self.getTransformForward()
+    pos_current = self.getPosition()
+    pos = {
+        x = pos_current.x + pos_target.x * distance,
+        y = pos_current.y + pos_target.y * distance,
+        z = pos_current.z + pos_target.z * distance,
+    }
+    self.setPositionSmooth(pos)
+end
+```
+
+---
+
+
+###getTransformRight()
+
+Returns a Vector of the forward direction of this object. The direction is relative to how the object is facing.
+
+``` Lua
+--Example of moving right 5 units
+function onLoad()
+    distance = 5
+    pos_target = self.getTransformRight()
     pos_current = self.getPosition()
     pos = {
         x = pos_current.x + pos_target.x * distance,
@@ -318,25 +320,50 @@ end
 ---
 
 
-###getTransformRight()
+###positionToLocal(...)
 
-Returns a Vector of the forward direction of this object. The direction is relative to how the object is facing.
+Returns a Vector after converting a world vector to a local Vector. A world Vector is a positional Vector using the world's coordinate system. A Local Vector is a positional Vector that is relative to the position of the given object.
+
+---
+
+
+###positionToWorld(...)
+
+Returns a Vector after converting a local Vector to a world Vector. A world Vector is a positional Vector using the world's coordinate system. A Local Vector is a positional Vector that is relative to the position of the given object.
+
+---
+
+
+###rotate(Vector)
+
+Rotates Object smoothly in the direction of the given Vector. This does not set the Object to face a specific rotation, it rotates the Object around by the number of degrees given for x/y/z.
 
 ``` Lua
---Example of moving right 5 units
-function onLoad()
-    distance = 5
-    pos_target = self.getTransformRight()
-    pos_current = self.getPosition()
-    pos = {
-        x = pos_current.x + pos_target.x * distance,
-        y = pos_current.y + pos_target.y * distance,
-        z = pos_current.z + pos_target.z * distance,
-    }
-    self.setPositionSmooth(pos)
-end
+--Rotates object 90 degrees around its Y axis
+self.rotate({x=0, y=90, z=0})
 ```
 
 ---
+
+
+###scale(...)
+
+Scales Object by a multiple. This does not set the Object to a specific scale, it scales the Object by the given multiple.
+
+!!!info "scale(Vector or Float)"
+	This function accepts either a Vector or Float as a parameter. If you use a Float, it will multiple the Object's x/y/z by that number.
+
+``` Lua
+--Both examples work to scale an object to be twice its current scale
+self.scale({x=2, y=2, z=2})
+self.scale(2)
+```
+
+---
+
+
+
+
+
 
 	
