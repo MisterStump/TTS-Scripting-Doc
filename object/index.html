@@ -434,6 +434,89 @@
     Function Details
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#addforce" title="addForce(...)" class="md-nav__link">
+    addForce(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addtorque" title="addTorque(...)" class="md-nav__link">
+    addTorque(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getangularvelocity" title="getAngularVelocity()" class="md-nav__link">
+    getAngularVelocity()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getbounds" title="getBounds()" class="md-nav__link">
+    getBounds()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getboundsnormalized" title="getBoundsNormalized()" class="md-nav__link">
+    getBoundsNormalized()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getposition" title="getPosition()" class="md-nav__link">
+    getPosition()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getrotation" title="getRotation()" class="md-nav__link">
+    getRotation()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getscale" title="getScale()" class="md-nav__link">
+    getScale()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettransformforward" title="getTransformForward()" class="md-nav__link">
+    getTransformForward()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettransformup" title="getTransformUp()" class="md-nav__link">
+    getTransformUp()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettransformright" title="getTransformRight()" class="md-nav__link">
+    getTransformRight()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -555,6 +638,89 @@
     Function Details
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#addforce" title="addForce(...)" class="md-nav__link">
+    addForce(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addtorque" title="addTorque(...)" class="md-nav__link">
+    addTorque(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getangularvelocity" title="getAngularVelocity()" class="md-nav__link">
+    getAngularVelocity()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getbounds" title="getBounds()" class="md-nav__link">
+    getBounds()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getboundsnormalized" title="getBoundsNormalized()" class="md-nav__link">
+    getBoundsNormalized()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getposition" title="getPosition()" class="md-nav__link">
+    getPosition()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getrotation" title="getRotation()" class="md-nav__link">
+    getRotation()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getscale" title="getScale()" class="md-nav__link">
+    getScale()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettransformforward" title="getTransformForward()" class="md-nav__link">
+    getTransformForward()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettransformup" title="getTransformUp()" class="md-nav__link">
+    getTransformUp()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettransformright" title="getTransformRight()" class="md-nav__link">
+    getTransformRight()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -578,7 +744,7 @@
                 
                 <p>The Object class represents any entity within tabletop simulator. Once you have a reference to an object in youre script you can call functions on it directly. Example: <code class="codehilite">obj.getPosition(...)</code>. You can get a reference to an object multiple ways;</p>
 <ul>
-<li>Using the <code class="codehilite">self</code> property if your object is on an object and referring to the object it is on.</li>
+<li>Using the <code class="codehilite">self</code> property if your script is on an Object and referring to that Object.</li>
 <li>Using <a href="../base#getobjectfromguid"><code class="codehilite">getObjectFromGUID(...)</code></a> with the object's GUID (found by right clicking it with the pointer).</li>
 <li>Getting it as a return from another function, like with <a href="../base#spawnobject"><code class="codehilite">spawnObject(...)</code></a>.</li>
 </ul>
@@ -793,17 +959,17 @@
 </tr>
 <tr>
 <td>getTransformForward()</td>
-<td>Returns a Vector of the forward direction for this object.</td>
+<td>Returns a Vector of the forward direction of this object.</td>
 <td align="right"><a href="#gettransformforward"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
 <tr>
 <td>getTransformRight()</td>
-<td>Returns a Vector of the right direction for this object.</td>
+<td>Returns a Vector of the right direction of this object.</td>
 <td align="right"><a href="#gettransformright"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
 <tr>
 <td>getTransformUp()</td>
-<td>Returns a Vector of the up direction for this object.</td>
+<td>Returns a Vector of the up direction of this object.</td>
 <td align="right"><a href="#gettransformup"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
 <tr>
@@ -880,14 +1046,398 @@
 </table>
 <h3 id="ui-functions">UI Functions<a class="headerlink" href="#ui-functions" title="Permanent link">&para;</a></h3>
 <p>These functions allow for the creation/editing/removal of functional buttons and text inputs which themselves trigger code within your scripts.</p>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+<th align="right"><i class="material-icons" style="line-height:90%;">info_outline</i></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clearButtons()</td>
+<td>Removes all scripted buttons.</td>
+<td align="right"><a href="#clearbuttons"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>clearInputs()</td>
+<td>Removes all scripted inputs.</td>
+<td align="right"><a href="#clearinputs"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>createButton(Table parameters)</td>
+<td>Creates a scripted button attached to the Object.</td>
+<td align="right"><a href="#createbutton"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>createInput(Table parameters)</td>
+<td>Creates a scripted input attached to the Object.</td>
+<td align="right"><a href="#createinput"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>editButton(Table parameters)</td>
+<td>Modify an existing button.</td>
+<td align="right"><a href="#editbutton"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>editInput(Table parameters)</td>
+<td>Modify an existing input.</td>
+<td align="right"><a href="#editinput"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getButtons()</td>
+<td>Returns a Table of all buttons on this Object.</td>
+<td align="right"><a href="#getButtons"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getInputs()</td>
+<td>Returns a Table of all inputs on this Object.</td>
+<td align="right"><a href="#getButtons"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>removeButton(Int index)</td>
+<td>Removes a specific button.</td>
+<td align="right"><a href="#removebutton"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>removeInput(Int index)</td>
+<td>Removes a specific button.</td>
+<td align="right"><a href="#removeinput"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+</tbody>
+</table>
 <h3 id="get-functions">Get Functions<a class="headerlink" href="#get-functions" title="Permanent link">&para;</a></h3>
 <p>These functions obtain information from an object.</p>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+<th align="right"><i class="material-icons" style="line-height:90%;">info_outline</i></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getColorTint()</td>
+<td>Returns Color tint.</td>
+<td align="right"><a href="#getcolortint"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getCustomObject()</td>
+<td>Returns a Table with the Custom Object information of a Custom Object.</td>
+<td align="right"><a href="#getcustomobject"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getLock()</td>
+<td>Returns a Bool of the lock status. True is locked.</td>
+<td align="right"><a href="#getlock"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getObjects()</td>
+<td>Returns a Table of objects in the script zone/bag/deck.</td>
+<td align="right"><a href="#getobjects"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getQuantity()</td>
+<td>Returns an Int of how many objects are in the stack. Returns -1 if the Object is not a stack.</td>
+<td align="right"><a href="#getquantity"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getRotationValues()</td>
+<td>Returns a Table of rotation values. Rotation values are used to give value to different rotations (like dice).</td>
+<td align="right"><a href="#getrotationvalues"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getStateId()</td>
+<td>Returns an Int for the current <a href="http://berserk-games.com/knowledgebase/creating-states/">state</a> ID (index) an object is it. Returns -1 if there are no other states.</td>
+<td align="right"><a href="#getstateid"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getStates()</td>
+<td>Returns a Table of information on the <a href="http://berserk-games.com/knowledgebase/creating-states/">states</a> of an Object.</td>
+<td align="right"><a href="#getstates"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getValue()</td>
+<td>Returns an Int as the value. What the value represents depends on what type of Object it is.</td>
+<td align="right"><a href="#getvalue"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+</tbody>
+</table>
 <h3 id="set-functions">Set Functions<a class="headerlink" href="#set-functions" title="Permanent link">&para;</a></h3>
 <p>These functions apply action to an object. They take some property in order to work.</p>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+<th align="right"><i class="material-icons" style="line-height:90%;">info_outline</i></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>setColorTint(Color)</td>
+<td>Sets the Color tint.</td>
+<td align="right"><a href="#getcolortint"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>setCustomObject(Table parameters)</td>
+<td>Sets a custom object's properties.</td>
+<td align="right"><a href="#setcustomobject"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>setLock(Bool lock)</td>
+<td>Sets if an object is locked in place.</td>
+<td align="right"><a href="#setcustomobject"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>setRotationValues(Table rotation_values)</td>
+<td>Sets rotation values of an object. Rotation values are used to give value to different rotations (like dice).</td>
+<td align="right"><a href="#setrotationvalues"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>setState(int state)</td>
+<td>Sets the <a href="http://berserk-games.com/knowledgebase/creating-states/">state</a> of an Object.</td>
+<td align="right"><a href="#setstate"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>setValue(variable value)</td>
+<td>Sets an Int as the value. What the value represents depends on what type of Object it is.</td>
+<td align="right"><a href="#setvalue"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+</tbody>
+</table>
 <h3 id="action-function">Action Function<a class="headerlink" href="#action-function" title="Permanent link">&para;</a></h3>
 <p>These functions perform general actions on objects and do not require any input parameters.</p>
-<p>flip()</p>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+<th align="right"><i class="material-icons" style="line-height:90%;">info_outline</i></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>call(String func_name, Table func_params)</td>
+<td>Used to call a Lua function on this Object.</td>
+<td align="right"><a href="#call"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>flip()</td>
+<td>Flip Object over.</td>
+<td align="right"><a href="#flip"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>clone(Table parameters)</td>
+<td>Copy/Paste this Object, returns a reference to the new Object.</td>
+<td align="right"><a href="#clone"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>cut()</td>
+<td>Cuts (splits in half) a deck or stack Object.</td>
+<td align="right"><a href="#cut"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>deal(Int number, String player_color, Int index)</td>
+<td>Deals Objects. Will deal from decks/bags/stacks/individual items.</td>
+<td align="right"><a href="#deal"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>dealToColorWithOffset(Vector, Bool flip, String player_color)</td>
+<td>Deals from a deck to a position relative to the hand zone.</td>
+<td align="right"><a href="#dealtocolorwithoffset"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>destruct()</td>
+<td>Destroys Object.</td>
+<td align="right"><a href="#destruct"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>highlightOn(Color, Float duration)</td>
+<td>Creates a highlight around an Object.</td>
+<td align="right"><a href="#highlighton"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>highlightOff(Color, Float duration)</td>
+<td>Removes a highlight from around an Object.</td>
+<td align="right"><a href="#highlightoff"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>putObject(Object put_object)</td>
+<td>Places an object into a container (chip stacks/bags/decks).</td>
+<td align="right"><a href="#putobject"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>randomize()</td>
+<td>Shuffles deck/bag, rolls dice/coin, lifts other objects into the air. Same as pressing <code class="codehilite">R</code> by default.</td>
+<td align="right"><a href="#randomize"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>reload()</td>
+<td>Returns Object reference of itself after it respawns itself.</td>
+<td align="right"><a href="#reload"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>roll()</td>
+<td>Rolls dice/coins.</td>
+<td align="right"><a href="#roll"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>shuffle()</td>
+<td></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>shuffleStates()</td>
+<td>Returns an Object reference to a new <a href="http://berserk-games.com/knowledgebase/creating-states/">state</a> after randomly selecting and changing to one.</td>
+<td align="right"><a href="#shufflestates"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>takeObject(Table parameters)</td>
+<td>Takes an object from a container (bag/deck/chip stack) and places it in the world.</td>
+<td align="right"><a href="#takeobject"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h2 id="function-details">Function Details<a class="headerlink" href="#function-details" title="Permanent link">&para;</a></h2>
+<h3 id="addforce">addForce(...)<a class="headerlink" href="#addforce" title="Permanent link">&para;</a></h3>
+<p>Adds force to an object in a directional Vector.</p>
+<div class="admonition info">
+<p class="admonition-title">addForce(Vector, Int force_type)</p>
+<ul>
+<li><strong>Vector</strong>: A Vector of the direction and magnitude of force.</li>
+<li><strong>Force Type</strong>: An Int representing the force type to apply. Options below.<ul>
+<li><span class="critic comment">Optional, defaults to 3.</span></li>
+<li><strong>1</strong>: Continuous force, uses mass. <em>(Force)</em></li>
+<li><strong>2</strong>: Continuous acceleration, ignores mass. <em>(Acceleration)</em></li>
+<li><strong>3</strong>: Instant force impulse, uses mass. <em>(Impulse)</em></li>
+<li><strong>4</strong>: Instant velocity change, ignores mass. <em>(Velocity Change)</em></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<h3 id="addtorque">addTorque(...)<a class="headerlink" href="#addtorque" title="Permanent link">&para;</a></h3>
+<p>Adds torque to an object in a rotational Vector.</p>
+<div class="admonition info">
+<p class="admonition-title">addTorque(Vector, Int force_type)</p>
+<ul>
+<li><strong>Vector</strong>: A Vector of the direction and magnitude of rotational force.</li>
+<li><strong>Force Type</strong>: An Int representing the force type to apply. Options below.<ul>
+<li><span class="critic comment">Optional, defaults to 3.</span></li>
+<li><strong>1</strong>: Continuous force, uses mass. <em>(Force)</em></li>
+<li><strong>2</strong>: Continuous acceleration, ignores mass. <em>(Acceleration)</em></li>
+<li><strong>3</strong>: Instant force impulse, uses mass. <em>(Impulse)</em></li>
+<li><strong>4</strong>: Instant velocity change, ignores mass. <em>(Velocity Change)</em></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<h3 id="getangularvelocity">getAngularVelocity()<a class="headerlink" href="#getangularvelocity" title="Permanent link">&para;</a></h3>
+<p>Returns a Vector of the current angular velocity. That is the speed at which it is turning, and in which direction.</p>
+<hr />
+<h3 id="getbounds">getBounds()<a class="headerlink" href="#getbounds" title="Permanent link">&para;</a></h3>
+<p>Returns a Table of Vector information describing the size of an object in Global terms. <a href="https://docs.unity3d.com/ScriptReference/Bounds.html">Bounds</a> are part of Unity, and represent an imaginary square box that can be drawn around an object. Unlike scale, it can help indicate the size of an object in in-game units, not just relative model size.</p>
+<div class="admonition info">
+<p class="admonition-title">Return Table</p>
+<ul>
+<li><strong>center</strong>: The center of the bounding box.</li>
+<li><strong>size</strong>: The size of the bounding box.</li>
+<li><strong>offset</strong>: The offset of the center of the bounding box from the middle of the Object model.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="c1">--Example returned Table</span>
+<span class="p">{</span>
+    <span class="n">center</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">5</span><span class="p">},</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">},</span>
+    <span class="n">offset</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<hr />
+<h3 id="getboundsnormalized">getBoundsNormalized()<a class="headerlink" href="#getboundsnormalized" title="Permanent link">&para;</a></h3>
+<p>Returns a Table of Vector information describing the size of an object in Global terms, as if it was rotated to {0,0,0}. <a href="https://docs.unity3d.com/ScriptReference/Bounds.html">Bounds</a> are part of Unity, and represent an imaginary square box that can be drawn around an object. Unlike scale, it can help indicate the size of an object in in-game units, not just relative model size.</p>
+<div class="admonition info">
+<p class="admonition-title">Return Table</p>
+<ul>
+<li><strong>center</strong>: The center of the bounding box.</li>
+<li><strong>size</strong>: The size of the bounding box.</li>
+<li><strong>offset</strong>: The offset of the center of the bounding box from the middle of the Object model.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="c1">--Example returned Table</span>
+<span class="p">{</span>
+    <span class="n">center</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">5</span><span class="p">},</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">},</span>
+    <span class="n">offset</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<hr />
+<h3 id="getposition">getPosition()<a class="headerlink" href="#getposition" title="Permanent link">&para;</a></h3>
+<p>Returns a Vector of the current position. The returned Vector is a world position.</p>
+<hr />
+<h3 id="getrotation">getRotation()<a class="headerlink" href="#getrotation" title="Permanent link">&para;</a></h3>
+<p>Returns a Vector of the current rotation.</p>
+<hr />
+<h3 id="getscale">getScale()<a class="headerlink" href="#getscale" title="Permanent link">&para;</a></h3>
+<p>Returns a Vector of the current scale. Scale is not an absolute measurement, it is a multiple of the Object's default model size. So {x=2, y=2, z=2} would be a model twice its default size, not 2 units large.</p>
+<hr />
+<h3 id="gettransformforward">getTransformForward()<a class="headerlink" href="#gettransformforward" title="Permanent link">&para;</a></h3>
+<p>Returns a Vector of the forward direction of this Object. The direction is relative to how the object is facing.</p>
+<div class="codehilite"><pre><span></span><span class="c1">--Example of moving forward 5 units</span>
+<span class="kr">function</span> <span class="nf">onLoad</span><span class="p">()</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">pos_target</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">getTransformForward</span><span class="p">()</span>
+    <span class="n">pos_current</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">getPosition</span><span class="p">()</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">pos_current</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">pos_target</span><span class="p">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">distance</span><span class="p">,</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">pos_current</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">pos_target</span><span class="p">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">distance</span><span class="p">,</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">pos_current</span><span class="p">.</span><span class="n">z</span> <span class="o">+</span> <span class="n">pos_target</span><span class="p">.</span><span class="n">z</span> <span class="o">*</span> <span class="n">distance</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">setPositionSmooth</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+
+<hr />
+<h3 id="gettransformup">getTransformUp()<a class="headerlink" href="#gettransformup" title="Permanent link">&para;</a></h3>
+<p>Returns a Vector of the up direction of this Object. The direction is relative to how the object is facing.</p>
+<div class="codehilite"><pre><span></span><span class="c1">--Example of moving up 5 units</span>
+<span class="kr">function</span> <span class="nf">onLoad</span><span class="p">()</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">pos_target</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">getTransformUp</span><span class="p">()</span>
+    <span class="n">pos_current</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">getPosition</span><span class="p">()</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">pos_current</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">pos_target</span><span class="p">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">distance</span><span class="p">,</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">pos_current</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">pos_target</span><span class="p">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">distance</span><span class="p">,</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">pos_current</span><span class="p">.</span><span class="n">z</span> <span class="o">+</span> <span class="n">pos_target</span><span class="p">.</span><span class="n">z</span> <span class="o">*</span> <span class="n">distance</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">setPositionSmooth</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+
+<hr />
+<h3 id="gettransformright">getTransformRight()<a class="headerlink" href="#gettransformright" title="Permanent link">&para;</a></h3>
+<p>Returns a Vector of the forward direction of this object. The direction is relative to how the object is facing.</p>
+<div class="codehilite"><pre><span></span><span class="c1">--Example of moving right 5 units</span>
+<span class="kr">function</span> <span class="nf">onLoad</span><span class="p">()</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">pos_target</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">getTransformRight</span><span class="p">()</span>
+    <span class="n">pos_current</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">getPosition</span><span class="p">()</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">pos_current</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">pos_target</span><span class="p">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">distance</span><span class="p">,</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">pos_current</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">pos_target</span><span class="p">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">distance</span><span class="p">,</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">pos_current</span><span class="p">.</span><span class="n">z</span> <span class="o">+</span> <span class="n">pos_target</span><span class="p">.</span><span class="n">z</span> <span class="o">*</span> <span class="n">distance</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">setPositionSmooth</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+
+<hr />
                 
                   
                 
