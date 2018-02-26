@@ -1,6 +1,6 @@
 The Object class represents any entity within tabletop simulator. Once you have a reference to an object in youre script you can call functions on it directly. Example: `obj.getPosition(...)`. You can get a reference to an object multiple ways;
 
-* Using the `self` property if your object is on an object and referring to the object it is on.
+* Using the `self` property if your script is on an Object and referring to that Object.
 * Using [`getObjectFromGUID(...)`](base#getobjectfromguid) with the object's GUID (found by right clicking it with the pointer).
 * Getting it as a return from another function, like with [`spawnObject(...)`](base#spawnobject).
 
@@ -49,13 +49,16 @@ TextTool | A [TextTool](texttool), which is an in-game text display system.
 ---
 
 
+
+
+
+
+
+
 ##Function Summary
 
 ###Transform Functions
 These functions handle the physical attributes of an Object: Position, Rotation, Scale, Bounds, Velocity. In other words, moving objects around as well as getting information on how they are moving.
-
-
-
 
 Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
 -- | -- | --:
@@ -67,9 +70,9 @@ getBoundsNormalized() | Returns a Table of Vector information describing the siz
 getPosition() | Returns a Vector of the current position. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getposition)
 getRotation() | Returns a Vector of the current rotation. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getrotation)
 getScale() | Returns a Vector of the current scale. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getscale)
-getTransformForward() | Returns a Vector of the forward direction for this object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gettransformforward)
-getTransformRight() | Returns a Vector of the right direction for this object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gettransformright)
-getTransformUp() | Returns a Vector of the up direction for this object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gettransformup)
+getTransformForward() | Returns a Vector of the forward direction of this object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gettransformforward)
+getTransformRight() | Returns a Vector of the right direction of this object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gettransformright)
+getTransformUp() | Returns a Vector of the up direction of this object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gettransformup)
 getVelocity() | Returns a Vector of the current velocity. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getvelocity)
 isSmoothMoving() | Indicates if an object is traveling as part of a Smooth move (ex. setPositionSmooth). | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#issmoothmoving)
 positionToLocal(Vector) | Returns a Vector after converting a global Vector to a local Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#positiontolocal)
@@ -86,27 +89,79 @@ setVelocity(Vector) | Sets a Vector as the current velocity. | [<i class="materi
 translate(Vector) | Smoothly moves Object by the given Vector offset. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#translate)
 
 
+
 ###UI Functions
 These functions allow for the creation/editing/removal of functional buttons and text inputs which themselves trigger code within your scripts.
+
+Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
+-- | -- | --:
+clearButtons() | Removes all scripted buttons. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#clearbuttons)
+clearInputs() | Removes all scripted inputs. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#clearinputs)
+createButton(Table parameters) | Creates a scripted button attached to the Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#createbutton)
+createInput(Table parameters) | Creates a scripted input attached to the Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#createinput)
+editButton(Table parameters) | Modify an existing button. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#editbutton)
+editInput(Table parameters) | Modify an existing input. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#editinput)
+getButtons() | Returns a Table of all buttons on this Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getButtons)
+getInputs() | Returns a Table of all inputs on this Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getButtons)
+removeButton(Int index) | Removes a specific button. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#removebutton)
+removeInput(Int index) | Removes a specific button. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#removeinput)
+
 
 
 ###Get Functions
 These functions obtain information from an object.
 
+Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
+-- | -- | --:
+getColorTint() | Returns Color tint. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getcolortint)
+getCustomObject() | Returns a Table with the Custom Object information of a Custom Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getcustomobject)
+getLock() | Returns a Bool of the lock status. True is locked. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getlock)
+getObjects() | Returns a Table of objects in the script zone/bag/deck. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getobjects)
+getQuantity() | Returns an Int of how many objects are in the stack. Returns -1 if the Object is not a stack. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getquantity)
+getRotationValues() | Returns a Table of rotation values. Rotation values are used to give value to different rotations (like dice). | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getrotationvalues)
+getStateId() | Returns an Int for the current [state](http://berserk-games.com/knowledgebase/creating-states/) ID (index) an object is it. Returns -1 if there are no other states. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getstateid)
+getStates() | Returns a Table of information on the [states](http://berserk-games.com/knowledgebase/creating-states/) of an Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getstates)
+getValue() | Returns an Int as the value. What the value represents depends on what type of Object it is. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getvalue)
+
+
 
 ###Set Functions
 These functions apply action to an object. They take some property in order to work.
+
+Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
+-- | -- | --:
+setColorTint(Color) | Sets the Color tint. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getcolortint)
+setCustomObject(Table parameters) | Sets a custom object's properties. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setcustomobject)
+setLock(Bool lock) | Sets if an object is locked in place. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setcustomobject)
+setRotationValues(Table rotation_values) | Sets rotation values of an object. Rotation values are used to give value to different rotations (like dice). | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setrotationvalues)
+setState(int state) | Sets the [state](http://berserk-games.com/knowledgebase/creating-states/) of an Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setstate)
+setValue(variable value) | Sets an Int as the value. What the value represents depends on what type of Object it is. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setvalue)
+
 
 
 ###Action Function
 These functions perform general actions on objects and do not require any input parameters.
 
-flip()
+Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
+-- | -- | --:
+call(String func_name, Table func_params) | Used to call a Lua function on this Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#call)
+flip() | Flip Object over. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#flip)
+clone(Table parameters) | Copy/Paste this Object, returns a reference to the new Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#clone)
+cut() | Cuts (splits in half) a deck or stack Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#cut)
+deal(Int number, String player_color, Int index) | Deals Objects. Will deal from decks/bags/stacks/individual items. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#deal)
+dealToColorWithOffset(Vector, Bool flip, String player_color) | Deals from a deck to a position relative to the hand zone. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#dealtocolorwithoffset)
+destruct() | Destroys Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#destruct)
+highlightOn(Color, Float duration) | Creates a highlight around an Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#highlighton)
+highlightOff(Color, Float duration) | Removes a highlight from around an Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#highlightoff)
+putObject(Object put_object) | Places an object into a container (chip stacks/bags/decks). | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#putobject)
+randomize() | Shuffles deck/bag, rolls dice/coin, lifts other objects into the air. Same as pressing `R` by default. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#randomize)
+reload() | Returns Object reference of itself after it respawns itself. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#reload)
+roll() | Rolls dice/coins. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#roll)
+shuffle()
+shuffleStates() | Returns an Object reference to a new [state](http://berserk-games.com/knowledgebase/creating-states/) after randomly selecting and changing to one. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#shufflestates)
+takeObject(Table parameters) | Takes an object from a container (bag/deck/chip stack) and places it in the world. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#takeobject)
 
-
-
-
-
+---
 
 
 
@@ -116,3 +171,172 @@ flip()
 
 
 ##Function Details
+
+###addForce(...)
+
+Adds force to an object in a directional Vector.
+
+!!!info "addForce(Vector, Int force_type)"
+	* **Vector**: A Vector of the direction and magnitude of force.
+    * **Force Type**: An Int representing the force type to apply. Options below.
+		* {>>Optional, defaults to 3.<<}
+        * **1**: Continuous force, uses mass. *(Force)*
+        * **2**: Continuous acceleration, ignores mass. *(Acceleration)*
+		* **3**: Instant force impulse, uses mass. *(Impulse)*
+		* **4**: Instant velocity change, ignores mass. *(Velocity Change)*
+
+---
+
+
+###addTorque(...)
+
+Adds torque to an object in a rotational Vector.
+
+!!!info "addTorque(Vector, Int force_type)"
+	* **Vector**: A Vector of the direction and magnitude of rotational force.
+	* **Force Type**: An Int representing the force type to apply. Options below.
+		* {>>Optional, defaults to 3.<<}
+        * **1**: Continuous force, uses mass. *(Force)*
+        * **2**: Continuous acceleration, ignores mass. *(Acceleration)*
+		* **3**: Instant force impulse, uses mass. *(Impulse)*
+		* **4**: Instant velocity change, ignores mass. *(Velocity Change)*
+
+---
+
+
+###getAngularVelocity()
+
+Returns a Vector of the current angular velocity. That is the speed at which it is turning, and in which direction.
+
+---
+
+
+###getBounds()
+
+Returns a Table of Vector information describing the size of an object in Global terms. [Bounds](https://docs.unity3d.com/ScriptReference/Bounds.html) are part of Unity, and represent an imaginary square box that can be drawn around an object. Unlike scale, it can help indicate the size of an object in in-game units, not just relative model size.
+
+!!!info "Return Table"
+	* **center**: The center of the bounding box.
+	* **size**: The size of the bounding box.
+	* **offset**: The offset of the center of the bounding box from the middle of the Object model.
+
+``` Lua
+--Example returned Table
+{
+	center = {x=0, y=3, z=0, 0, 3, 0},
+	size = {x=5, y=5, z=5}, 5, 5, 5},
+	offset = {x=0, y=-1, z=0, 0, -1, 0}
+}
+```
+
+---
+
+
+###getBoundsNormalized()
+
+Returns a Table of Vector information describing the size of an object in Global terms, as if it was rotated to {0,0,0}. [Bounds](https://docs.unity3d.com/ScriptReference/Bounds.html) are part of Unity, and represent an imaginary square box that can be drawn around an object. Unlike scale, it can help indicate the size of an object in in-game units, not just relative model size.
+
+!!!info "Return Table"
+	* **center**: The center of the bounding box.
+	* **size**: The size of the bounding box.
+	* **offset**: The offset of the center of the bounding box from the middle of the Object model.
+
+``` Lua
+--Example returned Table
+{
+	center = {x=0, y=3, z=0, 0, 3, 0},
+	size = {x=5, y=5, z=5}, 5, 5, 5},
+	offset = {x=0, y=-1, z=0, 0, -1, 0}
+}
+```
+
+---
+
+
+###getPosition()
+
+Returns a Vector of the current position. The returned Vector is a world position.
+
+---
+
+
+###getRotation()
+
+Returns a Vector of the current rotation.
+
+---
+
+
+###getScale()
+
+Returns a Vector of the current scale. Scale is not an absolute measurement, it is a multiple of the Object's default model size. So {x=2, y=2, z=2} would be a model twice its default size, not 2 units large.
+
+---
+
+
+###getTransformForward()
+
+Returns a Vector of the forward direction of this Object. The direction is relative to how the object is facing.
+
+``` Lua
+--Example of moving forward 5 units
+function onLoad()
+    distance = 5
+    pos_target = self.getTransformForward()
+    pos_current = self.getPosition()
+    pos = {
+        x = pos_current.x + pos_target.x * distance,
+        y = pos_current.y + pos_target.y * distance,
+        z = pos_current.z + pos_target.z * distance,
+    }
+    self.setPositionSmooth(pos)
+end
+```
+
+---
+
+
+###getTransformUp()
+
+Returns a Vector of the up direction of this Object. The direction is relative to how the object is facing.
+
+``` Lua
+--Example of moving up 5 units
+function onLoad()
+    distance = 5
+    pos_target = self.getTransformUp()
+    pos_current = self.getPosition()
+    pos = {
+        x = pos_current.x + pos_target.x * distance,
+        y = pos_current.y + pos_target.y * distance,
+        z = pos_current.z + pos_target.z * distance,
+    }
+    self.setPositionSmooth(pos)
+end
+```
+
+---
+
+
+###getTransformRight()
+
+Returns a Vector of the forward direction of this object. The direction is relative to how the object is facing.
+
+``` Lua
+--Example of moving right 5 units
+function onLoad()
+    distance = 5
+    pos_target = self.getTransformRight()
+    pos_current = self.getPosition()
+    pos = {
+        x = pos_current.x + pos_target.x * distance,
+        y = pos_current.y + pos_target.y * distance,
+        z = pos_current.z + pos_target.z * distance,
+    }
+    self.setPositionSmooth(pos)
+end
+```
+
+---
+
+	
