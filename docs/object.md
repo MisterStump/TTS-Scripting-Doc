@@ -77,16 +77,16 @@ getVelocity() | Returns a Vector of the current velocity. |
 isSmoothMoving() | Indicates if an object is traveling as part of a Smooth move. Smooth moving is performed by setPositionSmooth and setRotationSmooth. | 
 positionToLocal(Vector) | Returns a Vector after converting a world Vector to a local Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#positiontolocal)
 positionToWorld(Vector) | Returns a Vector after converting a local Vector to a world Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#positiontoworld)
-rotate(Vector) | Rotates Object smoothly in the direction of the given Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#rotate)
+rotate(Vector) | Rotates Object smoothly in the direction of the given Vector. | 
 scale(Vector or Float) | Scales Object by a multiple. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#scale)
-setAngularVelocity(Vector) | Sets a Vector as the current angular velocity. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setangularvelocity)
-setPosition(Vector) | Instantly moves an Object to the given Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setposition)
-setPositionSmooth<br>(Vector, Bool collide, Bool fast) | Sets a Vector as the position to move to smoothly. | 
+setAngularVelocity(Vector) | Sets a Vector as the current angular velocity. | 
+setPosition(Vector) | Instantly moves an Object to the given Vector. | 
+setPositionSmooth<br>(Vector, Bool collide, Bool fast) | Moves the Object smoothly to the given Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setpositionsmooth)
 setRotation(Vector) | Instantly rotates an Object to the given Vector. | 
-setRotationSmooth<br>(Vector, Bool collide, Bool fast) | Sets a Vector as the rotation to face towards smoothly. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setrotationsmooth)
-setScale(Vector) | Sets a Vector as the current scale. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setscale)
-setVelocity(Vector) | Sets a Vector as the current velocity. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setvelocity)
-translate(Vector) | Smoothly moves Object by the given Vector offset. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#translate)
+setRotationSmooth<br>(Vector, Bool collide, Bool fast) | Rotates the Object smoothly to the given Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setrotationsmooth)
+setScale(Vector) | Sets a Vector as the current scale. | 
+setVelocity(Vector) | Sets a Vector as the current velocity. | 
+translate(Vector) | Smoothly moves Object by the given Vector offset. | 
 
 
 
@@ -95,8 +95,8 @@ These functions allow for the creation/editing/removal of functional buttons and
 
 Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
 -- | -- | --:
-clearButtons() | Removes all scripted buttons. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#clearbuttons)
-clearInputs() | Removes all scripted inputs. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#clearinputs)
+clearButtons() | Removes all scripted buttons. | 
+clearInputs() | Removes all scripted inputs. | 
 createButton(Table parameters) | Creates a scripted button attached to the Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#createbutton)
 createInput(Table parameters) | Creates a scripted input attached to the Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#createinput)
 editButton(Table parameters) | Modify an existing button. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#editbutton)
@@ -172,7 +172,9 @@ takeObject(Table parameters) | Takes an object from a container (bag/deck/chip s
 
 ##Function Details
 
-###addForce(...)
+###Transform Function Details
+
+####addForce(...)
 
 Adds force to an object in a directional Vector.
 
@@ -188,7 +190,7 @@ Adds force to an object in a directional Vector.
 ---
 
 
-###addTorque(...)
+####addTorque(...)
 
 Adds torque to an object in a rotational Vector.
 
@@ -205,7 +207,7 @@ Adds torque to an object in a rotational Vector.
 
 
 
-###getBounds()
+####getBounds()
 
 Returns a Table of Vector information describing the size of an object in Global terms. [Bounds](https://docs.unity3d.com/ScriptReference/Bounds.html) are part of Unity, and represent an imaginary square box that can be drawn around an object. Unlike scale, it can help indicate the size of an object in in-game units, not just relative model size.
 
@@ -226,7 +228,7 @@ Returns a Table of Vector information describing the size of an object in Global
 ---
 
 
-###getBoundsNormalized()
+####getBoundsNormalized()
 
 Returns a Table of Vector information describing the size of an object in Global terms, as if it was rotated to {0,0,0}. [Bounds](https://docs.unity3d.com/ScriptReference/Bounds.html) are part of Unity, and represent an imaginary square box that can be drawn around an object. Unlike scale, it can help indicate the size of an object in in-game units, not just relative model size.
 
@@ -247,14 +249,14 @@ Returns a Table of Vector information describing the size of an object in Global
 ---
 
 
-###getScale()
+####getScale()
 
 Returns a Vector of the current scale. Scale is not an absolute measurement, it is a multiple of the Object's default model size. So {x=2, y=2, z=2} would be a model twice its default size, not 2 units large.
 
 ---
 
 
-###getTransformForward()
+####getTransformForward()
 
 Returns a Vector of the forward direction of this Object. The direction is relative to how the object is facing.
 
@@ -276,7 +278,7 @@ end
 ---
 
 
-###getTransformRight()
+####getTransformRight()
 
 Returns a Vector of the forward direction of this object. The direction is relative to how the object is facing.
 
@@ -298,7 +300,7 @@ end
 ---
 
 
-###getTransformUp()
+####getTransformUp()
 
 Returns a Vector of the up direction of this Object. The direction is relative to how the object is facing.
 
@@ -320,21 +322,21 @@ end
 ---
 
 
-###positionToLocal(...)
+####positionToLocal(...)
 
 Returns a Vector after converting a world vector to a local Vector. A world Vector is a positional Vector using the world's coordinate system. A Local Vector is a positional Vector that is relative to the position of the given object.
 
 ---
 
 
-###positionToWorld(...)
+####positionToWorld(...)
 
 Returns a Vector after converting a local Vector to a world Vector. A world Vector is a positional Vector using the world's coordinate system. A Local Vector is a positional Vector that is relative to the position of the given object.
 
 ---
 
 
-###rotate(Vector)
+####rotate(Vector)
 
 Rotates Object smoothly in the direction of the given Vector. This does not set the Object to face a specific rotation, it rotates the Object around by the number of degrees given for x/y/z.
 
@@ -346,7 +348,7 @@ self.rotate({x=0, y=90, z=0})
 ---
 
 
-###scale(...)
+####scale(...)
 
 Scales Object by a multiple. This does not set the Object to a specific scale, it scales the Object by the given multiple.
 
@@ -360,6 +362,41 @@ self.scale(2)
 ```
 
 ---
+
+
+####setPositionSmooth(...)
+
+Moves the Object smoothly to the given Vector.
+
+!!!info "setPositionSmooth(Vector, Bool collide, Bool fast)"
+	* **Vector**: A positional Vector.
+	* **Bool collide**: A Bool for if the Object will collide with other Objects while moving.
+	* **Bool fast**: A Bool for if the Object is moved quickly.
+	
+---
+
+
+####setRotationSmooth(...)
+
+Rotates the Object smoothly to the given Vector.
+
+!!!info "setRotationSmooth(Vector, Bool collide, Bool fast)"
+	* **Vector**: A rotational Vector.
+	* **Bool collide**: A Bool for if the Object will collide with other Objects while rotating.
+	* **Bool fast**: A Bool for if the Object is rotated quickly.
+
+---
+
+
+###UI Function Details
+
+####createButton(...)
+
+Creates a scripted button attached to the Object.
+
+!!!info "createButton(Table parameters)"
+
+
 
 
 
