@@ -44,3 +44,8 @@ html body div.md-container table td {
     padding-top: 8px !important;
 	padding-bottom: 8px !important;
 }
+
+/*Attempt to make width of these tables extend to full width available*/
+/*html body div.md-container table{width: 100% !important;}*/
+
+
