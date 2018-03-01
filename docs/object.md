@@ -392,9 +392,61 @@ Rotates the Object smoothly to the given Vector.
 
 ####createButton(...)
 
-Creates a scripted button attached to the Object.
+Creates a scripted button attached to the Object. Scripted buttons are buttons that can be clicked while in-game that trigger a function in a script.
 
 !!!info "createButton(Table parameters)"
+	* **Table parameters**: A Table containing the information used to spawn the button.
+		* **parameters.click_function**: A String of the function's name that will be run when button is clicked.
+		* **parameters.function_owner**: The Object which contains the click_function function.
+			* {>>Defaults to Global.<<}
+		* **parameters.label**: A String of text that appears on the button.
+			* {>>Optional, defaults to an empty string.<<}
+		* **parameters.position**: A Vector of where the button appears, relative to the Object's center.
+			* {>>Optional, defaults to {x=0, y=0, z=0}.<<}
+		* **parameters.rotation**: A Vector of how the button is rotated, relative to the Object's rotation.
+			* {>>Optional, defaults to {x=0, y=0, z=0}.<<}
+		* **parameters.scale**: A Vector of the scale of the button, relative to the Object's scale.
+			* {>>Optional, defaults to {x=1, y=1, z=1}.<<}
+		* **parameters.width**: An Int of how wide the button will be, relative to the Object.
+			* {>>Optional, defaults to 500.<<}
+		* **parameters.height**: An Int of how tall the button will be, relative to the Object.
+			* {>>Optional, defaults to 500.<<}
+		* **parameters.font_size**: An Int of the size the label font will be, relative to the Object.
+			* {>>Optional, defaults to 500.<<}
+		* **parameters.color**: A Color for the clickable button.
+			* {>>Optional, defaults to {r=1, g=1, b=1}.<<}
+		* **parameters.font_color**: A Color for the the label text.
+			* {>>Optional, defaults to {r=0, g=0, b=0}.<<}
+		* **parameters.tooltip**: A String for a popup of text, similar to how an object's name is displayed on mouseover.
+			* {>>Optional, defaults to an empty string.<<}
+
+``` Lua
+params = {
+	click_function = "click_func",
+	function_owner = self,
+	label = "Test",
+	position = {0, 1, 0},
+	rotation = {0, 180, 0},
+	width= 800,
+	height=400,
+	font_size = 340,
+	color = {0.5, 0.5, 0.5},
+	font_color = {1, 1, 1},
+	tooltip = "This text appears on mouseover.",
+}
+self.createButton(params)
+```
+
+!!!tip "Button Tips"
+	* Buttons can not be clicked from their back side.
+	* Buttons can not be clicked if there is another object between the pointer and the button. This does not include the Object the button is attached to.
+	* Buttons are placed relative to the Object they are attached to.
+	* The maximum font size is capped at 1000.
+	* The minimum width/height is ~100 before you won't see it getting any smaller.
+	* A button width/height of 0 will cause the button not to be drawn, but its label will be. This can be a way to attach text to an Object.
+
+!!!bug
+	Button scale currently distorts button height and width if the button is rotated at anything besided `{0,0,0}`.
 
 
 
