@@ -398,7 +398,7 @@ Creates a scripted button attached to the Object. Scripted buttons are buttons t
 	* **Table parameters**: A Table containing the information used to spawn the button.
 		* **parameters.click_function**: A String of the function's name that will be run when button is clicked.
 		* **parameters.function_owner**: The Object which contains the click_function function.
-			* {>>Defaults to Global.<<}
+			* {>>Optional, Defaults to Global.<<}
 		* **parameters.label**: A String of text that appears on the button.
 			* {>>Optional, defaults to an empty string.<<}
 		* **parameters.position**: A Vector of where the button appears, relative to the Object's center.
@@ -408,48 +408,267 @@ Creates a scripted button attached to the Object. Scripted buttons are buttons t
 		* **parameters.scale**: A Vector of the scale of the button, relative to the Object's scale.
 			* {>>Optional, defaults to {x=1, y=1, z=1}.<<}
 		* **parameters.width**: An Int of how wide the button will be, relative to the Object.
-			* {>>Optional, defaults to 500.<<}
+			* {>>Optional, defaults to 100.<<}
 		* **parameters.height**: An Int of how tall the button will be, relative to the Object.
-			* {>>Optional, defaults to 500.<<}
+			* {>>Optional, defaults to 100.<<}
 		* **parameters.font_size**: An Int of the size the label font will be, relative to the Object.
-			* {>>Optional, defaults to 500.<<}
+			* {>>Optional, defaults to 100.<<}
 		* **parameters.color**: A Color for the clickable button.
 			* {>>Optional, defaults to {r=1, g=1, b=1}.<<}
-		* **parameters.font_color**: A Color for the the label text.
+		* **parameters.font_color**: A Color for the label text.
 			* {>>Optional, defaults to {r=0, g=0, b=0}.<<}
-		* **parameters.tooltip**: A String for a popup of text, similar to how an object's name is displayed on mouseover.
+		* **parameters.tooltip**: A String for a popup of text, similar to how an Object's name is displayed on mouseover.
 			* {>>Optional, defaults to an empty string.<<}
+			
+!!!info "click_function(Object obj, String player_clicker_color)"
+	The click function which is activated by clicking this button has its own parameters it is passed automatically.
+	
+	* **Object obj**: The Object the button is attached to.
+	* **String player_clicker_color**: A String of the Color of the player that pressed the button.
 
 ``` Lua
-params = {
-	click_function = "click_func",
-	function_owner = self,
-	label = "Test",
-	position = {0, 1, 0},
-	rotation = {0, 180, 0},
-	width= 800,
-	height=400,
-	font_size = 340,
-	color = {0.5, 0.5, 0.5},
-	font_color = {1, 1, 1},
-	tooltip = "This text appears on mouseover.",
-}
-self.createButton(params)
+function onLoad()
+	params = {
+		click_function = "click_func",
+		function_owner = self,
+		label          = "Test",
+		position       = {0, 1, 0},
+		rotation       = {0, 180, 0},
+		width          = 800,
+		height         = 400,
+		font_size      = 340,
+		color          = {0.5, 0.5, 0.5},
+		font_color     = {1, 1, 1},
+		tooltip        = "This text appears on mouseover.",
+	}
+	self.createButton(params)
+end
+
+function click_func(obj, color)
+	print(obj)
+	print(color)
+end
 ```
 
-!!!tip "Button Tips"
+???tip "Button Tips"
 	* Buttons can not be clicked from their back side.
 	* Buttons can not be clicked if there is another object between the pointer and the button. This does not include the Object the button is attached to.
 	* Buttons are placed relative to the Object they are attached to.
 	* The maximum font size is capped at 1000.
-	* The minimum width/height is ~100 before you won't see it getting any smaller.
+	* The minimum width/height is 60. Any lower number (besides 0) will appear to be 60. This prevents visual glitches involving the corner rounding.
 	* A button width/height of 0 will cause the button not to be drawn, but its label will be. This can be a way to attach text to an Object.
 
 !!!bug
-	Button scale currently distorts button height and width if the button is rotated at anything besided `{0,0,0}`.
+	Button scale currently distorts button height and width if the button is rotated at anything besides `{0,0,0}`.
+
+---
 
 
+####createInput(...)
 
+Creates a scripted input attached to the Object. Scripted inputs are boxes you can click inside of in-game to input/edit text. Every letter typed triggers the function. The bool that is returned as part of the input_function allows you to determine when a player has finished editing the input.
+
+!!!info "createInput(Table parameters)"
+	* **Table parameters**: A Table containing the information used to spawn the input.
+		* **parameters.input_function**: A String of the function's name that will be run when a key is used or when it is deselected.
+		* **parameters.function_owner**: The Object which contains the input_function function.
+			* {>>Optional, Defaults to Global.<<}
+		* **parameters.label**: A String of text that appears as greyed out text when there is no value in the input.
+			* {>>Optional, defaults to an empty string.<<}
+		* **parameters.position**: A Vector of where the input appears, relative to the Object's center.
+			* {>>Optional, defaults to {x=0, y=0, z=0}.<<}
+		* **parameters.rotation**: A Vector of how the input is rotated, relative to the Object's rotation.
+			* {>>Optional, defaults to {x=0, y=0, z=0}.<<}
+		* **parameters.scale**: A Vector of the scale of the input, relative to the Object's scale.
+			* {>>Optional, defaults to {x=1, y=1, z=1}.<<}
+		* **parameters.width**: An Int of how wide the input will be, relative to the Object.
+			* {>>Optional, defaults to 100.<<}
+		* **parameters.height**: An Int of how tall the input will be, relative to the Object.
+			* {>>Optional, defaults to 100.<<}
+		* **parameters.font_size**: An Int of the size the label/value font will be, relative to the Object.
+			* {>>Optional, defaults to 100.<<}
+		* **parameters.color**: A Color for the input's background.
+			* {>>Optional, defaults to {r=1, g=1, b=1}.<<}
+		* **parameters.font_color**: A Color for the value text.
+			* {>>Optional, defaults to {r=0, g=0, b=0}.<<}
+		* **parameters.tooltip**: A String for a popup of text, similar to how an Object's name is displayed on mouseover.
+			* {>>Optional, defaults to an empty string.<<}
+		* **parameters.alignment**: An Int for how text is aligned in the input box.
+			* {>>Optional, defaults to 1.<<}
+			* **1**: Automatic
+			* **2**: Left
+			* **3**: Center
+			* **4**: Right
+			* **5**: Justified
+		* **parameters.value**: A String of the text entered into the input.
+			* {>>Optional, defaults to an empty string.<<}
+		* **parameters.validation**: An Int which determines what characters can be input into the value.
+			* {>>Optional, defaults to 1.<<}
+			* **1**: None
+			* **2**: Integer
+			* **3**: Float
+			* **4**: Alphanumeric
+			* **5**: Username
+			* **6**: Name
+		* **parameters.tab**: An Int which determines how pressing tab is handled when inputting.
+			* {>>Optional, defaults to 1.<<}
+			* **1**: None
+			* **2**: Select Next Input
+			* **3**: Indent
+
+!!!info "input_function(Object obj, String player_clicker_color, String input_value, Bool selected)"
+	The click function which is activated by clicking this button has its own parameters it is passed automatically.
+	
+	* **Object obj**: The Object the input is attached to.
+	* **String player_clicker_color**: A String of the Color of the player that has selected/edited the input.
+	* **String input_value**: A String of the text currently in the input.
+	* **Bool selected**: A Bool for if the value box is still being edited or not.
+	
+``` Lua
+function onLoad()
+	self.createInput({
+	    input_function = "input_func",
+	    function_owner = self,
+	    label          = "Gold",
+	    alignment      = 4,
+	    position       = {x=0, y=1, z=0},
+	    width          = 800,
+	    height         = 300,
+	    font_size      = 323,
+	    validation     = 2,
+	})
+end
+
+function input_func(obj, color, input, stillEditing)
+	print(input)
+	if not stillEditing then
+		print("Finished editing.")
+	end
+end
+```
+
+???tip "Input Tips"
+	* Inputs can not be clicked from their back side.
+	* Inputs can not be clicked if there is another object between the pointer and the inputs. This does not include the Object the input is attached to.
+	* Inputs are placed relative to the Object they are attached to.
+	* The maximum font size is capped at 1000.
+	* The minimum width/height is 60. Any lower number (besides 0) will appear to be 60. This prevents visual glitches involving the corner rounding.
+	* Font that does not fit in the input window's width/height does NOT display. To know how much height you need for each line, the formula is `(font_size * # of lines) + 23`. In other words, multiply how many lines of text you want to display by your font_size and add 23. That is your height value.
+
+---
+
+
+####editButton(...)
+
+Modify an existing button. The only parameter that is required is the index. The rest are optional, and not using them will cause the edited button's element to remain. Indexes start at 0. The first button on any given Object has an index of 0, the next button on it has an index of 1, etc. Each Object has its own indexes.
+
+!!!info "editButton(Table parameters)"
+	* **Table parameters**: A Table containing the information used to spawn the button.
+		* **parameters.index**: An Int of the index of the button you want to edit.
+		* **parameters.click_function**: A String of the function's name that will be run when button is clicked.
+		* **parameters.function_owner**: The Object which contains the click_function function.
+		* **parameters.label**: A String of text that appears on the button.
+		* **parameters.position**: A Vector of where the button appears, relative to the Object's center.
+		* **parameters.rotation**: A Vector of how the button is rotated, relative to the Object's rotation.
+		* **parameters.scale**: A Vector of the scale of the button, relative to the Object's scale.
+		* **parameters.width**: An Int of how wide the button will be, relative to the Object.
+		* **parameters.height**: An Int of how tall the button will be, relative to the Object.
+		* **parameters.font_size**: An Int of the size the label font will be, relative to the Object.
+		* **parameters.color**: A Color for the clickable button.
+		* **parameters.font_color**: A Color for the label text.
+		* **parameters.tooltip**: A String for a popup of text, similar to how an Object's name is displayed on mouseover.
+
+``` Lua
+self.editButton({index=0, label="New Label"})
+```
+
+---
+
+
+####editInput(...)
+
+Modify an existing input. The only parameter that is required is the index. The rest are optional, and not using them will cause the edited input's element to remain. Indexes start at 0. The first input on any given Object has an index of 0, the next input on it has an index of 1, etc. Each Object has its own indexes.
+
+!!!info "editInput(Table parameters)"
+	* **Table parameters**: A Table containing the information used to spawn the input.
+		* **parameters.index**: An Int of the index of the input you want to edit.
+		* **parameters.input_function**: A String of the function's name that will be run when a key is used or when it is deselected.
+		* **parameters.function_owner**: The Object which contains the input_function function.
+		* **parameters.label**: A String of text that appears as greyed out text when there is no value in the input.
+		* **parameters.position**: A Vector of where the input appears, relative to the Object's center.
+		* **parameters.rotation**: A Vector of how the input is rotated, relative to the Object's rotation.
+		* **parameters.scale**: A Vector of the scale of the input, relative to the Object's scale.
+		* **parameters.width**: An Int of how wide the input will be, relative to the Object.
+		* **parameters.height**: An Int of how tall the input will be, relative to the Object.
+		* **parameters.font_size**: An Int of the size the label/value font will be, relative to the Object.
+		* **parameters.color**: A Color for the input's background.
+		* **parameters.font_color**: A Color for the value text.
+		* **parameters.tooltip**: A String for a popup of text, similar to how an Object's name is displayed on mouseover.
+		* **parameters.alignment**: An Int for how text is aligned in the input box.
+			* **1**: Automatic
+			* **2**: Left
+			* **3**: Center
+			* **4**: Right
+			* **5**: Justified
+		* **parameters.value**: A String of the text entered into the input.
+		* **parameters.validation**: An Int which determines what characters can be input into the value.
+			* **1**: None
+			* **2**: Integer
+			* **3**: Float
+			* **4**: Alphanumeric
+			* **5**: Username
+			* **6**: Name
+		* **parameters.tab**: An Int which determines how pressing tab is handled when inputting.
+			* **1**: None
+			* **2**: Select Next Input
+			* **3**: Indent
+			
+	``` Lua
+	self.editInput({index=0, value="New Value"})
+	```
+
+---
+
+
+####getButtons()
+
+Returns a Table of all buttons on this Object. The Table contains parameters tables with the same keys as seen in the [createButton](#createbutton) section, except each Table of parameters also contains an index entry. This is used to identify each button, used by [editButton](#editbutton) and [removeButton](#removebutton).
+
+---
+
+
+####getButtons()
+
+Returns a Table of all inputs on this Object. The Table contains parameters tables with the same keys as seen in the [createInput](#createinput) section, except each Table of parameters also contains an index entry. This is used to identify each inputs, used by [editInput](#editinput) and [removeInput](#removeinput).
+
+---
+
+
+####removeButton(...)
+
+Removes a specific button. Indexes start at 0. The first button on any given Object has an index of 0, the next button on it has an index of 1, etc. Each Object has its own indexes.
+
+Removing an index instantly causes all other higher indexes to shift down 1.
+
+!!!info "removeButton(Int index)"
+	* **Int index**: An Int of the button's index to remove.
+
+---
+
+
+####removeInput(...)
+
+Removes a specific input. Indexes start at 0. The first button on any given Object has an index of 0, the next input on it has an index of 1, etc. Each Object has its own indexes.
+
+Removing an index instantly causes all other higher indexes to shift down 1.
+
+!!!info "removeInput(Int index)"
+	* **Int index**: An Int of the input's index to remove.
+
+---
+
+
+###Get Function Details
 
 
 
