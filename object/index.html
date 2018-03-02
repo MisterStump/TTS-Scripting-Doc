@@ -563,8 +563,64 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#createinput" title="createInput(...)" class="md-nav__link">
+    createInput(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editbutton" title="editButton(...)" class="md-nav__link">
+    editButton(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editinput" title="editInput(...)" class="md-nav__link">
+    editInput(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getbuttons" title="getButtons()" class="md-nav__link">
+    getButtons()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getbuttons_1" title="getButtons()" class="md-nav__link">
+    getButtons()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removebutton" title="removeButton(...)" class="md-nav__link">
+    removeButton(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removeinput" title="removeInput(...)" class="md-nav__link">
+    removeInput(...)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-function-details" title="Get Function Details" class="md-nav__link">
+    Get Function Details
+  </a>
   
 </li>
         
@@ -821,8 +877,64 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#createinput" title="createInput(...)" class="md-nav__link">
+    createInput(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editbutton" title="editButton(...)" class="md-nav__link">
+    editButton(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editinput" title="editInput(...)" class="md-nav__link">
+    editInput(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getbuttons" title="getButtons()" class="md-nav__link">
+    getButtons()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getbuttons_1" title="getButtons()" class="md-nav__link">
+    getButtons()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removebutton" title="removeButton(...)" class="md-nav__link">
+    removeButton(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removeinput" title="removeInput(...)" class="md-nav__link">
+    removeInput(...)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-function-details" title="Get Function Details" class="md-nav__link">
+    Get Function Details
+  </a>
   
 </li>
         
@@ -1587,10 +1699,319 @@
 <hr />
 <h3 id="ui-function-details">UI Function Details<a class="headerlink" href="#ui-function-details" title="Permanent link">&para;</a></h3>
 <h4 id="createbutton">createButton(...)<a class="headerlink" href="#createbutton" title="Permanent link">&para;</a></h4>
-<p>Creates a scripted button attached to the Object.</p>
+<p>Creates a scripted button attached to the Object. Scripted buttons are buttons that can be clicked while in-game that trigger a function in a script.</p>
 <div class="admonition info">
 <p class="admonition-title">createButton(Table parameters)</p>
+<ul>
+<li><strong>Table parameters</strong>: A Table containing the information used to spawn the button.<ul>
+<li><strong>parameters.click_function</strong>: A String of the function's name that will be run when button is clicked.</li>
+<li><strong>parameters.function_owner</strong>: The Object which contains the click_function function.<ul>
+<li><span class="critic comment">Optional, Defaults to Global.</span></li>
+</ul>
+</li>
+<li><strong>parameters.label</strong>: A String of text that appears on the button.<ul>
+<li><span class="critic comment">Optional, defaults to an empty string.</span></li>
+</ul>
+</li>
+<li><strong>parameters.position</strong>: A Vector of where the button appears, relative to the Object's center.<ul>
+<li><span class="critic comment">Optional, defaults to {x=0, y=0, z=0}.</span></li>
+</ul>
+</li>
+<li><strong>parameters.rotation</strong>: A Vector of how the button is rotated, relative to the Object's rotation.<ul>
+<li><span class="critic comment">Optional, defaults to {x=0, y=0, z=0}.</span></li>
+</ul>
+</li>
+<li><strong>parameters.scale</strong>: A Vector of the scale of the button, relative to the Object's scale.<ul>
+<li><span class="critic comment">Optional, defaults to {x=1, y=1, z=1}.</span></li>
+</ul>
+</li>
+<li><strong>parameters.width</strong>: An Int of how wide the button will be, relative to the Object.<ul>
+<li><span class="critic comment">Optional, defaults to 100.</span></li>
+</ul>
+</li>
+<li><strong>parameters.height</strong>: An Int of how tall the button will be, relative to the Object.<ul>
+<li><span class="critic comment">Optional, defaults to 100.</span></li>
+</ul>
+</li>
+<li><strong>parameters.font_size</strong>: An Int of the size the label font will be, relative to the Object.<ul>
+<li><span class="critic comment">Optional, defaults to 100.</span></li>
+</ul>
+</li>
+<li><strong>parameters.color</strong>: A Color for the clickable button.<ul>
+<li><span class="critic comment">Optional, defaults to {r=1, g=1, b=1}.</span></li>
+</ul>
+</li>
+<li><strong>parameters.font_color</strong>: A Color for the label text.<ul>
+<li><span class="critic comment">Optional, defaults to {r=0, g=0, b=0}.</span></li>
+</ul>
+</li>
+<li><strong>parameters.tooltip</strong>: A String for a popup of text, similar to how an Object's name is displayed on mouseover.<ul>
+<li><span class="critic comment">Optional, defaults to an empty string.</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </div>
+<div class="admonition info">
+<p class="admonition-title">click_function(Object obj, String player_clicker_color)</p>
+<p>The click function which is activated by clicking this button has its own parameters it is passed automatically.</p>
+<ul>
+<li><strong>Object obj</strong>: The Object the button is attached to.</li>
+<li><strong>String player_clicker_color</strong>: A String of the Color of the player that pressed the button.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="kr">function</span> <span class="nf">onLoad</span><span class="p">()</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">click_function</span> <span class="o">=</span> <span class="s2">&quot;click_func&quot;</span><span class="p">,</span>
+        <span class="n">function_owner</span> <span class="o">=</span> <span class="n">self</span><span class="p">,</span>
+        <span class="n">label</span>          <span class="o">=</span> <span class="s2">&quot;Test&quot;</span><span class="p">,</span>
+        <span class="n">position</span>       <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="n">rotation</span>       <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="n">width</span>          <span class="o">=</span> <span class="mi">800</span><span class="p">,</span>
+        <span class="n">height</span>         <span class="o">=</span> <span class="mi">400</span><span class="p">,</span>
+        <span class="n">font_size</span>      <span class="o">=</span> <span class="mi">340</span><span class="p">,</span>
+        <span class="n">color</span>          <span class="o">=</span> <span class="p">{</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">},</span>
+        <span class="n">font_color</span>     <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">},</span>
+        <span class="n">tooltip</span>        <span class="o">=</span> <span class="s2">&quot;This text appears on mouseover.&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">createButton</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">click_func</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+
+<details class="tip"><summary>Button Tips</summary><ul><li>Buttons can not be clicked from their back side.</li><li>Buttons can not be clicked if there is another object between the pointer and the button. This does not include the Object the button is attached to.</li><li>Buttons are placed relative to the Object they are attached to.</li><li>The maximum font size is capped at 1000.</li><li>The minimum width/height is 60. Any lower number (besides 0) will appear to be 60. This prevents visual glitches involving the corner rounding.</li><li>A button width/height of 0 will cause the button not to be drawn, but its label will be. This can be a way to attach text to an Object.</li></ul></details><div class="admonition bug">
+<p class="admonition-title">Bug</p>
+<p>Button scale currently distorts button height and width if the button is rotated at anything besides <code class="codehilite">{0,0,0}</code>.</p>
+</div>
+<hr />
+<h4 id="createinput">createInput(...)<a class="headerlink" href="#createinput" title="Permanent link">&para;</a></h4>
+<p>Creates a scripted input attached to the Object. Scripted inputs are boxes you can click inside of in-game to input/edit text. Every letter typed triggers the function. The bool that is returned as part of the input_function allows you to determine when a player has finished editing the input.</p>
+<div class="admonition info">
+<p class="admonition-title">createInput(Table parameters)</p>
+<ul>
+<li><strong>Table parameters</strong>: A Table containing the information used to spawn the input.<ul>
+<li><strong>parameters.input_function</strong>: A String of the function's name that will be run when a key is used or when it is deselected.</li>
+<li><strong>parameters.function_owner</strong>: The Object which contains the input_function function.<ul>
+<li><span class="critic comment">Optional, Defaults to Global.</span></li>
+</ul>
+</li>
+<li><strong>parameters.label</strong>: A String of text that appears as greyed out text when there is no value in the input.<ul>
+<li><span class="critic comment">Optional, defaults to an empty string.</span></li>
+</ul>
+</li>
+<li><strong>parameters.position</strong>: A Vector of where the input appears, relative to the Object's center.<ul>
+<li><span class="critic comment">Optional, defaults to {x=0, y=0, z=0}.</span></li>
+</ul>
+</li>
+<li><strong>parameters.rotation</strong>: A Vector of how the input is rotated, relative to the Object's rotation.<ul>
+<li><span class="critic comment">Optional, defaults to {x=0, y=0, z=0}.</span></li>
+</ul>
+</li>
+<li><strong>parameters.scale</strong>: A Vector of the scale of the input, relative to the Object's scale.<ul>
+<li><span class="critic comment">Optional, defaults to {x=1, y=1, z=1}.</span></li>
+</ul>
+</li>
+<li><strong>parameters.width</strong>: An Int of how wide the input will be, relative to the Object.<ul>
+<li><span class="critic comment">Optional, defaults to 100.</span></li>
+</ul>
+</li>
+<li><strong>parameters.height</strong>: An Int of how tall the input will be, relative to the Object.<ul>
+<li><span class="critic comment">Optional, defaults to 100.</span></li>
+</ul>
+</li>
+<li><strong>parameters.font_size</strong>: An Int of the size the label/value font will be, relative to the Object.<ul>
+<li><span class="critic comment">Optional, defaults to 100.</span></li>
+</ul>
+</li>
+<li><strong>parameters.color</strong>: A Color for the input's background.<ul>
+<li><span class="critic comment">Optional, defaults to {r=1, g=1, b=1}.</span></li>
+</ul>
+</li>
+<li><strong>parameters.font_color</strong>: A Color for the value text.<ul>
+<li><span class="critic comment">Optional, defaults to {r=0, g=0, b=0}.</span></li>
+</ul>
+</li>
+<li><strong>parameters.tooltip</strong>: A String for a popup of text, similar to how an Object's name is displayed on mouseover.<ul>
+<li><span class="critic comment">Optional, defaults to an empty string.</span></li>
+</ul>
+</li>
+<li><strong>parameters.alignment</strong>: An Int for how text is aligned in the input box.<ul>
+<li><span class="critic comment">Optional, defaults to 1.</span></li>
+<li><strong>1</strong>: Automatic</li>
+<li><strong>2</strong>: Left</li>
+<li><strong>3</strong>: Center</li>
+<li><strong>4</strong>: Right</li>
+<li><strong>5</strong>: Justified</li>
+</ul>
+</li>
+<li><strong>parameters.value</strong>: A String of the text entered into the input.<ul>
+<li><span class="critic comment">Optional, defaults to an empty string.</span></li>
+</ul>
+</li>
+<li><strong>parameters.validation</strong>: An Int which determines what characters can be input into the value.<ul>
+<li><span class="critic comment">Optional, defaults to 1.</span></li>
+<li><strong>1</strong>: None</li>
+<li><strong>2</strong>: Integer</li>
+<li><strong>3</strong>: Float</li>
+<li><strong>4</strong>: Alphanumeric</li>
+<li><strong>5</strong>: Username</li>
+<li><strong>6</strong>: Name</li>
+</ul>
+</li>
+<li><strong>parameters.tab</strong>: An Int which determines how pressing tab is handled when inputting.<ul>
+<li><span class="critic comment">Optional, defaults to 1.</span></li>
+<li><strong>1</strong>: None</li>
+<li><strong>2</strong>: Select Next Input</li>
+<li><strong>3</strong>: Indent</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">input_function(Object obj, String player_clicker_color, String input_value, Bool selected)</p>
+<p>The click function which is activated by clicking this button has its own parameters it is passed automatically.</p>
+<ul>
+<li><strong>Object obj</strong>: The Object the input is attached to.</li>
+<li><strong>String player_clicker_color</strong>: A String of the Color of the player that has selected/edited the input.</li>
+<li><strong>String input_value</strong>: A String of the text currently in the input.</li>
+<li><strong>Bool selected</strong>: A Bool for if the value box is still being edited or not.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="kr">function</span> <span class="nf">onLoad</span><span class="p">()</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">createInput</span><span class="p">({</span>
+        <span class="n">input_function</span> <span class="o">=</span> <span class="s2">&quot;input_func&quot;</span><span class="p">,</span>
+        <span class="n">function_owner</span> <span class="o">=</span> <span class="n">self</span><span class="p">,</span>
+        <span class="n">label</span>          <span class="o">=</span> <span class="s2">&quot;Gold&quot;</span><span class="p">,</span>
+        <span class="n">alignment</span>      <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="n">position</span>       <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">},</span>
+        <span class="n">width</span>          <span class="o">=</span> <span class="mi">800</span><span class="p">,</span>
+        <span class="n">height</span>         <span class="o">=</span> <span class="mi">300</span><span class="p">,</span>
+        <span class="n">font_size</span>      <span class="o">=</span> <span class="mi">323</span><span class="p">,</span>
+        <span class="n">validation</span>     <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">input_func</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">input</span><span class="p">,</span> <span class="n">stillEditing</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">input</span><span class="p">)</span>
+    <span class="kr">if</span> <span class="ow">not</span> <span class="n">stillEditing</span> <span class="kr">then</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Finished editing.&quot;</span><span class="p">)</span>
+    <span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+
+<details class="tip"><summary>Input Tips</summary><ul><li>Inputs can not be clicked from their back side.</li><li>Inputs can not be clicked if there is another object between the pointer and the inputs. This does not include the Object the input is attached to.</li><li>Inputs are placed relative to the Object they are attached to.</li><li>The maximum font size is capped at 1000.</li><li>The minimum width/height is 60. Any lower number (besides 0) will appear to be 60. This prevents visual glitches involving the corner rounding.</li><li>Font that does not fit in the input window's width/height does NOT display. To know how much height you need for each line, the formula is <code class="codehilite">(font_size * # of lines) + 23</code>. In other words, multiply how many lines of text you want to display by your font_size and add 23. That is your height value.</li></ul></details><hr />
+<h4 id="editbutton">editButton(...)<a class="headerlink" href="#editbutton" title="Permanent link">&para;</a></h4>
+<p>Modify an existing button. The only parameter that is required is the index. The rest are optional, and not using them will cause the edited button's element to remain. Indexes start at 0. The first button on any given Object has an index of 0, the next button on it has an index of 1, etc. Each Object has its own indexes.</p>
+<div class="admonition info">
+<p class="admonition-title">editButton(Table parameters)</p>
+<ul>
+<li><strong>Table parameters</strong>: A Table containing the information used to spawn the button.<ul>
+<li><strong>parameters.index</strong>: An Int of the index of the button you want to edit.</li>
+<li><strong>parameters.click_function</strong>: A String of the function's name that will be run when button is clicked.</li>
+<li><strong>parameters.function_owner</strong>: The Object which contains the click_function function.</li>
+<li><strong>parameters.label</strong>: A String of text that appears on the button.</li>
+<li><strong>parameters.position</strong>: A Vector of where the button appears, relative to the Object's center.</li>
+<li><strong>parameters.rotation</strong>: A Vector of how the button is rotated, relative to the Object's rotation.</li>
+<li><strong>parameters.scale</strong>: A Vector of the scale of the button, relative to the Object's scale.</li>
+<li><strong>parameters.width</strong>: An Int of how wide the button will be, relative to the Object.</li>
+<li><strong>parameters.height</strong>: An Int of how tall the button will be, relative to the Object.</li>
+<li><strong>parameters.font_size</strong>: An Int of the size the label font will be, relative to the Object.</li>
+<li><strong>parameters.color</strong>: A Color for the clickable button.</li>
+<li><strong>parameters.font_color</strong>: A Color for the label text.</li>
+<li><strong>parameters.tooltip</strong>: A String for a popup of text, similar to how an Object's name is displayed on mouseover.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="n">self</span><span class="p">.</span><span class="n">editButton</span><span class="p">({</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;New Label&quot;</span><span class="p">})</span>
+</pre></div>
+
+<hr />
+<h4 id="editinput">editInput(...)<a class="headerlink" href="#editinput" title="Permanent link">&para;</a></h4>
+<p>Modify an existing input. The only parameter that is required is the index. The rest are optional, and not using them will cause the edited input's element to remain. Indexes start at 0. The first input on any given Object has an index of 0, the next input on it has an index of 1, etc. Each Object has its own indexes.</p>
+<div class="admonition info">
+<p class="admonition-title">editInput(Table parameters)</p>
+<ul>
+<li><strong>Table parameters</strong>: A Table containing the information used to spawn the input.<ul>
+<li><strong>parameters.index</strong>: An Int of the index of the input you want to edit.</li>
+<li><strong>parameters.input_function</strong>: A String of the function's name that will be run when a key is used or when it is deselected.</li>
+<li><strong>parameters.function_owner</strong>: The Object which contains the input_function function.</li>
+<li><strong>parameters.label</strong>: A String of text that appears as greyed out text when there is no value in the input.</li>
+<li><strong>parameters.position</strong>: A Vector of where the input appears, relative to the Object's center.</li>
+<li><strong>parameters.rotation</strong>: A Vector of how the input is rotated, relative to the Object's rotation.</li>
+<li><strong>parameters.scale</strong>: A Vector of the scale of the input, relative to the Object's scale.</li>
+<li><strong>parameters.width</strong>: An Int of how wide the input will be, relative to the Object.</li>
+<li><strong>parameters.height</strong>: An Int of how tall the input will be, relative to the Object.</li>
+<li><strong>parameters.font_size</strong>: An Int of the size the label/value font will be, relative to the Object.</li>
+<li><strong>parameters.color</strong>: A Color for the input's background.</li>
+<li><strong>parameters.font_color</strong>: A Color for the value text.</li>
+<li><strong>parameters.tooltip</strong>: A String for a popup of text, similar to how an Object's name is displayed on mouseover.</li>
+<li><strong>parameters.alignment</strong>: An Int for how text is aligned in the input box.<ul>
+<li><strong>1</strong>: Automatic</li>
+<li><strong>2</strong>: Left</li>
+<li><strong>3</strong>: Center</li>
+<li><strong>4</strong>: Right</li>
+<li><strong>5</strong>: Justified</li>
+</ul>
+</li>
+<li><strong>parameters.value</strong>: A String of the text entered into the input.</li>
+<li><strong>parameters.validation</strong>: An Int which determines what characters can be input into the value.<ul>
+<li><strong>1</strong>: None</li>
+<li><strong>2</strong>: Integer</li>
+<li><strong>3</strong>: Float</li>
+<li><strong>4</strong>: Alphanumeric</li>
+<li><strong>5</strong>: Username</li>
+<li><strong>6</strong>: Name</li>
+</ul>
+</li>
+<li><strong>parameters.tab</strong>: An Int which determines how pressing tab is handled when inputting.<ul>
+<li><strong>1</strong>: None</li>
+<li><strong>2</strong>: Select Next Input</li>
+<li><strong>3</strong>: Indent</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">self</span><span class="p">.</span><span class="n">editInput</span><span class="p">({</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;New Value&quot;</span><span class="p">})</span>
+</pre></div>
+
+</div>
+<hr />
+<h4 id="getbuttons">getButtons()<a class="headerlink" href="#getbuttons" title="Permanent link">&para;</a></h4>
+<p>Returns a Table of all buttons on this Object. The Table contains parameters tables with the same keys as seen in the <a href="#createbutton">createButton</a> section, except each Table of parameters also contains an index entry. This is used to identify each button, used by <a href="#editbutton">editButton</a> and <a href="#removebutton">removeButton</a>.</p>
+<hr />
+<h4 id="getbuttons_1">getButtons()<a class="headerlink" href="#getbuttons_1" title="Permanent link">&para;</a></h4>
+<p>Returns a Table of all inputs on this Object. The Table contains parameters tables with the same keys as seen in the <a href="#createinput">createInput</a> section, except each Table of parameters also contains an index entry. This is used to identify each inputs, used by <a href="#editinput">editInput</a> and <a href="#removeinput">removeInput</a>.</p>
+<hr />
+<h4 id="removebutton">removeButton(...)<a class="headerlink" href="#removebutton" title="Permanent link">&para;</a></h4>
+<p>Removes a specific button. Indexes start at 0. The first button on any given Object has an index of 0, the next button on it has an index of 1, etc. Each Object has its own indexes.</p>
+<p>Removing an index instantly causes all other higher indexes to shift down 1.</p>
+<div class="admonition info">
+<p class="admonition-title">removeButton(Int index)</p>
+<ul>
+<li><strong>Int index</strong>: An Int of the button's index to remove.</li>
+</ul>
+</div>
+<hr />
+<h4 id="removeinput">removeInput(...)<a class="headerlink" href="#removeinput" title="Permanent link">&para;</a></h4>
+<p>Removes a specific input. Indexes start at 0. The first button on any given Object has an index of 0, the next input on it has an index of 1, etc. Each Object has its own indexes.</p>
+<p>Removing an index instantly causes all other higher indexes to shift down 1.</p>
+<div class="admonition info">
+<p class="admonition-title">removeInput(Int index)</p>
+<ul>
+<li><strong>Int index</strong>: An Int of the input's index to remove.</li>
+</ul>
+</div>
+<hr />
+<h3 id="get-function-details">Get Function Details<a class="headerlink" href="#get-function-details" title="Permanent link">&para;</a></h3>
                 
                   
                 
