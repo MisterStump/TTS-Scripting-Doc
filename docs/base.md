@@ -444,24 +444,27 @@ Returns Object reference for the object spawned. View the [Spawnable Object](spa
 			* {>>Optional, defaults to false.<<}
 		* **parameters.callback**: A String of the function name you want activated once the Object is initiated.
 			* {>>Optional, no callback is triggered without it.<<}
+			* {>>A callback function has 2 parameters, the Object spawned and, if used, the Table of params.<<}
 		* **parameters.callback_owner**: An Object of what object has the callback function on it. Global is a valid target as well.
 			* {>>Optional, defaults to Global. Serves no purpose if callback is not also used.<<}
 		* **parameters.params**: A Table of data to send to the callback to use as parameters. See example.
 			* {>>Optional, default is to not be used.<<}
+
+If you are spawning a **custom Object**, you should call [setCustomObject](object#setcustomobject) immediately after spawnObject to set its custom properties.
 
 ``` Lua
 function onLoad()
 	futureName = "Spawned By Script!"
 	spawnParams = {
 		type = "rpg_BEAR",
-		position = {x=0, y=3, z=-5},
-		rotation = {x=0, y=90, z=0},
-		scale = {x=2, y=2, z=2},
-		sound = false,
-		snap_to_grid = true,
-		callback = "spawn_callback",
+		position       = {x=0, y=3, z=-5},
+		rotation       = {x=0, y=90, z=0},
+		scale          = {x=2, y=2, z=2},
+		sound          = false,
+		snap_to_grid   = true,
+		callback       = "spawn_callback",
 		callback_owner = Global,
-		params = {name = futureName}
+		params         = {name = futureName}
 	}
 	spawnObject(spawnParams)
 end

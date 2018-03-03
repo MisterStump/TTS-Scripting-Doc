@@ -62,8 +62,8 @@ These functions handle the physical attributes of an Object: Position, Rotation,
 
 Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
 -- | -- | --:
-addForce(Vector, Int force_type) | Adds force to an object in a directional Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#addforce)
-addTorque(Vector, Int force_type) | Adds torque to an object in a rotational Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#addtorque)
+addForce(Vector, Int force_type) | Adds force to an object in a directional Vector. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#addforce)
+addTorque(Vector, Int force_type) | Adds torque to an object in a rotational Vector. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#addtorque)
 getAngularVelocity() | Returns a Vector of the current angular velocity. | 
 getBounds() | Returns a Table of Vector information describing the size of an object in Global terms. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getbounds)
 getBoundsNormalized() | Returns a Table of Vector information describing the size of an object in Global terms, as if it was rotated to {0,0,0}. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getboundsnormalized)
@@ -74,19 +74,19 @@ getTransformForward() | Returns a Vector of the forward direction of this object
 getTransformRight() | Returns a Vector of the right direction of this object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gettransformright)
 getTransformUp() | Returns a Vector of the up direction of this object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gettransformup)
 getVelocity() | Returns a Vector of the current velocity. | 
-isSmoothMoving() | Indicates if an object is traveling as part of a Smooth move. Smooth moving is performed by setPositionSmooth and setRotationSmooth. | 
+isSmoothMoving() | Indicates if an object is traveling as part of a Smooth move. Smooth moving is performed by setPositionSmooth and setRotationSmooth. Returns Bool. | 
 positionToLocal(Vector) | Returns a Vector after converting a world Vector to a local Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#positiontolocal)
 positionToWorld(Vector) | Returns a Vector after converting a local Vector to a world Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#positiontoworld)
-rotate(Vector) | Rotates Object smoothly in the direction of the given Vector. | 
-scale(Vector or Float) | Scales Object by a multiple. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#scale)
-setAngularVelocity(Vector) | Sets a Vector as the current angular velocity. | 
-setPosition(Vector) | Instantly moves an Object to the given Vector. | 
-setPositionSmooth<br>(Vector, Bool collide, Bool fast) | Moves the Object smoothly to the given Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setpositionsmooth)
+rotate(Vector) | Rotates Object smoothly in the direction of the given Vector. Returns Bool. | 
+scale(Vector or Float) | Scales Object by a multiple. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#scale)
+setAngularVelocity(Vector) | Sets a Vector as the current angular velocity. Returns Bool. | 
+setPosition(Vector) | Instantly moves an Object to the given Vector. Returns Bool. | 
+setPositionSmooth<br>(Vector, Bool collide, Bool fast) | Moves the Object smoothly to the given Vector. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setpositionsmooth)
 setRotation(Vector) | Instantly rotates an Object to the given Vector. | 
-setRotationSmooth<br>(Vector, Bool collide, Bool fast) | Rotates the Object smoothly to the given Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setrotationsmooth)
-setScale(Vector) | Sets a Vector as the current scale. | 
-setVelocity(Vector) | Sets a Vector as the current velocity. | 
-translate(Vector) | Smoothly moves Object by the given Vector offset. | 
+setRotationSmooth<br>(Vector, Bool collide, Bool fast) | Rotates the Object smoothly to the given Vector. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setrotationsmooth)
+setScale(Vector) | Sets a Vector as the current scale. Returns Bool. | 
+setVelocity(Vector) | Sets a Vector as the current velocity. Returns Bool. | 
+translate(Vector) | Smoothly moves Object by the given Vector offset. Returns Bool. | 
 
 
 
@@ -95,16 +95,16 @@ These functions allow for the creation/editing/removal of functional buttons and
 
 Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
 -- | -- | --:
-clearButtons() | Removes all scripted buttons. | 
-clearInputs() | Removes all scripted inputs. | 
-createButton(Table parameters) | Creates a scripted button attached to the Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#createbutton)
-createInput(Table parameters) | Creates a scripted input attached to the Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#createinput)
-editButton(Table parameters) | Modify an existing button. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#editbutton)
-editInput(Table parameters) | Modify an existing input. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#editinput)
-getButtons() | Returns a Table of all buttons on this Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getButtons)
-getInputs() | Returns a Table of all inputs on this Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getButtons)
-removeButton(Int index) | Removes a specific button. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#removebutton)
-removeInput(Int index) | Removes a specific button. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#removeinput)
+clearButtons() | Removes all scripted buttons. Returns Bool. | 
+clearInputs() | Removes all scripted inputs. Returns Bool. | 
+createButton(Table parameters) | Creates a scripted button attached to the Object. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#createbutton)
+createInput(Table parameters) | Creates a scripted input attached to the Object. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#createinput)
+editButton(Table parameters) | Modify an existing button. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#editbutton)
+editInput(Table parameters) | Modify an existing input. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#editinput)
+getButtons() | Returns a Table of all buttons on this Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getbuttons)
+getInputs() | Returns a Table of all inputs on this Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getinputs)
+removeButton(Int index) | Removes a specific button. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#removebutton)
+removeInput(Int index) | Removes a specific button. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#removeinput)
 
 
 
@@ -113,15 +113,15 @@ These functions obtain information from an object.
 
 Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
 -- | -- | --:
-getColorTint() | Returns Color tint. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getcolortint)
+getColorTint() | Returns Color tint. | 
 getCustomObject() | Returns a Table with the Custom Object information of a Custom Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getcustomobject)
-getLock() | Returns a Bool of the lock status. True is locked. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getlock)
+getLock() | Returns a Bool of the lock status. True is locked. | 
 getObjects() | Returns a Table of objects in the script zone/bag/deck. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getobjects)
-getQuantity() | Returns an Int of how many objects are in the stack. Returns -1 if the Object is not a stack. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getquantity)
+getQuantity() | Returns an Int of how many objects are in the stack. Returns -1 if the Object is not a stack. | 
 getRotationValues() | Returns a Table of rotation values. Rotation values are used to give value to different rotations (like dice). | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getrotationvalues)
-getStateId() | Returns an Int for the current [state](http://berserk-games.com/knowledgebase/creating-states/) ID (index) an object is it. Returns -1 if there are no other states. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getstateid)
+getStateId() | Returns an Int for the current [state](http://berserk-games.com/knowledgebase/creating-states/) ID (index) an object is it. Returns -1 if there are no other states. State ids (indexes) start at 1. | 
 getStates() | Returns a Table of information on the [states](http://berserk-games.com/knowledgebase/creating-states/) of an Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getstates)
-getValue() | Returns an Int as the value. What the value represents depends on what type of Object it is. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getvalue)
+getValue() | Returns an Int as the value. What the value represents depends on what type of Object this function is used on. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getvalue)
 
 
 
@@ -130,12 +130,12 @@ These functions apply action to an object. They take some property in order to w
 
 Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
 -- | -- | --:
-setColorTint(Color) | Sets the Color tint. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getcolortint)
-setCustomObject(Table parameters) | Sets a custom object's properties. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setcustomobject)
-setLock(Bool lock) | Sets if an object is locked in place. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setcustomobject)
-setRotationValues(Table rotation_values) | Sets rotation values of an object. Rotation values are used to give value to different rotations (like dice). | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setrotationvalues)
-setState(int state) | Sets the [state](http://berserk-games.com/knowledgebase/creating-states/) of an Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setstate)
-setValue(variable value) | Sets an Int as the value. What the value represents depends on what type of Object it is. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setvalue)
+setColorTint(Color) | Sets the Color tint. Returns Bool. | 
+setCustomObject(Table parameters) | Sets a custom Object's properties. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setcustomobject)
+setLock(Bool lock) | Sets if an object is locked in place. Returns Bool. | 
+setRotationValues(Table rotation_values) | Sets rotation values of an object. Rotation values are used to give value to different rotations (like dice). Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setrotationvalues)
+setState(Int state_id) | Returns Object of set [state](http://berserk-games.com/knowledgebase/creating-states/) of an Object. State ids (indexes) start at 1. | 
+setValue(Var value) | Sets an Int as the value. What the value represents depends on what type of Object it is. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setvalue)
 
 
 
@@ -144,22 +144,22 @@ These functions perform general actions on objects and do not require any input 
 
 Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
 -- | -- | --:
-call(String func_name, Table func_params) | Used to call a Lua function on this Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#call)
-flip() | Flip Object over. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#flip)
+call(String func_name,<br>Table func_params) | Used to call a Lua function on this Object. Returns Var. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#call)
+flip() | Flip Object over. Returns Bool. | 
 clone(Table parameters) | Copy/Paste this Object, returns a reference to the new Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#clone)
-cut() | Cuts (splits in half) a deck or stack Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#cut)
-deal(Int number, String player_color, Int index) | Deals Objects. Will deal from decks/bags/stacks/individual items. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#deal)
-dealToColorWithOffset(Vector, Bool flip, String player_color) | Deals from a deck to a position relative to the hand zone. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#dealtocolorwithoffset)
-destruct() | Destroys Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#destruct)
-highlightOn(Color, Float duration) | Creates a highlight around an Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#highlighton)
-highlightOff(Color, Float duration) | Removes a highlight from around an Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#highlightoff)
-putObject(Object put_object) | Places an object into a container (chip stacks/bags/decks). | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#putobject)
-randomize() | Shuffles deck/bag, rolls dice/coin, lifts other objects into the air. Same as pressing `R` by default. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#randomize)
+cut() | Cuts (splits in half) a deck or stack Object. | 
+deal(Int number,<br>String player_color, Int index) | Deals Objects. Will deal from decks/bags/stacks/individual items. Returns Object dealt. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#deal)
+dealToColorWithOffset<br>(Vector, Bool flip, String player_color) | Deals from a deck to a position relative to the hand zone. Returns Object dealt. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#dealtocolorwithoffset)
+destruct() | Destroys Object. Allows for `self.destruct()`. Returns Bool. | 
+highlightOn(Color, Float duration) | Creates a highlight around an Object. Returns Bool. | 
+highlightOff(Color) | Removes a highlight from around an Object. Returns Bool. |
+putObject(Object put_object) | Places an object into a container (chip stacks/bags/decks). Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#putobject)
+randomize() | Shuffles deck/bag, rolls dice/coin, lifts other objects into the air. Same as pressing `R` by default. Returns Bool. | 
 reload() | Returns Object reference of itself after it respawns itself. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#reload)
-roll() | Rolls dice/coins. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#roll)
-shuffle()
-shuffleStates() | Returns an Object reference to a new [state](http://berserk-games.com/knowledgebase/creating-states/) after randomly selecting and changing to one. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#shufflestates)
-takeObject(Table parameters) | Takes an object from a container (bag/deck/chip stack) and places it in the world. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#takeobject)
+roll() | Rolls dice/coins. Returns Bool. | 
+shuffle() | Shuffles/shakes up contents of a deck or bag. Returns Bool. |
+shuffleStates() | Returns an Object reference to a new [state](http://berserk-games.com/knowledgebase/creating-states/) after randomly selecting and changing to one. | 
+takeObject(Table parameters) | Returns an Object reference of Object taken from a container (bag/deck/chip stack) and placed into the world. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#takeobject)
 
 ---
 
@@ -394,6 +394,15 @@ Rotates the Object smoothly to the given Vector.
 
 Creates a scripted button attached to the Object. Scripted buttons are buttons that can be clicked while in-game that trigger a function in a script.
 
+???tip "Button Tips"
+	* Buttons can not be clicked from their back side.
+	* Buttons can not be clicked if there is another object between the pointer and the button. This does not include the Object the button is attached to.
+	* Buttons are placed relative to the Object they are attached to.
+	* The maximum font size is capped at 1000.
+	* The minimum width/height is 60. Any lower number (besides 0) will appear to be 60. This prevents visual glitches involving the corner rounding.
+	* A button width/height of 0 will cause the button not to be drawn, but its label will be. This can be a way to attach text to an Object.
+	* You cannot assign an index to a button. It is given one automatically.
+
 !!!info "createButton(Table parameters)"
 	* **Table parameters**: A Table containing the information used to spawn the button.
 		* **parameters.click_function**: A String of the function's name that will be run when button is clicked.
@@ -450,14 +459,6 @@ function click_func(obj, color)
 end
 ```
 
-???tip "Button Tips"
-	* Buttons can not be clicked from their back side.
-	* Buttons can not be clicked if there is another object between the pointer and the button. This does not include the Object the button is attached to.
-	* Buttons are placed relative to the Object they are attached to.
-	* The maximum font size is capped at 1000.
-	* The minimum width/height is 60. Any lower number (besides 0) will appear to be 60. This prevents visual glitches involving the corner rounding.
-	* A button width/height of 0 will cause the button not to be drawn, but its label will be. This can be a way to attach text to an Object.
-
 !!!bug
 	Button scale currently distorts button height and width if the button is rotated at anything besides `{0,0,0}`.
 
@@ -467,6 +468,15 @@ end
 ####createInput(...)
 
 Creates a scripted input attached to the Object. Scripted inputs are boxes you can click inside of in-game to input/edit text. Every letter typed triggers the function. The bool that is returned as part of the input_function allows you to determine when a player has finished editing the input.
+
+???tip "Input Tips"
+	* Inputs can not be clicked from their back side.
+	* Inputs can not be clicked if there is another object between the pointer and the inputs. This does not include the Object the input is attached to.
+	* Inputs are placed relative to the Object they are attached to.
+	* The maximum font size is capped at 1000.
+	* The minimum width/height is 60. Any lower number (besides 0) will appear to be 60. This prevents visual glitches involving the corner rounding.
+	* Font that does not fit in the input window's width/height does NOT display. To know how much height you need for each line, the formula is `(font_size * # of lines) + 23`. In other words, multiply how many lines of text you want to display by your font_size and add 23. That is your height value.
+	* You cannot assign an index to an input. It is given one automatically.
 
 !!!info "createInput(Table parameters)"
 	* **Table parameters**: A Table containing the information used to spawn the input.
@@ -545,15 +555,7 @@ function input_func(obj, color, input, stillEditing)
 		print("Finished editing.")
 	end
 end
-```
-
-???tip "Input Tips"
-	* Inputs can not be clicked from their back side.
-	* Inputs can not be clicked if there is another object between the pointer and the inputs. This does not include the Object the input is attached to.
-	* Inputs are placed relative to the Object they are attached to.
-	* The maximum font size is capped at 1000.
-	* The minimum width/height is 60. Any lower number (besides 0) will appear to be 60. This prevents visual glitches involving the corner rounding.
-	* Font that does not fit in the input window's width/height does NOT display. To know how much height you need for each line, the formula is `(font_size * # of lines) + 23`. In other words, multiply how many lines of text you want to display by your font_size and add 23. That is your height value.
+```	
 
 ---
 
@@ -632,14 +634,18 @@ Modify an existing input. The only parameter that is required is the index. The 
 
 ####getButtons()
 
-Returns a Table of all buttons on this Object. The Table contains parameters tables with the same keys as seen in the [createButton](#createbutton) section, except each Table of parameters also contains an index entry. This is used to identify each button, used by [editButton](#editbutton) and [removeButton](#removebutton).
+Returns a Table of all buttons on this Object. The Table contains parameters tables with the same keys as seen in the [createButton](#createbutton) section, except each Table of parameters also contains an __index__ entry. This is used to identify each button, used by [editButton](#editbutton) and [removeButton](#removebutton).
+
+Indexes start at 0.
 
 ---
 
 
-####getButtons()
+####getInputs()
 
-Returns a Table of all inputs on this Object. The Table contains parameters tables with the same keys as seen in the [createInput](#createinput) section, except each Table of parameters also contains an index entry. This is used to identify each inputs, used by [editInput](#editinput) and [removeInput](#removeinput).
+Returns a Table of all inputs on this Object. The Table contains parameters tables with the same keys as seen in the [createInput](#createinput) section, except each Table of parameters also contains an __index__ entry. This is used to identify each input, used by [editInput](#editinput) and [removeInput](#removeinput).
+
+Indexes start at 0.
 
 ---
 
@@ -669,6 +675,371 @@ Removing an index instantly causes all other higher indexes to shift down 1.
 
 
 ###Get Function Details
+
+
+####getCustomObject()
+
+Returns a Table with the Custom Object information of a Custom Object. See the [Spawnable Objects](spawnableobject) page for the kind of information returned.
+
+``` Lua
+--Example returned Table for a custom token
+{
+	image = "SOME URL HERE",
+	thickness = 0.2,
+	merge_distance = 15,
+	stackable = false,
+}
+```
+
+---
+
+
+####getObjects()
+
+Returns a Table of objects in the script zone/bag/deck. What it returns varies depending on the type of Object it is used on.
+
+If an Object is inside of a container, it does not exist in-game. As a result, you only get data on each Object, not an Object reference.
+
+!!!info "Return Table by Object Type"
+	!!!info "Scripting Zone""
+		Returns a Table of Object references to every object in the scripting zone.
+		
+		``` Lua
+		{
+			object_1,
+			object_2,
+		}
+		```
+
+	!!!info "Bag"
+		Returns a Table of sub-Tables, each sub-Table containing data on 1 bagged item. Indexes start at 0.
+		
+		* **String name**: A String of the name of the Object.
+		* **String guid**: A String of the GUID of the Object.
+		* **Int index**: A String of the index of the Object, represents the Object's place in the bag.
+		
+		``` Lua
+		{
+			name  = "Object Name",
+			guid  = "AAA111",
+			index = 0,	
+		}
+		```
+
+	!!!info "Deck"
+		Returns a Table of sub-Tables, each sub-Table containing data on 1 card. Indexes start at 0.
+		
+		* **String nickname**: A String of the name of the card.
+		* **String description**: A String of the description of the card.
+		* **String guid**: A String of the guid of the card.
+		* **Int index**: An Int of the index of the card, represents the card's order in the deck.
+		* **String lua_script**: A String of any Lua scripting saved on the card.
+		
+		``` Lua
+		{
+			nickname    = "Object Name",
+			description = "Object Descripotion",
+			guid        = "AAA111",
+			index       = 0,
+			lua_script  = "Any Lua Script On This Card",
+		}
+		```
+
+This function is often used with [takeObject(...)](#takeobject) to remove objects from containers.
+	
+---
+
+
+####getRotationValues()
+
+Returns a Table of rotation values. Rotation values are used to give value to different rotations (like dice) based on which side is pointed "up". It works by checking all of the rotation values assigned to an object and determining which one of them is closest to pointing up, and then displaying the value associated with that rotation.
+
+You can manually assign rotation values to objects using the Rotation Value Gizmo tool (in the left side Gizmo menu) or using [setRotationValues(...)](setrotationvalues).
+
+!!!info "Return Table"
+	The returned Table contains sub-Tables, each sub-Table containing these 2 key/value pairs.
+	
+	* **Var value**: A Var of what value is associated with a given rotation. Often a String or Int.
+	* **Vector rotation**: A Vector of the rotation of the object  that best represents the given value.
+
+``` Lua
+--Example returned Table for a coin
+{
+	{value="Heads", rotation={x=0, y=0, z=0}},
+	{value="Tails", rotation={x=0, y=180, z=0}},
+}
+```
+
+---
+
+
+####getStates()
+
+Returns a Table of information on the [states](http://berserk-games.com/knowledgebase/creating-states/) of an Object. Stated Objects have ids (indexes) starting with 1.
+
+!!!info "Return Table"
+	* **String name**: A String of name of the Object.
+	* **String guid**: A String of the GUID of the Object.
+	* **Int id**: An Int of the id (index) of the state.
+	
+``` Lua
+--Example returned Table
+{
+	{
+		name = "First State",
+		guid = "AAA111",
+		id   = 1,
+	},
+	{
+		name = "Second State",
+		guid = "BBB222",
+		id   = 2,
+	},
+}
+```
+
+---
+
+
+####getValue()
+
+Returns an Int as the value. What the value represents depends on what type of Object this function is used on.
+
+Object | Value
+-- | --
+[Clock](clock) | Returns Int of stopwatch/timer current time *(in seconds)*.
+[Counter](clock) | Returns Int of counter value.
+Rotation Value | Returns Var of the face-up value.
+Hidden Zone | Returns String of the Player [Color](color) of the zone.
+Poker Chip | Returns Int of the face value. {>>Does not work on custom chips.<<}
+Tablet | Returns String of the current URL.
+
+---
+
+
+###Set Function Details
+
+####setCustomObject(...)
+
+Sets a custom Object's properties. It can be used after [spawnObject](base#spawnobject) or on an already existing custom Object. If used on an already existing custom Object, you must use [reload](#reload) on the object after setCustomObject for the changes to be displayed.
+
+!!!info "setCustomObject(Table parameters)"
+	The Table of parameters varies, depending on which type of custom Object it is. See the [Spawnable Object](spawnableobject) page for the parameters needed.
+	
+``` Lua
+--Example of a custom token
+params = {
+	image = "SOME URL HERE",
+	thickness = 0.2,
+	merge_distance = 15,
+	stackable = false,
+}
+obj.setCustomObject(params)
+```
+
+---
+
+
+####setRotationValues(...)
+
+Sets rotation values of an object. Rotation values are used to give value to different rotations (like dice). It works by checking all of the rotation values assigned to an object and determining which one of them is closest to pointing up, and then displaying the value associated with that rotation.
+
+!!!info "setRotationValues(Table rotation_values)"
+	* **Table rotation_values**: A Table containing Tables with the following values. 1 sub-Table per "face".
+		* **rotation_values.value**: A Var of what value is associated with a given rotation. Often a String or Int.
+		* **rotation_values.rotation**: A Vector of the rotation of the object  that best represents the given value.
+
+``` Lua
+--Example setting of rotation values for a coin
+rotation_values = {
+	{value="Heads", rotation={x=0, y=0, z=0}},
+	{value="Tails", rotation={x=0, y=180, z=0}},
+}
+self.setRotationValues(rotation_values)
+```
+
+---
+
+
+####setValue(...)
+
+Sets an Int as the value of an Object. What the value represents depends on what type of Object it is.
+
+Object | Value
+-- | --
+[Clock](clock) | Set Int for stopwatch/timer current time *(in seconds)*.
+[Counter](clock) | Set Int for counter value.
+Rotation Value | Set Var for the face-up value.
+Hidden Zone | Set String for the Player [Color](color) of the zone.
+Tablet | Set String for the current URL.
+
+---
+
+
+###Action Function Details
+
+####call(...)
+
+Used to call a Lua function on this Object. This is used to remotely call functions in other scripts, either in Global or Object scripts. `Global` is the "Object" to use to call a function in the Global script.
+
+If the function that is called has a `return` Variable, it is returned like any function call would be. See example.
+
+!!!info "call(String func_name, Table func_params)"
+	* **String func_name**: A String of the function name you want to activate.
+	* **Table func_name**: A Table containing any data you want to pass to that function.
+		* {>>Optional, will not be sent by default.<<}
+
+``` Lua
+--Call, used from an Object script
+params = {
+	msg   = "Hello world!",
+	color = {r=0.2, g=1, b=0.2},
+}
+--Success would be set to true by the return value in the function
+success = Global.call("testFunc", params)
+```
+``` Lua
+--Function in Global
+function testFunc(params)
+	broadcastToAll(params.msg, params.color)
+	return true
+end
+```
+
+---
+
+
+####clone(...)
+
+Copy/Paste this Object, returns a reference to the new Object.
+
+!!!info "clone(Table parameters)"
+	* **Table parameters**: A Table with information used when pasting.
+		* **parameters.position**: A Vector of where the Object is placed.
+			* {>>Optional, defaults to {x=0, y=3, z=0}.<<}
+		* **parameters.snap_to_grid**: A Bool for if the Object snaps to grid.
+			* {>>Optional, defaults to false.<<}
+
+---
+
+
+####deal(...)
+
+Deals Objects to hand zones. Will deal from decks/bags/stacks as well as individual items. If dealing an individual item to a hand zone, it is a good idea to make sure that its [Member Variable](#member-variables) for `use_hands` is `true`.
+
+!!!info "deal(Int number, String player_color, Int index)"
+	* **Int number**: An Int of how many to deal.
+	* **String player_color**: A String of the Color to deal to.
+		* {>>Optional, defaults to an empty string. If not supplied, it will attempt to deal to all seated players.<<}
+	* **Int index**: An Int of which Object to deal from a container.
+		* {>>Optional, defaults to 0. If not supplied it will deal in regular order.<<}
+
+---
+
+
+####dealToColorWithOffset(...)
+
+Deals from a deck to a position relative to the hand zone.
+
+==Returns an Object reference to the dealt card.==
+
+!!!info "dealToColorWithOffset(Vector, Bool flip, String player_color)"
+	* **Vector**: A Vector of the x/y/z offset to deal to around the given hand zone.
+	* **Bool flip**: A Bool for if the card is flipped over when dealt.
+	* **String player_color**: A String of the hand zone Color to offset dealing to.
+
+``` Lua
+--Example of dealing 2 cards in front of the White player, face up.
+self.dealToColorWithOffset({-2,0,5}, true, "White")
+self.dealToColorWithOffset({ 2,0,5}, true, "White")
+```
+
+
+####putObject(...)
+
+Places an object into a container (chip stacks/bags/decks).
+
+!!!info "putObject(Object put_object)"
+	* **Object put_object**: An Object to place into the container.
+
+``` Lua
+--Example of a script on a bag that places Object into itself
+local obj = getObjectFromGUID("AAA111")
+self.putObject(obj)
+```
+
+---
+
+
+####reload()
+
+Returns Object reference of itself after it respawns itself. This function causes the Object to be deleted and respawned instantly to refresh it, so its old Object reference will no longer be valid.
+
+Most often this is used after using [setCustomObject(...)](#setcustomobject) to modify a custom object.
+
+---
+
+
+####takeObject(...)
+
+Takes an object from a container (bag/deck/chip stack) and places it in the world.
+
+==Returns an Object reference to the taken Object.==
+
+!!!tip
+	Spawned Objects take a moment to be physically spawned into the game. The purpose of the callback functionality is to allow you to run additional actions after the Object has been initiated fully into the instance. It is also possible to add a delay using a [coroutine](#startluacoroutine).
+	
+!!!info "takeObject(Table parameters)"
+	* **Table parameters**: A Table of parameters used to determine how takeObject will act.
+		* **parameters.position**: A Table Vector of the position to place Object.
+			* {>>Optional, defaults to container's position + 2 on the x axis.<<}
+		* **parameters.rotation**: A Table Vector of the rotation of the Object.
+			* {>>Optional, defaults to the container's rotation.<<}
+		* **parameters.flip**: A Bool for if the Object is flipped over.
+			* {>>Optional, defaults to false. Only used with decks, not bags/stacks.<<}
+			* {>>If rotation is used, flip's Bool will be ignored.<<}
+		* **parameters.guid**: A String of the GUID of the Object to take.
+			* {>>Optional,  no default. Only use index or guid, never both.<<}
+		* **parameters.index**: An Int of the index of the Object to take.
+			* {>>Optional,  no default. Only use index or guid, never both.<<}
+		* **parameters.top**: A Bool for if an object is taken from the top (vs bottom).
+			* {>>Optional, defaults to true.<<}
+		* **parameters.smooth**: A Bool for if the taken Object moves smoothly or instantly. 
+			* {>>Optional, defaults to true.<<}
+		* **parameters.callback**: A String of the function name you want activated once the Object is initiated.
+			* {>>Optional, no default.<<}
+			* {>>A callback function has 2 parameters, the Object spawned and, if used, the Table of params.<<}
+		* **parameters.callback_owner**: An Object of what Object has the callback function in its script. Global is a valid target.
+			* {>>Optional, defaults to container Object. Serves no purpose if callback is not also used.<<}
+		* **parameters.params**: A Table of data to send to the callback to use as parameters. See example.
+			* {>>Optional, no default. Serves no purpose if callback is not also used.<<}
+
+``` Lua
+function onLoad()
+    futureName = "Taken from container!"
+    takeParams = {
+        position = {x=0, y=3, z=5},
+        callback = "take_callback",
+        callback_owner = self,
+        params = {name = futureName},
+    }
+    self.takeObject(takeParams)
+end
+
+function take_callback(object_spawned, params)
+    object_spawned.setName(params.name)
+end
+```
+	
+
+???tip "Tip for using GUID to pull Object"
+	When getting the GUIDs of objects in a container, it is possible items can have the same GUID while in a container. This is because only once two items try to exist at the same time is one of them given a new GUID, and Objects in a container do not currently exist. Removing all Objects from the container at once will force all of them to be given unique GUIDs.
+
+???tip "Tip for using index to pull Object"
+	When you take an Object from the container, all higher indexes are reduced by 1 instantly. If you pull more than once Object at once by their index, you must account for this index changing.
+
+
+
 
 
 
