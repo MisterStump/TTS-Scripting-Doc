@@ -49,3 +49,17 @@ html body div.md-container table td {
 /*html body div.md-container table{width: 100% !important;}*/
 
 
+/*Coloring of top bar*/
+[data-md-color-primary=indigo] .md-header, [data-md-color-primary=indigo] .md-hero {
+  background-color: #bb0c0d;
+}
+
+/*Coloring of main header*/
+.md-typeset h1 {
+    color: #bb0c0d;
+}
+
+/*Coloring of secondary header*/
+h2{
+    color: #bb0c0d;
+}
