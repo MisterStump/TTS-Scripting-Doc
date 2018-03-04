@@ -4,10 +4,9 @@ theme:
   palette:
     primary: 'indigo'
     accent: 'indigo'
-  feature:
-    tabs: true
   logo: 'img/Icon-Dice.png'
   favicon: 'img/Icon-Dice.png'
+  custom_dir: 'theme'
 extra_css:
   - css/base.css
 markdown_extensions:
@@ -36,10 +35,14 @@ pages:
     - Introduction: index.md
     - Overview: overview.md
     - Atom: atom.md
-    - External Editor API: externaleditorapi.md
+    - External Editor AP: externaleditorapi.md
   - Lua API:
     - Introduction: luaapi.md
     - Event: event.md
     - Base: base.md
     - Object: object.md
-    - AssetBundle : assetbundle.md
+    - AssetBundle: assetbundle.md
+    - Clock: clock.md
+    - Counter: counter.md
+    - JSON: json.md
+    - Color: color.md

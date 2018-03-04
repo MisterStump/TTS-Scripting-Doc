@@ -12,7 +12,7 @@ These are variables that objects share. They allow for direct access to an Objec
 Read Example = `isResting = self.resting` Write Example = `self.resting = true`
 
 Variable | Description | Type
--- | -- | --:
+-- | -- | :--
 angular_drag | Angular drag. [Unity rigidbody property](https://docs.unity3d.com/Manual/class-Rigidbody.html). | Float
 auto_raise | If an object should be lifted above other objects to avoid collision when held by a player. | Bool
 bounciness | Bounciness, value of 0-1. [Unity physics material](https://docs.unity3d.com/Manual/class-PhysicMaterial.html). | Float
@@ -880,9 +880,12 @@ Tablet | Set String for the current URL.
 
 ####call(...)
 
-Used to call a Lua function on this Object. This is used to remotely call functions in other scripts, either in Global or Object scripts. `Global` is the "Object" to use to call a function in the Global script.
+testFunc
+:  Used to call a Lua function on this Object. This is used to remotely call functions in other scripts, either in Global or Object scripts. `Global` is the "Object" to use to call a function in the Global script.
 
-If the function that is called has a `return` Variable, it is returned like any function call would be. See example.
+> Returns Var
+
+*Var is only returned if the function called has a `return`. Otherwise return is `nil`. See example.*
 
 !!!info "call(String func_name, Table func_params)"
 	* **String func_name**: A String of the function name you want to activate.
@@ -911,7 +914,9 @@ end
 
 ####clone(...)
 
-Copy/Paste this Object, returns a reference to the new Object.
+Copy/Paste this Object.
+
+> Returns Object pasted
 
 !!!info "clone(Table parameters)"
 	* **Table parameters**: A Table with information used when pasting.
@@ -927,6 +932,8 @@ Copy/Paste this Object, returns a reference to the new Object.
 
 Deals Objects to hand zones. Will deal from decks/bags/stacks as well as individual items. If dealing an individual item to a hand zone, it is a good idea to make sure that its [Member Variable](#member-variables) for `use_hands` is `true`.
 
+> Returns Bool
+
 !!!info "deal(Int number, String player_color, Int index)"
 	* **Int number**: An Int of how many to deal.
 	* **String player_color**: A String of the Color to deal to.
@@ -941,7 +948,7 @@ Deals Objects to hand zones. Will deal from decks/bags/stacks as well as individ
 
 Deals from a deck to a position relative to the hand zone.
 
-==Returns an Object reference to the dealt card.==
+> Returns Object of dealt card
 
 !!!info "dealToColorWithOffset(Vector, Bool flip, String player_color)"
 	* **Vector**: A Vector of the x/y/z offset to deal to around the given hand zone.
@@ -958,6 +965,8 @@ self.dealToColorWithOffset({ 2,0,5}, true, "White")
 ####putObject(...)
 
 Places an object into a container (chip stacks/bags/decks).
+
+> Returns Bool
 
 !!!info "putObject(Object put_object)"
 	* **Object put_object**: An Object to place into the container.
@@ -977,6 +986,8 @@ Returns Object reference of itself after it respawns itself. This function cause
 
 Most often this is used after using [setCustomObject(...)](#setcustomobject) to modify a custom object.
 
+> Returns Object of itself after respawn
+
 ---
 
 
@@ -984,7 +995,7 @@ Most often this is used after using [setCustomObject(...)](#setcustomobject) to 
 
 Takes an object from a container (bag/deck/chip stack) and places it in the world.
 
-==Returns an Object reference to the taken Object.==
+> Returns Object of the Object taken
 
 !!!tip
 	Spawned Objects take a moment to be physically spawned into the game. The purpose of the callback functionality is to allow you to run additional actions after the Object has been initiated fully into the instance. It is also possible to add a delay using a [coroutine](#startluacoroutine).
