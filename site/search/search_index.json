@@ -857,8 +857,38 @@
         },
         {
             "location": "/json/",
-            "text": "",
+            "text": "The static global JSON class provides the ability to encode/decode data into JSON strings. This is largely used by the \nonSave()\n event function, but has other potential applications as well. The JSON class can be used on any String, Int, Float or Table. You call these functions like this: \nJSON.encode(...)\n.\n\n\n\n\nWarning\n\n\nThis class \ndoes not\n work with Object references. Use the Object's GUID instead.\n\n\n\n\nFunction Summary\n\u00b6\n\n\nObject Functions\n\u00b6\n\n\n\n\n\n\n\n\nFunction Name\n\n\nDescription\n\n\ninfo_outline\n\n\n\n\n\n\n\n\n\n\ndecode(String json_string)\n\n\nReturns Var from the decoded String.\n\n\ninfo_outline\n\n\n\n\n\n\nencode(Var data)\n\n\nReturns String of the encoded data from a number, String or Table.\n\n\ninfo_outline\n\n\n\n\n\n\nencode_pretty(Var data)\n\n\nReturns String of the encoded data from a number, String or Table. This version is slightly less efficient than encode(...) but is easier to read.\n\n\ninfo_outline\n\n\n\n\n\n\n\n\n\n\nFunction Details\n\u00b6\n\n\ndecode(...)\n\u00b6\n\n\nReturns Var from the decoded string.\n\n\n\n\ndecode(String json_string)\n\n\n\n\nString json_string\n: A String that is decoded, generally created by encode(...) or encode_pretty(...).\n\n\n\n\n\n\ncoded\n \n=\n \nJSON\n.\nencode\n(\n\"Test\"\n)\n\n\nprint\n(\ncoded\n)\n \n--Prints \"Test\"\n\n\ndecoded\n \n=\n \nJSON\n.\ndecode\n(\ncoded\n)\n\n\nprint\n(\ndecoded\n)\n \n--Prints Test\n\n\n\n\n\n\n\nencode(...)\n\u00b6\n\n\nReturns String of the encoded data from a number, String or Table.\n\n\n\n\nencode(Var data)\n\n\n\n\nVar data\n: A Var, either String, Int, Float or Table, to encode as a string.\n\n\n\n\n\n\n\n\nencode_pretty(...)\n\u00b6\n\n\nReturns String of the encoded data from a number, String or Table. This version is slightly less efficient than encode(...) but is easier to read.\n\n\n\n\nencode_pretty(Var data)\n\n\n\n\nVar data\n: A Var, either String, Int, Float or Table, to encode as a string.",
             "title": "JSON"
+        },
+        {
+            "location": "/json/#function-summary",
+            "text": "",
+            "title": "Function Summary"
+        },
+        {
+            "location": "/json/#object-functions",
+            "text": "Function Name  Description  info_outline      decode(String json_string)  Returns Var from the decoded String.  info_outline    encode(Var data)  Returns String of the encoded data from a number, String or Table.  info_outline    encode_pretty(Var data)  Returns String of the encoded data from a number, String or Table. This version is slightly less efficient than encode(...) but is easier to read.  info_outline",
+            "title": "Object Functions"
+        },
+        {
+            "location": "/json/#function-details",
+            "text": "",
+            "title": "Function Details"
+        },
+        {
+            "location": "/json/#decode",
+            "text": "Returns Var from the decoded string.   decode(String json_string)   String json_string : A String that is decoded, generally created by encode(...) or encode_pretty(...).    coded   =   JSON . encode ( \"Test\" )  print ( coded )   --Prints \"Test\"  decoded   =   JSON . decode ( coded )  print ( decoded )   --Prints Test",
+            "title": "decode(...)"
+        },
+        {
+            "location": "/json/#encode",
+            "text": "Returns String of the encoded data from a number, String or Table.   encode(Var data)   Var data : A Var, either String, Int, Float or Table, to encode as a string.",
+            "title": "encode(...)"
+        },
+        {
+            "location": "/json/#encode_pretty",
+            "text": "Returns String of the encoded data from a number, String or Table. This version is slightly less efficient than encode(...) but is easier to read.   encode_pretty(Var data)   Var data : A Var, either String, Int, Float or Table, to encode as a string.",
+            "title": "encode_pretty(...)"
         },
         {
             "location": "/color/",
@@ -879,6 +909,46 @@
             "location": "/color/#value",
             "text": "Values are between 0 and 1 for each key. If you are using RGB color that is in 0-255, you can use simple math to convert to the proper value. --To display a color that is r=50, b=83, g=199  self . setColorTint ({ 50 / 255 ,   83 / 255 ,   199 / 255 })",
             "title": "Value"
+        },
+        {
+            "location": "/vector/",
+            "text": "Keys\n\u00b6\n\n\nVector is a type of Table that is used to define a position, rotation or direction. The Table will contain the keys \nx\n, \ny\n, \nz\n and/or \n1\n, \n2\n, \n3\n. The letter and numeric keys are duplicates of each other.\n\n\n\n\n\n\n\n\nLetter Key\n\n\nNumber Key\n\n\n\n\n\n\n\n\n\n\nx\n\n\n1\n\n\n\n\n\n\ny\n\n\n2\n\n\n\n\n\n\nz\n\n\n3\n\n\n\n\n\n\n\n\nAs an example, An Object at coordinate X=5, Y=2, Z=-1 would return this table:\n\n{\n\n    \nx\n \n=\n \n5\n,\n\n    \ny\n \n=\n \n2\n,\n\n    \nz\n \n=\n \n-\n1\n,\n\n    \n1\n \n=\n \n5\n,\n\n    \n2\n \n=\n \n2\n,\n\n    \n3\n \n=\n \n-\n1\n,\n\n\n}\n\n\n\n\n\n\nMixed Keys\n\u00b6\n\n\nOnly one type of key, number or letter, is required. If both a are present in a Table, the numeric key is ignored and only the \nletter key\n is used.\n\n\n--Valid Table for 1 to the right\n\n\n{\nx\n=\n1\n,\n \ny\n=\n0\n,\n \nz\n=\n0\n}\n\n\n--Valid Table for 1 unit forward\n\n\n{\n0\n,\n \n0\n,\n \n1\n}\n\n\n--This Table would be for 1 unit to the right.\n\n\n{\nx\n=\n1\n,\n \ny\n=\n0\n,\n \nz\n=\n0\n,\n \n0\n,\n \n0\n,\n \n1\n}\n\n\n\n\n\n\n\nValue Range\n\u00b6\n\n\nThe range of values depend on the type of Vector you are using.\n\n\n\n\n\n\n\n\nType\n\n\nDescription\n\n\nRange\n\n\n\n\n\n\n\n\n\n\nPosition\n\n\nA point in space.\n\n\nAny number within the bounds of the world.\n\n\n\n\n\n\nRotation\n\n\nAngle, in degrees.\n\n\n-180 to 180.\n\n\n\n\n\n\nDirection\n\n\nVector direction.\n\n\n-1 to 1.\n\n\n\n\n\n\n\n\n\n\nType Details\n\u00b6\n\n\nPosition\n\u00b6\n\n\nX is right/left, Y is forward/back, Z is up/down. A positional Vector can be either world or local.\n\n\n\n\n\n\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nWorld\n\n\nThe center of the instance is \n{x=0, y=0, z=0}\n. That is generally the tabletop's center.\n\n\n\n\n\n\nLocal\n\n\nThe center of the Object's model is \n{x=0, y=0, z=0}\n. The center of an Object is determined by the model's creator.\n\n\n\n\n\n\n\n\nGenerally speaking, Tabletop Simulator's functions use world positional Vectors. \npositionToWorld(...)\n and \npositionToLocal(...)\n can be used to convert them.\n\n\nRotation\n\u00b6\n\n\nX is pitch (nodding your head), Y is yaw (shaking you head), Z is roll (tilting your head).\n\n\nDirection\n\u00b6\n\n\nX is right/left, Y is forward/back, Z is up/down.",
+            "title": "Vector"
+        },
+        {
+            "location": "/vector/#keys",
+            "text": "Vector is a type of Table that is used to define a position, rotation or direction. The Table will contain the keys  x ,  y ,  z  and/or  1 ,  2 ,  3 . The letter and numeric keys are duplicates of each other.     Letter Key  Number Key      x  1    y  2    z  3     As an example, An Object at coordinate X=5, Y=2, Z=-1 would return this table: { \n     x   =   5 , \n     y   =   2 , \n     z   =   - 1 , \n     1   =   5 , \n     2   =   2 , \n     3   =   - 1 ,  }",
+            "title": "Keys"
+        },
+        {
+            "location": "/vector/#mixed-keys",
+            "text": "Only one type of key, number or letter, is required. If both a are present in a Table, the numeric key is ignored and only the  letter key  is used.  --Valid Table for 1 to the right  { x = 1 ,   y = 0 ,   z = 0 }  --Valid Table for 1 unit forward  { 0 ,   0 ,   1 }  --This Table would be for 1 unit to the right.  { x = 1 ,   y = 0 ,   z = 0 ,   0 ,   0 ,   1 }",
+            "title": "Mixed Keys"
+        },
+        {
+            "location": "/vector/#value-range",
+            "text": "The range of values depend on the type of Vector you are using.     Type  Description  Range      Position  A point in space.  Any number within the bounds of the world.    Rotation  Angle, in degrees.  -180 to 180.    Direction  Vector direction.  -1 to 1.",
+            "title": "Value Range"
+        },
+        {
+            "location": "/vector/#type-details",
+            "text": "",
+            "title": "Type Details"
+        },
+        {
+            "location": "/vector/#position",
+            "text": "X is right/left, Y is forward/back, Z is up/down. A positional Vector can be either world or local.     Type  Description      World  The center of the instance is  {x=0, y=0, z=0} . That is generally the tabletop's center.    Local  The center of the Object's model is  {x=0, y=0, z=0} . The center of an Object is determined by the model's creator.     Generally speaking, Tabletop Simulator's functions use world positional Vectors.  positionToWorld(...)  and  positionToLocal(...)  can be used to convert them.",
+            "title": "Position"
+        },
+        {
+            "location": "/vector/#rotation",
+            "text": "X is pitch (nodding your head), Y is yaw (shaking you head), Z is roll (tilting your head).",
+            "title": "Rotation"
+        },
+        {
+            "location": "/vector/#direction",
+            "text": "X is right/left, Y is forward/back, Z is up/down.",
+            "title": "Direction"
         }
     ]
 }
