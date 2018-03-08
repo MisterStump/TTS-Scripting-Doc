@@ -167,28 +167,98 @@
         },
         {
             "location": "/luaapi/",
-            "text": "In this section, you will find details on all events/classes/functions specific to Tabletop Simulator's Lua scripting. For more general information on how the scripting language of Lua works and what it does on its own, you can review the \nonline documentation\n. \n\n\n\n\nTODO:\n\n\n\n\nAdd more here on how this docu is set up\n\n\nLink to the tutorial in the top message once I input it\n\n\nInstructions on how to modify if they think changes are needed.\n\n\n\n\n\n\nTemporary paste of data\n\u00b6\n\n\nClasses\n\u00b6\n\n\nFor the purposes of Tabletop Simulator, a class is a collection of methods/functions which all share commonality. That means, for example, that anything within the Object class is for use with in-game object and that anything within the Player class is for interacting with in-game players.\n\n\nClasses\n\u00b6\n\n\n\n\nClock\n\n\nCounter\n\n\nObject\n\n\nAssetBundle\n\n\nRPGFigurine\n\n\nTextTool\n\n\n\n\nStatic Classes\n\u00b6\n\n\n\n\nJSON\n\n\nPlayer\n\n\nTimer\n\n\nWebRequest\n\n\nPhysics\n\n\nLighting",
+            "text": "In this section, you will find details on all events/classes/functions specific to Tabletop Simulator's Lua scripting. For more general information on how the scripting language of Lua works and what it does on its own, you can review the \nonline documentation\n. \n\n\n\n\nTODO:\n\n\n\n\nAdd more here on how this docu is set up\n\n\nLink to the tutorial in the top message once I input it\n\n\nInstructions on how to modify if they think changes are needed.",
             "title": "Introduction"
         },
         {
-            "location": "/luaapi/#temporary-paste-of-data",
-            "text": "",
-            "title": "Temporary paste of data"
+            "location": "/typeandclass/",
+            "text": "Type\n\u00b6\n\n\nType refers to the type of information. You do not need to declare the type in Lua, but in this API you will see them indicated. This is only so you know what kind of information is required in a given variable/parameter. This API utilizes the following types.\n\n\n\n\n\n\n\n\nType\n\n\nDescription\n\n\nExample\n\n\n\n\n\n\n\n\n\n\nnil\n\n\nNo value.\n\n\nnil\n\n\n\n\n\n\nint\n\n\nNon-decimal value.\n\n\n5\n\n\n\n\n\n\nfloat\n\n\nNon-exact decimal value.\n\n\n2.032\n\n\n\n\n\n\nbool\n\n\ntrue\n or \nfalse\n value.\n\n\ntrue\n\n\n\n\n\n\nstring\n\n\nA series of characters.\n\n\n\"Hello.\"\n\n\n\n\n\n\ntable\n\n\nA container with keys and values.\n\n\n{[\n\"key\"\n]\n=\n\"value\"\n,\n \ntrue\n,\n \n5\n}\n\n\n\n\n\n\n\n\nFor more information what types are, you can refer to the relevant \nLua documentation\n.\n\n\n\n\nClass\n\u00b6\n\n\nDefining class requires further knowledge on object-oriented programming to really understand. However for the purposes of Tabletop Simulator Lua scripting, you can think of a class as a standard or collection that handles categories of objects.\n\n\nClasses\n\u00b6\n\n\nAssociated with in-game Objects.\n\n\n\n\nClock\n\n\nCounter\n\n\nObject\n\n\nAssetBundle\n\n\nRPGFigurine\n\n\nTextTool\n\n\n\n\nStatic Classes\n\u00b6\n\n\nAssociated with in-game properties and systems.\n\n\n\n\nJSON\n\n\nPlayer\n\n\nTimer\n\n\nWebRequest\n\n\nPhysics\n\n\nLighting\n\n\n\n\nFor more information on what a class is, you can refer to the relevant \nLua Documentation\n.\n\n\n\n\nSpecial Standards\n\u00b6\n\n\nThere are two Table types that are used often in Tabletop Simulator. They represent Vectors and Colors, and have special formatting rules to be understood by the many functions that utilize them.\n\n\nColor\n\u00b6\n\n\nColor is a type of Table that is used to define a color.\n\n\nKeys\n\u00b6\n\n\nThe Table will contain the keys \nr\n, \ng\n, \nb\n, \na\n and/or \n1\n, \n2\n, \n3\n, \n4\n. The letter and numeric keys are duplicates of each other, and each represents a color or transparency.\n\n\n\n\n\n\n\n\nColor\n\n\nLetter Key\n\n\nNumber Key\n\n\n\n\n\n\n\n\n\n\nred\n\n\nr\n\n\n1\n\n\n\n\n\n\ngreen\n\n\ng\n\n\n2\n\n\n\n\n\n\nblue\n\n\nb\n\n\n3\n\n\n\n\n\n\nalpha\n\n\na\n\n\n4\n\n\n\n\n\n\n\n\nAs an example, an Object with a white color tint would return this table:\n\n{\n\n    \nr\n \n=\n \n1\n,\n\n    \ng\n \n=\n \n1\n,\n\n    \nb\n \n=\n \n1\n,\n\n    \n1\n \n=\n \n1\n,\n\n    \n2\n \n=\n \n1\n,\n\n    \n3\n \n=\n \n1\n,\n\n\n}\n\n\n\n\nNotice it does not contain the \na\n or \n4\n keys. This is because currently only scripted buttons and scripted inputs utilize the alpha channel (transparency).\n\n\n\n\nMixed Keys\n\u00b6\n\n\nOnly one type of key, number or letter, is required. If both a are present in a Table, the numeric key is ignored and only the \nletter key\n is used.\n\n\n--Valid Table for red\n\n\n{\nr\n=\n1\n,\n \ng\n=\n0\n,\n \nb\n=\n0\n}\n\n\n--Valid Table for blue\n\n\n{\n0\n,\n \n0\n,\n \n1\n}\n\n\n--This Table would be red.\n\n\n{\nr\n=\n1\n,\n \ng\n=\n0\n,\n \nb\n=\n0\n,\n \n0\n,\n \n0\n,\n \n1\n}\n\n\n\n\n\nValue\n\u00b6\n\n\nValues are between 0 and 1 for each key. If you are using RGB color that is in 0-255, you can use simple math to convert to the proper value.\n\n--To display a color that is r=50, b=83, g=199\n\n\nself\n.\nsetColorTint\n({\n50\n/\n255\n,\n \n83\n/\n255\n,\n \n199\n/\n255\n})\n\n\n\n\n\n\nVector\n\u00b6\n\n\nVector is a type of Table that is used to define a position, rotation or direction. \n\n\nKeys\n\u00b6\n\n\nThe Table will contain the keys \nx\n, \ny\n, \nz\n and/or \n1\n, \n2\n, \n3\n. The letter and numeric keys are duplicates of each other.\n\n\n\n\n\n\n\n\nLetter Key\n\n\nNumber Key\n\n\n\n\n\n\n\n\n\n\nx\n\n\n1\n\n\n\n\n\n\ny\n\n\n2\n\n\n\n\n\n\nz\n\n\n3\n\n\n\n\n\n\n\n\nAs an example, An Object at coordinate X=5, Y=2, Z=-1 would return this table:\n\n{\n\n    \nx\n \n=\n \n5\n,\n\n    \ny\n \n=\n \n2\n,\n\n    \nz\n \n=\n \n-\n1\n,\n\n    \n1\n \n=\n \n5\n,\n\n    \n2\n \n=\n \n2\n,\n\n    \n3\n \n=\n \n-\n1\n,\n\n\n}\n\n\n\n\n\n\nMixed Keys\n\u00b6\n\n\nOnly one type of key, number or letter, is required. If both a are present in a Table, the numeric key is ignored and only the \nletter key\n is used.\n\n\n--Valid Table for 1 to the right\n\n\n{\nx\n=\n1\n,\n \ny\n=\n0\n,\n \nz\n=\n0\n}\n\n\n--Valid Table for 1 unit forward\n\n\n{\n0\n,\n \n0\n,\n \n1\n}\n\n\n--This Table would be for 1 unit to the right.\n\n\n{\nx\n=\n1\n,\n \ny\n=\n0\n,\n \nz\n=\n0\n,\n \n0\n,\n \n0\n,\n \n1\n}\n\n\n\n\n\n\n\nValue Range\n\u00b6\n\n\nThe range of values depend on the type of Vector you are using.\n\n\n\n\n\n\n\n\nType\n\n\nDescription\n\n\nRange\n\n\n\n\n\n\n\n\n\n\nPosition\n\n\nA point in space.\n\n\nAny number within the bounds of the world.\n\n\n\n\n\n\nRotation\n\n\nAngle, in degrees.\n\n\n-180 to 180.\n\n\n\n\n\n\nDirection\n\n\nVector direction.\n\n\n-1 to 1.\n\n\n\n\n\n\n\n\n\n\nType Details\n\u00b6\n\n\nPosition\n\u00b6\n\n\nX is right/left, Y is up/down, Z is forward/back. A positional Vector can be either world or local. Most of Tabletop Simulator's functions use world positional Vectors.\n\n\n\n\n\n\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nWorld\n\n\nThe center of the instance is \n{x=0, y=0, z=0}\n. That is usually near the tabletop's center.\n\n\n\n\n\n\nLocal\n\n\nThe center of the Object's model is \n{x=0, y=0, z=0}\n. The center of an Object is determined by the model's creator.\n\n\n\n\n\n\n\n\nConversion Between World/Local\npositionToWorld(...)\n and \npositionToLocal(...)\n can be used to convert between the two types.\nRotation\n\u00b6\n\n\nX is pitch (nodding your head), Y is yaw (shaking you head), Z is roll (tilting your head).\n\n\nDirection\n\u00b6\n\n\nX is right/left, Y is up/down, Z is forward/back.",
+            "title": "Type and Class"
         },
         {
-            "location": "/luaapi/#classes",
-            "text": "For the purposes of Tabletop Simulator, a class is a collection of methods/functions which all share commonality. That means, for example, that anything within the Object class is for use with in-game object and that anything within the Player class is for interacting with in-game players.",
+            "location": "/typeandclass/#type",
+            "text": "Type refers to the type of information. You do not need to declare the type in Lua, but in this API you will see them indicated. This is only so you know what kind of information is required in a given variable/parameter. This API utilizes the following types.     Type  Description  Example      nil  No value.  nil    int  Non-decimal value.  5    float  Non-exact decimal value.  2.032    bool  true  or  false  value.  true    string  A series of characters.  \"Hello.\"    table  A container with keys and values.  {[ \"key\" ] = \"value\" ,   true ,   5 }     For more information what types are, you can refer to the relevant  Lua documentation .",
+            "title": "Type"
+        },
+        {
+            "location": "/typeandclass/#class",
+            "text": "Defining class requires further knowledge on object-oriented programming to really understand. However for the purposes of Tabletop Simulator Lua scripting, you can think of a class as a standard or collection that handles categories of objects.",
+            "title": "Class"
+        },
+        {
+            "location": "/typeandclass/#classes",
+            "text": "Associated with in-game Objects.   Clock  Counter  Object  AssetBundle  RPGFigurine  TextTool",
             "title": "Classes"
         },
         {
-            "location": "/luaapi/#classes_1",
-            "text": "Clock  Counter  Object  AssetBundle  RPGFigurine  TextTool",
-            "title": "Classes"
-        },
-        {
-            "location": "/luaapi/#static-classes",
-            "text": "JSON  Player  Timer  WebRequest  Physics  Lighting",
+            "location": "/typeandclass/#static-classes",
+            "text": "Associated with in-game properties and systems.   JSON  Player  Timer  WebRequest  Physics  Lighting   For more information on what a class is, you can refer to the relevant  Lua Documentation .",
             "title": "Static Classes"
+        },
+        {
+            "location": "/typeandclass/#special-standards",
+            "text": "There are two Table types that are used often in Tabletop Simulator. They represent Vectors and Colors, and have special formatting rules to be understood by the many functions that utilize them.",
+            "title": "Special Standards"
+        },
+        {
+            "location": "/typeandclass/#color",
+            "text": "Color is a type of Table that is used to define a color.",
+            "title": "Color"
+        },
+        {
+            "location": "/typeandclass/#keys",
+            "text": "The Table will contain the keys  r ,  g ,  b ,  a  and/or  1 ,  2 ,  3 ,  4 . The letter and numeric keys are duplicates of each other, and each represents a color or transparency.     Color  Letter Key  Number Key      red  r  1    green  g  2    blue  b  3    alpha  a  4     As an example, an Object with a white color tint would return this table: { \n     r   =   1 , \n     g   =   1 , \n     b   =   1 , \n     1   =   1 , \n     2   =   1 , \n     3   =   1 ,  }   Notice it does not contain the  a  or  4  keys. This is because currently only scripted buttons and scripted inputs utilize the alpha channel (transparency).",
+            "title": "Keys"
+        },
+        {
+            "location": "/typeandclass/#mixed-keys",
+            "text": "Only one type of key, number or letter, is required. If both a are present in a Table, the numeric key is ignored and only the  letter key  is used.  --Valid Table for red  { r = 1 ,   g = 0 ,   b = 0 }  --Valid Table for blue  { 0 ,   0 ,   1 }  --This Table would be red.  { r = 1 ,   g = 0 ,   b = 0 ,   0 ,   0 ,   1 }",
+            "title": "Mixed Keys"
+        },
+        {
+            "location": "/typeandclass/#value",
+            "text": "Values are between 0 and 1 for each key. If you are using RGB color that is in 0-255, you can use simple math to convert to the proper value. --To display a color that is r=50, b=83, g=199  self . setColorTint ({ 50 / 255 ,   83 / 255 ,   199 / 255 })",
+            "title": "Value"
+        },
+        {
+            "location": "/typeandclass/#vector",
+            "text": "Vector is a type of Table that is used to define a position, rotation or direction.",
+            "title": "Vector"
+        },
+        {
+            "location": "/typeandclass/#keys_1",
+            "text": "The Table will contain the keys  x ,  y ,  z  and/or  1 ,  2 ,  3 . The letter and numeric keys are duplicates of each other.     Letter Key  Number Key      x  1    y  2    z  3     As an example, An Object at coordinate X=5, Y=2, Z=-1 would return this table: { \n     x   =   5 , \n     y   =   2 , \n     z   =   - 1 , \n     1   =   5 , \n     2   =   2 , \n     3   =   - 1 ,  }",
+            "title": "Keys"
+        },
+        {
+            "location": "/typeandclass/#mixed-keys_1",
+            "text": "Only one type of key, number or letter, is required. If both a are present in a Table, the numeric key is ignored and only the  letter key  is used.  --Valid Table for 1 to the right  { x = 1 ,   y = 0 ,   z = 0 }  --Valid Table for 1 unit forward  { 0 ,   0 ,   1 }  --This Table would be for 1 unit to the right.  { x = 1 ,   y = 0 ,   z = 0 ,   0 ,   0 ,   1 }",
+            "title": "Mixed Keys"
+        },
+        {
+            "location": "/typeandclass/#value-range",
+            "text": "The range of values depend on the type of Vector you are using.     Type  Description  Range      Position  A point in space.  Any number within the bounds of the world.    Rotation  Angle, in degrees.  -180 to 180.    Direction  Vector direction.  -1 to 1.",
+            "title": "Value Range"
+        },
+        {
+            "location": "/typeandclass/#type-details",
+            "text": "",
+            "title": "Type Details"
+        },
+        {
+            "location": "/typeandclass/#position",
+            "text": "X is right/left, Y is up/down, Z is forward/back. A positional Vector can be either world or local. Most of Tabletop Simulator's functions use world positional Vectors.     Type  Description      World  The center of the instance is  {x=0, y=0, z=0} . That is usually near the tabletop's center.    Local  The center of the Object's model is  {x=0, y=0, z=0} . The center of an Object is determined by the model's creator.     Conversion Between World/Local positionToWorld(...)  and  positionToLocal(...)  can be used to convert between the two types.",
+            "title": "Position"
+        },
+        {
+            "location": "/typeandclass/#rotation",
+            "text": "X is pitch (nodding your head), Y is yaw (shaking you head), Z is roll (tilting your head).",
+            "title": "Rotation"
+        },
+        {
+            "location": "/typeandclass/#direction",
+            "text": "X is right/left, Y is up/down, Z is forward/back.",
+            "title": "Direction"
         },
         {
             "location": "/event/",
@@ -891,64 +961,59 @@
             "title": "encode_pretty(...)"
         },
         {
-            "location": "/color/",
-            "text": "Keys\n\u00b6\n\n\nColor is a type of Table that is used to define a color. The Table will contain the keys \nr\n, \ng\n, \nb\n, \na\n and/or \n1\n, \n2\n, \n3\n, \n4\n. The letter and numeric keys are duplicates of each other, and each represents a color or transparency.\n\n\n\n\n\n\n\n\nColor\n\n\nLetter Key\n\n\nNumber Key\n\n\n\n\n\n\n\n\n\n\nred\n\n\nr\n\n\n1\n\n\n\n\n\n\ngreen\n\n\ng\n\n\n2\n\n\n\n\n\n\nblue\n\n\nb\n\n\n3\n\n\n\n\n\n\nalpha\n\n\na\n\n\n4\n\n\n\n\n\n\n\n\nAs an example, an Object with a white color tint would return this table:\n\n{\n\n    \nr\n \n=\n \n1\n,\n\n    \ng\n \n=\n \n1\n,\n\n    \nb\n \n=\n \n1\n,\n\n    \n1\n \n=\n \n1\n,\n\n    \n2\n \n=\n \n1\n,\n\n    \n3\n \n=\n \n1\n,\n\n\n}\n\n\n\n\nNotice it does not contain the \na\n or \n4\n keys. This is because currently only scripted buttons and scripted inputs utilize the alpha channel (transparency).\n\n\nMixed Keys\n\u00b6\n\n\nOnly one type of key, number or letter, is required. If both a are present in a Table, the numeric key is ignored and only the \nletter key\n is used.\n\n\n--Valid Table for red\n\n\n{\nr\n=\n1\n,\n \ng\n=\n0\n,\n \nb\n=\n0\n}\n\n\n--Valid Table for blue\n\n\n{\n0\n,\n \n0\n,\n \n1\n}\n\n\n--This Table would be red.\n\n\n{\nr\n=\n1\n,\n \ng\n=\n0\n,\n \nb\n=\n0\n,\n \n0\n,\n \n0\n,\n \n1\n}\n\n\n\n\n\nValue\n\u00b6\n\n\nValues are between 0 and 1 for each key. If you are using RGB color that is in 0-255, you can use simple math to convert to the proper value.\n\n--To display a color that is r=50, b=83, g=199\n\n\nself\n.\nsetColorTint\n({\n50\n/\n255\n,\n \n83\n/\n255\n,\n \n199\n/\n255\n})",
-            "title": "Color"
+            "location": "/lighting/",
+            "text": "Lighting, a static global class, is the in-game light of the map. It allows you to modify the lighting of the instance in the same way that the \nin-game lighting menu\n does. You call these functions like this: \nLighting.apply()\n.\n\n\nFor more information on lighting in Unity, \nrefer to the Unity documentation\n.\n\n\nMember Variables\n\u00b6\n\n\nLike \nObject member variables\n, Lighting has its own member variables. They are all numbers, and have specific valid ranges.\n\n\n\n\n\n\n\n\nVariable\n\n\nDescription\n\n\nType\n\n\n\n\n\n\n\n\n\n\nambient_type\n\n\nThe source of ambient light. 1 = background, 2 = gradient.\n\n\nInt\n\n\n\n\n\n\nambient_intensity\n\n\nThe strength of the ambient light. Range = 0 to 4.\n\n\nFloat\n\n\n\n\n\n\nlight_intensity\n\n\nThe strength of the directional light shining down in the scene. Range = 0 to 4.\n\n\nFloat\n\n\n\n\n\n\nreflection_intensity\n\n\nThe strength of the reflections from the background. Range = 0 to 1.\n\n\nFloat\n\n\n\n\n\n\n\n\nFunction Summary\n\u00b6\n\n\nFunctions\n\u00b6\n\n\n\n\n\n\n\n\nFunction Name\n\n\nDescription\n\n\ninfo_outline\n\n\n\n\n\n\n\n\n\n\napply()\n\n\nApplies changes made to the lighting Class using these functions or member variables. Return Bool.\n\n\n\n\n\n\n\n\ngetAmbientEquatorColor()\n\n\nReturns Color Table of the gradient equator. Not used if \nambient_type = 1\n.\n\n\n\n\n\n\n\n\ngetAmbientGroundColor()\n\n\nReturns Color Table of the gradient ground. Not used if \nambient_type = 1\n.\n\n\n\n\n\n\n\n\ngetAmbientSkyColor()\n\n\nReturns Color Table of the gradient sky. Not used if \nambient_type = 1\n.\n\n\n\n\n\n\n\n\ngetLightColor()\n\n\nReturns Color Table of the directional light, which shines straight down on the table.\n\n\n\n\n\n\n\n\nsetAmbientEquatorColor(Color)\n\n\nSets the color of the gradient equator. Not used if \nambient_type = 1\n. Returns Bool.\n\n\n\n\n\n\n\n\nsetAmbientGroundColor(Color)\n\n\nSets the color of the gradient ground. Not used if \nambient_type = 1\n. Returns Bool.\n\n\n\n\n\n\n\n\nsetAmbientSkyColor(Color)\n\n\nSets the color of the gradient sky. Not used if \nambient_type = 1\n. Returns Bool.\n\n\n\n\n\n\n\n\nsetLightColor(Color)\n\n\nSets the color of the directional light, which shines straight down on the table. Returns Bool.\n\n\n\n\n\n\n\n\n\n\n\n\nFunction Details\n\u00b6\n\n\nExample of making light red and bright\n\u00b6\n\n\nfunction\n \nonLoad\n()\n\n    \nred\n \n=\n \n{\nr\n=\n1\n,\n \ng\n=\n0.6\n,\n \nb\n=\n0.6\n}\n\n    \nLighting\n.\nlight_intensity\n \n=\n \n2\n\n    \nLighting\n.\nsetLightColor\n(\nred\n)\n\n    \nLighting\n.\napply\n()\n\n\nend",
+            "title": "Lighting"
         },
         {
-            "location": "/color/#keys",
-            "text": "Color is a type of Table that is used to define a color. The Table will contain the keys  r ,  g ,  b ,  a  and/or  1 ,  2 ,  3 ,  4 . The letter and numeric keys are duplicates of each other, and each represents a color or transparency.     Color  Letter Key  Number Key      red  r  1    green  g  2    blue  b  3    alpha  a  4     As an example, an Object with a white color tint would return this table: { \n     r   =   1 , \n     g   =   1 , \n     b   =   1 , \n     1   =   1 , \n     2   =   1 , \n     3   =   1 ,  }   Notice it does not contain the  a  or  4  keys. This is because currently only scripted buttons and scripted inputs utilize the alpha channel (transparency).",
-            "title": "Keys"
+            "location": "/lighting/#member-variables",
+            "text": "Like  Object member variables , Lighting has its own member variables. They are all numbers, and have specific valid ranges.     Variable  Description  Type      ambient_type  The source of ambient light. 1 = background, 2 = gradient.  Int    ambient_intensity  The strength of the ambient light. Range = 0 to 4.  Float    light_intensity  The strength of the directional light shining down in the scene. Range = 0 to 4.  Float    reflection_intensity  The strength of the reflections from the background. Range = 0 to 1.  Float",
+            "title": "Member Variables"
         },
         {
-            "location": "/color/#mixed-keys",
-            "text": "Only one type of key, number or letter, is required. If both a are present in a Table, the numeric key is ignored and only the  letter key  is used.  --Valid Table for red  { r = 1 ,   g = 0 ,   b = 0 }  --Valid Table for blue  { 0 ,   0 ,   1 }  --This Table would be red.  { r = 1 ,   g = 0 ,   b = 0 ,   0 ,   0 ,   1 }",
-            "title": "Mixed Keys"
-        },
-        {
-            "location": "/color/#value",
-            "text": "Values are between 0 and 1 for each key. If you are using RGB color that is in 0-255, you can use simple math to convert to the proper value. --To display a color that is r=50, b=83, g=199  self . setColorTint ({ 50 / 255 ,   83 / 255 ,   199 / 255 })",
-            "title": "Value"
-        },
-        {
-            "location": "/vector/",
-            "text": "Keys\n\u00b6\n\n\nVector is a type of Table that is used to define a position, rotation or direction. The Table will contain the keys \nx\n, \ny\n, \nz\n and/or \n1\n, \n2\n, \n3\n. The letter and numeric keys are duplicates of each other.\n\n\n\n\n\n\n\n\nLetter Key\n\n\nNumber Key\n\n\n\n\n\n\n\n\n\n\nx\n\n\n1\n\n\n\n\n\n\ny\n\n\n2\n\n\n\n\n\n\nz\n\n\n3\n\n\n\n\n\n\n\n\nAs an example, An Object at coordinate X=5, Y=2, Z=-1 would return this table:\n\n{\n\n    \nx\n \n=\n \n5\n,\n\n    \ny\n \n=\n \n2\n,\n\n    \nz\n \n=\n \n-\n1\n,\n\n    \n1\n \n=\n \n5\n,\n\n    \n2\n \n=\n \n2\n,\n\n    \n3\n \n=\n \n-\n1\n,\n\n\n}\n\n\n\n\n\n\nMixed Keys\n\u00b6\n\n\nOnly one type of key, number or letter, is required. If both a are present in a Table, the numeric key is ignored and only the \nletter key\n is used.\n\n\n--Valid Table for 1 to the right\n\n\n{\nx\n=\n1\n,\n \ny\n=\n0\n,\n \nz\n=\n0\n}\n\n\n--Valid Table for 1 unit forward\n\n\n{\n0\n,\n \n0\n,\n \n1\n}\n\n\n--This Table would be for 1 unit to the right.\n\n\n{\nx\n=\n1\n,\n \ny\n=\n0\n,\n \nz\n=\n0\n,\n \n0\n,\n \n0\n,\n \n1\n}\n\n\n\n\n\n\n\nValue Range\n\u00b6\n\n\nThe range of values depend on the type of Vector you are using.\n\n\n\n\n\n\n\n\nType\n\n\nDescription\n\n\nRange\n\n\n\n\n\n\n\n\n\n\nPosition\n\n\nA point in space.\n\n\nAny number within the bounds of the world.\n\n\n\n\n\n\nRotation\n\n\nAngle, in degrees.\n\n\n-180 to 180.\n\n\n\n\n\n\nDirection\n\n\nVector direction.\n\n\n-1 to 1.\n\n\n\n\n\n\n\n\n\n\nType Details\n\u00b6\n\n\nPosition\n\u00b6\n\n\nX is right/left, Y is forward/back, Z is up/down. A positional Vector can be either world or local.\n\n\n\n\n\n\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nWorld\n\n\nThe center of the instance is \n{x=0, y=0, z=0}\n. That is generally the tabletop's center.\n\n\n\n\n\n\nLocal\n\n\nThe center of the Object's model is \n{x=0, y=0, z=0}\n. The center of an Object is determined by the model's creator.\n\n\n\n\n\n\n\n\nGenerally speaking, Tabletop Simulator's functions use world positional Vectors. \npositionToWorld(...)\n and \npositionToLocal(...)\n can be used to convert them.\n\n\nRotation\n\u00b6\n\n\nX is pitch (nodding your head), Y is yaw (shaking you head), Z is roll (tilting your head).\n\n\nDirection\n\u00b6\n\n\nX is right/left, Y is forward/back, Z is up/down.",
-            "title": "Vector"
-        },
-        {
-            "location": "/vector/#keys",
-            "text": "Vector is a type of Table that is used to define a position, rotation or direction. The Table will contain the keys  x ,  y ,  z  and/or  1 ,  2 ,  3 . The letter and numeric keys are duplicates of each other.     Letter Key  Number Key      x  1    y  2    z  3     As an example, An Object at coordinate X=5, Y=2, Z=-1 would return this table: { \n     x   =   5 , \n     y   =   2 , \n     z   =   - 1 , \n     1   =   5 , \n     2   =   2 , \n     3   =   - 1 ,  }",
-            "title": "Keys"
-        },
-        {
-            "location": "/vector/#mixed-keys",
-            "text": "Only one type of key, number or letter, is required. If both a are present in a Table, the numeric key is ignored and only the  letter key  is used.  --Valid Table for 1 to the right  { x = 1 ,   y = 0 ,   z = 0 }  --Valid Table for 1 unit forward  { 0 ,   0 ,   1 }  --This Table would be for 1 unit to the right.  { x = 1 ,   y = 0 ,   z = 0 ,   0 ,   0 ,   1 }",
-            "title": "Mixed Keys"
-        },
-        {
-            "location": "/vector/#value-range",
-            "text": "The range of values depend on the type of Vector you are using.     Type  Description  Range      Position  A point in space.  Any number within the bounds of the world.    Rotation  Angle, in degrees.  -180 to 180.    Direction  Vector direction.  -1 to 1.",
-            "title": "Value Range"
-        },
-        {
-            "location": "/vector/#type-details",
+            "location": "/lighting/#function-summary",
             "text": "",
-            "title": "Type Details"
+            "title": "Function Summary"
         },
         {
-            "location": "/vector/#position",
-            "text": "X is right/left, Y is forward/back, Z is up/down. A positional Vector can be either world or local.     Type  Description      World  The center of the instance is  {x=0, y=0, z=0} . That is generally the tabletop's center.    Local  The center of the Object's model is  {x=0, y=0, z=0} . The center of an Object is determined by the model's creator.     Generally speaking, Tabletop Simulator's functions use world positional Vectors.  positionToWorld(...)  and  positionToLocal(...)  can be used to convert them.",
-            "title": "Position"
+            "location": "/lighting/#functions",
+            "text": "Function Name  Description  info_outline      apply()  Applies changes made to the lighting Class using these functions or member variables. Return Bool.     getAmbientEquatorColor()  Returns Color Table of the gradient equator. Not used if  ambient_type = 1 .     getAmbientGroundColor()  Returns Color Table of the gradient ground. Not used if  ambient_type = 1 .     getAmbientSkyColor()  Returns Color Table of the gradient sky. Not used if  ambient_type = 1 .     getLightColor()  Returns Color Table of the directional light, which shines straight down on the table.     setAmbientEquatorColor(Color)  Sets the color of the gradient equator. Not used if  ambient_type = 1 . Returns Bool.     setAmbientGroundColor(Color)  Sets the color of the gradient ground. Not used if  ambient_type = 1 . Returns Bool.     setAmbientSkyColor(Color)  Sets the color of the gradient sky. Not used if  ambient_type = 1 . Returns Bool.     setLightColor(Color)  Sets the color of the directional light, which shines straight down on the table. Returns Bool.",
+            "title": "Functions"
         },
         {
-            "location": "/vector/#rotation",
-            "text": "X is pitch (nodding your head), Y is yaw (shaking you head), Z is roll (tilting your head).",
-            "title": "Rotation"
+            "location": "/lighting/#function-details",
+            "text": "",
+            "title": "Function Details"
         },
         {
-            "location": "/vector/#direction",
-            "text": "X is right/left, Y is forward/back, Z is up/down.",
-            "title": "Direction"
+            "location": "/lighting/#example-of-making-light-red-and-bright",
+            "text": "function   onLoad () \n     red   =   { r = 1 ,   g = 0.6 ,   b = 0.6 } \n     Lighting . light_intensity   =   2 \n     Lighting . setLightColor ( red ) \n     Lighting . apply ()  end",
+            "title": "Example of making light red and bright"
+        },
+        {
+            "location": "/physics/",
+            "text": "Physics, a static global class, allows access to casts and gravity. Physics casts are a way to detect Objects. You call these functions like this: \nPhysics.getGravity()\n.\n\n\nFor more information on physics casts in Unity, \nrefer to the Unity documentation\n under BoxCast/RayCast/SphereCast.\n\n\nFunction Summary\n\u00b6\n\n\nFunctions\n\u00b6\n\n\n\n\n\n\n\n\nFunction Name\n\n\nDescription\n\n\ninfo_outline\n\n\n\n\n\n\n\n\n\n\ncast(Table parameters)\n\n\nReturns Table containing information on hit Objects.\n\n\ninfo_outline\n\n\n\n\n\n\ngetGravity()\n\n\nReturns directional Vector of the direction gravity is pulling.\n\n\n\n\n\n\n\n\nsetGravity(Vector)\n\n\nSets the direction gravity gravity pulls.\n\n\n\n\n\n\n\n\n\n\n\n\nFunction Details\n\u00b6\n\n\ncast(...)\n\u00b6\n\n\nReturns Table containing information on hit Objects. There are three kinds of casts:\n\n\n\n\n\n\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nRay\n\n\nA line.\n\n\n\n\n\n\nBox\n\n\nA cube, rectangle, plane.\n\n\n\n\n\n\nSphere\n\n\nA round ball. You cannot make ovals.\n\n\n\n\n\n\n\n\nIt draws the imaginary cast, then moves the rap/box/sphere along that path instantly. The debug Bool in the parameters allows you to see this shape, to aid in setup, but the visual is not instant (due to that making it pointless, if you can't see it).\n\n\n\n\nWarning\n\n\nPhysics casts are somewhat expensive. When running 30+ at once it will cause your game to stutter and/or crash. Do not overuse.\n\n\n\n\n\n\ncast(Table parameters)\n\n\n\n\nTable parameters\n: A Table of parameters used to guide the function.\n\n\nparameters.origin\n: A Vector of the starting point.\n\n\nparameters.direction\n: A directional Vector for the cast to move in.\n\n\nparameters.type\n: An Int of the type of cast. 1 = Ray, 2 = Sphere, 3= Box.\n\n\nparameters.size\n: A Vector of the size of the cast. Sphere/Box only.\n\n\nparameters.orientation\n: A rotational Vector of the cast. Box only.\n\n\nparameters.max_distance\n: A Float of how fast the cast will travel.\n\n\nOptional, defaults to infinity.\n\n\n\n\n\n\nparameters.debug\n: A Bool for if the cast is visualized for the user.\n\n\n\n\n\n\n\n\n\n\n\n\nReturned Table of Hit Objects\n\n\n\n\nTable\n: A numerically indexed Table, one entry for each hit Object. Entries are in the order of being hit.\n\n\nVector point\n: A Vector of the position the cast impact.\n\n\nVector normal\n: A Vector of the surface normal of the impact point.\n\n\nFloat distance\n: A Float of the distance between cast origin and impact point.\n\n\nObject hit_object\n: An Object reference to the object hit by the cast.\n\n\n\n\n\n\n\n\n\n\n--Example usage\n\n\n--This function, when called, returns a table of hit data\n\n\nfunction\n \nfindHitsInRadius\n(\npos\n,\n \nradius\n)\n\n    \nlocal\n \nradius\n \n=\n \n(\nradius\n \nor\n \n1\n)\n\n    \nlocal\n \nhitList\n \n=\n \nPhysics\n.\ncast\n({\n\n        \norigin\n       \n=\n \npos\n,\n\n        \ndirection\n    \n=\n \n{\n0\n,\n1\n,\n0\n},\n\n        \ntype\n         \n=\n \n2\n,\n\n        \nsize\n         \n=\n \n{\nradius\n,\nradius\n,\nradius\n},\n\n        \nmax_distance\n \n=\n \n0\n,\n\n        \ndebug\n        \n=\n \ntrue\n,\n\n    \n})\n\n\n    \nreturn\n \nhitList\n\n\nend\n\n\n\n\n\n--Example returned Table\n\n\n{\n\n    \n{\n\n        \npoint\n \n=\n \n{\nx\n=\n0\n,\ny\n=\n0\n,\nz\n=\n0\n},\n\n        \nnormal\n \n=\n \n{\nx\n=\n1\n,\n0\n,\n0\n},\n\n        \ndistance\n \n=\n \n4\n,\n\n        \nhit_object\n \n=\n \nobjectreference1\n,\n\n    \n},\n\n    \n{\n\n        \npoint\n \n=\n \n{\nx\n=\n1\n,\ny\n=\n0\n,\nz\n=\n0\n},\n\n        \nnormal\n \n=\n \n{\nx\n=\n2\n,\n0\n,\n0\n},\n\n        \ndistance\n \n=\n \n5\n,\n\n        \nhit_object\n \n=\n \nobjectreference2\n,\n\n    \n},\n\n\n}",
+            "title": "Physics"
+        },
+        {
+            "location": "/physics/#function-summary",
+            "text": "",
+            "title": "Function Summary"
+        },
+        {
+            "location": "/physics/#functions",
+            "text": "Function Name  Description  info_outline      cast(Table parameters)  Returns Table containing information on hit Objects.  info_outline    getGravity()  Returns directional Vector of the direction gravity is pulling.     setGravity(Vector)  Sets the direction gravity gravity pulls.",
+            "title": "Functions"
+        },
+        {
+            "location": "/physics/#function-details",
+            "text": "",
+            "title": "Function Details"
+        },
+        {
+            "location": "/physics/#cast",
+            "text": "Returns Table containing information on hit Objects. There are three kinds of casts:     Type  Description      Ray  A line.    Box  A cube, rectangle, plane.    Sphere  A round ball. You cannot make ovals.     It draws the imaginary cast, then moves the rap/box/sphere along that path instantly. The debug Bool in the parameters allows you to see this shape, to aid in setup, but the visual is not instant (due to that making it pointless, if you can't see it).   Warning  Physics casts are somewhat expensive. When running 30+ at once it will cause your game to stutter and/or crash. Do not overuse.    cast(Table parameters)   Table parameters : A Table of parameters used to guide the function.  parameters.origin : A Vector of the starting point.  parameters.direction : A directional Vector for the cast to move in.  parameters.type : An Int of the type of cast. 1 = Ray, 2 = Sphere, 3= Box.  parameters.size : A Vector of the size of the cast. Sphere/Box only.  parameters.orientation : A rotational Vector of the cast. Box only.  parameters.max_distance : A Float of how fast the cast will travel.  Optional, defaults to infinity.    parameters.debug : A Bool for if the cast is visualized for the user.       Returned Table of Hit Objects   Table : A numerically indexed Table, one entry for each hit Object. Entries are in the order of being hit.  Vector point : A Vector of the position the cast impact.  Vector normal : A Vector of the surface normal of the impact point.  Float distance : A Float of the distance between cast origin and impact point.  Object hit_object : An Object reference to the object hit by the cast.      --Example usage  --This function, when called, returns a table of hit data  function   findHitsInRadius ( pos ,   radius ) \n     local   radius   =   ( radius   or   1 ) \n     local   hitList   =   Physics . cast ({ \n         origin         =   pos , \n         direction      =   { 0 , 1 , 0 }, \n         type           =   2 , \n         size           =   { radius , radius , radius }, \n         max_distance   =   0 , \n         debug          =   true , \n     }) \n\n     return   hitList  end   --Example returned Table  { \n     { \n         point   =   { x = 0 , y = 0 , z = 0 }, \n         normal   =   { x = 1 , 0 , 0 }, \n         distance   =   4 , \n         hit_object   =   objectreference1 , \n     }, \n     { \n         point   =   { x = 1 , y = 0 , z = 0 }, \n         normal   =   { x = 2 , 0 , 0 }, \n         distance   =   5 , \n         hit_object   =   objectreference2 , \n     },  }",
+            "title": "cast(...)"
         }
     ]
 }

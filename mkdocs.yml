@@ -38,6 +38,7 @@ pages:
     - External Editor AP: externaleditorapi.md
   - Lua API:
     - Introduction: luaapi.md
+    - Type and Class: typeandclass.md
     - Event: event.md
     - Base: base.md
     - Object: object.md
@@ -45,5 +46,5 @@ pages:
     - Clock: clock.md
     - Counter: counter.md
     - JSON: json.md
-    - Color: color.md
-    - Vector: vector.md
+    - Lighting: lighting.md
+    - Physics: physics.md
