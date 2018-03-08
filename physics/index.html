@@ -36,7 +36,7 @@
     
     
       
-        <title>Counter - Tabletop Simulator Scripting Documentation</title>
+        <title>Physics - Tabletop Simulator Scripting Documentation</title>
       
     
     
@@ -101,7 +101,7 @@
                 Tabletop Simulator Scripting Documentation
               </span>
               <span class="md-header-nav__topic">
-                Counter
+                Physics
               </span>
             
           
@@ -347,58 +347,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Counter
-      </label>
-    
-    <a href="./" title="Counter" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../counter/" title="Counter" class="md-nav__link">
       Counter
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#function-summary" title="Function Summary" class="md-nav__link">
-    Function Summary
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#object-functions" title="Object Functions" class="md-nav__link">
-    Object Functions
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -430,11 +383,78 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../physics/" title="Physics" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Physics
+      </label>
+    
+    <a href="./" title="Physics" class="md-nav__link md-nav__link--active">
       Physics
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#function-summary" title="Function Summary" class="md-nav__link">
+    Function Summary
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functions" title="Functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-details" title="Function Details" class="md-nav__link">
+    Function Details
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cast" title="cast(...)" class="md-nav__link">
+    cast(...)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -470,8 +490,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#object-functions" title="Object Functions" class="md-nav__link">
-    Object Functions
+  <a href="#functions" title="Functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-details" title="Function Details" class="md-nav__link">
+    Function Details
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cast" title="cast(...)" class="md-nav__link">
+    cast(...)
   </a>
   
 </li>
@@ -498,11 +538,12 @@
               
                 
                 
-                  <h1>Counter</h1>
+                  <h1>Physics</h1>
                 
-                <p>The Counter is an in-game Object of a digital counter. It has its own class, Counter, with functions/members associated with it. This allows you to manipulate the special properties of a Counter. You call these functions like this: <code class="codehilite">self.Counter.increment()</code>.</p>
+                <p>Physics, a static global class, allows access to casts and gravity. Physics casts are a way to detect Objects. You call these functions like this: <code class="codehilite">Physics.getGravity()</code>.</p>
+<p>For more information on physics casts in Unity, <a href="https://docs.unity3d.com/ScriptReference/Physics.html">refer to the Unity documentation</a> under BoxCast/RayCast/SphereCast.</p>
 <h2 id="function-summary">Function Summary<a class="headerlink" href="#function-summary" title="Permanent link">&para;</a></h2>
-<h3 id="object-functions">Object Functions<a class="headerlink" href="#object-functions" title="Permanent link">&para;</a></h3>
+<h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -513,32 +554,116 @@
 </thead>
 <tbody>
 <tr>
-<td>clear()</td>
-<td>Resets Counter to 0. Returns Bool.</td>
+<td>cast(Table parameters)</td>
+<td>Returns Table containing information on hit Objects.</td>
+<td align="right"><a href="#cast"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>getGravity()</td>
+<td>Returns directional Vector of the direction gravity is pulling.</td>
 <td align="right"></td>
 </tr>
 <tr>
-<td>decrement()</td>
-<td>Reduces Counter's value by 1. Returns Bool.</td>
-<td align="right"></td>
-</tr>
-<tr>
-<td>getValue()</td>
-<td>Returns Int of the current value displayed by the Counter. This function acts the same as <a href="../object#getvalue">Object's getValue()</a>. Returns Bool.</td>
-<td align="right"></td>
-</tr>
-<tr>
-<td>increment()</td>
-<td>Increases Counter's value by 1. Returns Bool.</td>
-<td align="right"></td>
-</tr>
-<tr>
-<td>setValue()</td>
-<td>Sets the current value of the Counter. This function acts the same as <a href="../object#setvalue">Object's setValue()</a>. Returns Bool.</td>
+<td>setGravity(Vector)</td>
+<td>Sets the direction gravity gravity pulls.</td>
 <td align="right"></td>
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="function-details">Function Details<a class="headerlink" href="#function-details" title="Permanent link">&para;</a></h2>
+<h3 id="cast">cast(...)<a class="headerlink" href="#cast" title="Permanent link">&para;</a></h3>
+<p>Returns Table containing information on hit Objects. There are three kinds of casts:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ray</td>
+<td>A line.</td>
+</tr>
+<tr>
+<td>Box</td>
+<td>A cube, rectangle, plane.</td>
+</tr>
+<tr>
+<td>Sphere</td>
+<td>A round ball. You cannot make ovals.</td>
+</tr>
+</tbody>
+</table>
+<p>It draws the imaginary cast, then moves the rap/box/sphere along that path instantly. The debug Bool in the parameters allows you to see this shape, to aid in setup, but the visual is not instant (due to that making it pointless, if you can't see it).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Physics casts are somewhat expensive. When running 30+ at once it will cause your game to stutter and/or crash. Do not overuse.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">cast(Table parameters)</p>
+<ul>
+<li><strong>Table parameters</strong>: A Table of parameters used to guide the function.<ul>
+<li><strong>parameters.origin</strong>: A Vector of the starting point.</li>
+<li><strong>parameters.direction</strong>: A directional Vector for the cast to move in.</li>
+<li><strong>parameters.type</strong>: An Int of the type of cast. 1 = Ray, 2 = Sphere, 3= Box.</li>
+<li><strong>parameters.size</strong>: A Vector of the size of the cast. Sphere/Box only.</li>
+<li><strong>parameters.orientation</strong>: A rotational Vector of the cast. Box only.</li>
+<li><strong>parameters.max_distance</strong>: A Float of how fast the cast will travel.<ul>
+<li><span class="critic comment">Optional, defaults to infinity.</span></li>
+</ul>
+</li>
+<li><strong>parameters.debug</strong>: A Bool for if the cast is visualized for the user.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Returned Table of Hit Objects</p>
+<ul>
+<li><strong>Table</strong>: A numerically indexed Table, one entry for each hit Object. Entries are in the order of being hit.<ul>
+<li><strong>Vector point</strong>: A Vector of the position the cast impact.</li>
+<li><strong>Vector normal</strong>: A Vector of the surface normal of the impact point.</li>
+<li><strong>Float distance</strong>: A Float of the distance between cast origin and impact point.</li>
+<li><strong>Object hit_object</strong>: An Object reference to the object hit by the cast.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="c1">--Example usage</span>
+<span class="c1">--This function, when called, returns a table of hit data</span>
+<span class="kr">function</span> <span class="nf">findHitsInRadius</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">radius</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">radius</span> <span class="o">=</span> <span class="p">(</span><span class="n">radius</span> <span class="ow">or</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">hitList</span> <span class="o">=</span> <span class="n">Physics</span><span class="p">.</span><span class="n">cast</span><span class="p">({</span>
+        <span class="n">origin</span>       <span class="o">=</span> <span class="n">pos</span><span class="p">,</span>
+        <span class="n">direction</span>    <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span>
+        <span class="nb">type</span>         <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="n">size</span>         <span class="o">=</span> <span class="p">{</span><span class="n">radius</span><span class="p">,</span><span class="n">radius</span><span class="p">,</span><span class="n">radius</span><span class="p">},</span>
+        <span class="n">max_distance</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">debug</span>        <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="p">})</span>
+
+    <span class="kr">return</span> <span class="n">hitList</span>
+<span class="kr">end</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="c1">--Example returned Table</span>
+<span class="p">{</span>
+    <span class="p">{</span>
+        <span class="n">point</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">},</span>
+        <span class="n">normal</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span>
+        <span class="n">distance</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="n">hit_object</span> <span class="o">=</span> <span class="n">objectreference1</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="n">point</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">},</span>
+        <span class="n">normal</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span>
+        <span class="n">distance</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="n">hit_object</span> <span class="o">=</span> <span class="n">objectreference2</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
                 
                   
                 
@@ -585,8 +710,8 @@
 
         <!-- Link to previous page -->
         
-          <a href="../clock/"
-              title="Clock"
+          <a href="../lighting/"
+              title="Lighting"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -599,31 +724,13 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Clock
+                Lighting
               </span>
             </div>
           </a>
         
 
         <!-- Link to next page -->
-        
-          <a href="../json/" title="JSON"
-              class="md-flex md-footer-nav__link md-footer-nav__link--next"
-              rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch
-                  md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                JSON
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward
-                    md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>
