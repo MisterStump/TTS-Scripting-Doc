@@ -458,6 +458,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../player/" title="Player" class="md-nav__link">
+      Player
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../player-colors/" title="Player" class="md-nav__link">
+      Player
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -605,16 +629,34 @@
 <p class="admonition-title">cast(Table parameters)</p>
 <ul>
 <li><strong>Table parameters</strong>: A Table of parameters used to guide the function.<ul>
-<li><strong>parameters.origin</strong>: A Vector of the starting point.</li>
-<li><strong>parameters.direction</strong>: A directional Vector for the cast to move in.</li>
-<li><strong>parameters.type</strong>: An Int of the type of cast. 1 = Ray, 2 = Sphere, 3= Box.</li>
-<li><strong>parameters.size</strong>: A Vector of the size of the cast. Sphere/Box only.</li>
-<li><strong>parameters.orientation</strong>: A rotational Vector of the cast. Box only.</li>
-<li><strong>parameters.max_distance</strong>: A Float of how fast the cast will travel.<ul>
-<li><span class="critic comment">Optional, defaults to infinity.</span></li>
+<li><strong>parameters.origin</strong>: A Vector of the starting point.<ul>
+<li><span class="critic comment">Optional, defaults to {x=0, y=0, z=0}.</span></li>
 </ul>
 </li>
-<li><strong>parameters.debug</strong>: A Bool for if the cast is visualized for the user.</li>
+<li><strong>parameters.direction</strong>: A directional Vector for the cast to move in.<ul>
+<li><span class="critic comment">Optional, but cast is motionless without a direction.</span></li>
+</ul>
+</li>
+<li><strong>parameters.type</strong>: An Int of the type of cast. 1 = Ray, 2 = Sphere, 3= Box.<ul>
+<li><span class="critic comment">Optional, defaults to 1.</span></li>
+</ul>
+</li>
+<li><strong>parameters.size</strong>: A Vector of the size of the cast. Sphere/Box only.<ul>
+<li><span class="critic comment">Optional, defaults to {x=0, y=0, z=0}.</span></li>
+</ul>
+</li>
+<li><strong>parameters.orientation</strong>: A rotational Vector of the cast. Box only.<ul>
+<li><span class="critic comment">Optional, defaults to {x=0, y=0, z=0}.</span></li>
+</ul>
+</li>
+<li><strong>parameters.max_distance</strong>: A Float of how fast the cast will travel.<ul>
+<li><span class="critic comment">Optional, defaults to infinity. Won't move without direction.</span></li>
+</ul>
+</li>
+<li><strong>parameters.debug</strong>: A Bool for if the cast is visualized for the user.<ul>
+<li><span class="critic comment">Optional, defaults to false.</span></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -731,6 +773,24 @@
         
 
         <!-- Link to next page -->
+        
+          <a href="../player/" title="Player"
+              class="md-flex md-footer-nav__link md-footer-nav__link--next"
+              rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Player
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward
+                    md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
