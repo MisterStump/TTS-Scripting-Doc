@@ -48,3 +48,5 @@ pages:
     - JSON: json.md
     - Lighting: lighting.md
     - Physics: physics.md
+    - Player: player.md
+    - Player: player-colors.md

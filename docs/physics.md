@@ -38,13 +38,19 @@ It draws the imaginary cast, then moves the rap/box/sphere along that path insta
 !!!info "cast(Table parameters)"
     * **Table parameters**: A Table of parameters used to guide the function.
         * **parameters.origin**: A Vector of the starting point.
+            * {>>Optional, defaults to {x=0, y=0, z=0}.<<}
         * **parameters.direction**: A directional Vector for the cast to move in.
+            * {>>Optional, but cast is motionless without a direction.<<}
         * **parameters.type**: An Int of the type of cast. 1 = Ray, 2 = Sphere, 3= Box.
+            * {>>Optional, defaults to 1.<<}
         * **parameters.size**: A Vector of the size of the cast. Sphere/Box only.
+            * {>>Optional, defaults to {x=0, y=0, z=0}.<<}
         * **parameters.orientation**: A rotational Vector of the cast. Box only.
+            * {>>Optional, defaults to {x=0, y=0, z=0}.<<}
         * **parameters.max_distance**: A Float of how fast the cast will travel.
-            * {>>Optional, defaults to infinity.<<}
+            * {>>Optional, defaults to infinity. Won't move without direction.<<}
         * **parameters.debug**: A Bool for if the cast is visualized for the user.
+            * {>>Optional, defaults to false.<<}
     
 !!!info "Returned Table of Hit Objects"
     * **Table**: A numerically indexed Table, one entry for each hit Object. Entries are in the order of being hit.

@@ -12,6 +12,8 @@ Variable | Description | Type
 -- | -- | :--
 paused | If the clock timer is paused. | Bool
 
+---
+
 ##Function Summary
 
 ###Object Functions
