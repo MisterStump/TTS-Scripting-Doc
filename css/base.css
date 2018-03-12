@@ -10,6 +10,8 @@ html body div.md-container div.md-main__inner div.md-sidebar--primary {
 }
 */
 
+
+
 /*Nowrap on first row of tables*/
 html body div.md-container table tr td:first-child {
     white-space: nowrap;
