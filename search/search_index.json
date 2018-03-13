@@ -1109,6 +1109,141 @@
             "location": "/player-colors/",
             "text": "Each person able to interact with objects in-game is assigned a Player Color to represent them. This is chosen when a Player picks a seat color or is assigned one by the host. Many functions refer to these Players or their hand zones, and it does so via color names. All color names are strings and are case sensitive within functions.\n\n\nEach color also has an RGB value associated with it. For more information on the RGB Color standard, view the \nColor section\n.\n\n\n\n\n\n\n\n\nColor Name\n\n\nRGB \nColor Sample\n\n\n\n\n\n\n\n\n\n\nWhite\n\n\n Test\n\n\n\n\n\n\nBrown\n\n\nTest \n\n\n\n\n\n\nRed\n\n\n\n\n\n\n\n\nOrange\n\n\n{r=1, g=1, b=1}\n \n\n\n\n\n\n\nYellow\n\n\n\n\n\n\n\n\nGreen\n\n\n\n\n\n\n\n\nTeal\n\n\n\n\n\n\n\n\nBlue\n\n\n\n\n\n\n\n\nPurple\n\n\n\n\n\n\n\n\nPink\n\n\n\n\n\n\n\n\nGrey \nspectator\n\n\n\n\n\n\n\n\nBlack \nDM\n\n\n\n\n\n\n\n\n\n\n\n    \n\n        \nColor Name\n\n        \nColor Swatch\n\n        \nRGB\n\n    \n\n    \n\n        \nWhite\n\n        \n\n        \n {r=1, g=1, b=1} \n\n    \n\n    \n\n        \nBrown\n\n        \n\n        \n0.443, 0.231, 0.09\n\n    \n\n    \n\n        \nRed\n\n        \n\n        \n0.856, 0.1, 0.094\n\n    \n\n    \n\n        \nOrange\n\n        \n\n        \n0.956, 0.392, 0.113\n\n    \n\n    \n\n        \nYellow\n\n        \n\n        \n0.905, 0.898, 0.172\n\n    \n\n    \n\n        \nGreen\n\n        \n\n        \n0.192, 0.701, 0.168\n\n    \n\n    \n\n        \nTeal\n\n        \n\n        \n0.129, 0.694, 0.607\n\n    \n\n    \n\n        \nBlue\n\n        \n\n        \n0.118, 0.53, 1\n\n    \n\n    \n\n        \nPurple\n\n        \n\n        \n0.627, 0.125, 0.941\n\n    \n\n    \n\n        \nPink\n\n        \n\n        \n0.96, 0.439, 0.807\n\n    \n\n    \n\n        \nGrey\n\n        \n\n        \n0.5, 0.5, 0.5\n\n    \n\n    \n\n        \nBlack\n\n        \n\n        \n0.25, 0.25, 0.25",
             "title": "Player Colors"
+        },
+        {
+            "location": "/rpgfigurine/",
+            "text": "An RPGFigurine is an in-game Object of a figurine with built-in animations. It has its own class, RPGFigurine, with functions associated with it. This allows you to manipulate the special properties of these figurines.\n\n\nFunction Summary\n\u00b6\n\n\nObject Functions\n\u00b6\n\n\nThese functions are called like this: \nself.RPGFigurine.attack()\n.\n\n\n\n\n\n\n\n\nFunction Name\n\n\nDescription\n\n\ninfo_outline\n\n\n\n\n\n\n\n\n\n\nattack()\n\n\nPlays a random attack animation. Returns Bool.\n\n\n\n\n\n\n\n\nchangeMode()\n\n\nChanges the figurine's current mode. What the mode represents is based on the figurine. Returns Bool.\n\n\n\n\n\n\n\n\ndie()\n\n\nPlays the death animation or causes it to return to life. Returns Bool.\n\n\n\n\n\n\n\n\n\n\nEvent Functions\n\u00b6\n\n\nThese functions are called by the game whenever a figurine attacks or is attacked. See details for example usage.\n\n\n\n\n\n\n\n\nFunction Name\n\n\nDescription\n\n\ninfo_outline\n\n\n\n\n\n\n\n\n\n\nonAttack(Table hit_list)\n\n\nActivates when an attack is performed by an identified RPGFigurine Object.\n\n\ninfo_outline\n\n\n\n\n\n\nonHit(Object attacker)\n\n\nActivates when an attack is performed on this RPGFigurine Object.\n\n\ninfo_outline\n\n\n\n\n\n\n\n\n\n\nFunction Details\n\u00b6\n\n\nEvent Function Details\n\u00b6\n\n\nonAttack(...)\n\u00b6\n\n\nActivates when an attack is performed by an identified RPGFigurine Object. An attack is triggered via the context menu or pressing the appropriate number key. If another RPGFigurine is within its attack arch, then the function will be triggered with the figurine hit passed as a parameter.\n\n\n\n\nonAttack(Table hit_list)\n\n\n\n\nTable hit_list\n: A Table of Object references for RPGFigurines within the reach of the attack.\n\n\n\n\n\n\n--Monitoring and announcing a cyclops attacks\n\n\nfunction\n \nonLoad\n()\n\n    \ncyclops\n \n=\n \ngetObjectFromGUID\n(\n\"aaa111\"\n)\n\n\n    \nfunction\n \ncyclops\n.\nRPGFigurine\n.\nonAttack\n(\nhit_list\n)\n\n        \nfor\n \n_\n,\n \nv\n \nin\n \nipairs\n(\nhit_list\n)\n \ndo\n\n            \nprint\n(\nv\n.\ngetName\n()\n \n..\n \n\" was hit!\"\n)\n\n        \nend\n\n    \nend\n\n\nend\n\n\n\n\n\n\n\nonHit(...)\n\u00b6\n\n\nActivates when an attack is performed on this RPGFigurine Object. An attack is triggered via the context menu or pressing the appropriate number key. If this RPGFigurine is within the attack radius, this function is triggered, passing a parameter of the Object which attacked.\n\n\n\n\nonHit(Object attacker)\n\n\n\n\nObject attacker\n: An Object reference of the RPGFigurine attacking the indicated RPGFigurine.\n\n\n\n\n\n\n--Monitoring and announcing a cyclops being hit\n\n\nfunction\n \nonLoad\n()\n\n    \ncyclops\n \n=\n \ngetObjectFromGUID\n(\n\"aaa111\"\n)\n\n\n    \nfunction\n \ncyclops\n.\nRPGFigurine\n.\nonHit\n(\nattacker\n)\n\n        \nprint\n(\nattacker\n.\ngetName\n()\n \n..\n \n\" attacked the Cyclops!\"\n)\n\n    \nend\n\n\nend",
+            "title": "RPGFigurine"
+        },
+        {
+            "location": "/rpgfigurine/#function-summary",
+            "text": "",
+            "title": "Function Summary"
+        },
+        {
+            "location": "/rpgfigurine/#object-functions",
+            "text": "These functions are called like this:  self.RPGFigurine.attack() .     Function Name  Description  info_outline      attack()  Plays a random attack animation. Returns Bool.     changeMode()  Changes the figurine's current mode. What the mode represents is based on the figurine. Returns Bool.     die()  Plays the death animation or causes it to return to life. Returns Bool.",
+            "title": "Object Functions"
+        },
+        {
+            "location": "/rpgfigurine/#event-functions",
+            "text": "These functions are called by the game whenever a figurine attacks or is attacked. See details for example usage.     Function Name  Description  info_outline      onAttack(Table hit_list)  Activates when an attack is performed by an identified RPGFigurine Object.  info_outline    onHit(Object attacker)  Activates when an attack is performed on this RPGFigurine Object.  info_outline",
+            "title": "Event Functions"
+        },
+        {
+            "location": "/rpgfigurine/#function-details",
+            "text": "",
+            "title": "Function Details"
+        },
+        {
+            "location": "/rpgfigurine/#event-function-details",
+            "text": "",
+            "title": "Event Function Details"
+        },
+        {
+            "location": "/rpgfigurine/#onattack",
+            "text": "Activates when an attack is performed by an identified RPGFigurine Object. An attack is triggered via the context menu or pressing the appropriate number key. If another RPGFigurine is within its attack arch, then the function will be triggered with the figurine hit passed as a parameter.   onAttack(Table hit_list)   Table hit_list : A Table of Object references for RPGFigurines within the reach of the attack.    --Monitoring and announcing a cyclops attacks  function   onLoad () \n     cyclops   =   getObjectFromGUID ( \"aaa111\" ) \n\n     function   cyclops . RPGFigurine . onAttack ( hit_list ) \n         for   _ ,   v   in   ipairs ( hit_list )   do \n             print ( v . getName ()   ..   \" was hit!\" ) \n         end \n     end  end",
+            "title": "onAttack(...)"
+        },
+        {
+            "location": "/rpgfigurine/#onhit",
+            "text": "Activates when an attack is performed on this RPGFigurine Object. An attack is triggered via the context menu or pressing the appropriate number key. If this RPGFigurine is within the attack radius, this function is triggered, passing a parameter of the Object which attacked.   onHit(Object attacker)   Object attacker : An Object reference of the RPGFigurine attacking the indicated RPGFigurine.    --Monitoring and announcing a cyclops being hit  function   onLoad () \n     cyclops   =   getObjectFromGUID ( \"aaa111\" ) \n\n     function   cyclops . RPGFigurine . onHit ( attacker ) \n         print ( attacker . getName ()   ..   \" attacked the Cyclops!\" ) \n     end  end",
+            "title": "onHit(...)"
+        },
+        {
+            "location": "/spawnableobjects/",
+            "text": "Objects can be spawned by any script using the \nspawnObject()\n function. These are the \ntype\n Strings used to designate the type of Object to spawn. \n\n\nBuilt-in Game Objects\n\u00b6\n\n\nBoards\n\u00b6\n\n\n\n\nbackgammon_board\n\n\nCardBot_Board\n\n\nChecker_Board\n\n\nChess_Board\n\n\nChinese_Checkers_Board\n\n\nGo_Board\n\n\nPachisi_Board\n\n\nreversi_board\n\n\n\n\nContainers\n\u00b6\n\n\n\n\nBag\n\n\nBowl\n\n\nCup\n\n\ngo_game_bowl_black\n\n\ngo_game_bowl_white\n\n\nInfinite_Bag\n\n\n\n\nFigurines\n\u00b6\n\n\n\n\nFigurine_Card_Bot\n\n\nFigurine_Kimi_Kat\n\n\nFigurine_Knil\n\n\nFigurine_Mara\n\n\nFigurine_Sir_Loin\n\n\nFigurine_Zeke\n\n\nFigurine_Zomblor\n\n\n\n\nGame Pieces\n\u00b6\n\n\n\n\nbackgammon_piece_brown\n\n\nbackgammon_piece_white\n\n\nBlockRectangle\n\n\nBlockSquare\n\n\nBlockTriangle\n\n\nCard\n\n\nChecker_black\n\n\nChecker_red\n\n\nChecker_white\n\n\nChess_Bishop\n\n\nChess_King\n\n\nChess_Knight\n\n\nChess_Pawn\n\n\nChess_Queen\n\n\nChess_Rook\n\n\nChinese_Checkers_Piece\n\n\nChip_10\n\n\nChip_50\n\n\nChip_100\n\n\nChip_500\n\n\nChip_1000\n\n\nDeck\n\n\nDie_4\n\n\nDie_6\n\n\nDie_6_Rounded\n\n\nDie_8\n\n\nDie_10\n\n\nDie_12\n\n\nDie_20\n\n\nDie_Piecepack\n\n\nDomino\n\n\ngo_game_piece_black\n\n\ngo_game_piece_white\n\n\nMahjong_Coin\n\n\nMahjong_Stick\n\n\nMahjong_Tile\n\n\nMetal Ball\n\n\nPiecePack_Arms\n\n\nPiecePack_Crowns\n\n\nPiecePack_Moons\n\n\nPiecePack_Suns\n\n\nPlayerPawn\n\n\nQuarter\n\n\nreversi_chip\n\n\n\n\nRPG Figurines\n\u00b6\n\n\n\n\nrpg_BARGHEST\n\n\nrpg_BASILISK\n\n\nrpg_BEAR\n\n\nrpg_BLACK_DRAGON\n\n\nrpg_CENTAUR\n\n\nrpg_CERBERUS\n\n\nrpg_CHIMERA\n\n\nrpg_CRASC\n\n\nrpg_CYCLOP\n\n\nrpg_DARKNESS_WARLORD\n\n\nrpg_DRAGONIDE\n\n\nrpg_EVIL_WATCHER\n\n\nrpg_GHOUL\n\n\nrpg_GIANT_VIPER\n\n\nrpg_GOBLIN\n\n\nrpg_GOLEM\n\n\nrpg_GRIFFON\n\n\nrpg_HYDRA\n\n\nrpg_KNIGHT\n\n\nrpg_KOBOLD\n\n\nrpg_LIZARD_WARRIOR\n\n\nrpg_MAGE\n\n\nrpg_MANTICORA\n\n\nrpg_MUMMY\n\n\nrpg_OGRE\n\n\nrpg_ORC\n\n\nrpg_RANGER\n\n\nrpg_RAT\n\n\nrpg_SKELETON_KNIGHT\n\n\nrpg_TEMPLATE\n\n\nrpg_THIEF\n\n\nrpg_TREE_ENT\n\n\nrpg_TROLL\n\n\nrpg_VAMPIRE\n\n\nrpg_WARRIOR\n\n\nrpg_WEREWOLF\n\n\nrpg_WYVERN\n\n\n\n\nTilesets\n\u00b6\n\n\n\n\nTileset_Barrel\n\n\nTileset_Chair\n\n\nTileset_Chest\n\n\nTileset_Corner\n\n\nTileset_Floor\n\n\nTileset_Rock\n\n\nTileset_Table\n\n\nTileset_Tree\n\n\nTileset_Wall\n\n\n\n\nTools\n\u00b6\n\n\n\n\nCalculator\n\n\nCounter\n\n\nDigital_Clock\n\n\nNotecard\n\n\nTablet\n\n\n\n\nTriggers\n\u00b6\n\n\n\n\nScriptingTrigger\n\n\nA Scripting Zone, a zone used for scripting\n\n\n\n\n\n\nFogOfWarTrigger\n\n\nA \nHidden Zone\n\n\n\n\n\n\n\n\nOther\n\u00b6\n\n\n\n\n3DText\n\n\nThe text that the \nText Tool\n spawns.\n\n\n\n\n\n\n\n\n\n\nCustom Game Objects\n\u00b6\n\n\nYou can also spawn \ncustom Objects\n and then provide the custom content for them after spawning them by calling \nsetCustomObject()\n. \n(See setCustomObject for usage)\n\n\nYou can also use setCustomObject along with \nreload()\n to modify an existing custom Object.\n\n\nCustom AssetBundle\n\u00b6\n\n\nCustom Board\n\u00b6\n\n\nCustom Dice\n\u00b6\n\n\nCustom Figurine\n\u00b6\n\n\nCustom Model\n\u00b6\n\n\nCustom Tile\n\u00b6\n\n\nCustom Token\n\u00b6",
+            "title": "Spawnable Objects"
+        },
+        {
+            "location": "/spawnableobjects/#built-in-game-objects",
+            "text": "",
+            "title": "Built-in Game Objects"
+        },
+        {
+            "location": "/spawnableobjects/#boards",
+            "text": "backgammon_board  CardBot_Board  Checker_Board  Chess_Board  Chinese_Checkers_Board  Go_Board  Pachisi_Board  reversi_board",
+            "title": "Boards"
+        },
+        {
+            "location": "/spawnableobjects/#containers",
+            "text": "Bag  Bowl  Cup  go_game_bowl_black  go_game_bowl_white  Infinite_Bag",
+            "title": "Containers"
+        },
+        {
+            "location": "/spawnableobjects/#figurines",
+            "text": "Figurine_Card_Bot  Figurine_Kimi_Kat  Figurine_Knil  Figurine_Mara  Figurine_Sir_Loin  Figurine_Zeke  Figurine_Zomblor",
+            "title": "Figurines"
+        },
+        {
+            "location": "/spawnableobjects/#game-pieces",
+            "text": "backgammon_piece_brown  backgammon_piece_white  BlockRectangle  BlockSquare  BlockTriangle  Card  Checker_black  Checker_red  Checker_white  Chess_Bishop  Chess_King  Chess_Knight  Chess_Pawn  Chess_Queen  Chess_Rook  Chinese_Checkers_Piece  Chip_10  Chip_50  Chip_100  Chip_500  Chip_1000  Deck  Die_4  Die_6  Die_6_Rounded  Die_8  Die_10  Die_12  Die_20  Die_Piecepack  Domino  go_game_piece_black  go_game_piece_white  Mahjong_Coin  Mahjong_Stick  Mahjong_Tile  Metal Ball  PiecePack_Arms  PiecePack_Crowns  PiecePack_Moons  PiecePack_Suns  PlayerPawn  Quarter  reversi_chip",
+            "title": "Game Pieces"
+        },
+        {
+            "location": "/spawnableobjects/#rpg-figurines",
+            "text": "rpg_BARGHEST  rpg_BASILISK  rpg_BEAR  rpg_BLACK_DRAGON  rpg_CENTAUR  rpg_CERBERUS  rpg_CHIMERA  rpg_CRASC  rpg_CYCLOP  rpg_DARKNESS_WARLORD  rpg_DRAGONIDE  rpg_EVIL_WATCHER  rpg_GHOUL  rpg_GIANT_VIPER  rpg_GOBLIN  rpg_GOLEM  rpg_GRIFFON  rpg_HYDRA  rpg_KNIGHT  rpg_KOBOLD  rpg_LIZARD_WARRIOR  rpg_MAGE  rpg_MANTICORA  rpg_MUMMY  rpg_OGRE  rpg_ORC  rpg_RANGER  rpg_RAT  rpg_SKELETON_KNIGHT  rpg_TEMPLATE  rpg_THIEF  rpg_TREE_ENT  rpg_TROLL  rpg_VAMPIRE  rpg_WARRIOR  rpg_WEREWOLF  rpg_WYVERN",
+            "title": "RPG Figurines"
+        },
+        {
+            "location": "/spawnableobjects/#tilesets",
+            "text": "Tileset_Barrel  Tileset_Chair  Tileset_Chest  Tileset_Corner  Tileset_Floor  Tileset_Rock  Tileset_Table  Tileset_Tree  Tileset_Wall",
+            "title": "Tilesets"
+        },
+        {
+            "location": "/spawnableobjects/#tools",
+            "text": "Calculator  Counter  Digital_Clock  Notecard  Tablet",
+            "title": "Tools"
+        },
+        {
+            "location": "/spawnableobjects/#triggers",
+            "text": "ScriptingTrigger  A Scripting Zone, a zone used for scripting    FogOfWarTrigger  A  Hidden Zone",
+            "title": "Triggers"
+        },
+        {
+            "location": "/spawnableobjects/#other",
+            "text": "3DText  The text that the  Text Tool  spawns.",
+            "title": "Other"
+        },
+        {
+            "location": "/spawnableobjects/#custom-game-objects",
+            "text": "You can also spawn  custom Objects  and then provide the custom content for them after spawning them by calling  setCustomObject() .  (See setCustomObject for usage)  You can also use setCustomObject along with  reload()  to modify an existing custom Object.",
+            "title": "Custom Game Objects"
+        },
+        {
+            "location": "/spawnableobjects/#custom-assetbundle",
+            "text": "",
+            "title": "Custom AssetBundle"
+        },
+        {
+            "location": "/spawnableobjects/#custom-board",
+            "text": "",
+            "title": "Custom Board"
+        },
+        {
+            "location": "/spawnableobjects/#custom-dice",
+            "text": "",
+            "title": "Custom Dice"
+        },
+        {
+            "location": "/spawnableobjects/#custom-figurine",
+            "text": "",
+            "title": "Custom Figurine"
+        },
+        {
+            "location": "/spawnableobjects/#custom-model",
+            "text": "",
+            "title": "Custom Model"
+        },
+        {
+            "location": "/spawnableobjects/#custom-tile",
+            "text": "",
+            "title": "Custom Tile"
+        },
+        {
+            "location": "/spawnableobjects/#custom-token",
+            "text": "",
+            "title": "Custom Token"
         }
     ]
 }

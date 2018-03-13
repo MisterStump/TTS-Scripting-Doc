@@ -36,7 +36,7 @@
     
     
       
-        <title>Counter - Tabletop Simulator Scripting Documentation</title>
+        <title>RPGFigurine - Tabletop Simulator Scripting Documentation</title>
       
     
     
@@ -101,7 +101,7 @@
                 Tabletop Simulator Scripting Documentation
               </span>
               <span class="md-header-nav__topic">
-                Counter
+                RPGFigurine
               </span>
             
           
@@ -347,58 +347,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Counter
-      </label>
-    
-    <a href="./" title="Counter" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../counter/" title="Counter" class="md-nav__link">
       Counter
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#function-summary" title="Function Summary" class="md-nav__link">
-    Function Summary
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#object-functions" title="Object Functions" class="md-nav__link">
-    Object Functions
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -466,11 +419,105 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../rpgfigurine/" title="RPGFigurine" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        RPGFigurine
+      </label>
+    
+    <a href="./" title="RPGFigurine" class="md-nav__link md-nav__link--active">
       RPGFigurine
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#function-summary" title="Function Summary" class="md-nav__link">
+    Function Summary
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#object-functions" title="Object Functions" class="md-nav__link">
+    Object Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-functions" title="Event Functions" class="md-nav__link">
+    Event Functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-details" title="Function Details" class="md-nav__link">
+    Function Details
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-function-details" title="Event Function Details" class="md-nav__link">
+    Event Function Details
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#onattack" title="onAttack(...)" class="md-nav__link">
+    onAttack(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onhit" title="onHit(...)" class="md-nav__link">
+    onHit(...)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -524,6 +571,53 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#event-functions" title="Event Functions" class="md-nav__link">
+    Event Functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-details" title="Function Details" class="md-nav__link">
+    Function Details
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-function-details" title="Event Function Details" class="md-nav__link">
+    Event Function Details
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#onattack" title="onAttack(...)" class="md-nav__link">
+    onAttack(...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onhit" title="onHit(...)" class="md-nav__link">
+    onHit(...)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -546,11 +640,12 @@
               
                 
                 
-                  <h1>Counter</h1>
+                  <h1>RPGFigurine</h1>
                 
-                <p>The Counter is an in-game Object of a digital counter. It has its own class, Counter, with functions/members associated with it. This allows you to manipulate the special properties of a Counter. You call these functions like this: <code class="codehilite">self.Counter.increment()</code>.</p>
+                <p>An RPGFigurine is an in-game Object of a figurine with built-in animations. It has its own class, RPGFigurine, with functions associated with it. This allows you to manipulate the special properties of these figurines.</p>
 <h2 id="function-summary">Function Summary<a class="headerlink" href="#function-summary" title="Permanent link">&para;</a></h2>
 <h3 id="object-functions">Object Functions<a class="headerlink" href="#object-functions" title="Permanent link">&para;</a></h3>
+<p>These functions are called like this: <code class="codehilite">self.RPGFigurine.attack()</code>.</p>
 <table>
 <thead>
 <tr>
@@ -561,32 +656,86 @@
 </thead>
 <tbody>
 <tr>
-<td>clear()</td>
-<td>Resets Counter to 0. Returns Bool.</td>
+<td>attack()</td>
+<td>Plays a random attack animation. Returns Bool.</td>
 <td align="right"></td>
 </tr>
 <tr>
-<td>decrement()</td>
-<td>Reduces Counter's value by 1. Returns Bool.</td>
+<td>changeMode()</td>
+<td>Changes the figurine's current mode. What the mode represents is based on the figurine. Returns Bool.</td>
 <td align="right"></td>
 </tr>
 <tr>
-<td>getValue()</td>
-<td>Returns Int of the current value displayed by the Counter. This function acts the same as <a href="../object#getvalue">Object's getValue()</a>. Returns Bool.</td>
-<td align="right"></td>
-</tr>
-<tr>
-<td>increment()</td>
-<td>Increases Counter's value by 1. Returns Bool.</td>
-<td align="right"></td>
-</tr>
-<tr>
-<td>setValue()</td>
-<td>Sets the current value of the Counter. This function acts the same as <a href="../object#setvalue">Object's setValue()</a>. Returns Bool.</td>
+<td>die()</td>
+<td>Plays the death animation or causes it to return to life. Returns Bool.</td>
 <td align="right"></td>
 </tr>
 </tbody>
 </table>
+<h3 id="event-functions">Event Functions<a class="headerlink" href="#event-functions" title="Permanent link">&para;</a></h3>
+<p>These functions are called by the game whenever a figurine attacks or is attacked. See details for example usage.</p>
+<table>
+<thead>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+<th align="right"><i class="material-icons" style="line-height:90%;">info_outline</i></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onAttack(Table hit_list)</td>
+<td>Activates when an attack is performed by an identified RPGFigurine Object.</td>
+<td align="right"><a href="#onattack"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+<tr>
+<td>onHit(Object attacker)</td>
+<td>Activates when an attack is performed on this RPGFigurine Object.</td>
+<td align="right"><a href="#onattack"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="function-details">Function Details<a class="headerlink" href="#function-details" title="Permanent link">&para;</a></h2>
+<h3 id="event-function-details">Event Function Details<a class="headerlink" href="#event-function-details" title="Permanent link">&para;</a></h3>
+<h4 id="onattack">onAttack(...)<a class="headerlink" href="#onattack" title="Permanent link">&para;</a></h4>
+<p>Activates when an attack is performed by an identified RPGFigurine Object. An attack is triggered via the context menu or pressing the appropriate number key. If another RPGFigurine is within its attack arch, then the function will be triggered with the figurine hit passed as a parameter.</p>
+<div class="admonition info">
+<p class="admonition-title">onAttack(Table hit_list)</p>
+<ul>
+<li><strong>Table hit_list</strong>: A Table of Object references for RPGFigurines within the reach of the attack.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="c1">--Monitoring and announcing a cyclops attacks</span>
+<span class="kr">function</span> <span class="nf">onLoad</span><span class="p">()</span>
+    <span class="n">cyclops</span> <span class="o">=</span> <span class="n">getObjectFromGUID</span><span class="p">(</span><span class="s2">&quot;aaa111&quot;</span><span class="p">)</span>
+
+    <span class="kr">function</span> <span class="nc">cyclops</span><span class="p">.</span><span class="nc">RPGFigurine</span><span class="p">.</span><span class="nf">onAttack</span><span class="p">(</span><span class="n">hit_list</span><span class="p">)</span>
+        <span class="kr">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">hit_list</span><span class="p">)</span> <span class="kr">do</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">..</span> <span class="s2">&quot; was hit!&quot;</span><span class="p">)</span>
+        <span class="kr">end</span>
+    <span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+
+<hr />
+<h4 id="onhit">onHit(...)<a class="headerlink" href="#onhit" title="Permanent link">&para;</a></h4>
+<p>Activates when an attack is performed on this RPGFigurine Object. An attack is triggered via the context menu or pressing the appropriate number key. If this RPGFigurine is within the attack radius, this function is triggered, passing a parameter of the Object which attacked.</p>
+<div class="admonition info">
+<p class="admonition-title">onHit(Object attacker)</p>
+<ul>
+<li><strong>Object attacker</strong>: An Object reference of the RPGFigurine attacking the indicated RPGFigurine.</li>
+</ul>
+</div>
+<div class="codehilite"><pre><span></span><span class="c1">--Monitoring and announcing a cyclops being hit</span>
+<span class="kr">function</span> <span class="nf">onLoad</span><span class="p">()</span>
+    <span class="n">cyclops</span> <span class="o">=</span> <span class="n">getObjectFromGUID</span><span class="p">(</span><span class="s2">&quot;aaa111&quot;</span><span class="p">)</span>
+
+    <span class="kr">function</span> <span class="nc">cyclops</span><span class="p">.</span><span class="nc">RPGFigurine</span><span class="p">.</span><span class="nf">onHit</span><span class="p">(</span><span class="n">attacker</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">attacker</span><span class="p">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">..</span> <span class="s2">&quot; attacked the Cyclops!&quot;</span><span class="p">)</span>
+    <span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
                 
                   
                 
@@ -633,8 +782,8 @@
 
         <!-- Link to previous page -->
         
-          <a href="../clock/"
-              title="Clock"
+          <a href="../player-colors/"
+              title="Player Colors"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -647,7 +796,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Clock
+                Player Colors
               </span>
             </div>
           </a>
@@ -655,7 +804,7 @@
 
         <!-- Link to next page -->
         
-          <a href="../json/" title="JSON"
+          <a href="../spawnableobjects/" title="Spawnable Objects"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -664,7 +813,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                JSON
+                Spawnable Objects
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

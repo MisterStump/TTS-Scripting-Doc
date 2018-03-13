@@ -36,7 +36,7 @@
     
     
       
-        <title>Counter - Tabletop Simulator Scripting Documentation</title>
+        <title>Spawnable Objects - Tabletop Simulator Scripting Documentation</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#function-summary" tabindex="1" class="md-skip">
+      <a href="#built-in-game-objects" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -101,7 +101,7 @@
                 Tabletop Simulator Scripting Documentation
               </span>
               <span class="md-header-nav__topic">
-                Counter
+                Spawnable Objects
               </span>
             
           
@@ -347,58 +347,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Counter
-      </label>
-    
-    <a href="./" title="Counter" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../counter/" title="Counter" class="md-nav__link">
       Counter
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#function-summary" title="Function Summary" class="md-nav__link">
-    Function Summary
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#object-functions" title="Object Functions" class="md-nav__link">
-    Object Functions
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -478,11 +431,176 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../spawnableobjects/" title="Spawnable Objects" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Spawnable Objects
+      </label>
+    
+    <a href="./" title="Spawnable Objects" class="md-nav__link md-nav__link--active">
       Spawnable Objects
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-game-objects" title="Built-in Game Objects" class="md-nav__link">
+    Built-in Game Objects
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boards" title="Boards" class="md-nav__link">
+    Boards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers" title="Containers" class="md-nav__link">
+    Containers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figurines" title="Figurines" class="md-nav__link">
+    Figurines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#game-pieces" title="Game Pieces" class="md-nav__link">
+    Game Pieces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpg-figurines" title="RPG Figurines" class="md-nav__link">
+    RPG Figurines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tilesets" title="Tilesets" class="md-nav__link">
+    Tilesets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools" title="Tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triggers" title="Triggers" class="md-nav__link">
+    Triggers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other" title="Other" class="md-nav__link">
+    Other
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-game-objects" title="Custom Game Objects" class="md-nav__link">
+    Custom Game Objects
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-assetbundle" title="Custom AssetBundle" class="md-nav__link">
+    Custom AssetBundle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-board" title="Custom Board" class="md-nav__link">
+    Custom Board
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-dice" title="Custom Dice" class="md-nav__link">
+    Custom Dice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-figurine" title="Custom Figurine" class="md-nav__link">
+    Custom Figurine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-model" title="Custom Model" class="md-nav__link">
+    Custom Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-tile" title="Custom Tile" class="md-nav__link">
+    Custom Tile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-token" title="Custom Token" class="md-nav__link">
+    Custom Token
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -510,16 +628,134 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#function-summary" title="Function Summary" class="md-nav__link">
-    Function Summary
+  <a href="#built-in-game-objects" title="Built-in Game Objects" class="md-nav__link">
+    Built-in Game Objects
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#object-functions" title="Object Functions" class="md-nav__link">
-    Object Functions
+  <a href="#boards" title="Boards" class="md-nav__link">
+    Boards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers" title="Containers" class="md-nav__link">
+    Containers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figurines" title="Figurines" class="md-nav__link">
+    Figurines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#game-pieces" title="Game Pieces" class="md-nav__link">
+    Game Pieces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpg-figurines" title="RPG Figurines" class="md-nav__link">
+    RPG Figurines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tilesets" title="Tilesets" class="md-nav__link">
+    Tilesets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools" title="Tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triggers" title="Triggers" class="md-nav__link">
+    Triggers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other" title="Other" class="md-nav__link">
+    Other
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-game-objects" title="Custom Game Objects" class="md-nav__link">
+    Custom Game Objects
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-assetbundle" title="Custom AssetBundle" class="md-nav__link">
+    Custom AssetBundle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-board" title="Custom Board" class="md-nav__link">
+    Custom Board
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-dice" title="Custom Dice" class="md-nav__link">
+    Custom Dice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-figurine" title="Custom Figurine" class="md-nav__link">
+    Custom Figurine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-model" title="Custom Model" class="md-nav__link">
+    Custom Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-tile" title="Custom Tile" class="md-nav__link">
+    Custom Tile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-token" title="Custom Token" class="md-nav__link">
+    Custom Token
   </a>
   
 </li>
@@ -546,47 +782,176 @@
               
                 
                 
-                  <h1>Counter</h1>
+                  <h1>Spawnable Objects</h1>
                 
-                <p>The Counter is an in-game Object of a digital counter. It has its own class, Counter, with functions/members associated with it. This allows you to manipulate the special properties of a Counter. You call these functions like this: <code class="codehilite">self.Counter.increment()</code>.</p>
-<h2 id="function-summary">Function Summary<a class="headerlink" href="#function-summary" title="Permanent link">&para;</a></h2>
-<h3 id="object-functions">Object Functions<a class="headerlink" href="#object-functions" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Function Name</th>
-<th>Description</th>
-<th align="right"><i class="material-icons" style="line-height:90%;">info_outline</i></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>clear()</td>
-<td>Resets Counter to 0. Returns Bool.</td>
-<td align="right"></td>
-</tr>
-<tr>
-<td>decrement()</td>
-<td>Reduces Counter's value by 1. Returns Bool.</td>
-<td align="right"></td>
-</tr>
-<tr>
-<td>getValue()</td>
-<td>Returns Int of the current value displayed by the Counter. This function acts the same as <a href="../object#getvalue">Object's getValue()</a>. Returns Bool.</td>
-<td align="right"></td>
-</tr>
-<tr>
-<td>increment()</td>
-<td>Increases Counter's value by 1. Returns Bool.</td>
-<td align="right"></td>
-</tr>
-<tr>
-<td>setValue()</td>
-<td>Sets the current value of the Counter. This function acts the same as <a href="../object#setvalue">Object's setValue()</a>. Returns Bool.</td>
-<td align="right"></td>
-</tr>
-</tbody>
-</table>
+                <p>Objects can be spawned by any script using the <a href="../base#spawnobject">spawnObject()</a> function. These are the <code class="codehilite">type</code> Strings used to designate the type of Object to spawn. </p>
+<h2 id="built-in-game-objects">Built-in Game Objects<a class="headerlink" href="#built-in-game-objects" title="Permanent link">&para;</a></h2>
+<h3 id="boards">Boards<a class="headerlink" href="#boards" title="Permanent link">&para;</a></h3>
+<ul>
+<li>backgammon_board</li>
+<li>CardBot_Board</li>
+<li>Checker_Board</li>
+<li>Chess_Board</li>
+<li>Chinese_Checkers_Board</li>
+<li>Go_Board</li>
+<li>Pachisi_Board</li>
+<li>reversi_board</li>
+</ul>
+<h3 id="containers">Containers<a class="headerlink" href="#containers" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Bag</li>
+<li>Bowl</li>
+<li>Cup</li>
+<li>go_game_bowl_black</li>
+<li>go_game_bowl_white</li>
+<li>Infinite_Bag</li>
+</ul>
+<h3 id="figurines">Figurines<a class="headerlink" href="#figurines" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Figurine_Card_Bot</li>
+<li>Figurine_Kimi_Kat</li>
+<li>Figurine_Knil</li>
+<li>Figurine_Mara</li>
+<li>Figurine_Sir_Loin</li>
+<li>Figurine_Zeke</li>
+<li>Figurine_Zomblor</li>
+</ul>
+<h3 id="game-pieces">Game Pieces<a class="headerlink" href="#game-pieces" title="Permanent link">&para;</a></h3>
+<ul>
+<li>backgammon_piece_brown</li>
+<li>backgammon_piece_white</li>
+<li>BlockRectangle</li>
+<li>BlockSquare</li>
+<li>BlockTriangle</li>
+<li>Card</li>
+<li>Checker_black</li>
+<li>Checker_red</li>
+<li>Checker_white</li>
+<li>Chess_Bishop</li>
+<li>Chess_King</li>
+<li>Chess_Knight</li>
+<li>Chess_Pawn</li>
+<li>Chess_Queen</li>
+<li>Chess_Rook</li>
+<li>Chinese_Checkers_Piece</li>
+<li>Chip_10</li>
+<li>Chip_50</li>
+<li>Chip_100</li>
+<li>Chip_500</li>
+<li>Chip_1000</li>
+<li>Deck</li>
+<li>Die_4</li>
+<li>Die_6</li>
+<li>Die_6_Rounded</li>
+<li>Die_8</li>
+<li>Die_10</li>
+<li>Die_12</li>
+<li>Die_20</li>
+<li>Die_Piecepack</li>
+<li>Domino</li>
+<li>go_game_piece_black</li>
+<li>go_game_piece_white</li>
+<li>Mahjong_Coin</li>
+<li>Mahjong_Stick</li>
+<li>Mahjong_Tile</li>
+<li>Metal Ball</li>
+<li>PiecePack_Arms</li>
+<li>PiecePack_Crowns</li>
+<li>PiecePack_Moons</li>
+<li>PiecePack_Suns</li>
+<li>PlayerPawn</li>
+<li>Quarter</li>
+<li>reversi_chip</li>
+</ul>
+<h3 id="rpg-figurines">RPG Figurines<a class="headerlink" href="#rpg-figurines" title="Permanent link">&para;</a></h3>
+<ul>
+<li>rpg_BARGHEST</li>
+<li>rpg_BASILISK</li>
+<li>rpg_BEAR</li>
+<li>rpg_BLACK_DRAGON</li>
+<li>rpg_CENTAUR</li>
+<li>rpg_CERBERUS</li>
+<li>rpg_CHIMERA</li>
+<li>rpg_CRASC</li>
+<li>rpg_CYCLOP</li>
+<li>rpg_DARKNESS_WARLORD</li>
+<li>rpg_DRAGONIDE</li>
+<li>rpg_EVIL_WATCHER</li>
+<li>rpg_GHOUL</li>
+<li>rpg_GIANT_VIPER</li>
+<li>rpg_GOBLIN</li>
+<li>rpg_GOLEM</li>
+<li>rpg_GRIFFON</li>
+<li>rpg_HYDRA</li>
+<li>rpg_KNIGHT</li>
+<li>rpg_KOBOLD</li>
+<li>rpg_LIZARD_WARRIOR</li>
+<li>rpg_MAGE</li>
+<li>rpg_MANTICORA</li>
+<li>rpg_MUMMY</li>
+<li>rpg_OGRE</li>
+<li>rpg_ORC</li>
+<li>rpg_RANGER</li>
+<li>rpg_RAT</li>
+<li>rpg_SKELETON_KNIGHT</li>
+<li>rpg_TEMPLATE</li>
+<li>rpg_THIEF</li>
+<li>rpg_TREE_ENT</li>
+<li>rpg_TROLL</li>
+<li>rpg_VAMPIRE</li>
+<li>rpg_WARRIOR</li>
+<li>rpg_WEREWOLF</li>
+<li>rpg_WYVERN</li>
+</ul>
+<h3 id="tilesets">Tilesets<a class="headerlink" href="#tilesets" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tileset_Barrel</li>
+<li>Tileset_Chair</li>
+<li>Tileset_Chest</li>
+<li>Tileset_Corner</li>
+<li>Tileset_Floor</li>
+<li>Tileset_Rock</li>
+<li>Tileset_Table</li>
+<li>Tileset_Tree</li>
+<li>Tileset_Wall</li>
+</ul>
+<h3 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Calculator</li>
+<li>Counter</li>
+<li>Digital_Clock</li>
+<li>Notecard</li>
+<li>Tablet</li>
+</ul>
+<h3 id="triggers">Triggers<a class="headerlink" href="#triggers" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ScriptingTrigger<ul>
+<li>A Scripting Zone, a zone used for scripting</li>
+</ul>
+</li>
+<li>FogOfWarTrigger<ul>
+<li>A <a href="http://berserk-games.com/knowledgebase/hidden-zones-2/">Hidden Zone</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="other">Other<a class="headerlink" href="#other" title="Permanent link">&para;</a></h3>
+<ul>
+<li>3DText<ul>
+<li>The text that the <a href="http://berserk-games.com/knowledgebase/1958/">Text Tool</a> spawns.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="custom-game-objects">Custom Game Objects<a class="headerlink" href="#custom-game-objects" title="Permanent link">&para;</a></h2>
+<p>You can also spawn <a href="http://berserk-games.com/knowledgebase_category/custom-content/">custom Objects</a> and then provide the custom content for them after spawning them by calling <a href="../object#setcustomobject">setCustomObject()</a>. <em>(See setCustomObject for usage)</em></p>
+<p>You can also use setCustomObject along with <a href="../object#reload">reload()</a> to modify an existing custom Object.</p>
+<h3 id="custom-assetbundle">Custom AssetBundle<a class="headerlink" href="#custom-assetbundle" title="Permanent link">&para;</a></h3>
+<h3 id="custom-board">Custom Board<a class="headerlink" href="#custom-board" title="Permanent link">&para;</a></h3>
+<h3 id="custom-dice">Custom Dice<a class="headerlink" href="#custom-dice" title="Permanent link">&para;</a></h3>
+<h3 id="custom-figurine">Custom Figurine<a class="headerlink" href="#custom-figurine" title="Permanent link">&para;</a></h3>
+<h3 id="custom-model">Custom Model<a class="headerlink" href="#custom-model" title="Permanent link">&para;</a></h3>
+<h3 id="custom-tile">Custom Tile<a class="headerlink" href="#custom-tile" title="Permanent link">&para;</a></h3>
+<h3 id="custom-token">Custom Token<a class="headerlink" href="#custom-token" title="Permanent link">&para;</a></h3>
                 
                   
                 
@@ -633,8 +998,8 @@
 
         <!-- Link to previous page -->
         
-          <a href="../clock/"
-              title="Clock"
+          <a href="../rpgfigurine/"
+              title="RPGFigurine"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -647,31 +1012,13 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Clock
+                RPGFigurine
               </span>
             </div>
           </a>
         
 
         <!-- Link to next page -->
-        
-          <a href="../json/" title="JSON"
-              class="md-flex md-footer-nav__link md-footer-nav__link--next"
-              rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch
-                  md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                JSON
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward
-                    md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>
