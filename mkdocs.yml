@@ -50,3 +50,5 @@ pages:
     - Physics: physics.md
     - Player: player.md
     - Player Colors: player-colors.md
+    - RPGFigurine: rpgfigurine.md
+    - Spawnable Objects: spawnableobjects.md
