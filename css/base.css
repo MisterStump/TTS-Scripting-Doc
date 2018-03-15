@@ -16,13 +16,16 @@ html body div.md-container div.md-main__inner div.md-sidebar--primary {
     display:inline;
 }
 
+
 #t1 {
-    content:url(https://github.com/MisterStump/TTS-Scripting-Doc/raw/master/docs/img/string.png);
+    content:url(/img/string.png);
 }
 
+
 #t2 {
-    content:url(https://github.com/MisterStump/TTS-Scripting-Doc/raw/master/docs/img/string.png);
+    content:url(/img/string.png);
 }
+
 
 #t3 {
     content:url(https://github.com/MisterStump/TTS-Scripting-Doc/raw/master/docs/img/string.png);
