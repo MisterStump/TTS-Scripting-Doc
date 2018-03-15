@@ -8,6 +8,7 @@ theme:
   favicon: 'img/Icon-Dice.png'
   custom_dir: 'theme'
 extra_css:
+  - 'stylesheets/extra.css'
   - css/base.css
 markdown_extensions:
   - admonition

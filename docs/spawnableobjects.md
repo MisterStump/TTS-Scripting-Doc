@@ -152,11 +152,9 @@ Objects can be spawned by any script using the [spawnObject()](base#spawnobject)
 * 3DText
     * The text that the [Text Tool](http://berserk-games.com/knowledgebase/1958/) spawns.
 
-
-
-
-
 ---
+
+
 
 ##Custom Game Objects
 You can also spawn [custom Objects](http://berserk-games.com/knowledgebase_category/custom-content/) and then provide the custom content for them after spawning them by calling [setCustomObject()](object#setcustomobject). *(See setCustomObject for usage)*
@@ -165,7 +163,36 @@ You can also use setCustomObject along with [reload()](object#reload) to modify 
 
 ###Custom AssetBundle
 
+* Custom_AssetBundle
+            
+!!!info "Custom_AssetBundle"
+    * **Table parameters**: A Table of parameters which determine the properties of the Object.
+        * <div id='string'></div>**assetbundle**: The path/url for the AssetBundle. 
+        * <div id='string'></div>**assetbundle_secondary**: The path/url for the secondary AssetBundle property. 
+            * {>>Optional, is not used by default.<<}
+        * **type**: An Int representing the Object's type.
+            * {>>Optional, defaults to 0.<<}
+            * **0**: Generic
+            * **1**: Figurine
+            * **2**: Dice
+            * **3**: Coin
+            * **4**: Board
+            * **5**: Chip
+            * **6**: Bag
+            * **7**: Infinite bag
+        * **material**: An Int representing the Object's material.
+            * {>>Optional, defaults to 0.<<}
+            * **0**: Plastic
+            * **1**: Wood
+            * **2**: Metal
+            * **3**: Cardboard
+            
 ###Custom Board
+<div class="test">Test</div>
+<h2 class="test">Test</h2>
+
+
+
 
 ###Custom Dice
 

@@ -8,6 +8,8 @@ These are functions which are triggered by an event taking place in-game. They w
 Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
 -- | -- | --:
 onChat(String message, Player) | Called when a chat message is sent in game chat. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onchat)
+onConnect(Player) | Called when a [Player](player) connects to a game.
+onDisconnect(Player) | Called when a [Player](player) disconnects from a game.
 onExternalMessage(Table) | Called when an external script editor (like [Atom](atom)) sends a message back to the game. Used for custom editor functionality. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onexternalmessage)
 onFixedUpdate() | Called **every physics tick** (90 times a second). This is a frame independent onUpdate(). | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onfixedupdate)
 onLoad(String save_state) | Called when a game save is finished loading every Object. It is where most setup code will go. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onload)
@@ -28,6 +30,10 @@ onSave() | Called whenever your game is saved. | [<i class="material-icons" styl
 onScriptingButtonDown<br>(Int index, String [player_color](player)) | Called when a scripting button (numpad by default) is pressed. The index range that is returned is 1-10. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onscriptingbuttondown)
 onScriptingButtonUp<br>(Int index, String [player_color](player)) | Called when a scripting button (numpad by default) is released. The index range that is returned is 1-10. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onscriptingbuttonup)
 onUpdate() | Called **every frame**. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onupdate)
+
+
+
+
 
 
 
