@@ -56,6 +56,8 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
       <link rel="stylesheet" href="../css/base.css">
     
     
@@ -946,7 +948,45 @@
 <p>You can also spawn <a href="http://berserk-games.com/knowledgebase_category/custom-content/">custom Objects</a> and then provide the custom content for them after spawning them by calling <a href="../object#setcustomobject">setCustomObject()</a>. <em>(See setCustomObject for usage)</em></p>
 <p>You can also use setCustomObject along with <a href="../object#reload">reload()</a> to modify an existing custom Object.</p>
 <h3 id="custom-assetbundle">Custom AssetBundle<a class="headerlink" href="#custom-assetbundle" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Custom_AssetBundle</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Custom_AssetBundle</p>
+<ul>
+<li><strong>Table parameters</strong>: A Table of parameters which determine the properties of the Object.<ul>
+<li><strong>assetbundle</strong>: <img alt="" src="../img/string.png" /> Path/url for the AssetBundle.</li>
+<li><strong>assetbundle_secondary</strong>: A String of the path/url for the secondary AssetBundle property.<ul>
+<li><span class="critic comment">Optional, is not used by default.</span></li>
+</ul>
+</li>
+<li><strong>type</strong>: An Int representing the Object's type.<ul>
+<li><span class="critic comment">Optional, defaults to 0.</span></li>
+<li><strong>0</strong>: Generic</li>
+<li><strong>1</strong>: Figurine</li>
+<li><strong>2</strong>: Dice</li>
+<li><strong>3</strong>: Coin</li>
+<li><strong>4</strong>: Board</li>
+<li><strong>5</strong>: Chip</li>
+<li><strong>6</strong>: Bag</li>
+<li><strong>7</strong>: Infinite bag</li>
+</ul>
+</li>
+<li><strong>material</strong>: An Int representing the Object's material.<ul>
+<li><span class="critic comment">Optional, defaults to 0.</span></li>
+<li><strong>0</strong>: Plastic</li>
+<li><strong>1</strong>: Wood</li>
+<li><strong>2</strong>: Metal</li>
+<li><strong>3</strong>: Cardboard</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <h3 id="custom-board">Custom Board<a class="headerlink" href="#custom-board" title="Permanent link">&para;</a></h3>
+<p><div class="test">Test</div>
+<h2 class="test">Test</h2></p>
 <h3 id="custom-dice">Custom Dice<a class="headerlink" href="#custom-dice" title="Permanent link">&para;</a></h3>
 <h3 id="custom-figurine">Custom Figurine<a class="headerlink" href="#custom-figurine" title="Permanent link">&para;</a></h3>
 <h3 id="custom-model">Custom Model<a class="headerlink" href="#custom-model" title="Permanent link">&para;</a></h3>

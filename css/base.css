@@ -11,6 +11,12 @@ html body div.md-container div.md-main__inner div.md-sidebar--primary {
 */
 
 
+.test {
+    background-color: lightblue;
+    color: yellow;
+}
+
+
 
 /*Nowrap on first row of tables*/
 html body div.md-container table tr td:first-child {
@@ -43,7 +49,7 @@ html body div.md-container table th:nth-child(3) {
 
 /*Reduce padding in table body*/
 html body div.md-container table td {
-    padding-top: 8px !important;
+    padding-top: 8px !important ;
 	padding-bottom: 8px !important;
 }
 
