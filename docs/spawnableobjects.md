@@ -163,11 +163,11 @@ You can also use setCustomObject along with [reload()](object#reload) to modify 
 
 ###Custom AssetBundle
 
-* Custom Parameters
+* Custom_AssetBundle
             
-!!!info "Custom_AssetBundle"
-    * **Table parameters**: A Table of parameters which determine the properties of the Object.
-        * <div id='string'></div>**assetbundle**: The path/url for the AssetBundle. 
+!!!info "Custom Parameters"
+       * [<div id='ico_table'></div>](https://en.wikiversity.org/wiki/Lua/Tables)**parameters**: A Table of parameters which determine the properties of the Object.
+        * [<div id='string'></div>](string) **assetbundle**: The path/url for the AssetBundle. 
         * <div id='string'></div>**assetbundle_secondary**: The path/url for the secondary AssetBundle property. 
             * {>>Optional, is not used by default.<<}
         * **type**: An Int representing the Object's type.
@@ -187,7 +187,6 @@ You can also use setCustomObject along with [reload()](object#reload) to modify 
             * **2**: Metal
             * **3**: Cardboard
             
-###Custom Board
 <div class="test">Test</div>
 <h2 class="test">Test</h2>
 
@@ -200,13 +199,103 @@ You can also use setCustomObject along with [reload()](object#reload) to modify 
 
 
 
+###Custom Board
+
+* Custom_Board
+
+!!!info "Custom Parameters"
+   * [<div id='ico_table'></div>](https://en.wikiversity.org/wiki/Lua/Tables)**parameters**: A Table of parameters which determine the properties of the Object.
+      * **image**: The path/url for the board.
+   
+
 
 ###Custom Dice
 
+* Custom_Dice
+
+!!!info "Custom Parameters"
+   * [<div id='ico_table'></div>](https://en.wikiversity.org/wiki/Lua/Tables)**parameters**: A Table of parameters which determine the properties of the Object.
+      * **image**: The path/url for the [custom die](http://berserk-games.com/knowledgebase/custom-dice/).
+      * **type**: The type of die, which determines its number of sides.
+         * {>>Optional, defaults to 1.<<}
+         * **0**: 4-sided
+         * **1**: 6-sided
+         * **2**: 8-sided
+         * **3**: 10-sided
+         * **4**: 12-sided
+         * **5**: 20-sided
+
+
+
 ###Custom Figurine
+
+* Figurine_Custom
+
+!!!info "Custom Parameters"
+   * [<div id='ico_table'></div>](https://en.wikiversity.org/wiki/Lua/Tables)**parameters**: A Table of parameters which determine the properties of the Object.
+      * **image**: The path/url for the [custom figurine](http://berserk-games.com/knowledgebase/custom-figurines/).
+      * **image_secondary**: The path/url for the custom figurine's back.
+         * {>>Optional, defaults to "image".<<}
+
+
 
 ###Custom Model
 
+* Custom_Model
+
+!!!info "Custom Parameters"
+   * [<div id='ico_table'></div>](https://en.wikiversity.org/wiki/Lua/Tables)**parameters**: A Table of parameters which determine the properties of the Object.
+      * **mesh**: The path/url for the .obj mesh used on the [custom model](http://berserk-games.com/knowledgebase/custom-models/).
+      * **diffuse**: The path/url for the diffuse image.
+      * **normal**: The path/url for the normals image.
+         * {>>Optional, is not used by default.<<}
+      * **collider**: The path/url for the collider mesh.
+         * {>>Optional, defaults to a generic box collider.<<}
+      * **convex**: If the object model is convex.
+         * {>>Optional, defaults to false.<<}
+      * **type**: An Int representing the Object's type.
+         * {>>Optional, defaults to 0.<<}
+         * **0**: Generic
+         * **1**: Figurine
+         * **2**: Dice
+         * **3**: Coin
+         * **4**: Board
+         * **5**: Chip
+         * **6**: Bag
+         * **7**: Infinite bag
+      * **material**: An Int representing the Object's material.
+         * {>>Optional, defaults to 0.<<}
+         * **0**: Plastic
+         * **1**: Wood
+         * **2**: Metal
+         * **3**: Cardboard
+      * **specular_intensity**: The specular intensity.
+         * {>>Optional, defaults to 0.1.<<}
+      * **specular_color**: The specular Color.
+         * {>>Optional, defaults to {r=1, g=1, b=1}.<<}
+      * **specular_sharpness**: The specular sharpness.
+         * {>>Optional, defaults to 3.<<}
+      * **freshnel_strength**: The freshnel strength.
+         * {>>Optional, defaults to 0.1.<<}
+      * **cast_shadows**: If the Object casts shadows.
+         * {>>Optional, defaults to true.<<}
+
+
+
 ###Custom Tile
 
+* Custom_Tile
+
+!!!info "Custom Parameters"
+   * [<div id='ico_table'></div>](https://en.wikiversity.org/wiki/Lua/Tables)**parameters**: A Table of parameters which determine the properties of the Object.
+
+
+
 ###Custom Token
+
+* Custom_Token
+
+!!!info "Custom Parameters"
+   * [<div id='ico_table'></div>](https://en.wikiversity.org/wiki/Lua/Tables)**parameters**: A Table of parameters which determine the properties of the Object.
+
+
