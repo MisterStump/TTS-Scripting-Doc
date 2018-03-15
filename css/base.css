@@ -11,10 +11,23 @@ html body div.md-container div.md-main__inner div.md-sidebar--primary {
 */
 
 
+#string {
+    content:url(/img/string.png);
+    display:inline;
+}
+
+
+
 .test {
     background-color: lightblue;
     color: yellow;
 }
+
+
+
+
+
+
 
 
 
