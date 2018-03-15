@@ -12,7 +12,7 @@ html body div.md-container div.md-main__inner div.md-sidebar--primary {
 
 
 #string {
-    content:url(/img/string.png);
+    content:url(https://github.com/MisterStump/TTS-Scripting-Doc/raw/master/docs/img/string.png);
     display:inline;
 }
 
