@@ -1,0 +1,31 @@
+/*Red background behind current selection*/
+[data-md-color-primary=indigo] .md-nav__link--active, [data-md-color-primary=indigo] .md-nav__link:active {
+    color: black;
+    background-color: #F16767;
+    padding: 2px;
+}
+
+/*Coloring of top bar*/
+[data-md-color-primary=indigo] .md-header, [data-md-color-primary=indigo] .md-hero {
+  background-color: #bb0c0d;
+}
+
+/*Coloring of main header*/
+.md-typeset h1 {
+    color: #bb0c0d;
+}
+
+/*Coloring of secondary header*/
+h2{
+    color: #bb0c0d;
+}
+
+/*Coloring of third header*/
+h3 {
+    color: #580505;
+}
+
+/*Coloring of permalink icon*/
+[data-md-color-accent=indigo] .md-nav__link:focus, [data-md-color-accent=indigo] .md-nav__link:hover, [data-md-color-accent=indigo] .md-typeset .footnote li:hover .footnote-backref:hover, [data-md-color-accent=indigo] .md-typeset .footnote li:target .footnote-backref, [data-md-color-accent=indigo] .md-typeset .md-clipboard:active:before, [data-md-color-accent=indigo] .md-typeset .md-clipboard:hover:before, [data-md-color-accent=indigo] .md-typeset [id] .headerlink:focus, [data-md-color-accent=indigo] .md-typeset [id]:hover .headerlink:hover, [data-md-color-accent=indigo] .md-typeset [id]:target .headerlink {
+    color: #bb0c0d;
+}
