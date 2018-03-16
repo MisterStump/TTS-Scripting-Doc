@@ -6,3 +6,11 @@ In this section, you will find details on all events/classes/functions specific 
 	* Instructions on how to modify if they think changes are needed.
 	
 	
+##In progress reference
+
+* [<span class="ico_tab"></span>](typeandclass) **parameters**: Test of this feature.
+* [<span class="ico_str"></span>](typeandclass) **image**: Test of this feature.
+* [<span class="ico_int"></span>](typeandclass) **material**: Test of this feature.
+* [<span class="ico_flo"></span>](typeandclass) **specular**: Test of this feature.
+* [<span class="ico_nil"></span>](typeandclass) **nil**: Test of this feature.
+* [<span class="ico_boo"></span>](typeandclass) **bool**: Test of this feature.
