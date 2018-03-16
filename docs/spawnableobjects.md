@@ -293,9 +293,20 @@ You can also use setCustomObject along with [reload()](object#reload) to modify 
 
 ###Custom Token
 
+
+
+
+
+* [<span class="ico_tab"></span>](typeandclass) **parameters**: Test of this feature.
+* [<span class="ico_str"></span>](typeandclass) **image**: Test of this feature.
+* [<span class="ico_int"></span>](typeandclass) **material**: Test of this feature.
+* [<span class="ico_flo"></span>](typeandclass) **specular**: Test of this feature.
+
+
+
+
+
 * Custom_Token
 
 !!!info "Custom Parameters"
    * [<div id='ico_table'></div>](https://en.wikiversity.org/wiki/Lua/Tables)**parameters**: A Table of parameters which determine the properties of the Object.
-
-
