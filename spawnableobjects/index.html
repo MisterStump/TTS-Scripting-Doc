@@ -947,13 +947,13 @@
 <p>You can also use setCustomObject along with <a href="../object#reload">reload()</a> to modify an existing custom Object.</p>
 <h3 id="custom-assetbundle">Custom AssetBundle<a class="headerlink" href="#custom-assetbundle" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Custom Parameters</li>
+<li>Custom_AssetBundle</li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title">Custom_AssetBundle</p>
+<p class="admonition-title">Custom Parameters</p>
 <ul>
-<li><strong>Table parameters</strong>: A Table of parameters which determine the properties of the Object.<ul>
-<li><div id='string'></div><strong>assetbundle</strong>: The path/url for the AssetBundle. </li>
+<li><a href="https://en.wikiversity.org/wiki/Lua/Tables"><div id='ico_table'></div></a><strong>parameters</strong>: A Table of parameters which determine the properties of the Object.<ul>
+<li><a href="../string"><div id='string'></div></a> <strong>assetbundle</strong>: The path/url for the AssetBundle. </li>
 <li><div id='string'></div><strong>assetbundle_secondary</strong>: The path/url for the secondary AssetBundle property. <ul>
 <li><span class="critic comment">Optional, is not used by default.</span></li>
 </ul>
@@ -982,20 +982,163 @@
 </li>
 </ul>
 </div>
-<h3 id="custom-board">Custom Board<a class="headerlink" href="#custom-board" title="Permanent link">&para;</a></h3>
-<p><div class="test">Test</div>
-<h2 class="test">Test</h2></p>
+<div class="test">Test</div>
+
+<h2 class="test">Test</h2>
+
 <p>1
 <div id='t1'></div>
 2
 <div id='t2'></div>
 3
 <div id='t3'></div></p>
+<h3 id="custom-board">Custom Board<a class="headerlink" href="#custom-board" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Custom_Board</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Custom Parameters</p>
+</div>
+<ul>
+<li><a href="https://en.wikiversity.org/wiki/Lua/Tables"><div id='ico_table'></div></a><strong>parameters</strong>: A Table of parameters which determine the properties of the Object.<ul>
+<li><strong>image</strong>: The path/url for the board.</li>
+</ul>
+</li>
+</ul>
 <h3 id="custom-dice">Custom Dice<a class="headerlink" href="#custom-dice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Custom_Dice</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Custom Parameters</p>
+</div>
+<ul>
+<li><a href="https://en.wikiversity.org/wiki/Lua/Tables"><div id='ico_table'></div></a><strong>parameters</strong>: A Table of parameters which determine the properties of the Object.<ul>
+<li><strong>image</strong>: The path/url for the <a href="http://berserk-games.com/knowledgebase/custom-dice/">custom die</a>.</li>
+<li><strong>type</strong>: The type of die, which determines its number of sides.<ul>
+<li><span class="critic comment">Optional, defaults to 1.</span></li>
+<li><strong>0</strong>: 4-sided</li>
+<li><strong>1</strong>: 6-sided</li>
+<li><strong>2</strong>: 8-sided</li>
+<li><strong>3</strong>: 10-sided</li>
+<li><strong>4</strong>: 12-sided</li>
+<li><strong>5</strong>: 20-sided</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h3 id="custom-figurine">Custom Figurine<a class="headerlink" href="#custom-figurine" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Figurine_Custom</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Custom Parameters</p>
+</div>
+<ul>
+<li><a href="https://en.wikiversity.org/wiki/Lua/Tables"><div id='ico_table'></div></a><strong>parameters</strong>: A Table of parameters which determine the properties of the Object.<ul>
+<li><strong>image</strong>: The path/url for the <a href="http://berserk-games.com/knowledgebase/custom-figurines/">custom figurine</a>.</li>
+<li><strong>image_secondary</strong>: The path/url for the custom figurine's back.<ul>
+<li><span class="critic comment">Optional, defaults to &quot;image&quot;.</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h3 id="custom-model">Custom Model<a class="headerlink" href="#custom-model" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Custom_Model</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Custom Parameters</p>
+</div>
+<ul>
+<li><a href="https://en.wikiversity.org/wiki/Lua/Tables"><div id='ico_table'></div></a><strong>parameters</strong>: A Table of parameters which determine the properties of the Object.<ul>
+<li><strong>mesh</strong>: The path/url for the .obj mesh used on the <a href="http://berserk-games.com/knowledgebase/custom-models/">custom model</a>.</li>
+<li><strong>diffuse</strong>: The path/url for the diffuse image.</li>
+<li><strong>normal</strong>: The path/url for the normals image.<ul>
+<li><span class="critic comment">Optional, is not used by default.</span></li>
+</ul>
+</li>
+<li><strong>collider</strong>: The path/url for the collider mesh.<ul>
+<li><span class="critic comment">Optional, defaults to a generic box collider.</span></li>
+</ul>
+</li>
+<li><strong>convex</strong>: If the object model is convex.<ul>
+<li><span class="critic comment">Optional, defaults to false.</span></li>
+</ul>
+</li>
+<li><strong>type</strong>: An Int representing the Object's type.<ul>
+<li><span class="critic comment">Optional, defaults to 0.</span></li>
+<li><strong>0</strong>: Generic</li>
+<li><strong>1</strong>: Figurine</li>
+<li><strong>2</strong>: Dice</li>
+<li><strong>3</strong>: Coin</li>
+<li><strong>4</strong>: Board</li>
+<li><strong>5</strong>: Chip</li>
+<li><strong>6</strong>: Bag</li>
+<li><strong>7</strong>: Infinite bag</li>
+</ul>
+</li>
+<li><strong>material</strong>: An Int representing the Object's material.<ul>
+<li><span class="critic comment">Optional, defaults to 0.</span></li>
+<li><strong>0</strong>: Plastic</li>
+<li><strong>1</strong>: Wood</li>
+<li><strong>2</strong>: Metal</li>
+<li><strong>3</strong>: Cardboard</li>
+</ul>
+</li>
+<li><strong>specular_intensity</strong>: The specular intensity.<ul>
+<li><span class="critic comment">Optional, defaults to 0.1.</span></li>
+</ul>
+</li>
+<li><strong>specular_color</strong>: The specular Color.<ul>
+<li><span class="critic comment">Optional, defaults to {r=1, g=1, b=1}.</span></li>
+</ul>
+</li>
+<li><strong>specular_sharpness</strong>: The specular sharpness.<ul>
+<li><span class="critic comment">Optional, defaults to 3.</span></li>
+</ul>
+</li>
+<li><strong>freshnel_strength</strong>: The freshnel strength.<ul>
+<li><span class="critic comment">Optional, defaults to 0.1.</span></li>
+</ul>
+</li>
+<li><strong>cast_shadows</strong>: If the Object casts shadows.<ul>
+<li><span class="critic comment">Optional, defaults to true.</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h3 id="custom-tile">Custom Tile<a class="headerlink" href="#custom-tile" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Custom_Tile</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Custom Parameters</p>
+</div>
+<ul>
+<li><a href="https://en.wikiversity.org/wiki/Lua/Tables"><div id='ico_table'></div></a><strong>parameters</strong>: A Table of parameters which determine the properties of the Object.</li>
+</ul>
 <h3 id="custom-token">Custom Token<a class="headerlink" href="#custom-token" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../typeandclass"><span class="ico_tab"></span></a> <strong>parameters</strong>: Test of this feature.</li>
+<li><a href="../typeandclass"><span class="ico_str"></span></a> <strong>image</strong>: Test of this feature.</li>
+<li><a href="../typeandclass"><span class="ico_int"></span></a> <strong>material</strong>: Test of this feature.</li>
+<li>
+<p><a href="../typeandclass"><span class="ico_flo"></span></a> <strong>specular</strong>: Test of this feature.</p>
+</li>
+<li>
+<p>Custom_Token</p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Custom Parameters</p>
+</div>
+<ul>
+<li><a href="https://en.wikiversity.org/wiki/Lua/Tables"><div id='ico_table'></div></a><strong>parameters</strong>: A Table of parameters which determine the properties of the Object.</li>
+</ul>
                 
                   
                 

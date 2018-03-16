@@ -31,6 +31,78 @@ html body div.md-container div.md-main__inner div.md-sidebar--primary {
     content:url(https://github.com/MisterStump/TTS-Scripting-Doc/raw/master/docs/img/string.png);
 }
 
+.ico_str:before {
+    content: "string";
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2px 5px;
+    border-radius: 6px;
+    display: inline;
+    background-color: #98c379;
+    box-shadow: 2px 2px #696969;
+    position: relative;
+    bottom: 2px;
+}
+.ico_str:hover {
+    opacity: 0.75;
+}
+
+.ico_tab:before {
+    content: "table";
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2px 5px;
+    border-radius: 6px;
+    display: inline;
+    background-color: #D3D3D3;
+    box-shadow: 2px 2px #696969;
+    position: relative;
+    bottom: 2px;
+}
+.ico_tab:hover {
+    opacity: 0.75;
+}
+
+.ico_int:before {
+    content: "int";
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2px 5px;
+    border-radius: 6px;
+    display: inline;
+    background-color: #e74c3c;
+    box-shadow: 2px 2px #696969;
+    position: relative;
+    bottom: 2px;
+}
+.ico_int:hover {
+    opacity: 0.75;
+}
+
+.ico_flo:before {
+    content: "float";
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2px 5px;
+    border-radius: 6px;
+    display: inline;
+    background-color: #e74c3c;
+    box-shadow: 2px 2px #696969;
+    position: relative;
+    bottom: 2px;
+}
+.ico_flo:hover {
+    opacity: 0.75;
+}
+
 
 
 .test {
