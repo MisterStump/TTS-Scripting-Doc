@@ -36,7 +36,7 @@
     
     
       
-        <title>RPGFigurine - Tabletop Simulator Scripting Documentation</title>
+        <title>TextTool - Tabletop Simulator Scripting Documentation</title>
       
     
     
@@ -107,7 +107,7 @@
                 Tabletop Simulator Scripting Documentation
               </span>
               <span class="md-header-nav__topic">
-                RPGFigurine
+                TextTool
               </span>
             
           
@@ -425,6 +425,30 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../rpgfigurine/" title="RPGFigurine" class="md-nav__link">
+      RPGFigurine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../spawnableobjects/" title="Spawnable Objects" class="md-nav__link">
+      Spawnable Objects
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -434,11 +458,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        RPGFigurine
+        TextTool
       </label>
     
-    <a href="./" title="RPGFigurine" class="md-nav__link md-nav__link--active">
-      RPGFigurine
+    <a href="./" title="TextTool" class="md-nav__link md-nav__link--active">
+      TextTool
     </a>
     
       
@@ -464,53 +488,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#event-functions" title="Event Functions" class="md-nav__link">
-    Event Functions
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#function-details" title="Function Details" class="md-nav__link">
-    Function Details
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#event-function-details" title="Event Function Details" class="md-nav__link">
-    Event Function Details
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#onattack" title="onAttack(...)" class="md-nav__link">
-    onAttack(...)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#onhit" title="onHit(...)" class="md-nav__link">
-    onHit(...)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -524,30 +501,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../spawnableobjects/" title="Spawnable Objects" class="md-nav__link">
-      Spawnable Objects
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../texttool/" title="TextTool" class="md-nav__link">
-      TextTool
-    </a>
   </li>
 
         
@@ -589,53 +542,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#event-functions" title="Event Functions" class="md-nav__link">
-    Event Functions
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#function-details" title="Function Details" class="md-nav__link">
-    Function Details
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#event-function-details" title="Event Function Details" class="md-nav__link">
-    Event Function Details
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#onattack" title="onAttack(...)" class="md-nav__link">
-    onAttack(...)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#onhit" title="onHit(...)" class="md-nav__link">
-    onHit(...)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -658,12 +564,11 @@
               
                 
                 
-                  <h1>RPGFigurine</h1>
+                  <h1>TextTool</h1>
                 
-                <p>An RPGFigurine is an in-game Object of a figurine with built-in animations. It has its own class, RPGFigurine, with functions associated with it. This allows you to manipulate the special properties of these figurines.</p>
+                <p>TextTool is a special Object type for creating text labels in the game instance. It is the same text that is created with the <a href="http://berserk-games.com/knowledgebase/1958/">text tool</a>. You call these functions like this: <code class="codehilite">self.TextTool.getFontColor()</code>.</p>
 <h2 id="function-summary">Function Summary<a class="headerlink" href="#function-summary" title="Permanent link">&para;</a></h2>
 <h3 id="object-functions">Object Functions<a class="headerlink" href="#object-functions" title="Permanent link">&para;</a></h3>
-<p>These functions are called like this: <code class="codehilite">self.RPGFigurine.attack()</code>.</p>
 <table>
 <thead>
 <tr>
@@ -674,86 +579,37 @@
 </thead>
 <tbody>
 <tr>
-<td>attack()</td>
-<td>Plays a random attack animation. Returns Bool.</td>
+<td>getFontColor()</td>
+<td><a href="../typeandclass"><span class="ret_tab"></span></a>&nbsp; Returns Table of font Color.</td>
 <td align="right"></td>
 </tr>
 <tr>
-<td>changeMode()</td>
-<td>Changes the figurine's current mode. What the mode represents is based on the figurine. Returns Bool.</td>
+<td>getFontSize()</td>
+<td><a href="../typeandclass"><span class="ret_int"></span></a>&nbsp; Returns Int of the font size.</td>
 <td align="right"></td>
 </tr>
 <tr>
-<td>die()</td>
-<td>Plays the death animation or causes it to return to life. Returns Bool.</td>
+<td>getValue()</td>
+<td><a href="../typeandclass"><span class="ret_str"></span></a>&nbsp; Returns the current text. Works the same as Object's <a href="../object#getvalue">getValue()</a>.</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>setFontColor( <a href="../typeandclass"><span class="ico_tab"></span></a>&nbsp; Color)</td>
+<td><a href="../typeandclass"><span class="ret_boo"></span></a>&nbsp; Sets font Color.</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>setFontSize( <a href="../typeandclass"><span class="ico_int"></span></a>&nbsp;  font_size)</td>
+<td><a href="../typeandclass"><span class="ret_boo"></span></a>&nbsp; Sets font size.</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>setValue( <a href="../typeandclass"><span class="ico_str"></span></a>&nbsp; text)</td>
+<td><a href="../typeandclass"><span class="ret_boo"></span></a>&nbsp; Sets the current text. Works the same as Object's <a href="../object#setvalue">setValue(...)</a>.</td>
 <td align="right"></td>
 </tr>
 </tbody>
 </table>
-<h3 id="event-functions">Event Functions<a class="headerlink" href="#event-functions" title="Permanent link">&para;</a></h3>
-<p>These functions are called by the game whenever a figurine attacks or is attacked. See details for example usage.</p>
-<table>
-<thead>
-<tr>
-<th>Function Name</th>
-<th>Description</th>
-<th align="right"><i class="material-icons" style="line-height:90%;">info_outline</i></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>onAttack(Table hit_list)</td>
-<td>Activates when an attack is performed by an identified RPGFigurine Object.</td>
-<td align="right"><a href="#onattack"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
-</tr>
-<tr>
-<td>onHit(Object attacker)</td>
-<td>Activates when an attack is performed on this RPGFigurine Object.</td>
-<td align="right"><a href="#onattack"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="function-details">Function Details<a class="headerlink" href="#function-details" title="Permanent link">&para;</a></h2>
-<h3 id="event-function-details">Event Function Details<a class="headerlink" href="#event-function-details" title="Permanent link">&para;</a></h3>
-<h4 id="onattack">onAttack(...)<a class="headerlink" href="#onattack" title="Permanent link">&para;</a></h4>
-<p>Activates when an attack is performed by an identified RPGFigurine Object. An attack is triggered via the context menu or pressing the appropriate number key. If another RPGFigurine is within its attack arch, then the function will be triggered with the figurine hit passed as a parameter.</p>
-<div class="admonition info">
-<p class="admonition-title">onAttack(Table hit_list)</p>
-<ul>
-<li><strong>Table hit_list</strong>: A Table of Object references for RPGFigurines within the reach of the attack.</li>
-</ul>
-</div>
-<div class="codehilite"><pre><span></span><span class="c1">--Monitoring and announcing a cyclops attacks</span>
-<span class="kr">function</span> <span class="nf">onLoad</span><span class="p">()</span>
-    <span class="n">cyclops</span> <span class="o">=</span> <span class="n">getObjectFromGUID</span><span class="p">(</span><span class="s2">&quot;aaa111&quot;</span><span class="p">)</span>
-
-    <span class="kr">function</span> <span class="nc">cyclops</span><span class="p">.</span><span class="nc">RPGFigurine</span><span class="p">.</span><span class="nf">onAttack</span><span class="p">(</span><span class="n">hit_list</span><span class="p">)</span>
-        <span class="kr">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">hit_list</span><span class="p">)</span> <span class="kr">do</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">..</span> <span class="s2">&quot; was hit!&quot;</span><span class="p">)</span>
-        <span class="kr">end</span>
-    <span class="kr">end</span>
-<span class="kr">end</span>
-</pre></div>
-
-<hr />
-<h4 id="onhit">onHit(...)<a class="headerlink" href="#onhit" title="Permanent link">&para;</a></h4>
-<p>Activates when an attack is performed on this RPGFigurine Object. An attack is triggered via the context menu or pressing the appropriate number key. If this RPGFigurine is within the attack radius, this function is triggered, passing a parameter of the Object which attacked.</p>
-<div class="admonition info">
-<p class="admonition-title">onHit(Object attacker)</p>
-<ul>
-<li><strong>Object attacker</strong>: An Object reference of the RPGFigurine attacking the indicated RPGFigurine.</li>
-</ul>
-</div>
-<div class="codehilite"><pre><span></span><span class="c1">--Monitoring and announcing a cyclops being hit</span>
-<span class="kr">function</span> <span class="nf">onLoad</span><span class="p">()</span>
-    <span class="n">cyclops</span> <span class="o">=</span> <span class="n">getObjectFromGUID</span><span class="p">(</span><span class="s2">&quot;aaa111&quot;</span><span class="p">)</span>
-
-    <span class="kr">function</span> <span class="nc">cyclops</span><span class="p">.</span><span class="nc">RPGFigurine</span><span class="p">.</span><span class="nf">onHit</span><span class="p">(</span><span class="n">attacker</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">attacker</span><span class="p">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">..</span> <span class="s2">&quot; attacked the Cyclops!&quot;</span><span class="p">)</span>
-    <span class="kr">end</span>
-<span class="kr">end</span>
-</pre></div>
                 
                   
                 
@@ -800,8 +656,8 @@
 
         <!-- Link to previous page -->
         
-          <a href="../player-colors/"
-              title="Player Colors"
+          <a href="../spawnableobjects/"
+              title="Spawnable Objects"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -814,31 +670,13 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Player Colors
+                Spawnable Objects
               </span>
             </div>
           </a>
         
 
         <!-- Link to next page -->
-        
-          <a href="../spawnableobjects/" title="Spawnable Objects"
-              class="md-flex md-footer-nav__link md-footer-nav__link--next"
-              rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch
-                  md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Spawnable Objects
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward
-                    md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>

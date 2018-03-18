@@ -62,6 +62,8 @@
     
       <link rel="stylesheet" href="../css/ico_type.css">
     
+      <link rel="stylesheet" href="../css/ret_type.css">
+    
     
   </head>
   
@@ -871,6 +873,18 @@
   <li class="md-nav__item">
     <a href="../spawnableobjects/" title="Spawnable Objects" class="md-nav__link">
       Spawnable Objects
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../texttool/" title="TextTool" class="md-nav__link">
+      TextTool
     </a>
   </li>
 
@@ -2012,9 +2026,17 @@
 <hr />
 <h4 id="positiontolocal">positionToLocal(...)<a class="headerlink" href="#positiontolocal" title="Permanent link">&para;</a></h4>
 <p>Returns a Vector after converting a world vector to a local Vector. A world Vector is a positional Vector using the world's coordinate system. A Local Vector is a positional Vector that is relative to the position of the given object.</p>
+<div class="admonition tip">
+<p class="admonition-title">Object Scale</p>
+<p>This function takes the Object's scale into account, as the Object is the key relative point.</p>
+</div>
 <hr />
 <h4 id="positiontoworld">positionToWorld(...)<a class="headerlink" href="#positiontoworld" title="Permanent link">&para;</a></h4>
 <p>Returns a Vector after converting a local Vector to a world Vector. A world Vector is a positional Vector using the world's coordinate system. A Local Vector is a positional Vector that is relative to the position of the given object.</p>
+<div class="admonition tip">
+<p class="admonition-title">Object Scale</p>
+<p>This function takes the Object's scale into account, as the Object is the key relative point.</p>
+</div>
 <hr />
 <h4 id="rotatevector">rotate(Vector)<a class="headerlink" href="#rotatevector" title="Permanent link">&para;</a></h4>
 <p>Rotates Object smoothly in the direction of the given Vector. This does not set the Object to face a specific rotation, it rotates the Object around by the number of degrees given for x/y/z.</p>

@@ -1,10 +1,10 @@
 /*String*/
-.ico_str:before {
-    content: "string";
+.ret_str:before {
+    content: "return string";
     color: #000000;
-    font-weight: bold;
+    font-style: italic;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 1px 4px;
     border-radius: 6px;
     display: inline;
@@ -12,18 +12,22 @@
     box-shadow: 2px 2px #696969;
     position: relative;
     bottom: 1px;
+    
+    float: left;
+    width: 44px;
+    line-height: 1;
 }
-.ico_str:hover {
+.ret_str:hover {
     opacity: 0.75;
 }
 
 /*Table*/
-.ico_tab:before {
-    content: "table";
+.ret_tab:before {
+    content: "return table";
     color: #000000;
-    font-weight: bold;
+    font-style: italic;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 1px 4px;
     border-radius: 6px;
     display: inline;
@@ -31,18 +35,22 @@
     box-shadow: 2px 2px #696969;
     position: relative;
     bottom: 1px;
+    
+    float: left;
+    width: 44px;
+    line-height: 1;
 }
-.ico_tab:hover {
+.ret_tab:hover {
     opacity: 0.75;    
 }
 
 /*Intiger*/
-.ico_int:before {
-    content: "int";
+.ret_int:before {
+    content: "return int";
     color: #000000;
-    font-weight: bold;
+    font-style: italic;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 1px 4px;
     border-radius: 6px;
     display: inline;
@@ -50,18 +58,22 @@
     box-shadow: 2px 2px #696969;
     position: relative;
     bottom: 1px;
+    
+    float: left;
+    width: 44px;
+    line-height: 1;
 }
-.ico_int:hover {
+.ret_int:hover {
     opacity: 0.75;
 }
 
 /*Float*/
-.ico_flo:before {
-    content: "float";
+.ret_flo:before {
+    content: "return float";
     color: #000000;
-    font-weight: bold;
+    font-style: italic;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 1px 4px;
     border-radius: 6px;
     display: inline;
@@ -69,40 +81,22 @@
     box-shadow: 2px 2px #696969;
     position: relative;
     bottom: 1px;
+    
+    float: left;
+    width: 44px;
+    line-height: 1;
 }
-.ico_flo:hover {
-    opacity: 0.75;
-}
-
-/*Nil*/
-.ico_nil:before {
-    content: "nil";
-    color: #000000;
-    font-weight: bold;
-    text-align: center;
-    font-size: 1.2rem;
-    padding: 1px 4px;
-    border-radius: 6px;
-    display: inline;
-    background-color: inherit;
-    box-shadow: 2px 2px #696969;
-    position: relative;
-    bottom: 1px;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-}
-.ico_nil:hover {
+.ret_flo:hover {
     opacity: 0.75;
 }
 
 /*Bool*/
-.ico_boo:before {
-    content: "bool";
+.ret_boo:before {
+    content: "return bool";
     color: #000000;
-    font-weight: bold;
+    font-style: italic;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 1px 4px;
     border-radius: 6px;
     display: inline;
@@ -110,7 +104,11 @@
     box-shadow: 2px 2px #696969;
     position: relative;
     bottom: 1px;
+    
+    float: left;
+    width: 44px;
+    line-height: 1;
 }
-.ico_boo:hover {
+.ret_boo:hover {
     opacity: 0.75;
 }

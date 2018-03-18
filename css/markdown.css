@@ -30,3 +30,12 @@ html body div.md-container table td {
     padding-top: 8px !important ;
 	padding-bottom: 8px !important;
 }
+
+.md-typeset .md-typeset__table {
+    display: block;
+}
+
+/*Changing interio cell spacings, !important required to override before/after*/
+table td {
+    padding: 4px !important;
+}
