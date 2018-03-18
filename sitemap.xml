@@ -127,6 +127,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>/timer/</loc>
+     <lastmod>2018-03-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>

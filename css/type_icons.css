@@ -1,0 +1,112 @@
+/*General Icon Formatting, used by all tag type icons*/
+.tag {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1px 4px;
+    border-radius: 6px;
+    display: inline-block;
+    box-shadow: 2px 2px #696969;
+    position: relative;
+    bottom: 1px;
+    word-break: normal;
+
+    width: 44px;
+    line-height: 1;
+}
+.tag:hover {
+    opacity: 0.75;
+}
+
+/*General Return Formatting, used by all return type icons*/
+.ret {
+    font-style: italic;
+    text-align: center;
+    font-size: 1rem;
+    padding: 1px 4px;
+    border-radius: 6px;
+    display: inline-block;
+
+    box-shadow: 2px 2px #696969;
+    position: relative;
+    bottom: 1px;
+    
+    width: 40px;
+    line-height: 1;
+}
+.ret:hover {
+    opacity: 0.75;
+}
+.ret:before {
+    content: "return\A";
+}
+
+
+
+
+/*String*/
+.str {
+    color: #000000;
+    background-color: #98c379;
+}
+.str:after {
+    content: "string";
+}
+
+/*Table*/
+.tab {
+    color: #000000;
+    background-color: #D3D3D3;
+}
+.tab:after {
+    content: "table";  
+}
+
+/*Intiger*/
+.int {
+    color: #000000;
+    background-color: #e74c3c;
+}
+.int:after {
+    content: "int";
+}
+
+/*Float*/
+.flo {
+    color: #000000;
+    background-color: #e74c3c;
+}
+.flo:after {
+    content: "float";
+}
+
+/*Nil*/
+.nil {
+    color: #000000;
+    background-color: inherit;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+.nil:after {
+    content: "nil";
+}
+
+/*Bool*/
+.boo {
+    color: #000000;
+    background-color: #BA8BA1;
+}
+.boo:after {
+    content: "bool";
+}
+
+
+/*Object*/
+.obj {
+    color: #ffffff;
+    background-color: #37474f;
+}
+.obj:after {
+    content: "object";
+}

@@ -31,11 +31,12 @@ html body div.md-container table td {
 	padding-bottom: 8px !important;
 }
 
+/*Forces all standard tables to be 100% width
 .md-typeset .md-typeset__table {
     display: block;
-}
+}*/
 
 /*Changing interio cell spacings, !important required to override before/after*/
 table td {
-    padding: 4px !important;
+    padding: 4px 8px !important;
 }

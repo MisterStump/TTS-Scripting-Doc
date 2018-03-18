@@ -1264,6 +1264,31 @@
             "location": "/texttool/#object-functions",
             "text": "Function Name  Description  info_outline      getFontColor()  \u00a0 Returns Table of font Color.     getFontSize()  \u00a0 Returns Int of the font size.     getValue()  \u00a0 Returns the current text. Works the same as Object's  getValue() .     setFontColor(  \u00a0 Color)  \u00a0 Sets font Color.     setFontSize(  \u00a0  font_size)  \u00a0 Sets font size.     setValue(  \u00a0 text)  \u00a0 Sets the current text. Works the same as Object's  setValue(...) .",
             "title": "Object Functions"
+        },
+        {
+            "location": "/timer/",
+            "text": "Timer is a statis global class which provides methods for executing other functions after a delay and/or repeatedly. Each Timer is tracked by a unique \"identifier\" string. You call these functions like this: \nTimer.destroy(...)\n.\n\n\n\n\nWarning\n\n\nThe \"identifiers\" are shared between Global and all Object scripts, so each Timer must have a unique name.\n\n\n\n\nFunction Summary\n\u00b6\n\n\n\n\n\n\n\n\nFunction Name\n\n\nDescription\n\n\ninfo_outline\n\n\n\n\n\n\n\n\n\n\ncreate( \n\u00a0 parameters)\n\n\n\u00a0 Creates a Timer. It will auto-delete once its repetitions have been completed.\n\n\ninfo_outline\n\n\n\n\n\n\ndestroy( \n\u00a0 identifier)\n\n\n\u00a0 Destroys a Timer.\n\n\ninfo_outline\n\n\n\n\n\n\n\n\n\n\nFunction Details\n\u00b6\n\n\ncreate(...)\n\u00b6\n\n\n\u00a0 Creates a Timer. It will auto-delete once its repetitions have been completed.\n\n\n\n\ncreate( \n\u00a0 parameters)\n\n\n\n\n\u00a0 \nparameters\n: A Table containing the information used to start the Timer.\n\n\n\u00a0 \nidentifier\n: Timer's name, used to destroy it. Must be unique within all other scripts.\n\n\n\u00a0 \nfunction_name\n: Name of function to trigger when time is reached.\n\n\n\u00a0 \nfunction_owner\n: Where the function from function_name exists.\n\n\nOptional, defaults to the calling Object.\n\n\n\n\n\n\n\u00a0 \nparameters\n: Table containing any data that will be passed to the function.\n\n\nOptional, will not be used by default.\n\n\n\n\n\n\n\u00a0 \ndelay\n: Length of time before the function is triggered.\n\n\nOptional, defaults to 0.\n\n\n0 results in a delay of 1 frame before the triggered function activates.\n\n\n\n\n\n\n\u00a0 \nrepetitions\n: Number of times the countdown repeats.\n\n\nOptional, defaults to 1.\n\n\nUse 0 for infinite repetitions.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction\n \nonLoad\n()\n\n    \ndataTable\n \n=\n \n{\nwelcome\n=\n\"Hello World!\"\n}\n\n    \nTimer\n.\ncreate\n({\n\n        \nidentifier\n     \n=\n \n\"A Unique Name\"\n,\n\n        \nfunction_name\n  \n=\n \n\"fiveAfterOne\"\n,\n\n        \nparameters\n     \n=\n \ndataTable\n,\n\n        \ndelay\n          \n=\n \n1\n,\n\n        \nrepetitions\n    \n=\n \n5\n,\n\n    \n})\n\n\nend\n\n\n\nfunction\n \nfiveAfterOne\n(\nparams\n)\n\n    \nprint\n(\nparams\n.\nwelcome\n)\n\n\nend\n\n\n\n\n\n\n\nTip\n\n\nIf your timer is on an Object, a good way to establish a unique identifier for it is to use the item's GUID!\n\n\n\n\n\n\ndestroy(...)\n\u00b6\n\n\n\u00a0 Destroys a Timer. A timer, if it completes its number of repetitions, will automatically destroy itself.\n\n\n\n\ndestroy( \n\u00a0 identifier)\n\n\n\n\n\u00a0 \nidentifier\n: The unique identifier for the timer you want to destroy.",
+            "title": "Timer"
+        },
+        {
+            "location": "/timer/#function-summary",
+            "text": "Function Name  Description  info_outline      create(  \u00a0 parameters)  \u00a0 Creates a Timer. It will auto-delete once its repetitions have been completed.  info_outline    destroy(  \u00a0 identifier)  \u00a0 Destroys a Timer.  info_outline",
+            "title": "Function Summary"
+        },
+        {
+            "location": "/timer/#function-details",
+            "text": "",
+            "title": "Function Details"
+        },
+        {
+            "location": "/timer/#create",
+            "text": "Creates a Timer. It will auto-delete once its repetitions have been completed.   create(  \u00a0 parameters)   \u00a0  parameters : A Table containing the information used to start the Timer.  \u00a0  identifier : Timer's name, used to destroy it. Must be unique within all other scripts.  \u00a0  function_name : Name of function to trigger when time is reached.  \u00a0  function_owner : Where the function from function_name exists.  Optional, defaults to the calling Object.    \u00a0  parameters : Table containing any data that will be passed to the function.  Optional, will not be used by default.    \u00a0  delay : Length of time before the function is triggered.  Optional, defaults to 0.  0 results in a delay of 1 frame before the triggered function activates.    \u00a0  repetitions : Number of times the countdown repeats.  Optional, defaults to 1.  Use 0 for infinite repetitions.        function   onLoad () \n     dataTable   =   { welcome = \"Hello World!\" } \n     Timer . create ({ \n         identifier       =   \"A Unique Name\" , \n         function_name    =   \"fiveAfterOne\" , \n         parameters       =   dataTable , \n         delay            =   1 , \n         repetitions      =   5 , \n     })  end  function   fiveAfterOne ( params ) \n     print ( params . welcome )  end    Tip  If your timer is on an Object, a good way to establish a unique identifier for it is to use the item's GUID!",
+            "title": "create(...)"
+        },
+        {
+            "location": "/timer/#destroy",
+            "text": "Destroys a Timer. A timer, if it completes its number of repetitions, will automatically destroy itself.   destroy(  \u00a0 identifier)   \u00a0  identifier : The unique identifier for the timer you want to destroy.",
+            "title": "destroy(...)"
         }
     ]
 }
