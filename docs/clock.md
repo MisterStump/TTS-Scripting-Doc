@@ -1,8 +1,11 @@
-The clock is an in-game Object which either tells time or acts as a timer. It has its own class, Clock, with functions/members associated with it. This allows you to manipulate the special properties of a clock. You call these functions like this: `self.Clock.pauseStart()`.<br>Clocks have 3 modes:
+The clock is an in-game Object which either tells time or acts as a timer. It has its own class, Clock, with functions/members associated with it. This allows you to manipulate the special properties of a clock.
 
-* **Current Time**: Displays the current time of the host.
-* **Stopwatch**: Displays a running count up.
-* **Timer**: Displays a countdown and beeps once complete.
+Example Usage: `self.Clock.pauseStart()`
+
+> * **Clock Modes:**
+>       * **Current Time**: Displays the current time of the host.
+>       * **Stopwatch**: Displays a running count up.
+>       * **Timer**: Displays a countdown and beeps once complete.
 
 ##Member Variables
 

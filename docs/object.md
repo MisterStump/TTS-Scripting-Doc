@@ -81,9 +81,9 @@ rotate(Vector) | Rotates Object smoothly in the direction of the given Vector. R
 scale(Vector or Float) | Scales Object by a multiple. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#scale)
 setAngularVelocity(Vector) | Sets a Vector as the current angular velocity. Returns Bool. | 
 setPosition(Vector) | Instantly moves an Object to the given Vector. Returns Bool. | 
-setPositionSmooth<br>(Vector, Bool collide, Bool fast) | Moves the Object smoothly to the given Vector. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setpositionsmooth)
+setPositionSmooth(Vector, Bool collide, Bool fast) | Moves the Object smoothly to the given Vector. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setpositionsmooth)
 setRotation(Vector) | Instantly rotates an Object to the given Vector. | 
-setRotationSmooth<br>(Vector, Bool collide, Bool fast) | Rotates the Object smoothly to the given Vector. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setrotationsmooth)
+setRotationSmooth(Vector, Bool collide, Bool fast) | Rotates the Object smoothly to the given Vector. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setrotationsmooth)
 setScale(Vector) | Sets a Vector as the current scale. Returns Bool. | 
 setVelocity(Vector) | Sets a Vector as the current velocity. Returns Bool. | 
 translate(Vector) | Smoothly moves Object by the given Vector offset. Returns Bool. | 
@@ -144,12 +144,12 @@ These functions perform general actions on objects and do not require any input 
 
 Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
 -- | -- | --:
-call(String func_name,<br>Table func_params) | Used to call a Lua function on this Object. Returns Var. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#call)
+call(String func_name,Table func_params) | Used to call a Lua function on this Object. Returns Var. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#call)
 flip() | Flip Object over. Returns Bool. | 
 clone(Table parameters) | Copy/Paste this Object, returns a reference to the new Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#clone)
 cut() | Cuts (splits in half) a deck or stack Object. | 
-deal(Int number,<br>String player_color, Int index) | Deals Objects. Will deal from decks/bags/stacks/individual items. Returns Object dealt. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#deal)
-dealToColorWithOffset<br>(Vector, Bool flip, String player_color) | Deals from a deck to a position relative to the hand zone. Returns Object dealt. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#dealtocolorwithoffset)
+deal(Int number,String player_color, Int index) | Deals Objects. Will deal from decks/bags/stacks/individual items. Returns Object dealt. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#deal)
+dealToColorWithOffset(Vector, Bool flip, String player_color) | Deals from a deck to a position relative to the hand zone. Returns Object dealt. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#dealtocolorwithoffset)
 destruct() | Destroys Object. Allows for `self.destruct()`. Returns Bool. | 
 highlightOn(Color, Float duration) | Creates a highlight around an Object. Returns Bool. | 
 highlightOff(Color) | Removes a highlight from around an Object. Returns Bool. |

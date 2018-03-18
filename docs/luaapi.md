@@ -8,18 +8,19 @@ In this section, you will find details on all events/classes/functions specific 
 	
 ##In progress reference
 
-[<span class="ico tab"></span>](typeandclass)&nbsp; 
-[<span class="ico str"></span>](typeandclass)&nbsp; 
-[<span class="ico int"></span>](typeandclass)&nbsp; 
-[<span class="ico flo"></span>](typeandclass)&nbsp; 
-[<span class="ico nil"></span>](typeandclass)&nbsp; 
-[<span class="ico boo"></span>](typeandclass)&nbsp; 
-[<span class="ico obj"></span>](typeandclass)&nbsp; 
+[<span class="tag tab"></span>](typeandclass)&nbsp; 
+[<span class="tag str"></span>](typeandclass)&nbsp; 
+[<span class="tag int"></span>](typeandclass)&nbsp; 
+[<span class="tag flo"></span>](typeandclass)&nbsp; 
+[<span class="tag nil"></span>](typeandclass)&nbsp; 
+[<span class="tag boo"></span>](typeandclass)&nbsp; 
+[<span class="tag obj"></span>](typeandclass)&nbsp; 
 
 
-[<span class="ret_tab"></span>](typeandclass)&nbsp; 
-[<span class="ret_str"></span>](typeandclass)&nbsp; 
-[<span class="ret_int"></span>](typeandclass)&nbsp; 
-[<span class="ret_flo"></span>](typeandclass)&nbsp; 
-[<span class="ret_nil"></span>](typeandclass)&nbsp; 
-[<span class="ret_boo"></span>](typeandclass)&nbsp; 
+[<span class="ret tab"></span>](typeandclass)&nbsp; 
+[<span class="ret str"></span>](typeandclass)&nbsp; 
+[<span class="ret int"></span>](typeandclass)&nbsp; 
+[<span class="ret flo"></span>](typeandclass)&nbsp; 
+[<span class="ret nil"></span>](typeandclass)&nbsp; 
+[<span class="ret boo"></span>](typeandclass)&nbsp; 
+[<span class="ret obj"></span>](typeandclass)&nbsp;

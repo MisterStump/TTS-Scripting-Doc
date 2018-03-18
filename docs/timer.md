@@ -5,10 +5,10 @@ Timer is a statis global class which provides methods for executing other functi
 
 ##Function Summary
 
-Function Name | Description | <i class="material-tagns" style="line-height:90%;">info_outline</i>
+Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
 -- | -- | --:
-create( [<span class="tag tab"></span>](typeandclass)&nbsp; parameters) | [<span class="ret boo"></span>](typeandclass)&nbsp; Creates a Timer. It will auto-delete once its repetitions have been completed. | [<i class="material-tagns" style="line-height:150%;">info_outline</i>](#create)
-destroy( [<span class="tag str"></span>](typeandclass)&nbsp; identifier) | [<span class="ret boo"></span>](typeandclass)&nbsp; Destroys a Timer. | [<i class="material-tagns" style="line-height:150%;">info_outline</i>](#destroy)
+create( [<span class="tag tab"></span>](typeandclass)&nbsp; parameters) | [<span class="ret boo"></span>](typeandclass)&nbsp; Creates a Timer. It will auto-delete once its repetitions have been completed. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#create)
+destroy( [<span class="tag str"></span>](typeandclass)&nbsp; identifier) | [<span class="ret boo"></span>](typeandclass)&nbsp; Destroys a Timer. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#destroy)
 
 ---
 

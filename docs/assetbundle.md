@@ -1,4 +1,6 @@
-AssetBundle is a special [Object](object) type that has access to assetbundle related functions like looping and trigger effects. Once you have a reference to an Object you can call these functions like this: `obj.AssetBundle.getLoopingEffects()`.
+AssetBundle is a special [Object](object) type that has access to assetbundle related functions like looping and trigger effects. 
+
+Example Usage: `self.AssetBundle.getLoopingEffects()`
 
 ##Function Summary
 

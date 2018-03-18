@@ -7,8 +7,8 @@
 Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
 -- | -- | --:
 addNotebookTab(Table parameters) | Returns Int of the index of the newly added notebook tab. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#addnotebooktab)
-broadcastToAll<br>(String message, Table [color](color)) | Returns Bool with result of printing an on-screen message to all Players. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#broadcasttoall)
-broadcastToColor(String message,<br>String [player_color](player), Table [color](color)) | Returns Bool with result of printing an on-screen message to a specified Player. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#broadcasttocolor)
+broadcastToAll(String message, Table [color](color)) | Returns Bool with result of printing an on-screen message to all Players. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#broadcasttoall)
+broadcastToColor(String message,String [player_color](player), Table [color](color)) | Returns Bool with result of printing an on-screen message to a specified Player. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#broadcasttocolor)
 clearPixelPaint() | Returns Bool with result of removing pixel paint from the instance. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#clearpixelpaint)
 clearVectorPaint() | Returns Bool with result of removing vector paint from the instance. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#clearvectorpaint)
 copy(Table object_list) | Returns Bool of result of copying a list of Objects the clipboard. Works with [paste(...)](#paste). | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#copy)
@@ -21,16 +21,16 @@ getNotes() | Returns String of the contents of the on-screen notes section. | [<
 getObjectFromGUID(String guid) | Returns Object from GUID. Will return `nil` if it doesn't exist in-game. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getobjectfromguid)
 getSeatedPlayers() | Returns Table of the colors of seated players. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getseatedplayers)
 log(Var element, String tag, String label) | Returns Bool with result of printing information to the log. (Shortcut: ~)  | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#log)
-logStyle(String tag, Table color,<br> String prefix, String prefix, String postfix) | Returns bool with result of setting style options for the specified tag type for the log. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#logstyle)
+logStyle(String tag, Table color, String prefix, String prefix, String postfix) | Returns bool with result of setting style options for the specified tag type for the log. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#logstyle)
 paste(Table parameters) | Returns Table of newly spawned objects that were pasted from the clipboard. Works with [copy(...)](#copy). | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#paste)
 print(String message) | Prints a string into chat that only the host is able to see. Used for debugging scripts. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#print)
 printToAll(String message, Table [color](#color)) | Returns Bool with the result of printing a message into the chat of all connected players. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#printtoall)
-printToColor(String message,<br>String [player_color](#color), Table [color](#color)) | Returns Bool with the result of printing a message to a specific Player. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#printtocolor)
+printToColor(String message,String [player_color](#color), Table [color](#color)) | Returns Bool with the result of printing a message to a specific Player. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#printtocolor)
 removeNotebookTab(Int index) | Returns Bool with the result of removing a notebook tab. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#removenotebooktab)
 sendExternalMessage(Table) | Returns Bool with the result of sending the table to your external script editor, most likely Atom. This is for custom editor functionality. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#sendexternalmessage)
 setNotes(String notes) | Returns Bool with the result of replacing the text in the notes window with the string. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setnotes)
 spawnObject(Table parameters) | Returns Object reference for the object spawned. View the [Spawnable Object](spawnableobject) page for Objects that can be spawned. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#spawnobject)
-startLuaCoroutine(Object function_owner,<br>String function_name) | Returns Bool with the result of starting a coroutine. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#startluacoroutine)
+startLuaCoroutine(Object function_owner,String function_name) | Returns Bool with the result of starting a coroutine. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#startluacoroutine)
 stringColorToRGB(String player_color) | Returns Table [Color](color) requivilent to the Player Color string. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#stringcolortorgb)
 
 
