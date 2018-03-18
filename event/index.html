@@ -62,6 +62,8 @@
     
       <link rel="stylesheet" href="../css/type_icons.css">
     
+      <link rel="stylesheet" href="../css/player_color_table.css">
+    
     
   </head>
   
@@ -736,6 +738,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../webrequest/" title="Web Request" class="md-nav__link">
+      Web Request
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1069,37 +1083,37 @@
 <td align="right"><a href="#onobjectdestroy"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
 <tr>
-<td>onObjectDrop<br>(string player_color, Object dropped_object)</td>
+<td>onObjectDrop(string player_color, Object dropped_object)</td>
 <td>Called whenever any object is dropped by a player.</td>
 <td align="right"><a href="#onobjectdrop"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
 <tr>
-<td>onObjectEnterScriptingZone<br>(Object zone, Object enter_object)</td>
+<td>onObjectEnterScriptingZone(Object zone, Object enter_object)</td>
 <td>Called when any object enters any scripting zone.</td>
 <td align="right"><a href="#onobjectenterscriptingzone"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
 <tr>
-<td>onObjectLeaveScriptingZone<br>(Object zone, Object enter_object)</td>
+<td>onObjectLeaveScriptingZone(Object zone, Object enter_object)</td>
 <td>Called when any object leaves any scripting zone.</td>
 <td align="right"><a href="#onobjectleavescriptingzone"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
 <tr>
-<td>onObjectLeaveContainer<br>(Object container, Object leave_object)</td>
+<td>onObjectLeaveContainer(Object container, Object leave_object)</td>
 <td>Called when any object leaves any container.</td>
 <td align="right"><a href="#onobjectleavecontainer"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
 <tr>
-<td>onObjectLoopingEffect<br>(Object loop_object, Int index)</td>
+<td>onObjectLoopingEffect(Object loop_object, Int index)</td>
 <td>Called whenever the looping effect of an <a href="../assetbundle">AssetBundle</a> is activated.</td>
 <td align="right"><a href="#onobjectloopingeffect"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
 <tr>
-<td>onObjectPickUp<br>(String player_color, Object picked_up_object)</td>
+<td>onObjectPickUp(String player_color, Object picked_up_object)</td>
 <td>Called whenever a Player picks up an Object.</td>
 <td align="right"><a href="#onobjectpickup"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
 <tr>
-<td>onObjectRandomize<br>(Object randomize_object, String player_color)</td>
+<td>onObjectRandomize(Object randomize_object, String player_color)</td>
 <td>Called when an Object is randomized. Like when shuffling a deck or shaking dice.</td>
 <td align="right"><a href="#onobjectrandomize"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
@@ -1109,7 +1123,7 @@
 <td align="right"><a href="#onobjectspawn"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
 <tr>
-<td>onObjectTriggerEffect<br>(Object trigger_object, Int index)</td>
+<td>onObjectTriggerEffect(Object trigger_object, Int index)</td>
 <td>Called whenever the trigger effect of an <a href="../assetbundle">AssetBundle</a> is activated.</td>
 <td align="right"><a href="#onobjecttriggereffect"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
@@ -1119,12 +1133,12 @@
 <td align="right"><a href="#onplayerchangecolor"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
 <tr>
-<td>onPlayerTurnEnd(String <a href="../player">player_color_end</a>,<br>String <a href="../player">player_color_next</a>)</td>
+<td>onPlayerTurnEnd(String <a href="../player">player_color_end</a>,String <a href="../player">player_color_next</a>)</td>
 <td>Called at the end of a player's turn when using the in-game turn system.</td>
 <td align="right"><a href="#onplayerturnend"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
 <tr>
-<td>onPlayerTurnStart(String <a href="../player">player_color_start</a>,<br>String <a href="../player">player_color_prev</a>)</td>
+<td>onPlayerTurnStart(String <a href="../player">player_color_start</a>,String <a href="../player">player_color_prev</a>)</td>
 <td>Called at the start of a player's turn when using the in-game turn system.</td>
 <td align="right"><a href="#onplayerturnstart"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
@@ -1134,12 +1148,12 @@
 <td align="right"><a href="#onsave"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
 <tr>
-<td>onScriptingButtonDown<br>(Int index, String <a href="../player">player_color</a>)</td>
+<td>onScriptingButtonDown(Int index, String <a href="../player">player_color</a>)</td>
 <td>Called when a scripting button (numpad by default) is pressed. The index range that is returned is 1-10.</td>
 <td align="right"><a href="#onscriptingbuttondown"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
 <tr>
-<td>onScriptingButtonUp<br>(Int index, String <a href="../player">player_color</a>)</td>
+<td>onScriptingButtonUp(Int index, String <a href="../player">player_color</a>)</td>
 <td>Called when a scripting button (numpad by default) is released. The index range that is returned is 1-10.</td>
 <td align="right"><a href="#onscriptingbuttonup"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>

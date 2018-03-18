@@ -62,6 +62,8 @@
     
       <link rel="stylesheet" href="../css/type_icons.css">
     
+      <link rel="stylesheet" href="../css/player_color_table.css">
+    
     
   </head>
   
@@ -541,6 +543,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../webrequest/" title="Web Request" class="md-nav__link">
+      Web Request
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -630,12 +644,18 @@
                 
                   <h1>Clock</h1>
                 
-                <p>The clock is an in-game Object which either tells time or acts as a timer. It has its own class, Clock, with functions/members associated with it. This allows you to manipulate the special properties of a clock. You call these functions like this: <code class="codehilite">self.Clock.pauseStart()</code>.<br>Clocks have 3 modes:</p>
+                <p>The clock is an in-game Object which either tells time or acts as a timer. It has its own class, Clock, with functions/members associated with it. This allows you to manipulate the special properties of a clock.</p>
+<p>Example Usage: <code class="codehilite">self.Clock.pauseStart()</code></p>
+<blockquote>
 <ul>
+<li><strong>Clock Modes:</strong><ul>
 <li><strong>Current Time</strong>: Displays the current time of the host.</li>
 <li><strong>Stopwatch</strong>: Displays a running count up.</li>
 <li><strong>Timer</strong>: Displays a countdown and beeps once complete.</li>
 </ul>
+</li>
+</ul>
+</blockquote>
 <h2 id="member-variables">Member Variables<a class="headerlink" href="#member-variables" title="Permanent link">&para;</a></h2>
 <p>Like <a href="../object#member-variables">Object member variables</a>, Clocks have their own member variable.</p>
 <table>
