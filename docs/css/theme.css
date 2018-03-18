@@ -1,7 +1,7 @@
-/*Red background behind current selection*/
+/*background behind current selection in left bar*/
 [data-md-color-primary=indigo] .md-nav__link--active, [data-md-color-primary=indigo] .md-nav__link:active {
     color: black;
-    background-color: #F16767;
+    background-color: #d3d3d3;
     padding: 2px;
 }
 

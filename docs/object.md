@@ -326,12 +326,18 @@ end
 
 Returns a Vector after converting a world vector to a local Vector. A world Vector is a positional Vector using the world's coordinate system. A Local Vector is a positional Vector that is relative to the position of the given object.
 
+!!!tip "Object Scale"
+	This function takes the Object's scale into account, as the Object is the key relative point.
+
 ---
 
 
 ####positionToWorld(...)
 
 Returns a Vector after converting a local Vector to a world Vector. A world Vector is a positional Vector using the world's coordinate system. A Local Vector is a positional Vector that is relative to the position of the given object.
+
+!!!tip "Object Scale"
+	This function takes the Object's scale into account, as the Object is the key relative point.
 
 ---
 

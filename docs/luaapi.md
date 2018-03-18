@@ -8,9 +8,18 @@ In this section, you will find details on all events/classes/functions specific 
 	
 ##In progress reference
 
-* [<span class="ico_tab"></span>](typeandclass) **parameters**: Test of this feature.
-* [<span class="ico_str"></span>](typeandclass) **image**: Test of this feature.
-* [<span class="ico_int"></span>](typeandclass) **material**: Test of this feature.
-* [<span class="ico_flo"></span>](typeandclass) **specular**: Test of this feature.
-* [<span class="ico_nil"></span>](typeandclass) **nil**: Test of this feature.
-* [<span class="ico_boo"></span>](typeandclass) **bool**: Test of this feature.
+[<span class="ico tab"></span>](typeandclass)&nbsp; 
+[<span class="ico str"></span>](typeandclass)&nbsp; 
+[<span class="ico int"></span>](typeandclass)&nbsp; 
+[<span class="ico flo"></span>](typeandclass)&nbsp; 
+[<span class="ico nil"></span>](typeandclass)&nbsp; 
+[<span class="ico boo"></span>](typeandclass)&nbsp; 
+[<span class="ico obj"></span>](typeandclass)&nbsp; 
+
+
+[<span class="ret_tab"></span>](typeandclass)&nbsp; 
+[<span class="ret_str"></span>](typeandclass)&nbsp; 
+[<span class="ret_int"></span>](typeandclass)&nbsp; 
+[<span class="ret_flo"></span>](typeandclass)&nbsp; 
+[<span class="ret_nil"></span>](typeandclass)&nbsp; 
+[<span class="ret_boo"></span>](typeandclass)&nbsp; 

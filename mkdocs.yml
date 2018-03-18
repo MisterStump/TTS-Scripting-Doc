@@ -10,7 +10,7 @@ theme:
 extra_css:
   - css/theme.css
   - css/markdown.css
-  - css/ico_type.css
+  - css/type_icons.css
 markdown_extensions:
   - admonition
   - codehilite
@@ -54,3 +54,5 @@ pages:
     - Player Colors: player-colors.md
     - RPGFigurine: rpgfigurine.md
     - Spawnable Objects: spawnableobjects.md
+    - TextTool: texttool.md
+    - Timer: timer.md
