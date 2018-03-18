@@ -1252,7 +1252,7 @@
         },
         {
             "location": "/texttool/",
-            "text": "TextTool is a special Object type for creating text labels in the game instance. It is the same text that is created with the \ntext tool\n. You call these functions like this: \nself.TextTool.getFontColor()\n.\n\n\nFunction Summary\n\u00b6\n\n\nObject Functions\n\u00b6\n\n\n\n\n\n\n\n\nFunction Name\n\n\nReturn\n\n\nDescription\n\n\ninfo_outline\n\n\n\n\n\n\n\n\n\n\ngetFontColor()\n\n\n\n\nReturns Table of font Color.\n\n\n\n\n\n\n\n\ngetFontSize()\n\n\n\n\nReturns Int of the font size.\n\n\n\n\n\n\n\n\ngetValue()\n\n\n\n\nReturns the current text. Works the same as Object's \ngetValue()\n.\n\n\n\n\n\n\n\n\nsetFontColor( \n Color)\n\n\n\n\nSets font Color.\n\n\n\n\n\n\n\n\nsetFontSize( \n font_size)\n\n\n\n\nSets font size.\n\n\n\n\n\n\n\n\nsetValue( \n text)\n\n\n\n\nSets the current text. Works the same as Object's \nsetValue(...)\n.",
+            "text": "TextTool is a special Object type for creating text labels in the game instance. It is the same text that is created with the \ntext tool\n. You call these functions like this: \nself.TextTool.getFontColor()\n.\n\n\nFunction Summary\n\u00b6\n\n\nObject Functions\n\u00b6\n\n\n\n\n\n\n\n\nFunction Name\n\n\nDescription\n\n\nReturn\n\n\ninfo_outline\n\n\n\n\n\n\n\n\n\n\ngetFontColor()\n\n\nReturns Table of font Color.\n\n\n\n\n\n\n\n\n\n\ngetFontSize()\n\n\nReturns Int of the font size.\n\n\n\n\n\n\n\n\n\n\ngetValue()\n\n\nReturns the current text. Works the same as Object's \ngetValue()\n.\n\n\n\n\n\n\n\n\n\n\nsetFontColor( \n Color) Sets font Color.\n\n\n\n\n\n\n\n\n\n\n\n\nsetFontSize( \n font_size)\n\n\nSets font size.\n\n\n\n\n\n\n\n\n\n\nsetValue( \n text)\n\n\nSets the current text. Works the same as Object's \nsetValue(...)\n.",
             "title": "TextTool"
         },
         {
@@ -1262,7 +1262,7 @@
         },
         {
             "location": "/texttool/#object-functions",
-            "text": "Function Name  Return  Description  info_outline      getFontColor()   Returns Table of font Color.     getFontSize()   Returns Int of the font size.     getValue()   Returns the current text. Works the same as Object's  getValue() .     setFontColor(   Color)   Sets font Color.     setFontSize(   font_size)   Sets font size.     setValue(   text)   Sets the current text. Works the same as Object's  setValue(...) .",
+            "text": "Function Name  Description  Return  info_outline      getFontColor()  Returns Table of font Color.      getFontSize()  Returns Int of the font size.      getValue()  Returns the current text. Works the same as Object's  getValue() .      setFontColor(   Color) Sets font Color.       setFontSize(   font_size)  Sets font size.      setValue(   text)  Sets the current text. Works the same as Object's  setValue(...) .",
             "title": "Object Functions"
         },
         {
