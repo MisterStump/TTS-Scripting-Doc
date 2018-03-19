@@ -12,17 +12,17 @@
 
 /*Coloring of main header*/
 .md-typeset h1 {
-    color: #bb0c0d;
+    color: #888888;
 }
 
 /*Coloring of secondary header*/
 h2{
-    color: #bb0c0d;
+    color: #606060;
 }
 
 /*Coloring of third header*/
 h3 {
-    color: #580505;
+    color: #303030;
 }
 
 /*Coloring of permalink icon*/
