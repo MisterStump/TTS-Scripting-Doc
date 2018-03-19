@@ -11,7 +11,8 @@ int | Non-decimal value. | `#!lua 5`
 float | Non-exact decimal value. | `#!lua 2.032`
 bool | `true` or `false` value. | `#!lua true`
 string | A series of characters. | `#!lua "Hello."`
-table | A container with keys and values. | `#!lua {["key"]="value", true, 5`}
+table | A container with keys and values. | `#!lua {["key"]="value", true, 5}`
+obj | An in-game physical Object. Can refer to Global. | `#!lua Global or self`
 
 For more information what types are, you can refer to the relevant [Lua documentation](https://www.lua.org/manual/5.1/manual.html#2.2).
 

@@ -1,4 +1,6 @@
-Player, a static global class, allows control over in-game players and their [hand zones](http://berserk-games.com/knowledgebase/hands/). You call these functions like this: `Player["White"].seated` or `Player["Green"].mute()`.
+Player, a static global class, allows control over in-game players and their [hand zones](http://berserk-games.com/knowledgebase/hands/). 
+
+Example Usage: `Player["White"].seated` or `Player["Green"].mute()`
 
 
 ##Member Variables
@@ -7,16 +9,16 @@ Like [Object member variables](object#member-variables), Player has its own memb
 
 Variable | Description | Type
 -- | -- | :--
-admin | If the player is promoted or the host of the game. Read only. | Bool
-blindfolded | If the player is blindfolded. | Bool
-color | The player's [Player Color](player-color). Read only. | String
-host | If the player is the host. Read only. | Bool
-lift_height | The lift height for the player. This is how far an object is raised when held in a player's hand. Value is ranged 0 to 1. | Float
-promoted | If the current player is promoted. | Bool
-seated | If a player is currently seated at this color. Read only. | Bool
-steam_id | The Steam ID of the player. This is unique to each player's Steam account. Read only. | String
-steam_name | The Steam name of the player. Read only. | String
-Team | The team of the player.<br>Options: `"None", "Clubs", "Diamonds", "Hearts", "Spades", "Jokers"`. | String
+admin | If the player is promoted or the host of the game. Read only. | [<span class="tag boo"></span>](typeandclass)
+blindfolded | If the player is blindfolded. | [<span class="tag boo"></span>](typeandclass)
+color | The player's [Player Color](player-color). Read only. | [<span class="tag str"></span>](typeandclass)
+host | If the player is the host. Read only. | [<span class="tag boo"></span>](typeandclass)
+lift_height | The lift height for the player. This is how far an object is raised when held in a player's hand. Value is ranged 0 to 1. | [<span class="tag flo"></span>](typeandclass)
+promoted | If the current player is promoted. | [<span class="tag boo"></span>](typeandclass)
+seated | If a player is currently seated at this color. Read only. | [<span class="tag boo"></span>](typeandclass)
+steam_id | The Steam ID of the player. This is unique to each player's Steam account. Read only. | [<span class="tag str"></span>](typeandclass)
+steam_name | The Steam name of the player. Read only. | [<span class="tag str"></span>](typeandclass)
+Team | The team of the player.<br>Options: `"None", "Clubs", "Diamonds", "Hearts", "Spades", "Jokers"`. | [<span class="tag str"></span>](typeandclass)
 
 ---
 
@@ -24,34 +26,34 @@ Team | The team of the player.<br>Options: `"None", "Clubs", "Diamonds", "Hearts
 
 ###Class Functions
 
-Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
--- | -- | --:
-attachCameraToObject(Table parameters) | Makes a Player's camera follow an Object. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#attachcameratoobject)
-broadcast(String message, Color) | Print message on Player's screen and their game chat log. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#broadcast)
-changeColor(String player_color) | Changes player to this [Player Color](player-color). Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#changecolor)
-getHandCount() | Returns the number of [hand zones](http://berserk-games.com/knowledgebase/hands/) owned by this color. | 
-getHandObjects(Int hand_index) | Returns a Table of Objects that are in this [hand zone](http://berserk-games.com/knowledgebase/hands/). | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gethandobjects)
-getHandTransform(Int hand_index) | Returns a Table of data on this [hand zone](http://berserk-games.com/knowledgebase/hands/). | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gethandtransform)
-getHoldingObjects() | Returns Table of Objects a Player is holding in their hand. | 
-getHoverObject() | Returns Object that the Player's pointer is hovering over. | 
-getPointerPosition() | Returns Vector of the Player's pointer coordinates. |
-getSelectedObjects() | Returns Table of Objects that the Player has selected with an area selection. | 
-kick() | Kicks Player out of the room. Returns Bool. | 
-lookAt(Table parameters) | Moves a Player's camera, forcing 3'rd person camera mode. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#lookat)
-mute() | Mutes or unmutes Player, preventing/allowing voice chat. Returns Bool. | 
-print(String message, Color) | Prints a message into the Player's game chat. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#print)
-promote() | Promotes/demotes a Player. Promoted players have access to most host privileges. Returns Bool. |
-setHandTransform(Table parameters, Int hand_index) | Sets transform elements of a hand zone. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#sethandtransform)
+Function Name | Description | Return | <i class="material-icons" style="line-height:90%;">info_outline</i>
+-- | -- | -- | --:
+attachCameraToObject([<span class="tag tab"></span>](typeandclass)&nbsp; parameters) | Makes a Player's camera follow an Object. | [<span class="ret boo"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#attachcameratoobject)
+broadcast([<span class="tag str"></span>](typeandclass)&nbsp; message, [<span class="tag str"></span>](typeandclass)&nbsp; Color) | Print message on Player's screen and their game chat log. | [<span class="ret boo"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#broadcast)
+changeColor([<span class="tag str"></span>](typeandclass)&nbsp; player_color) | Changes player to this [Player Color](player-color). | [<span class="ret boo"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#changecolor)
+getHandCount() | Returns the number of [hand zones](http://berserk-games.com/knowledgebase/hands/) owned by this color. | [<span class="ret int"></span>](typeandclass)
+getHandObjects([<span class="tag int"></span>](typeandclass)&nbsp; hand_index) | Returns a Table of Objects that are in this [hand zone](http://berserk-games.com/knowledgebase/hands/). | [<span class="ret tab"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gethandobjects)
+getHandTransform([<span class="tag int"></span>](typeandclass)&nbsp; hand_index) | Returns a Table of data on this [hand zone](http://berserk-games.com/knowledgebase/hands/). | [<span class="ret tab"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gethandtransform)
+getHoldingObjects() | Returns Table of Objects a Player is holding in their hand. | [<span class="ret tab"></span>](typeandclass)
+getHoverObject() | Object that the Player's pointer is hovering over. | [<span class="ret obj"></span>](typeandclass)
+getPointerPosition() | Returns the Vector of the Player's pointer coordinates. | [<span class="ret tab"></span>](typeandclass)
+getSelectedObjects() | Returns Table of Objects that the Player has selected with an area selection. | [<span class="ret tab"></span>](typeandclass)
+kick() | Kicks Player out of the room. | [<span class="ret boo"></span>](typeandclass)
+lookAt([<span class="tag tab"></span>](typeandclass)&nbsp; parameters) | Moves a Player's camera, forcing 3'rd person camera mode. | [<span class="ret boo"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#lookat)
+mute() | Mutes or unmutes Player, preventing/allowing voice chat. | [<span class="ret boo"></span>](typeandclass)
+print([<span class="tag str"></span>](typeandclass)&nbsp; message, [<span class="tag tab"></span>](typeandclass)&nbsp; Color) | Prints a message into the Player's game chat. | [<span class="ret boo"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#print)
+promote() | Promotes/demotes a Player. Promoted players have access to most host privileges. | [<span class="ret boo"></span>](typeandclass) |
+setHandTransform([<span class="tag tab"></span>](typeandclass)&nbsp; parameters, [<span class="tag int"></span>](typeandclass)&nbsp; hand_index) | Sets transform elements of a hand zone. | [<span class="ret boo"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#sethandtransform)
 
 
 
 ###Direct Class Functions
-These functions return direct references to Players, not a Player Color. 
+These functions return direct references to Players, not a Player Color. See details section for usage.
 
-Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
--- | -- | --:
-getPlayers() | Returns Table of all Players in the instance. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getplayers)
-getSpectators() | Returns Table of all Players in spectator (Grey). | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getspectators)
+Function Name | Description | Return | <i class="material-icons" style="line-height:90%;">info_outline</i>
+-- | -- | -- | --:
+getPlayers() | Returns Table of all Players in the instance. | [<span class="ret tab"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getplayers)
+getSpectators() | Returns Table of all Players in spectator (Grey). | [<span class="ret tab"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getspectators)
 
 
 ---
@@ -62,14 +64,12 @@ getSpectators() | Returns Table of all Players in spectator (Grey). | [<i class=
 
 ####attachCameraToObject(...)
 
-Makes a Player's camera follow an Object. Returns Bool.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Makes a Player's camera follow an Object. Returns Bool.
 
-> Returns Bool
-
-!!!info "attachCameraToObject(Table parameters)"
-    * **Table parameters**: A Table with parameters which guide the function.
-        * **parameters.object**: The Object to attach the camera to.
-        * **parameters.offset**: A Vector to offset the camera by.
+!!!info "attachCameraToObject([<span class="tag tab"></span>](typeandclass)&nbsp; parameters)"
+    * [<span class="tag tab"></span>](typeandclass)&nbsp; **parameters**: A Table with parameters which guide the function.
+        * [<span class="tag obj"></span>](typeandclass)&nbsp; **parameters.object**: The Object to attach the camera to.
+        * [<span class="tag tab"></span>](typeandclass)&nbsp; **parameters.offset**: A Vector to offset the camera by.
             * {>>Optional, defaults to {x=0, y=0, z=0}.<<}
     
 ``` Lua
@@ -81,13 +81,11 @@ self.attachCameraToObject({object=self})
 
 ####broadcast(...)
 
-Print message on Player's screen and their game chat log.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Print message on Player's screen and their game chat log.
 
->Returns Bool.
-
-!!!info "broadcast(String message, Color)"
-    * **String message**: A String to be displayed.
-    * **Color**: A Color Table for the text to be tinted.
+!!!info "broadcast([<span class="tag str"></span>](typeandclass)&nbsp; message, [<span class="tag tab"></span>](typeandclass)&nbsp; Color)"
+    * [<span class="tag str"></span>](typeandclass)&nbsp; **message**: The message to be displayed.
+    * [<span class="tag tab"></span>](typeandclass)&nbsp; **Color**: A [Color](typeandclass#color) table, used to tint the message.
         * {>>Optional, defaults to {r=1, g=1, b=1}.<<}
 
 ---
@@ -95,12 +93,10 @@ Print message on Player's screen and their game chat log.
 
 ####changeColor(...)
 
-Changes player to this [Player Color](player-color).
+[<span class="ret boo"></span>](typeandclass)&nbsp; Changes player to this [Player Color](player-color).
 
-> Returns Bool.
-
-!!!info "changeColor(String player_color)"
-    * **String player_color**: A String of the color seat to move the Player to.
+!!!info "changeColor([<span class="tag str"></span>](typeandclass)&nbsp; player_color)"
+    * [<span class="tag str"></span>](typeandclass)&nbsp; **player_color**: The [player color](player-color) seat to move the Player to.
 
 ``` Lua
 Player["White"].changeColor("Red")
@@ -111,10 +107,10 @@ Player["White"].changeColor("Red")
 
 ####getHandObjects(...)
 
-Returns a Table of Objects that are in this [hand zone](http://berserk-games.com/knowledgebase/hands/).
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns a Table of Objects that are in this [hand zone](http://berserk-games.com/knowledgebase/hands/).
 
-!!!info "getHandObjects(Int hand_index)"
-    * **Int hand_index**: An Int of the index, representing which hand zone to return Objects for.
+!!!info "getHandObjects([<span class="tag int"></span>](typeandclass)&nbsp; hand_index)"
+    * [<span class="tag int"></span>](typeandclass)&nbsp; **hand_index**: An index, representing which hand zone to return Objects for.
         * {>>Optional, defaults to 1.<<}
 
 !!!tip "Indexing"
@@ -125,20 +121,20 @@ Returns a Table of Objects that are in this [hand zone](http://berserk-games.com
 
 ####getHandTransform(Int hand_index)
 
-Returns a Table of data on this [hand zone](http://berserk-games.com/knowledgebase/hands/).
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns a Table of data on this [hand zone](http://berserk-games.com/knowledgebase/hands/).
 
-!!!info "getHandTransform(Int hand_index)"
-    * **Int hand_index**: An Int of the index, representing which hand zone to return data on.
+!!!info "getHandTransform([<span class="tag int"></span>](typeandclass)&nbsp; hand_index)"
+    * [<span class="tag int"></span>](typeandclass)&nbsp; **hand_index**: An index, representing which hand zone to return data on.
         * {>>Optional, defaults to 1.<<}
 
 !!!info "Return Data Table"
-    * **Table data**: The Table the data is returned in
-        * **data.position**: A Vector of the position of the hand zone.
-        * **data.rotation**: A Vector of the rotation of the hand zone.
-        * **data.scale**: A Vector of the scale of the hand zone.
-        * **data.forward**: A Vector of the forward direction of the hand zone.
-        * **data.right**: A Vector of the right direction of the hand zone.
-        * **data.up**: A Vector of the up direction of the hand zone.
+    * [<span class="tag tab"></span>](typeandclass)&nbsp; **data**: The Table the data is returned in.
+        * [<span class="tag tab"></span>](typeandclass)&nbsp; **data.position**: A Vector of the position of the hand zone.
+        * [<span class="tag tab"></span>](typeandclass)&nbsp; **data.rotation**: A Vector of the rotation of the hand zone.
+        * [<span class="tag tab"></span>](typeandclass)&nbsp; **data.scale**: A Vector of the scale of the hand zone.
+        * [<span class="tag tab"></span>](typeandclass)&nbsp; **data.forward**: A Vector of the forward direction of the hand zone.
+        * [<span class="tag tab"></span>](typeandclass)&nbsp; **data.right**: A Vector of the right direction of the hand zone.
+        * [<span class="tag tab"></span>](typeandclass)&nbsp; **data.up**: A Vector of the up direction of the hand zone.
 
 !!!tip "Indexing"
     Hand indexes start at 1 and are numbered in the order of their creation. Each Player color has its own indexes.
@@ -148,18 +144,16 @@ Returns a Table of data on this [hand zone](http://berserk-games.com/knowledgeba
 
 ####lookAt(...)
 
-Moves a Player's camera, forcing 3'rd person camera mode.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Moves a Player's camera, forcing 3'rd person camera mode.
 
-> Returns Bool.
-
-!!!info "lookAt(Table parameters)"
-    * **Table parameters**: A Table of controlling parameters to point the player camera.
-        * **parameters.position**: A Vector of the position to center the camera to.
-        * **parameters.pitch**: A Float of the pitch angle of the camera. 0 to 90.
+!!!info "lookAt([<span class="tag tab"></span>](typeandclass)&nbsp; parameters)"
+    * [<span class="tag tab"></span>](typeandclass)&nbsp; **parameters**: A Table of controlling parameters to point the player camera.
+        * [<span class="tag tab"></span>](typeandclass)&nbsp; **parameters.position**: A Vector of the position to center the camera on.
+        * [<span class="tag flo"></span>](typeandclass)&nbsp; **parameters.pitch**: The pitch angle of the camera. 0 to 90.
             * {>>Optional, defaults to 0.<<}
-        * **parameters.yaw**: A Float of the yaw angle of the camera. -180 to 180.
+        * [<span class="tag flo"></span>](typeandclass)&nbsp; **parameters.yaw**: The yaw angle of the camera. -180 to 180.
             * {>>Optional, defaults to 0.<<}
-        * **parameters.distance**: A Float of the distance the camera is from the position Vector.
+        * [<span class="tag flo"></span>](typeandclass)&nbsp; **parameters.distance**: The distance the camera is from the position Vector.
             * {>>Optional, defaults to 40.<<}
         
 ``` Lua
@@ -177,13 +171,11 @@ Player["White"].lookAt({
 
 ####print(...)
 
-Prints a message into the Player's game chat.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Prints a message into the Player's game chat.
 
-> Returns Bool.
-
-!!!info "print(String message, Color)"
-    * **String message**: A String to be displayed.
-    * **Color**: A Color Table for the text to be tinted.
+!!!info "print([<span class="tag str"></span>](typeandclass)&nbsp; message, [<span class="tag tab"></span>](typeandclass)&nbsp; Color)"
+    * [<span class="tag str"></span>](typeandclass)&nbsp; **message**: The text to be displayed.
+    * [<span class="tag tab"></span>](typeandclass)&nbsp; **Color**: A [Color](typeandclass#color) Table for the text to be tinted.
         * {>>Optional, defaults to {r=1, g=1, b=1}.<<}
 
 ---
@@ -191,19 +183,17 @@ Prints a message into the Player's game chat.
 
 ####setHandTransform(...)
 
-Sets transform elements of a [hand zone](http://berserk-games.com/knowledgebase/hands/).
+[<span class="ret boo"></span>](typeandclass)&nbsp; Sets transform elements of a [hand zone](http://berserk-games.com/knowledgebase/hands/).
 
-> Returns Bool.
-
-!!!tip "setHandTransform(Table parameters, Int hand_index)"
-    * **Table parameters**: The Table the data to transform the hand zone with.
-        * **parameters.position**: A Vector of the position of the hand zone.
+!!!info "setHandTransform([<span class="tag tab"></span>](typeandclass)&nbsp; parameters, [<span class="tag int"></span>](typeandclass)&nbsp; hand_index)"
+    * [<span class="tag tab"></span>](typeandclass)&nbsp; **parameters**: The Table the data to transform the hand zone with.
+        * [<span class="tag tab"></span>](typeandclass)&nbsp; **parameters.position**: A Vector of the position of the hand zone.
             * {>>Optional, defaults to {x=0, y=0, z=0}.<<}
-        * **parameters.rotation**: A Vector of the rotation of the hand zone.
+        * [<span class="tag tab"></span>](typeandclass)&nbsp; **parameters.rotation**: A Vector of the rotation of the hand zone.
             * {>>Optional, defaults to {x=0, y=0, z=0}.<<}
-        * **parameters.scale**: A Vector of the scale of the hand zone.
+        * [<span class="tag tab"></span>](typeandclass)&nbsp; **parameters.scale**: A Vector of the scale of the hand zone.
             * {>>Optional, defaults to {x=0, y=0, z=0}.<<}
-    * **Int hand_index**: An Int of the index, representing which hand zone to modify.
+    * [<span class="tag int"></span>](typeandclass)&nbsp; **hand_index**: An Int of the index, representing which hand zone to modify.
         * {>>Optional, defaults to 1.<<}
 
 !!!tip "Indexing"
@@ -226,7 +216,7 @@ Player["White"].setHandTransform(params, 2)
 
 ####getPlayers()
 
-Returns Table of all Players in the instance.
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns Table of all Players in the instance.
 
 ``` Lua
 --Blindfolding all players
@@ -241,7 +231,7 @@ end
 
 ####getSpectators()
 
-Returns Table of all Players in spectator (Grey).
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns Table of all Players in spectator (Grey).
 
 ``` Lua
 --Printing steam name of all players to host chat

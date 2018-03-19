@@ -9,7 +9,7 @@ theme:
   custom_dir: 'theme'
 extra_css:
   - css/theme.css
-  - css/markdown.css
+  - css/table.css
   - css/type_icons.css
   - css/player_color_table.css
 markdown_extensions:
@@ -52,7 +52,7 @@ pages:
     - Lighting: lighting.md
     - Physics: physics.md
     - Player: player.md
-    - Player Colors: player-colors.md
+    - Player Color: player-color.md
     - RPGFigurine: rpgfigurine.md
     - Spawnable Objects: spawnableobjects.md
     - TextTool: texttool.md
