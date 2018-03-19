@@ -9,8 +9,13 @@
     vertical-align: middle;
 }
 .md-typeset table:not([class]) th {
-    min-width: 0rem;
+    min-width: 0px;
     padding: 14px 8px;
+}
+
+/*Prevent break of function name in table*/
+.md-typeset table th:first-child {
+    white-space: nowrap;
 }
 
 

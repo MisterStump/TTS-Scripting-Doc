@@ -58,7 +58,7 @@
     
       <link rel="stylesheet" href="../css/theme.css">
     
-      <link rel="stylesheet" href="../css/markdown.css">
+      <link rel="stylesheet" href="../css/table.css">
     
       <link rel="stylesheet" href="../css/type_icons.css">
     
@@ -415,8 +415,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../player-colors/" title="Player Colors" class="md-nav__link">
-      Player Colors
+    <a href="../player-color/" title="Player Color" class="md-nav__link">
+      Player Color
     </a>
   </li>
 
@@ -693,23 +693,27 @@
 <tr>
 <th>Function Name</th>
 <th>Description</th>
+<th>Return</th>
 <th align="right"><i class="material-icons" style="line-height:90%;">info_outline</i></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>attack()</td>
-<td>Plays a random attack animation. Returns Bool.</td>
+<td>Plays a random attack animation.</td>
+<td><a href="../typeandclass"><span class="ret boo"></span></a></td>
 <td align="right"></td>
 </tr>
 <tr>
 <td>changeMode()</td>
-<td>Changes the figurine's current mode. What the mode represents is based on the figurine. Returns Bool.</td>
+<td>Changes the figurine's current mode. What the mode represents is based on the figurine.</td>
+<td><a href="../typeandclass"><span class="ret boo"></span></a></td>
 <td align="right"></td>
 </tr>
 <tr>
 <td>die()</td>
-<td>Plays the death animation or causes it to return to life. Returns Bool.</td>
+<td>Plays the death animation or causes it to return to life.</td>
+<td><a href="../typeandclass"><span class="ret boo"></span></a></td>
 <td align="right"></td>
 </tr>
 </tbody>
@@ -726,12 +730,12 @@
 </thead>
 <tbody>
 <tr>
-<td>onAttack(Table hit_list)</td>
+<td>onAttack(<a href="../typeandclass"><span class="tag tab"></span></a> hit_list)</td>
 <td>Activates when an attack is performed by an identified RPGFigurine Object.</td>
 <td align="right"><a href="#onattack"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
 <tr>
-<td>onHit(Object attacker)</td>
+<td>onHit(<a href="../typeandclass"><span class="tag obj"></span></a> attacker)</td>
 <td>Activates when an attack is performed on this RPGFigurine Object.</td>
 <td align="right"><a href="#onattack"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
 </tr>
@@ -743,9 +747,9 @@
 <h4 id="onattack">onAttack(...)<a class="headerlink" href="#onattack" title="Permanent link">&para;</a></h4>
 <p>Activates when an attack is performed by an identified RPGFigurine Object. An attack is triggered via the context menu or pressing the appropriate number key. If another RPGFigurine is within its attack arch, then the function will be triggered with the figurine hit passed as a parameter.</p>
 <div class="admonition info">
-<p class="admonition-title">onAttack(Table hit_list)</p>
+<p class="admonition-title">onAttack(<a href="../typeandclass"><span class="tag tab"></span></a> hit_list)</p>
 <ul>
-<li><strong>Table hit_list</strong>: A Table of Object references for RPGFigurines within the reach of the attack.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>hit_list</strong>: A Table of RPGFigurine Object references within the reach of the attack.</li>
 </ul>
 </div>
 <div class="codehilite"><pre><span></span><span class="c1">--Monitoring and announcing a cyclops attacks</span>
@@ -764,9 +768,9 @@
 <h4 id="onhit">onHit(...)<a class="headerlink" href="#onhit" title="Permanent link">&para;</a></h4>
 <p>Activates when an attack is performed on this RPGFigurine Object. An attack is triggered via the context menu or pressing the appropriate number key. If this RPGFigurine is within the attack radius, this function is triggered, passing a parameter of the Object which attacked.</p>
 <div class="admonition info">
-<p class="admonition-title">onHit(Object attacker)</p>
+<p class="admonition-title">onHit(<a href="../typeandclass"><span class="tag obj"></span></a> attacker)</p>
 <ul>
-<li><strong>Object attacker</strong>: An Object reference of the RPGFigurine attacking the indicated RPGFigurine.</li>
+<li><a href="../typeandclass"><span class="tag obj"></span></a>&nbsp; <strong>attacker</strong>: Reference to the RPGFigurine attacking the indicated RPGFigurine.</li>
 </ul>
 </div>
 <div class="codehilite"><pre><span></span><span class="c1">--Monitoring and announcing a cyclops being hit</span>
@@ -824,8 +828,8 @@
 
         <!-- Link to previous page -->
         
-          <a href="../player-colors/"
-              title="Player Colors"
+          <a href="../player-color/"
+              title="Player Color"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -838,7 +842,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Player Colors
+                Player Color
               </span>
             </div>
           </a>
