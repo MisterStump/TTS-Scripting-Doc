@@ -10,6 +10,7 @@
     box-shadow: 2px 2px #696969;
     bottom: 1px;*/
     padding: 2px 4px;
+    border-radius:5px;
     position: relative;
     
     word-break: normal;
@@ -30,6 +31,7 @@
     /*padding: 1px 4px;
     box-shadow: 2px 2px #696969;
     border-radius: 6px;*/
+    border-radius:5px;
     padding: 2px 4px;
     display: inline-block;
 
