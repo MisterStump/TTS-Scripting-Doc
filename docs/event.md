@@ -5,31 +5,31 @@
 ###Default Events (Global & Object)
 These are functions which are triggered by an event taking place in-game. They work when within the script of an Object or the Global script.
 
-Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
+Function Name | Description | &nbsp; 
 -- | -- | --:
-onChat(String message, Player) | Called when a chat message is sent in game chat. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onchat)
+onChat(String message, Player) | Called when a chat message is sent in game chat. | [<span class="i"></span>](#onchat)
 onConnect(Player) | Called when a [Player](player) connects to a game.
 onDisconnect(Player) | Called when a [Player](player) disconnects from a game.
-onExternalMessage(Table) | Called when an external script editor (like [Atom](atom)) sends a message back to the game. Used for custom editor functionality. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onexternalmessage)
-onFixedUpdate() | Called **every physics tick** (90 times a second). This is a frame independent onUpdate(). | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onfixedupdate)
-onLoad(String save_state) | Called when a game save is finished loading every Object. It is where most setup code will go. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onload)
-onObjectDestroy(Object dying_object) | Called whenever any object is destroyed. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onobjectdestroy)
-onObjectDrop(string player_color, Object dropped_object) | Called whenever any object is dropped by a player. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onobjectdrop)
-onObjectEnterScriptingZone(Object zone, Object enter_object) | Called when any object enters any scripting zone. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onobjectenterscriptingzone)
-onObjectLeaveScriptingZone(Object zone, Object enter_object) | Called when any object leaves any scripting zone. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onobjectleavescriptingzone)
-onObjectLeaveContainer(Object container, Object leave_object) | Called when any object leaves any container. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onobjectleavecontainer)
-onObjectLoopingEffect(Object loop_object, Int index) | Called whenever the looping effect of an [AssetBundle](assetbundle) is activated. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onobjectloopingeffect)
-onObjectPickUp(String player_color, Object picked_up_object) | Called whenever a Player picks up an Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onobjectpickup)
-onObjectRandomize(Object randomize_object, String player_color) | Called when an Object is randomized. Like when shuffling a deck or shaking dice. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onobjectrandomize)
-onObjectSpawn(Object spawn_object) | Called when any Object is spawned/created. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onobjectspawn)
-onObjectTriggerEffect(Object trigger_object, Int index) | Called whenever the trigger effect of an [AssetBundle](assetbundle) is activated. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onobjecttriggereffect)
-onPlayerChangeColor(String [player_color](player)) | Called when a player changes color or selects it for the first time. It also returns `"Grey"` if they disconnect. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onplayerchangecolor)
-onPlayerTurnEnd(String [player_color_end](player),String [player_color_next](player)) | Called at the end of a player's turn when using the in-game turn system. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onplayerturnend)
-onPlayerTurnStart(String [player_color_start](player),String [player_color_prev](player)) | Called at the start of a player's turn when using the in-game turn system. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onplayerturnstart)
-onSave() | Called whenever your game is saved. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onsave)
-onScriptingButtonDown(Int index, String [player_color](player)) | Called when a scripting button (numpad by default) is pressed. The index range that is returned is 1-10. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onscriptingbuttondown)
-onScriptingButtonUp(Int index, String [player_color](player)) | Called when a scripting button (numpad by default) is released. The index range that is returned is 1-10. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onscriptingbuttonup)
-onUpdate() | Called **every frame**. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onupdate)
+onExternalMessage(Table) | Called when an external script editor (like [Atom](atom)) sends a message back to the game. Used for custom editor functionality. | [<span class="i"></span>](#onexternalmessage)
+onFixedUpdate() | Called **every physics tick** (90 times a second). This is a frame independent onUpdate(). | [<span class="i"></span>](#onfixedupdate)
+onLoad(String save_state) | Called when a game save is finished loading every Object. It is where most setup code will go. | [<span class="i"></span>](#onload)
+onObjectDestroy(Object dying_object) | Called whenever any object is destroyed. | [<span class="i"></span>](#onobjectdestroy)
+onObjectDrop(string player_color, Object dropped_object) | Called whenever any object is dropped by a player. | [<span class="i"></span>](#onobjectdrop)
+onObjectEnterScriptingZone(Object zone, Object enter_object) | Called when any object enters any scripting zone. | [<span class="i"></span>](#onobjectenterscriptingzone)
+onObjectLeaveScriptingZone(Object zone, Object enter_object) | Called when any object leaves any scripting zone. | [<span class="i"></span>](#onobjectleavescriptingzone)
+onObjectLeaveContainer(Object container, Object leave_object) | Called when any object leaves any container. | [<span class="i"></span>](#onobjectleavecontainer)
+onObjectLoopingEffect(Object loop_object, Int index) | Called whenever the looping effect of an [AssetBundle](assetbundle) is activated. | [<span class="i"></span>](#onobjectloopingeffect)
+onObjectPickUp(String player_color, Object picked_up_object) | Called whenever a Player picks up an Object. | [<span class="i"></span>](#onobjectpickup)
+onObjectRandomize(Object randomize_object, String player_color) | Called when an Object is randomized. Like when shuffling a deck or shaking dice. | [<span class="i"></span>](#onobjectrandomize)
+onObjectSpawn(Object spawn_object) | Called when any Object is spawned/created. | [<span class="i"></span>](#onobjectspawn)
+onObjectTriggerEffect(Object trigger_object, Int index) | Called whenever the trigger effect of an [AssetBundle](assetbundle) is activated. | [<span class="i"></span>](#onobjecttriggereffect)
+onPlayerChangeColor(String [player_color](player)) | Called when a player changes color or selects it for the first time. It also returns `"Grey"` if they disconnect. | [<span class="i"></span>](#onplayerchangecolor)
+onPlayerTurnEnd(String [player_color_end](player),String [player_color_next](player)) | Called at the end of a player's turn when using the in-game turn system. | [<span class="i"></span>](#onplayerturnend)
+onPlayerTurnStart(String [player_color_start](player),String [player_color_prev](player)) | Called at the start of a player's turn when using the in-game turn system. | [<span class="i"></span>](#onplayerturnstart)
+onSave() | Called whenever your game is saved. | [<span class="i"></span>](#onsave)
+onScriptingButtonDown(Int index, String [player_color](player)) | Called when a scripting button (numpad by default) is pressed. The index range that is returned is 1-10. | [<span class="i"></span>](#onscriptingbuttondown)
+onScriptingButtonUp(Int index, String [player_color](player)) | Called when a scripting button (numpad by default) is released. The index range that is returned is 1-10. | [<span class="i"></span>](#onscriptingbuttonup)
+onUpdate() | Called **every frame**. | [<span class="i"></span>](#onupdate)
 
 
 
@@ -45,12 +45,12 @@ These are functions which are triggered by an event taking place in-game. They o
 
 Function Name | Description
 -- | --
-onCollisionEnter(Table collision_info) | Called when an Object starts colliding with the Object the function is on. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#oncollisionenter)
-onCollisionExit(Table collision_info) | Called when an Object stops colliding with the Object the function is on. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#oncollisionexit)
-onCollisionStay(Table collision_info) | Called **every frame** that an Object is colliding with the Object this function is on. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#oncollisionstay)
-onDestroy() | Called when an Object it is on is destroyed. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#ondestroy)
-onDrop(String [player_color](player)) | Called when a player releases an Object after picking it up. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#ondrop)
-onPickUp(String [player_color](player)) | Called when a player picks up an Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onpickup)
+onCollisionEnter(Table collision_info) | Called when an Object starts colliding with the Object the function is on. | [<span class="i"></span>](#oncollisionenter)
+onCollisionExit(Table collision_info) | Called when an Object stops colliding with the Object the function is on. | [<span class="i"></span>](#oncollisionexit)
+onCollisionStay(Table collision_info) | Called **every frame** that an Object is colliding with the Object this function is on. | [<span class="i"></span>](#oncollisionstay)
+onDestroy() | Called when an Object it is on is destroyed. | [<span class="i"></span>](#ondestroy)
+onDrop(String [player_color](player)) | Called when a player releases an Object after picking it up. | [<span class="i"></span>](#ondrop)
+onPickUp(String [player_color](player)) | Called when a player picks up an Object. | [<span class="i"></span>](#onpickup)
 
 
 
@@ -97,7 +97,7 @@ end
 
 ###onFixedUpdate()
 
-Called **every physics tick** (90 times a second). This is a frame independent onUpdate(). | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onfixedupdate)
+Called **every physics tick** (90 times a second). This is a frame independent onUpdate(). | [<span class="i"></span>](#onfixedupdate)
 
 !!!warning
 	This is a very expensive function and can easily slow/crash your game if missused. Use with caution.

@@ -5,19 +5,19 @@ An RPGFigurine is an in-game Object of a figurine with built-in animations. It h
 ###Object Functions
 These functions are called like this: `self.RPGFigurine.attack()`.
 
-Function Name | Description | Return | <i class="material-icons" style="line-height:90%;">info_outline</i>
--- | -- | -- | --:
-attack() | Plays a random attack animation. | [<span class="ret boo"></span>](typeandclass) |
-changeMode() | Changes the figurine's current mode. What the mode represents is based on the figurine. | [<span class="ret boo"></span>](typeandclass) |
-die() | Plays the death animation or causes it to return to life. | [<span class="ret boo"></span>](typeandclass) |
+Function Name | Description | Return
+-- | -- | -- 
+attack() | Plays a random attack animation. | [<span class="ret boo"></span>](typeandclass)
+changeMode() | Changes the figurine's current mode. What the mode represents is based on the figurine. | [<span class="ret boo"></span>](typeandclass) 
+die() | Plays the death animation or causes it to return to life. | [<span class="ret boo"></span>](typeandclass) 
 
 ###Event Functions
 These functions are called by the game whenever a figurine attacks or is attacked. See details for example usage.
 
-Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
+Function Name | Description | &nbsp; 
 -- | -- | --:
-onAttack([<span class="tag tab"></span>](typeandclass) hit_list) | Activates when an attack is performed by an identified RPGFigurine Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onattack)
-onHit([<span class="tag obj"></span>](typeandclass) attacker) | Activates when an attack is performed on this RPGFigurine Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#onattack)
+onAttack([<span class="tag tab"></span>](typeandclass) hit_list) | Activates when an attack is performed by an identified RPGFigurine Object. | [<span class="i"></span>](#onattack)
+onHit([<span class="tag obj"></span>](typeandclass) attacker) | Activates when an attack is performed on this RPGFigurine Object. | [<span class="i"></span>](#onattack)
 
 
 

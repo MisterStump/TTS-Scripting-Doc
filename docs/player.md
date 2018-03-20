@@ -26,34 +26,34 @@ Team | The team of the player.<br>Options: `"None", "Clubs", "Diamonds", "Hearts
 
 ###Class Functions
 
-Function Name | Description | Return | <i class="material-icons" style="line-height:90%;">info_outline</i>
+Function Name | Description | Return | &nbsp; 
 -- | -- | -- | --:
-attachCameraToObject([<span class="tag tab"></span>](typeandclass)&nbsp; parameters) | Makes a Player's camera follow an Object. | [<span class="ret boo"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#attachcameratoobject)
-broadcast([<span class="tag str"></span>](typeandclass)&nbsp; message, [<span class="tag str"></span>](typeandclass)&nbsp; Color) | Print message on Player's screen and their game chat log. | [<span class="ret boo"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#broadcast)
-changeColor([<span class="tag str"></span>](typeandclass)&nbsp; player_color) | Changes player to this [Player Color](player-color). | [<span class="ret boo"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#changecolor)
+attachCameraToObject([<span class="tag tab"></span>](typeandclass)&nbsp; parameters) | Makes a Player's camera follow an Object. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#attachcameratoobject)
+broadcast([<span class="tag str"></span>](typeandclass)&nbsp; message, [<span class="tag str"></span>](typeandclass)&nbsp; Color) | Print message on Player's screen and their game chat log. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#broadcast)
+changeColor([<span class="tag str"></span>](typeandclass)&nbsp; player_color) | Changes player to this [Player Color](player-color). | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#changecolor)
 getHandCount() | Returns the number of [hand zones](http://berserk-games.com/knowledgebase/hands/) owned by this color. | [<span class="ret int"></span>](typeandclass)
-getHandObjects([<span class="tag int"></span>](typeandclass)&nbsp; hand_index) | Returns a Table of Objects that are in this [hand zone](http://berserk-games.com/knowledgebase/hands/). | [<span class="ret tab"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gethandobjects)
-getHandTransform([<span class="tag int"></span>](typeandclass)&nbsp; hand_index) | Returns a Table of data on this [hand zone](http://berserk-games.com/knowledgebase/hands/). | [<span class="ret tab"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gethandtransform)
+getHandObjects([<span class="tag int"></span>](typeandclass)&nbsp; hand_index) | Returns a Table of Objects that are in this [hand zone](http://berserk-games.com/knowledgebase/hands/). | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#gethandobjects)
+getHandTransform([<span class="tag int"></span>](typeandclass)&nbsp; hand_index) | Returns a Table of data on this [hand zone](http://berserk-games.com/knowledgebase/hands/). | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#gethandtransform)
 getHoldingObjects() | Returns Table of Objects a Player is holding in their hand. | [<span class="ret tab"></span>](typeandclass)
 getHoverObject() | Object that the Player's pointer is hovering over. | [<span class="ret obj"></span>](typeandclass)
 getPointerPosition() | Returns the Vector of the Player's pointer coordinates. | [<span class="ret tab"></span>](typeandclass)
 getSelectedObjects() | Returns Table of Objects that the Player has selected with an area selection. | [<span class="ret tab"></span>](typeandclass)
 kick() | Kicks Player out of the room. | [<span class="ret boo"></span>](typeandclass)
-lookAt([<span class="tag tab"></span>](typeandclass)&nbsp; parameters) | Moves a Player's camera, forcing 3'rd person camera mode. | [<span class="ret boo"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#lookat)
+lookAt([<span class="tag tab"></span>](typeandclass)&nbsp; parameters) | Moves a Player's camera, forcing 3'rd person camera mode. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#lookat)
 mute() | Mutes or unmutes Player, preventing/allowing voice chat. | [<span class="ret boo"></span>](typeandclass)
-print([<span class="tag str"></span>](typeandclass)&nbsp; message, [<span class="tag tab"></span>](typeandclass)&nbsp; Color) | Prints a message into the Player's game chat. | [<span class="ret boo"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#print)
+print([<span class="tag str"></span>](typeandclass)&nbsp; message, [<span class="tag tab"></span>](typeandclass)&nbsp; Color) | Prints a message into the Player's game chat. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#print)
 promote() | Promotes/demotes a Player. Promoted players have access to most host privileges. | [<span class="ret boo"></span>](typeandclass) |
-setHandTransform([<span class="tag tab"></span>](typeandclass)&nbsp; parameters, [<span class="tag int"></span>](typeandclass)&nbsp; hand_index) | Sets transform elements of a hand zone. | [<span class="ret boo"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#sethandtransform)
+setHandTransform([<span class="tag tab"></span>](typeandclass)&nbsp; parameters, [<span class="tag int"></span>](typeandclass)&nbsp; hand_index) | Sets transform elements of a hand zone. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#sethandtransform)
 
 
 
 ###Direct Class Functions
 These functions return direct references to Players, not a Player Color. See details section for usage.
 
-Function Name | Description | Return | <i class="material-icons" style="line-height:90%;">info_outline</i>
+Function Name | Description | Return | &nbsp; 
 -- | -- | -- | --:
-getPlayers() | Returns Table of all Players in the instance. | [<span class="ret tab"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getplayers)
-getSpectators() | Returns Table of all Players in spectator (Grey). | [<span class="ret tab"></span>](typeandclass) | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getspectators)
+getPlayers() | Returns Table of all Players in the instance. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#getplayers)
+getSpectators() | Returns Table of all Players in spectator (Grey). | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#getspectators)
 
 
 ---

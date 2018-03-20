@@ -15,6 +15,7 @@ In this section, you will find details on all events/classes/functions specific 
 [<span class="tag nil"></span>](typeandclass)&nbsp; 
 [<span class="tag boo"></span>](typeandclass)&nbsp; 
 [<span class="tag obj"></span>](typeandclass)&nbsp; 
+[<span class="tag var"></span>](typeandclass)&nbsp; 
 
 
 [<span class="ret tab"></span>](typeandclass)&nbsp; 
@@ -24,3 +25,4 @@ In this section, you will find details on all events/classes/functions specific 
 [<span class="ret nil"></span>](typeandclass)&nbsp; 
 [<span class="ret boo"></span>](typeandclass)&nbsp; 
 [<span class="ret obj"></span>](typeandclass)&nbsp;
+[<span class="ret var"></span>](typeandclass)&nbsp; 

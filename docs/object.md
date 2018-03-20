@@ -60,30 +60,30 @@ TextTool | A [TextTool](texttool), which is an in-game text display system.
 ###Transform Functions
 These functions handle the physical attributes of an Object: Position, Rotation, Scale, Bounds, Velocity. In other words, moving objects around as well as getting information on how they are moving.
 
-Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
+Function Name | Description | &nbsp; 
 -- | -- | --:
-addForce(Vector, Int force_type) | Adds force to an object in a directional Vector. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#addforce)
-addTorque(Vector, Int force_type) | Adds torque to an object in a rotational Vector. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#addtorque)
+addForce(Vector, Int force_type) | Adds force to an object in a directional Vector. Returns Bool. | [<span class="i"></span>](#addforce)
+addTorque(Vector, Int force_type) | Adds torque to an object in a rotational Vector. Returns Bool. | [<span class="i"></span>](#addtorque)
 getAngularVelocity() | Returns a Vector of the current angular velocity. | 
-getBounds() | Returns a Table of Vector information describing the size of an object in Global terms. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getbounds)
-getBoundsNormalized() | Returns a Table of Vector information describing the size of an object in Global terms, as if it was rotated to {0,0,0}. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getboundsnormalized)
+getBounds() | Returns a Table of Vector information describing the size of an object in Global terms. | [<span class="i"></span>](#getbounds)
+getBoundsNormalized() | Returns a Table of Vector information describing the size of an object in Global terms, as if it was rotated to {0,0,0}. | [<span class="i"></span>](#getboundsnormalized)
 getPosition() | Returns a Vector of the current world position. | 
 getRotation() | Returns a Vector of the current rotation. | 
-getScale() | Returns a Vector of the current scale. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getscale)
-getTransformForward() | Returns a Vector of the forward direction of this object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gettransformforward)
-getTransformRight() | Returns a Vector of the right direction of this object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gettransformright)
-getTransformUp() | Returns a Vector of the up direction of this object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#gettransformup)
+getScale() | Returns a Vector of the current scale. | [<span class="i"></span>](#getscale)
+getTransformForward() | Returns a Vector of the forward direction of this object. | [<span class="i"></span>](#gettransformforward)
+getTransformRight() | Returns a Vector of the right direction of this object. | [<span class="i"></span>](#gettransformright)
+getTransformUp() | Returns a Vector of the up direction of this object. | [<span class="i"></span>](#gettransformup)
 getVelocity() | Returns a Vector of the current velocity. | 
 isSmoothMoving() | Indicates if an object is traveling as part of a Smooth move. Smooth moving is performed by setPositionSmooth and setRotationSmooth. Returns Bool. | 
-positionToLocal(Vector) | Returns a Vector after converting a world Vector to a local Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#positiontolocal)
-positionToWorld(Vector) | Returns a Vector after converting a local Vector to a world Vector. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#positiontoworld)
+positionToLocal(Vector) | Returns a Vector after converting a world Vector to a local Vector. | [<span class="i"></span>](#positiontolocal)
+positionToWorld(Vector) | Returns a Vector after converting a local Vector to a world Vector. | [<span class="i"></span>](#positiontoworld)
 rotate(Vector) | Rotates Object smoothly in the direction of the given Vector. Returns Bool. | 
-scale(Vector or Float) | Scales Object by a multiple. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#scale)
+scale(Vector or Float) | Scales Object by a multiple. Returns Bool. | [<span class="i"></span>](#scale)
 setAngularVelocity(Vector) | Sets a Vector as the current angular velocity. Returns Bool. | 
 setPosition(Vector) | Instantly moves an Object to the given Vector. Returns Bool. | 
-setPositionSmooth(Vector, Bool collide, Bool fast) | Moves the Object smoothly to the given Vector. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setpositionsmooth)
+setPositionSmooth(Vector, Bool collide, Bool fast) | Moves the Object smoothly to the given Vector. Returns Bool. | [<span class="i"></span>](#setpositionsmooth)
 setRotation(Vector) | Instantly rotates an Object to the given Vector. | 
-setRotationSmooth(Vector, Bool collide, Bool fast) | Rotates the Object smoothly to the given Vector. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setrotationsmooth)
+setRotationSmooth(Vector, Bool collide, Bool fast) | Rotates the Object smoothly to the given Vector. Returns Bool. | [<span class="i"></span>](#setrotationsmooth)
 setScale(Vector) | Sets a Vector as the current scale. Returns Bool. | 
 setVelocity(Vector) | Sets a Vector as the current velocity. Returns Bool. | 
 translate(Vector) | Smoothly moves Object by the given Vector offset. Returns Bool. | 
@@ -93,73 +93,73 @@ translate(Vector) | Smoothly moves Object by the given Vector offset. Returns Bo
 ###UI Functions
 These functions allow for the creation/editing/removal of functional buttons and text inputs which themselves trigger code within your scripts.
 
-Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
+Function Name | Description | &nbsp; 
 -- | -- | --:
 clearButtons() | Removes all scripted buttons. Returns Bool. | 
 clearInputs() | Removes all scripted inputs. Returns Bool. | 
-createButton(Table parameters) | Creates a scripted button attached to the Object. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#createbutton)
-createInput(Table parameters) | Creates a scripted input attached to the Object. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#createinput)
-editButton(Table parameters) | Modify an existing button. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#editbutton)
-editInput(Table parameters) | Modify an existing input. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#editinput)
-getButtons() | Returns a Table of all buttons on this Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getbuttons)
-getInputs() | Returns a Table of all inputs on this Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getinputs)
-removeButton(Int index) | Removes a specific button. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#removebutton)
-removeInput(Int index) | Removes a specific button. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#removeinput)
+createButton(Table parameters) | Creates a scripted button attached to the Object. Returns Bool. | [<span class="i"></span>](#createbutton)
+createInput(Table parameters) | Creates a scripted input attached to the Object. Returns Bool. | [<span class="i"></span>](#createinput)
+editButton(Table parameters) | Modify an existing button. Returns Bool. | [<span class="i"></span>](#editbutton)
+editInput(Table parameters) | Modify an existing input. Returns Bool. | [<span class="i"></span>](#editinput)
+getButtons() | Returns a Table of all buttons on this Object. | [<span class="i"></span>](#getbuttons)
+getInputs() | Returns a Table of all inputs on this Object. | [<span class="i"></span>](#getinputs)
+removeButton(Int index) | Removes a specific button. Returns Bool. | [<span class="i"></span>](#removebutton)
+removeInput(Int index) | Removes a specific button. Returns Bool. | [<span class="i"></span>](#removeinput)
 
 
 
 ###Get Functions
 These functions obtain information from an object.
 
-Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
+Function Name | Description | &nbsp; 
 -- | -- | --:
 getColorTint() | Returns Color tint. | 
-getCustomObject() | Returns a Table with the Custom Object information of a Custom Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getcustomobject)
+getCustomObject() | Returns a Table with the Custom Object information of a Custom Object. | [<span class="i"></span>](#getcustomobject)
 getLock() | Returns a Bool of the lock status. True is locked. | 
-getObjects() | Returns a Table of objects in the script zone/bag/deck. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getobjects)
+getObjects() | Returns a Table of objects in the script zone/bag/deck. | [<span class="i"></span>](#getobjects)
 getQuantity() | Returns an Int of how many objects are in the stack. Returns -1 if the Object is not a stack. | 
-getRotationValues() | Returns a Table of rotation values. Rotation values are used to give value to different rotations (like dice). | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getrotationvalues)
+getRotationValues() | Returns a Table of rotation values. Rotation values are used to give value to different rotations (like dice). | [<span class="i"></span>](#getrotationvalues)
 getStateId() | Returns an Int for the current [state](http://berserk-games.com/knowledgebase/creating-states/) ID (index) an object is it. Returns -1 if there are no other states. State ids (indexes) start at 1. | 
-getStates() | Returns a Table of information on the [states](http://berserk-games.com/knowledgebase/creating-states/) of an Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getstates)
-getValue() | Returns an Int as the value. What the value represents depends on what type of Object this function is used on. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#getvalue)
+getStates() | Returns a Table of information on the [states](http://berserk-games.com/knowledgebase/creating-states/) of an Object. | [<span class="i"></span>](#getstates)
+getValue() | Returns an Int as the value. What the value represents depends on what type of Object this function is used on. | [<span class="i"></span>](#getvalue)
 
 
 
 ###Set Functions
 These functions apply action to an object. They take some property in order to work.
 
-Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
+Function Name | Description | &nbsp; 
 -- | -- | --:
 setColorTint(Color) | Sets the Color tint. Returns Bool. | 
-setCustomObject(Table parameters) | Sets a custom Object's properties. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setcustomobject)
+setCustomObject(Table parameters) | Sets a custom Object's properties. Returns Bool. | [<span class="i"></span>](#setcustomobject)
 setLock(Bool lock) | Sets if an object is locked in place. Returns Bool. | 
-setRotationValues(Table rotation_values) | Sets rotation values of an object. Rotation values are used to give value to different rotations (like dice). Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setrotationvalues)
+setRotationValues(Table rotation_values) | Sets rotation values of an object. Rotation values are used to give value to different rotations (like dice). Returns Bool. | [<span class="i"></span>](#setrotationvalues)
 setState(Int state_id) | Returns Object of set [state](http://berserk-games.com/knowledgebase/creating-states/) of an Object. State ids (indexes) start at 1. | 
-setValue(Var value) | Sets an Int as the value. What the value represents depends on what type of Object it is. Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#setvalue)
+setValue(Var value) | Sets an Int as the value. What the value represents depends on what type of Object it is. Returns Bool. | [<span class="i"></span>](#setvalue)
 
 
 
 ###Action Function
 These functions perform general actions on objects and do not require any input parameters.
 
-Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
+Function Name | Description | &nbsp; 
 -- | -- | --:
-call(String func_name,Table func_params) | Used to call a Lua function on this Object. Returns Var. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#call)
+call(String func_name,Table func_params) | Used to call a Lua function on this Object. Returns Var. | [<span class="i"></span>](#call)
 flip() | Flip Object over. Returns Bool. | 
-clone(Table parameters) | Copy/Paste this Object, returns a reference to the new Object. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#clone)
+clone(Table parameters) | Copy/Paste this Object, returns a reference to the new Object. | [<span class="i"></span>](#clone)
 cut() | Cuts (splits in half) a deck or stack Object. | 
-deal(Int number,String player_color, Int index) | Deals Objects. Will deal from decks/bags/stacks/individual items. Returns Object dealt. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#deal)
-dealToColorWithOffset(Vector, Bool flip, String player_color) | Deals from a deck to a position relative to the hand zone. Returns Object dealt. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#dealtocolorwithoffset)
+deal(Int number,String player_color, Int index) | Deals Objects. Will deal from decks/bags/stacks/individual items. Returns Object dealt. | [<span class="i"></span>](#deal)
+dealToColorWithOffset(Vector, Bool flip, String player_color) | Deals from a deck to a position relative to the hand zone. Returns Object dealt. | [<span class="i"></span>](#dealtocolorwithoffset)
 destruct() | Destroys Object. Allows for `self.destruct()`. Returns Bool. | 
 highlightOn(Color, Float duration) | Creates a highlight around an Object. Returns Bool. | 
 highlightOff(Color) | Removes a highlight from around an Object. Returns Bool. |
-putObject(Object put_object) | Places an object into a container (chip stacks/bags/decks). Returns Bool. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#putobject)
+putObject(Object put_object) | Places an object into a container (chip stacks/bags/decks). Returns Bool. | [<span class="i"></span>](#putobject)
 randomize() | Shuffles deck/bag, rolls dice/coin, lifts other objects into the air. Same as pressing `R` by default. Returns Bool. | 
-reload() | Returns Object reference of itself after it respawns itself. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#reload)
+reload() | Returns Object reference of itself after it respawns itself. | [<span class="i"></span>](#reload)
 roll() | Rolls dice/coins. Returns Bool. | 
 shuffle() | Shuffles/shakes up contents of a deck or bag. Returns Bool. |
 shuffleStates() | Returns an Object reference to a new [state](http://berserk-games.com/knowledgebase/creating-states/) after randomly selecting and changing to one. | 
-takeObject(Table parameters) | Returns an Object reference of Object taken from a container (bag/deck/chip stack) and placed into the world. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#takeobject)
+takeObject(Table parameters) | Returns an Object reference of Object taken from a container (bag/deck/chip stack) and placed into the world. | [<span class="i"></span>](#takeobject)
 
 ---
 

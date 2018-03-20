@@ -4,10 +4,10 @@ The Counter is an in-game Object of a digital counter. It has its own class, Cou
 
 ###Object Functions
 
-Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i>
+Function Name | Description | Return
 -- | -- | --:
-clear() | Resets Counter to 0. Returns Bool. |
-decrement() | Reduces Counter's value by 1. Returns Bool. |
-getValue() | Returns Int of the current value displayed by the Counter. This function acts the same as [Object's getValue()](object#getvalue). Returns Bool. | 
-increment() | Increases Counter's value by 1. Returns Bool. |
-setValue() | Sets the current value of the Counter. This function acts the same as [Object's setValue()](object#setvalue). Returns Bool. | 
+clear() | Resets Counter to 0. | [<span class="ret boo"></span>](typeandclass)
+decrement() | Reduces Counter's value by 1. | [<span class="ret boo"></span>](typeandclass)
+getValue() | Returns Int of the current value displayed by the Counter. This function acts the same as [Object's getValue()](object#getvalue). | [<span class="ret boo"></span>](typeandclass) 
+increment() | Increases Counter's value by 1. | [<span class="ret boo"></span>](typeandclass)
+setValue() | Sets the current value of the Counter. This function acts the same as [Object's setValue()](object#setvalue). | [<span class="ret boo"></span>](typeandclass) 

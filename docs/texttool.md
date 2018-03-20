@@ -4,8 +4,8 @@ TextTool is a special Object type for creating text labels in the game instance.
 
 ###Object Functions
 
-Function Name | Description | Return | <i class="material-icons" style="line-height:90%;">info_outline</i>
--- | -- | -- | --:
+Function Name | Description | Return 
+-- | -- | -- 
 getFontColor()  | Returns Table of font Color. | [<span class="ret tab"></span>](typeandclass)
 getFontSize()  | Returns Int of the font size. | [<span class="ret int"></span>](typeandclass)
 getValue()  | Returns the current text. Works the same as Object's [getValue()](object#getvalue). | [<span class="ret str"></span>](typeandclass)

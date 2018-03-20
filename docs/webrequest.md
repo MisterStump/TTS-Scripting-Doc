@@ -24,11 +24,11 @@ url | The targeted URL. | [<span class="tag str"></span>](typeandclass)
 ##Function Summary
 All functions return a WebRequest.
 
-Function Name | Description | <i class="material-icons" style="line-height:90%;">info_outline</i> 
+Function Name | Description | &nbsp; 
 -- | -- | --:
-get([<span class="tag str"></span>](typeandclass) url, [<span class="tag obj"></span>](typeandclass) callback_owner, [<span class="tag str"></span>](typeandclass) callback) | Get data from the current URL. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#get)
-post([<span class="tag str"></span>](typeandclass) url,  [<span class="tag tab"></span>](typeandclass) form, [<span class="tag obj"></span>](typeandclass) callback_owner, [<span class="tag str"></span>](typeandclass) callback) | Post the form to the URL. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#post)
-put([<span class="tag str"></span>](typeandclass) url,  [<span class="tag str"></span>](typeandclass) data, [<span class="tag obj"></span>](typeandclass) callback_owner, [<span class="tag str"></span>](typeandclass) callback) | Post the data to the URL. | [<i class="material-icons" style="line-height:150%;">info_outline</i>](#put)
+get([<span class="tag str"></span>](typeandclass) url, [<span class="tag obj"></span>](typeandclass) callback_owner, [<span class="tag str"></span>](typeandclass) callback) | Get data from the current URL. | [<span class="i"></span>](#get)
+post([<span class="tag str"></span>](typeandclass) url,  [<span class="tag tab"></span>](typeandclass) form, [<span class="tag obj"></span>](typeandclass) callback_owner, [<span class="tag str"></span>](typeandclass) callback) | Post the form to the URL. | [<span class="i"></span>](#post)
+put([<span class="tag str"></span>](typeandclass) url,  [<span class="tag str"></span>](typeandclass) data, [<span class="tag obj"></span>](typeandclass) callback_owner, [<span class="tag str"></span>](typeandclass) callback) | Post the data to the URL. | [<span class="i"></span>](#put)
 
 ---
 

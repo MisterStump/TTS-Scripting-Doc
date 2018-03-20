@@ -1,15 +1,19 @@
 /*General Icon Formatting, used by all tag type icons*/
 .tag {
-    background-color:rgba(1, 0, 0, 0.2);
+    /*background-color:rgba(1, 0, 0, 0.2);*/
     font-weight: normal;
     text-align: center;
     font-size: 1.1rem;
-    padding: 1px 4px;
-    border-radius: 6px;
     display: inline-block;
+    /*border-radius: 6px;
+    padding: 1px 4px;
     box-shadow: 2px 2px #696969;
+    bottom: 1px;*/
+    padding: 2px 4px;
+    border-radius:5px;
     position: relative;
-    bottom: 1px;
+    margin: 0px 1px;
+    
     word-break: normal;
 
     width: 42px;
@@ -21,17 +25,21 @@
 
 /*General Return Formatting, used by all return type icons*/
 .ret {
-    background-color:rgba(1, 0, 0, 0.2);
+    /*background-color:rgba(1, 0, 0, 0.2);*/
     font-style: italic;
     text-align: center;
     font-size: 1rem;
-    padding: 1px 4px;
-    border-radius: 6px;
+    /*padding: 1px 4px;
+    box-shadow: 2px 2px #696969;
+    border-radius: 6px;*/
+    border-radius:5px;
+    padding: 2px 4px;
     display: inline-block;
 
-    box-shadow: 2px 2px #696969;
+    
     position: relative;
     bottom: 1px;
+    left: 1px;
     vertical-align:middle;
 
 
@@ -54,6 +62,7 @@
 .str {
     color: #000000;
     /*background-color: #98c379;*/
+    background-color: #ACC39B;
 }
 .str:after {
     content: "string";
@@ -63,6 +72,7 @@
 .tab {
     color: #000000;
     /*background-color: #D3D3D3;*/
+    background-color: rgba(1, 0, 0, 0.2);
 }
 .tab:after {
     content: "table";  
@@ -72,6 +82,7 @@
 .int {
     color: #000000;
     /*background-color: #e74c3c;*/
+    background-color: #D48E87;
 }
 .int:after {
     content: "int";
@@ -81,6 +92,7 @@
 .flo {
     color: #000000;
     /*background-color: #e74c3c;*/
+    background-color: #D48E87;
 }
 .flo:after {
     content: "float";
@@ -88,7 +100,8 @@
 
 /*Nil*/
 .nil {
-    color: #000000;
+    color: #ffffff;
+    background-color: rgba(1, 0, 0, 0.6);;
     /*background-color: inherit;
     border-style: solid;
     border-color: black;
@@ -102,18 +115,29 @@
 .boo {
     color: #000000;
     /*background-color: #BA8BA1;*/
+    background-color: #BE9FAD;
 }
 .boo:after {
     content: "bool";
 }
 
-
 /*Object*/
 .obj {
     color: #000000;
+    background-color: #8C99B6;
     /*color: #ffffff;
     background-color: #37474f;*/
 }
 .obj:after {
     content: "object";
+}
+
+/*Var*/
+.var {
+    color: #000000;
+    /*background-color: #e74c3c;*/
+    background-color: #E0E270;
+}
+.var:after {
+    content: "var";
 }
