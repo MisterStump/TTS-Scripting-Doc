@@ -62,6 +62,8 @@
     
       <link rel="stylesheet" href="../css/type_icons.css">
     
+      <link rel="stylesheet" href="../css/i_icons.css">
+    
       <link rel="stylesheet" href="../css/player_color_table.css">
     
     
@@ -1043,14 +1045,14 @@
 <tr>
 <th>Function Name</th>
 <th>Description</th>
-<th align="right"><i class="material-icons" style="line-height:90%;">info_outline</i></th>
+<th align="right">&nbsp;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>onChat(String message, Player)</td>
 <td>Called when a chat message is sent in game chat.</td>
-<td align="right"><a href="#onchat"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onchat"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onConnect(Player)</td>
@@ -1065,102 +1067,102 @@
 <tr>
 <td>onExternalMessage(Table)</td>
 <td>Called when an external script editor (like <a href="../atom">Atom</a>) sends a message back to the game. Used for custom editor functionality.</td>
-<td align="right"><a href="#onexternalmessage"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onexternalmessage"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onFixedUpdate()</td>
 <td>Called <strong>every physics tick</strong> (90 times a second). This is a frame independent onUpdate().</td>
-<td align="right"><a href="#onfixedupdate"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onfixedupdate"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onLoad(String save_state)</td>
 <td>Called when a game save is finished loading every Object. It is where most setup code will go.</td>
-<td align="right"><a href="#onload"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onload"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onObjectDestroy(Object dying_object)</td>
 <td>Called whenever any object is destroyed.</td>
-<td align="right"><a href="#onobjectdestroy"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onobjectdestroy"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onObjectDrop(string player_color, Object dropped_object)</td>
 <td>Called whenever any object is dropped by a player.</td>
-<td align="right"><a href="#onobjectdrop"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onobjectdrop"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onObjectEnterScriptingZone(Object zone, Object enter_object)</td>
 <td>Called when any object enters any scripting zone.</td>
-<td align="right"><a href="#onobjectenterscriptingzone"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onobjectenterscriptingzone"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onObjectLeaveScriptingZone(Object zone, Object enter_object)</td>
 <td>Called when any object leaves any scripting zone.</td>
-<td align="right"><a href="#onobjectleavescriptingzone"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onobjectleavescriptingzone"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onObjectLeaveContainer(Object container, Object leave_object)</td>
 <td>Called when any object leaves any container.</td>
-<td align="right"><a href="#onobjectleavecontainer"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onobjectleavecontainer"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onObjectLoopingEffect(Object loop_object, Int index)</td>
 <td>Called whenever the looping effect of an <a href="../assetbundle">AssetBundle</a> is activated.</td>
-<td align="right"><a href="#onobjectloopingeffect"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onobjectloopingeffect"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onObjectPickUp(String player_color, Object picked_up_object)</td>
 <td>Called whenever a Player picks up an Object.</td>
-<td align="right"><a href="#onobjectpickup"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onobjectpickup"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onObjectRandomize(Object randomize_object, String player_color)</td>
 <td>Called when an Object is randomized. Like when shuffling a deck or shaking dice.</td>
-<td align="right"><a href="#onobjectrandomize"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onobjectrandomize"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onObjectSpawn(Object spawn_object)</td>
 <td>Called when any Object is spawned/created.</td>
-<td align="right"><a href="#onobjectspawn"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onobjectspawn"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onObjectTriggerEffect(Object trigger_object, Int index)</td>
 <td>Called whenever the trigger effect of an <a href="../assetbundle">AssetBundle</a> is activated.</td>
-<td align="right"><a href="#onobjecttriggereffect"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onobjecttriggereffect"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onPlayerChangeColor(String <a href="../player">player_color</a>)</td>
 <td>Called when a player changes color or selects it for the first time. It also returns <code class="codehilite">&quot;Grey&quot;</code> if they disconnect.</td>
-<td align="right"><a href="#onplayerchangecolor"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onplayerchangecolor"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onPlayerTurnEnd(String <a href="../player">player_color_end</a>,String <a href="../player">player_color_next</a>)</td>
 <td>Called at the end of a player's turn when using the in-game turn system.</td>
-<td align="right"><a href="#onplayerturnend"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onplayerturnend"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onPlayerTurnStart(String <a href="../player">player_color_start</a>,String <a href="../player">player_color_prev</a>)</td>
 <td>Called at the start of a player's turn when using the in-game turn system.</td>
-<td align="right"><a href="#onplayerturnstart"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onplayerturnstart"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onSave()</td>
 <td>Called whenever your game is saved.</td>
-<td align="right"><a href="#onsave"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onsave"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onScriptingButtonDown(Int index, String <a href="../player">player_color</a>)</td>
 <td>Called when a scripting button (numpad by default) is pressed. The index range that is returned is 1-10.</td>
-<td align="right"><a href="#onscriptingbuttondown"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onscriptingbuttondown"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onScriptingButtonUp(Int index, String <a href="../player">player_color</a>)</td>
 <td>Called when a scripting button (numpad by default) is released. The index range that is returned is 1-10.</td>
-<td align="right"><a href="#onscriptingbuttonup"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onscriptingbuttonup"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>onUpdate()</td>
 <td>Called <strong>every frame</strong>.</td>
-<td align="right"><a href="#onupdate"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td align="right"><a href="#onupdate"><span class="i"></span></a></td>
 </tr>
 </tbody>
 </table>
@@ -1233,7 +1235,7 @@
 
 <hr />
 <h3 id="onfixedupdate">onFixedUpdate()<a class="headerlink" href="#onfixedupdate" title="Permanent link">&para;</a></h3>
-<p>Called <strong>every physics tick</strong> (90 times a second). This is a frame independent onUpdate(). | <a href="#onfixedupdate"><i class="material-icons" style="line-height:150%;">info_outline</i></a></p>
+<p>Called <strong>every physics tick</strong> (90 times a second). This is a frame independent onUpdate(). | <a href="#onfixedupdate"><span class="i"></span></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is a very expensive function and can easily slow/crash your game if missused. Use with caution.</p>

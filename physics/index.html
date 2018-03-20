@@ -62,6 +62,8 @@
     
       <link rel="stylesheet" href="../css/type_icons.css">
     
+      <link rel="stylesheet" href="../css/i_icons.css">
+    
       <link rel="stylesheet" href="../css/player_color_table.css">
     
     
@@ -639,31 +641,35 @@
 <tr>
 <th>Function Name</th>
 <th>Description</th>
-<th align="right"><i class="material-icons" style="line-height:90%;">info_outline</i></th>
+<th>Return</th>
+<th>&nbsp;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>cast(Table parameters)</td>
+<td>cast(<a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; parameters)</td>
 <td>Returns Table containing information on hit Objects.</td>
-<td align="right"><a href="#cast"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td><a href="../typeandclass"><span class="ret tab"></span></a></td>
+<td><a href="#cast"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>getGravity()</td>
 <td>Returns directional Vector of the direction gravity is pulling.</td>
-<td align="right"></td>
+<td><a href="../typeandclass"><span class="ret tab"></span></a></td>
+<td></td>
 </tr>
 <tr>
-<td>setGravity(Vector)</td>
+<td>setGravity(<a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; Vector)</td>
 <td>Sets the direction gravity gravity pulls.</td>
-<td align="right"></td>
+<td><a href="../typeandclass"><span class="ret boo"></span></a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="function-details">Function Details<a class="headerlink" href="#function-details" title="Permanent link">&para;</a></h2>
 <h3 id="cast">cast(...)<a class="headerlink" href="#cast" title="Permanent link">&para;</a></h3>
-<p>Returns Table containing information on hit Objects. There are three kinds of casts:</p>
+<p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns Table containing information on hit Objects. There are three kinds of casts:</p>
 <table>
 <thead>
 <tr>
@@ -694,32 +700,32 @@
 <div class="admonition info">
 <p class="admonition-title">cast(Table parameters)</p>
 <ul>
-<li><strong>Table parameters</strong>: A Table of parameters used to guide the function.<ul>
-<li><strong>parameters.origin</strong>: A Vector of the starting point.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>parameters</strong>: A Table of parameters used to guide the function.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>parameters.origin</strong>: A Vector of the starting point.<ul>
 <li><span class="critic comment">Optional, defaults to {x=0, y=0, z=0}.</span></li>
 </ul>
 </li>
-<li><strong>parameters.direction</strong>: A directional Vector for the cast to move in.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>parameters.direction</strong>: A directional Vector for the cast to move in.<ul>
 <li><span class="critic comment">Optional, but cast is motionless without a direction.</span></li>
 </ul>
 </li>
-<li><strong>parameters.type</strong>: An Int of the type of cast. 1 = Ray, 2 = Sphere, 3= Box.<ul>
+<li><a href="../typeandclass"><span class="tag int"></span></a>&nbsp; <strong>parameters.type</strong>: The type of cast. 1 = Ray, 2 = Sphere, 3= Box.<ul>
 <li><span class="critic comment">Optional, defaults to 1.</span></li>
 </ul>
 </li>
-<li><strong>parameters.size</strong>: A Vector of the size of the cast. Sphere/Box only.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>parameters.size</strong>: A Vector of the size of the cast. Sphere/Box only.<ul>
 <li><span class="critic comment">Optional, defaults to {x=0, y=0, z=0}.</span></li>
 </ul>
 </li>
-<li><strong>parameters.orientation</strong>: A rotational Vector of the cast. Box only.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>parameters.orientation</strong>: A rotational Vector of the cast. Box only.<ul>
 <li><span class="critic comment">Optional, defaults to {x=0, y=0, z=0}.</span></li>
 </ul>
 </li>
-<li><strong>parameters.max_distance</strong>: A Float of how fast the cast will travel.<ul>
+<li><a href="../typeandclass"><span class="tag flo"></span></a>&nbsp; <strong>parameters.max_distance</strong>: How fast the cast will travel.<ul>
 <li><span class="critic comment">Optional, defaults to infinity. Won't move without direction.</span></li>
 </ul>
 </li>
-<li><strong>parameters.debug</strong>: A Bool for if the cast is visualized for the user.<ul>
+<li><a href="../typeandclass"><span class="tag boo"></span></a>&nbsp; <strong>parameters.debug</strong>: If the cast is visualized for the user.<ul>
 <li><span class="critic comment">Optional, defaults to false.</span></li>
 </ul>
 </li>
@@ -730,11 +736,11 @@
 <div class="admonition info">
 <p class="admonition-title">Returned Table of Hit Objects</p>
 <ul>
-<li><strong>Table</strong>: A numerically indexed Table, one entry for each hit Object. Entries are in the order of being hit.<ul>
-<li><strong>Vector point</strong>: A Vector of the position the cast impact.</li>
-<li><strong>Vector normal</strong>: A Vector of the surface normal of the impact point.</li>
-<li><strong>Float distance</strong>: A Float of the distance between cast origin and impact point.</li>
-<li><strong>Object hit_object</strong>: An Object reference to the object hit by the cast.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>table</strong>: A numerically indexed Table, one entry for each hit Object. Entries are in the order of being hit.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>table.point</strong>: A Vector of the position the cast impact.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>table.normal</strong>: A Vector of the surface normal of the impact point.</li>
+<li><a href="../typeandclass"><span class="tag flo"></span></a>&nbsp; <strong>table.distance</strong>: A Float of the distance between cast origin and impact point.</li>
+<li><a href="../typeandclass"><span class="tag obj"></span></a>&nbsp; <strong>table.hit_object</strong>: An Object reference to the object hit by the cast.</li>
 </ul>
 </li>
 </ul>

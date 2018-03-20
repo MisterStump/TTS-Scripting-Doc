@@ -62,6 +62,8 @@
     
       <link rel="stylesheet" href="../css/type_icons.css">
     
+      <link rel="stylesheet" href="../css/i_icons.css">
+    
       <link rel="stylesheet" href="../css/player_color_table.css">
     
     
@@ -670,7 +672,7 @@
 <tr>
 <td>paused</td>
 <td>If the clock timer is paused.</td>
-<td align="left">Bool</td>
+<td align="left"><a href="../typeandclass"><span class="tag boo"></span></a></td>
 </tr>
 </tbody>
 </table>
@@ -682,33 +684,39 @@
 <tr>
 <th>Function Name</th>
 <th>Description</th>
-<th align="right"><i class="material-icons" style="line-height:90%;">info_outline</i></th>
+<th>Return</th>
+<th align="right">&nbsp;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>getValue()</td>
-<td>Returns Int of the time in stopwatch or timer mode. Clock mode returns 0. This function acts the same as <a href="../object#getvalue">Object's getValue()</a>.</td>
+<td>Current time in stopwatch or timer mode. Clock mode returns 0. This function acts the same as <a href="../object#getvalue">Object's getValue()</a>.</td>
+<td><a href="../typeandclass"><span class="ret int"></span></a></td>
 <td align="right"></td>
 </tr>
 <tr>
 <td>pauseStart()</td>
-<td>Pauses/resumes a Clock in stopwatch or timer mode. Returns Bool.</td>
+<td>Pauses/resumes a Clock in stopwatch or timer mode.</td>
+<td><a href="../typeandclass"><span class="ret boo"></span></a></td>
 <td align="right"></td>
 </tr>
 <tr>
 <td>setValue(Int seconds)</td>
-<td>Switches clock to timer and sets countdown time. This function acts the same as <a href="../object#setvalue">Object's setValue()</a>. Returns Bool.</td>
-<td align="right"><a href="#setvalue"><i class="material-icons" style="line-height:150%;">info_outline</i></a></td>
+<td>Switches clock to timer and sets countdown time. This function acts the same as <a href="../object#setvalue">Object's setValue()</a>.</td>
+<td><a href="../typeandclass"><span class="ret boo"></span></a></td>
+<td align="right"><a href="#setvalue"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>showCurrentTime()</td>
-<td>Switches clock to display current time. It will clear any stopwatch or timer. Returns Bool.</td>
+<td>Switches clock to display current time. It will clear any stopwatch or timer.</td>
+<td><a href="../typeandclass"><span class="ret boo"></span></a></td>
 <td align="right"></td>
 </tr>
 <tr>
 <td>startStopwatch()</td>
-<td>Switches clock to stopwatch, setting time to 0. It will reset time if already in stopwatch mode. Returns Bool.</td>
+<td>Switches clock to stopwatch, setting time to 0. It will reset time if already in stopwatch mode.</td>
+<td><a href="../typeandclass"><span class="ret boo"></span></a></td>
 <td align="right"></td>
 </tr>
 </tbody>
@@ -716,14 +724,11 @@
 <hr />
 <h2 id="function-details">Function Details<a class="headerlink" href="#function-details" title="Permanent link">&para;</a></h2>
 <h3 id="setvalue">setValue(...)<a class="headerlink" href="#setvalue" title="Permanent link">&para;</a></h3>
-<p>Set the timer to display a number of seconds. This function acts the same as <a href="../object#setvalue">Object's setValue()</a>. If the Clock is not in timer mode, it will be switched. If it is in timer mode, it will be paused and the remaining time will be changed. This will not start the countdown on its own.</p>
-<blockquote>
-<p>Returns Bool</p>
-</blockquote>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Set the timer to display a number of seconds. This function acts the same as <a href="../object#setvalue">Object's setValue()</a>. If the Clock is not in timer mode, it will be switched. If it is in timer mode, it will be paused and the remaining time will be changed. This will not start the countdown on its own.</p>
 <div class="admonition info">
 <p class="admonition-title">setValue(Int seconds)</p>
 <ul>
-<li><strong>Int seconds</strong>: An Int of how many seconds will be counted down.</li>
+<li><a href="../typeandclass"><span class="tag int"></span></a>&nbsp; <strong>seconds</strong>: How many seconds will be counted down.</li>
 </ul>
 </div>
 <div class="codehilite"><pre><span></span><span class="n">self</span><span class="p">.</span><span class="n">Clock</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
