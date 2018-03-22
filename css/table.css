@@ -18,6 +18,11 @@
     white-space: nowrap;
 }
 
+/*Prevent break of function name in table*/
+.md-typeset table td:first-child {
+    font-family: 'Inconsolata', 'Monaco', 'Consolas', 'Courier New', 'Courier';
+}
+
 
 /*Nowrap on first row of tables
 html body div.md-container table tr td:first-child {

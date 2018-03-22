@@ -94,7 +94,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href=".." title="Tabletop Simulator Scripting Documentation" class="md-header-nav__button md-logo">
           
-            <img src="../img/Icon-Dice.png" width="24" height="24">
+            <img src="../img/TSIcon.png" width="24" height="24">
           
         </a>
       </div>
@@ -166,7 +166,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        <img src="../img/Icon-Dice.png" width="24" height="24">
+        <img src="../img/TSIcon.png" width="24" height="24">
       
     </span>
     Tabletop Simulator Scripting Documentation
@@ -912,7 +912,7 @@
 <th>Function Name</th>
 <th>Description</th>
 <th>Return</th>
-<th align="right">&nbsp;</th>
+<th>&nbsp;</th>
 </tr>
 </thead>
 <tbody>
@@ -920,97 +920,97 @@
 <td>attachCameraToObject(<a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; parameters)</td>
 <td>Makes a Player's camera follow an Object.</td>
 <td><a href="../typeandclass"><span class="ret boo"></span></a></td>
-<td align="right"><a href="#attachcameratoobject"><span class="i"></span></a></td>
+<td><a href="#attachcameratoobject"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>broadcast(<a href="../typeandclass"><span class="tag str"></span></a>&nbsp; message, <a href="../typeandclass"><span class="tag str"></span></a>&nbsp; Color)</td>
 <td>Print message on Player's screen and their game chat log.</td>
 <td><a href="../typeandclass"><span class="ret boo"></span></a></td>
-<td align="right"><a href="#broadcast"><span class="i"></span></a></td>
+<td><a href="#broadcast"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>changeColor(<a href="../typeandclass"><span class="tag str"></span></a>&nbsp; player_color)</td>
 <td>Changes player to this <a href="../player-color">Player Color</a>.</td>
 <td><a href="../typeandclass"><span class="ret boo"></span></a></td>
-<td align="right"><a href="#changecolor"><span class="i"></span></a></td>
+<td><a href="#changecolor"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>getHandCount()</td>
 <td>Returns the number of <a href="http://berserk-games.com/knowledgebase/hands/">hand zones</a> owned by this color.</td>
 <td><a href="../typeandclass"><span class="ret int"></span></a></td>
-<td align="right"></td>
+<td></td>
 </tr>
 <tr>
 <td>getHandObjects(<a href="../typeandclass"><span class="tag int"></span></a>&nbsp; hand_index)</td>
 <td>Returns a Table of Objects that are in this <a href="http://berserk-games.com/knowledgebase/hands/">hand zone</a>.</td>
 <td><a href="../typeandclass"><span class="ret tab"></span></a></td>
-<td align="right"><a href="#gethandobjects"><span class="i"></span></a></td>
+<td><a href="#gethandobjects"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>getHandTransform(<a href="../typeandclass"><span class="tag int"></span></a>&nbsp; hand_index)</td>
 <td>Returns a Table of data on this <a href="http://berserk-games.com/knowledgebase/hands/">hand zone</a>.</td>
 <td><a href="../typeandclass"><span class="ret tab"></span></a></td>
-<td align="right"><a href="#gethandtransform"><span class="i"></span></a></td>
+<td><a href="#gethandtransform"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>getHoldingObjects()</td>
 <td>Returns Table of Objects a Player is holding in their hand.</td>
 <td><a href="../typeandclass"><span class="ret tab"></span></a></td>
-<td align="right"></td>
+<td></td>
 </tr>
 <tr>
 <td>getHoverObject()</td>
 <td>Object that the Player's pointer is hovering over.</td>
 <td><a href="../typeandclass"><span class="ret obj"></span></a></td>
-<td align="right"></td>
+<td></td>
 </tr>
 <tr>
 <td>getPointerPosition()</td>
 <td>Returns the Vector of the Player's pointer coordinates.</td>
 <td><a href="../typeandclass"><span class="ret tab"></span></a></td>
-<td align="right"></td>
+<td></td>
 </tr>
 <tr>
 <td>getSelectedObjects()</td>
 <td>Returns Table of Objects that the Player has selected with an area selection.</td>
 <td><a href="../typeandclass"><span class="ret tab"></span></a></td>
-<td align="right"></td>
+<td></td>
 </tr>
 <tr>
 <td>kick()</td>
 <td>Kicks Player out of the room.</td>
 <td><a href="../typeandclass"><span class="ret boo"></span></a></td>
-<td align="right"></td>
+<td></td>
 </tr>
 <tr>
 <td>lookAt(<a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; parameters)</td>
 <td>Moves a Player's camera, forcing 3'rd person camera mode.</td>
 <td><a href="../typeandclass"><span class="ret boo"></span></a></td>
-<td align="right"><a href="#lookat"><span class="i"></span></a></td>
+<td><a href="#lookat"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>mute()</td>
 <td>Mutes or unmutes Player, preventing/allowing voice chat.</td>
 <td><a href="../typeandclass"><span class="ret boo"></span></a></td>
-<td align="right"></td>
+<td></td>
 </tr>
 <tr>
 <td>print(<a href="../typeandclass"><span class="tag str"></span></a>&nbsp; message, <a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; Color)</td>
 <td>Prints a message into the Player's game chat.</td>
 <td><a href="../typeandclass"><span class="ret boo"></span></a></td>
-<td align="right"><a href="#print"><span class="i"></span></a></td>
+<td><a href="#print"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>promote()</td>
 <td>Promotes/demotes a Player. Promoted players have access to most host privileges.</td>
 <td><a href="../typeandclass"><span class="ret boo"></span></a></td>
-<td align="right"></td>
+<td></td>
 </tr>
 <tr>
 <td>setHandTransform(<a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; parameters, <a href="../typeandclass"><span class="tag int"></span></a>&nbsp; hand_index)</td>
 <td>Sets transform elements of a hand zone.</td>
 <td><a href="../typeandclass"><span class="ret boo"></span></a></td>
-<td align="right"><a href="#sethandtransform"><span class="i"></span></a></td>
+<td><a href="#sethandtransform"><span class="i"></span></a></td>
 </tr>
 </tbody>
 </table>
@@ -1274,81 +1274,8 @@
 
 
 
-<!-- Application footer -->
-<footer class="md-footer">
-
-  <!-- Link to previous and/or next page -->
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-
-        <!-- Link to previous page -->
-        
-          <a href="../physics/"
-              title="Physics"
-              class="md-flex md-footer-nav__link md-footer-nav__link--prev"
-              rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back
-                    md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch
-                  md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Physics
-              </span>
-            </div>
-          </a>
-        
-
-        <!-- Link to next page -->
-        
-          <a href="../player-color/" title="Player Color"
-              class="md-flex md-footer-nav__link md-footer-nav__link--next"
-              rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch
-                  md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Player Color
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward
-                    md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
-  
-
-  <!-- Further information -->
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-
-      <!-- Copyright and theme information 
-      <div class="md-footer-copyright">
-        
-        powered by
-        <a href="http://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
-      </div>-->
-
-      <!-- Social links 
-      
-        
-      -->
-    </div>
-  </div>
-</footer>
+<!--This is empty because it is killing the default footer-->
+<!--Do not remove.-->
       
     </div>
     
