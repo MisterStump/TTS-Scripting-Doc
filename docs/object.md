@@ -13,28 +13,28 @@ Read Example = `isResting = self.resting` Write Example = `self.resting = true`
 
 Variable | Description | Type
 -- | -- | :--
-angular_drag | Angular drag. [Unity rigidbody property](https://docs.unity3d.com/Manual/class-Rigidbody.html). | Float
-auto_raise | If an object should be lifted above other objects to avoid collision when held by a player. | Bool
-bounciness | Bounciness, value of 0-1. [Unity physics material](https://docs.unity3d.com/Manual/class-PhysicMaterial.html). | Float
-drag | Drag. [Unity rigidbody property](https://docs.unity3d.com/Manual/class-Rigidbody.html). | Float
-dynamic_friction | Dynamic friction, value of 0-1. [Unity physics material](https://docs.unity3d.com/Manual/class-PhysicMaterial.html). | Float
-grid_projection | If grid lines can appear on the Object if visible grids are turned on. | Bool
-guid | The 6 character unique Object identifier within Tabletop Simulator. | String
-held_by_color | The Color of the Player that is holding the object. | String
-interactable | If an object can be interacted with by Players. Other object will still be able to interact with it. | Bool
-mass | Mass. [Unity rigidbody property](https://docs.unity3d.com/Manual/class-Rigidbody.html). | Float
-name | The Object's name. Read only, use `setName("")` to write to it. | String
-resting | If an Object is at rest. [Unity rigidbody property](https://docs.unity3d.com/412/Documentation/Components/RigidbodySleeping.html). | Bool
-script_code | The Lua Script on the Object. | String
-script_state | The saved data on the object. See [onSave()](event#onsave). | String
-static_friction | Static friction, value of 0-1. [Unity physics material](https://docs.unity3d.com/Manual/class-PhysicMaterial.html). | Float
-sticky | If other Objects on top of this one are also picked up when this Object is. | Bool
-tag | This object's type. Read only. | String
-tooltip | If the tooltip opens when a pointer hovers over the object. Tooltips display name and description. | Bool
-use_gravity | If gravity affects this object. | Bool
-use_grid | If snapping to grid is enabled or not. | Bool
-use_hands | If this object can be held in a hand zone. | Bool
-use_snap_points | If snap points are used or ignored. | Bool
+angular_drag | Angular drag. [Unity rigidbody property](https://docs.unity3d.com/Manual/class-Rigidbody.html). | [<span class="tag flo"></span>](typeandclass)
+auto_raise | If an object should be lifted above other objects to avoid collision when held by a player. | [<span class="tag boo"></span>](typeandclass)
+bounciness | Bounciness, value of 0-1. [Unity physics material](https://docs.unity3d.com/Manual/class-PhysicMaterial.html). | [<span class="tag flo"></span>](typeandclass)
+drag | Drag. [Unity rigidbody property](https://docs.unity3d.com/Manual/class-Rigidbody.html). | [<span class="tag flo"></span>](typeandclass)
+dynamic_friction | Dynamic friction, value of 0-1. [Unity physics material](https://docs.unity3d.com/Manual/class-PhysicMaterial.html). | [<span class="tag flo"></span>](typeandclass)
+grid_projection | If grid lines can appear on the Object if visible grids are turned on. | [<span class="tag boo"></span>](typeandclass)
+guid | The 6 character unique Object identifier within Tabletop Simulator. | [<span class="tag str"></span>](typeandclass)
+held_by_color | The Color of the Player that is holding the object. | [<span class="tag str"></span>](typeandclass)
+interactable | If an object can be interacted with by Players. Other object will still be able to interact with it. | [<span class="tag boo"></span>](typeandclass)
+mass | Mass. [Unity rigidbody property](https://docs.unity3d.com/Manual/class-Rigidbody.html). | [<span class="tag flo"></span>](typeandclass)
+name | The Object's name. Read only, use `setName("")` to write to it. | [<span class="tag str"></span>](typeandclass)
+resting | If an Object is at rest. [Unity rigidbody property](https://docs.unity3d.com/412/Documentation/Components/RigidbodySleeping.html). | [<span class="tag boo"></span>](typeandclass)
+script_code | The Lua Script on the Object. | [<span class="tag str"></span>](typeandclass)
+script_state | The saved data on the object. See [onSave()](event#onsave). | [<span class="tag str"></span>](typeandclass)
+static_friction | Static friction, value of 0-1. [Unity physics material](https://docs.unity3d.com/Manual/class-PhysicMaterial.html). | [<span class="tag flo"></span>](typeandclass)
+sticky | If other Objects on top of this one are also picked up when this Object is. | [<span class="tag boo"></span>](typeandclass)
+tag | This object's type. Read only. | [<span class="tag str"></span>](typeandclass)
+tooltip | If the tooltip opens when a pointer hovers over the object. Tooltips display name and description. | [<span class="tag boo"></span>](typeandclass)
+use_gravity | If gravity affects this object. | [<span class="tag boo"></span>](typeandclass)
+use_grid | If snapping to grid is enabled or not. | [<span class="tag boo"></span>](typeandclass)
+use_hands | If this object can be held in a hand zone. | [<span class="tag boo"></span>](typeandclass)
+use_snap_points | If snap points are used or ignored. | [<span class="tag boo"></span>](typeandclass)
 
 These member variables are classes of their own, and have their own member variables. Each one is for a special type of Object.
 
@@ -60,106 +60,106 @@ TextTool | A [TextTool](texttool), which is an in-game text display system.
 ###Transform Functions
 These functions handle the physical attributes of an Object: Position, Rotation, Scale, Bounds, Velocity. In other words, moving objects around as well as getting information on how they are moving.
 
-Function Name | Description | &nbsp; 
--- | -- | --:
-addForce(Vector, Int force_type) | Adds force to an object in a directional Vector. Returns Bool. | [<span class="i"></span>](#addforce)
-addTorque(Vector, Int force_type) | Adds torque to an object in a rotational Vector. Returns Bool. | [<span class="i"></span>](#addtorque)
-getAngularVelocity() | Returns a Vector of the current angular velocity. | 
-getBounds() | Returns a Table of Vector information describing the size of an object in Global terms. | [<span class="i"></span>](#getbounds)
-getBoundsNormalized() | Returns a Table of Vector information describing the size of an object in Global terms, as if it was rotated to {0,0,0}. | [<span class="i"></span>](#getboundsnormalized)
-getPosition() | Returns a Vector of the current world position. | 
-getRotation() | Returns a Vector of the current rotation. | 
-getScale() | Returns a Vector of the current scale. | [<span class="i"></span>](#getscale)
-getTransformForward() | Returns a Vector of the forward direction of this object. | [<span class="i"></span>](#gettransformforward)
-getTransformRight() | Returns a Vector of the right direction of this object. | [<span class="i"></span>](#gettransformright)
-getTransformUp() | Returns a Vector of the up direction of this object. | [<span class="i"></span>](#gettransformup)
-getVelocity() | Returns a Vector of the current velocity. | 
-isSmoothMoving() | Indicates if an object is traveling as part of a Smooth move. Smooth moving is performed by setPositionSmooth and setRotationSmooth. Returns Bool. | 
-positionToLocal(Vector) | Returns a Vector after converting a world Vector to a local Vector. | [<span class="i"></span>](#positiontolocal)
-positionToWorld(Vector) | Returns a Vector after converting a local Vector to a world Vector. | [<span class="i"></span>](#positiontoworld)
-rotate(Vector) | Rotates Object smoothly in the direction of the given Vector. Returns Bool. | 
-scale(Vector or Float) | Scales Object by a multiple. Returns Bool. | [<span class="i"></span>](#scale)
-setAngularVelocity(Vector) | Sets a Vector as the current angular velocity. Returns Bool. | 
-setPosition(Vector) | Instantly moves an Object to the given Vector. Returns Bool. | 
-setPositionSmooth(Vector, Bool collide, Bool fast) | Moves the Object smoothly to the given Vector. Returns Bool. | [<span class="i"></span>](#setpositionsmooth)
-setRotation(Vector) | Instantly rotates an Object to the given Vector. | 
-setRotationSmooth(Vector, Bool collide, Bool fast) | Rotates the Object smoothly to the given Vector. Returns Bool. | [<span class="i"></span>](#setrotationsmooth)
-setScale(Vector) | Sets a Vector as the current scale. Returns Bool. | 
-setVelocity(Vector) | Sets a Vector as the current velocity. Returns Bool. | 
-translate(Vector) | Smoothly moves Object by the given Vector offset. Returns Bool. | 
+Function Name | Description | Return | &nbsp; 
+-- | -- | -- | --
+addForce([<span class="tag tab"></span>](typeandclass) Vector, [<span class="tag int"></span>](typeandclass) force_type) | Adds force to an object in a directional Vector. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#addforce)
+addTorque([<span class="tag tab"></span>](typeandclass) Vector, [<span class="tag int"></span>](typeandclass) force_type) | Adds torque to an object in a rotational Vector. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#addtorque)
+getAngularVelocity() | Returns a Vector of the current angular velocity. | [<span class="ret tab"></span>](typeandclass)
+getBounds() | Returns a Vector describing the size of an object in Global terms. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#getbounds)
+getBoundsNormalized() | Returns a Vector describing the size of an object in Global terms, as if it was rotated to {0,0,0}. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#getboundsnormalized)
+getPosition() | Returns a Vector of the current world position. | [<span class="ret tab"></span>](typeandclass) 
+getRotation() | Returns a Vector of the current rotation. | [<span class="ret tab"></span>](typeandclass)
+getScale() | Returns a Vector of the current scale. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#getscale)
+getTransformForward() | Returns a Vector of the forward direction of this object. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#gettransformforward)
+getTransformRight() | Returns a Vector of the right direction of this object. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#gettransformright)
+getTransformUp() | Returns a Vector of the up direction of this object. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#gettransformup)
+getVelocity() | Returns a Vector of the current velocity. | [<span class="ret tab"></span>](typeandclass) | 
+isSmoothMoving() | Indicates if an object is traveling as part of a Smooth move. Smooth moving is performed by setPositionSmooth and setRotationSmooth. | [<span class="ret boo"></span>](typeandclass) | 
+positionToLocal([<span class="tag tab"></span>](typeandclass) Vector) | Returns a Vector after converting a world Vector to a local Vector. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#positiontolocal)
+positionToWorld([<span class="tag tab"></span>](typeandclass) Vector) | Returns a Vector after converting a local Vector to a world Vector. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#positiontoworld)
+rotate([<span class="tag tab"></span>](typeandclass) Vector) | Rotates Object smoothly in the direction of the given Vector. | [<span class="ret boo"></span>](typeandclass) | 
+scale([<span class="tag tab"></span>](typeandclass) Vector or [<span class="tag flo"></span>](typeandclass)) | Scales Object by a multiple. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#scale)
+setAngularVelocity([<span class="tag tab"></span>](typeandclass) Vector) | Sets a Vector as the current angular velocity. | [<span class="ret boo"></span>](typeandclass) | 
+setPosition([<span class="tag tab"></span>](typeandclass) Vector) | Instantly moves an Object to the given Vector. | [<span class="ret boo"></span>](typeandclass) | 
+setPositionSmooth([<span class="tag tab"></span>](typeandclass) Vector, [<span class="tag boo"></span>](typeandclass) collide, [<span class="tag boo"></span>](typeandclass) fast) | Moves the Object smoothly to the given Vector. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#setpositionsmooth)
+setRotation([<span class="tag tab"></span>](typeandclass) Vector) | Instantly rotates an Object to the given Vector. | [<span class="ret boo"></span>](typeandclass) | 
+setRotationSmooth([<span class="tag tab"></span>](typeandclass) Vector, [<span class="tag boo"></span>](typeandclass) collide, [<span class="tag boo"></span>](typeandclass) fast) | Rotates the Object smoothly to the given Vector. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#setrotationsmooth)
+setScale([<span class="tag tab"></span>](typeandclass) Vector) | Sets a Vector as the current scale. | [<span class="ret boo"></span>](typeandclass) | 
+setVelocity([<span class="tag tab"></span>](typeandclass) Vector) | Sets a Vector as the current velocity. | [<span class="ret boo"></span>](typeandclass) | 
+translate([<span class="tag tab"></span>](typeandclass) Vector) | Smoothly moves Object by the given Vector offset. | [<span class="ret boo"></span>](typeandclass) | 
 
 
 
 ###UI Functions
 These functions allow for the creation/editing/removal of functional buttons and text inputs which themselves trigger code within your scripts.
 
-Function Name | Description | &nbsp; 
--- | -- | --:
-clearButtons() | Removes all scripted buttons. Returns Bool. | 
-clearInputs() | Removes all scripted inputs. Returns Bool. | 
-createButton(Table parameters) | Creates a scripted button attached to the Object. Returns Bool. | [<span class="i"></span>](#createbutton)
-createInput(Table parameters) | Creates a scripted input attached to the Object. Returns Bool. | [<span class="i"></span>](#createinput)
-editButton(Table parameters) | Modify an existing button. Returns Bool. | [<span class="i"></span>](#editbutton)
-editInput(Table parameters) | Modify an existing input. Returns Bool. | [<span class="i"></span>](#editinput)
-getButtons() | Returns a Table of all buttons on this Object. | [<span class="i"></span>](#getbuttons)
-getInputs() | Returns a Table of all inputs on this Object. | [<span class="i"></span>](#getinputs)
-removeButton(Int index) | Removes a specific button. Returns Bool. | [<span class="i"></span>](#removebutton)
-removeInput(Int index) | Removes a specific button. Returns Bool. | [<span class="i"></span>](#removeinput)
+Function Name | Description | Return | &nbsp; 
+-- | -- | -- | --
+clearButtons() | Removes all scripted buttons. | [<span class="ret boo"></span>](typeandclass) | 
+clearInputs() | Removes all scripted inputs. | [<span class="ret boo"></span>](typeandclass) | 
+createButton([<span class="tag tab"></span>](typeandclass) parameters) | Creates a scripted button attached to the Object. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#createbutton)
+createInput([<span class="tag tab"></span>](typeandclass) parameters) | Creates a scripted input attached to the Object. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#createinput)
+editButton([<span class="tag tab"></span>](typeandclass) parameters) | Modify an existing button. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#editbutton)
+editInput([<span class="tag tab"></span>](typeandclass) parameters) | Modify an existing input. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#editinput)
+getButtons() | Returns a Table of all buttons on this Object. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#getbuttons)
+getInputs() | Returns a Table of all inputs on this Object. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#getinputs)
+removeButton([<span class="tag int"></span>](typeandclass) index) | Removes a specific button. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#removebutton)
+removeInput([<span class="tag int"></span>](typeandclass) index) | Removes a specific button. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#removeinput)
 
 
 
 ###Get Functions
 These functions obtain information from an object.
 
-Function Name | Description | &nbsp; 
--- | -- | --:
-getColorTint() | Returns Color tint. | 
-getCustomObject() | Returns a Table with the Custom Object information of a Custom Object. | [<span class="i"></span>](#getcustomobject)
-getLock() | Returns a Bool of the lock status. True is locked. | 
-getObjects() | Returns a Table of objects in the script zone/bag/deck. | [<span class="i"></span>](#getobjects)
-getQuantity() | Returns an Int of how many objects are in the stack. Returns -1 if the Object is not a stack. | 
-getRotationValues() | Returns a Table of rotation values. Rotation values are used to give value to different rotations (like dice). | [<span class="i"></span>](#getrotationvalues)
-getStateId() | Returns an Int for the current [state](http://berserk-games.com/knowledgebase/creating-states/) ID (index) an object is it. Returns -1 if there are no other states. State ids (indexes) start at 1. | 
-getStates() | Returns a Table of information on the [states](http://berserk-games.com/knowledgebase/creating-states/) of an Object. | [<span class="i"></span>](#getstates)
-getValue() | Returns an Int as the value. What the value represents depends on what type of Object this function is used on. | [<span class="i"></span>](#getvalue)
+Function Name | Description | Return | &nbsp; 
+-- | -- | -- | --
+getColorTint() | Returns Color tint. | [<span class="ret tab"></span>](typeandclass) | 
+getCustomObject() | Returns a Table with the Custom Object information of a Custom Object. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#getcustomobject)
+getLock() | Returns bool representing if the Object is locked. | [<span class="ret boo"></span>](typeandclass) | 
+getObjects() | Returns a Table of Objects in the script zone/bag/deck. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#getobjects)
+getQuantity() | Returns an Int of how many objects are in the stack. Returns -1 if the Object is not a stack. | [<span class="ret int"></span>](typeandclass) | 
+getRotationValues() | Returns a Table of rotation values. Rotation values are used to give value to different rotations (like dice). | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#getrotationvalues)
+getStateId() | Returns the current [state](http://berserk-games.com/knowledgebase/creating-states/) ID (index) an object is in. Returns -1 if there are no other states. State ids (indexes) start at 1. | [<span class="ret int"></span>](typeandclass) | 
+getStates() | Returns a Table of information on the [states](http://berserk-games.com/knowledgebase/creating-states/) of an Object. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#getstates)
+getValue() | Returns an Int as the value. What the value represents depends on what type of Object this function is used on. | [<span class="ret int"></span>](typeandclass) | [<span class="i"></span>](#getvalue)
 
 
 
 ###Set Functions
 These functions apply action to an object. They take some property in order to work.
 
-Function Name | Description | &nbsp; 
--- | -- | --:
-setColorTint(Color) | Sets the Color tint. Returns Bool. | 
-setCustomObject(Table parameters) | Sets a custom Object's properties. Returns Bool. | [<span class="i"></span>](#setcustomobject)
-setLock(Bool lock) | Sets if an object is locked in place. Returns Bool. | 
-setRotationValues(Table rotation_values) | Sets rotation values of an object. Rotation values are used to give value to different rotations (like dice). Returns Bool. | [<span class="i"></span>](#setrotationvalues)
-setState(Int state_id) | Returns Object of set [state](http://berserk-games.com/knowledgebase/creating-states/) of an Object. State ids (indexes) start at 1. | 
-setValue(Var value) | Sets an Int as the value. What the value represents depends on what type of Object it is. Returns Bool. | [<span class="i"></span>](#setvalue)
+Function Name | Description | Return | &nbsp; 
+-- | -- | -- | --
+setColorTint([<span class="tag tab"></span>](typeandclass) Color) | Sets the Color tint. | [<span class="ret boo"></span>](typeandclass) | 
+setCustomObject([<span class="tag tab"></span>](typeandclass) parameters) | Sets a custom Object's properties. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#setcustomobject)
+setLock([<span class="tag boo"></span>](typeandclass) lock) | Sets if an object is locked in place. | [<span class="ret boo"></span>](typeandclass) | 
+setRotationValues([<span class="tag tab"></span>](typeandclass) rotation_values) | Sets rotation values of an object. Rotation values are used to give value to different rotations (like dice). | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#setrotationvalues)
+setState([<span class="tag int"></span>](typeandclass) state_id) | Sets [state](http://berserk-games.com/knowledgebase/creating-states/) of an Object. State ids (indexes) start at 1. | [<span class="ret obj"></span>](typeandclass) | 
+setValue([<span class="tag var"></span>](typeandclass) value) | Sets an Int as the value. What the value represents depends on what type of Object it is. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#setvalue)
 
 
 
 ###Action Function
 These functions perform general actions on objects and do not require any input parameters.
 
-Function Name | Description | &nbsp; 
--- | -- | --:
-call(String func_name,Table func_params) | Used to call a Lua function on this Object. Returns Var. | [<span class="i"></span>](#call)
-flip() | Flip Object over. Returns Bool. | 
-clone(Table parameters) | Copy/Paste this Object, returns a reference to the new Object. | [<span class="i"></span>](#clone)
-cut() | Cuts (splits in half) a deck or stack Object. | 
-deal(Int number,String player_color, Int index) | Deals Objects. Will deal from decks/bags/stacks/individual items. Returns Object dealt. | [<span class="i"></span>](#deal)
-dealToColorWithOffset(Vector, Bool flip, String player_color) | Deals from a deck to a position relative to the hand zone. Returns Object dealt. | [<span class="i"></span>](#dealtocolorwithoffset)
-destruct() | Destroys Object. Allows for `self.destruct()`. Returns Bool. | 
-highlightOn(Color, Float duration) | Creates a highlight around an Object. Returns Bool. | 
-highlightOff(Color) | Removes a highlight from around an Object. Returns Bool. |
-putObject(Object put_object) | Places an object into a container (chip stacks/bags/decks). Returns Bool. | [<span class="i"></span>](#putobject)
-randomize() | Shuffles deck/bag, rolls dice/coin, lifts other objects into the air. Same as pressing `R` by default. Returns Bool. | 
-reload() | Returns Object reference of itself after it respawns itself. | [<span class="i"></span>](#reload)
-roll() | Rolls dice/coins. Returns Bool. | 
-shuffle() | Shuffles/shakes up contents of a deck or bag. Returns Bool. |
-shuffleStates() | Returns an Object reference to a new [state](http://berserk-games.com/knowledgebase/creating-states/) after randomly selecting and changing to one. | 
-takeObject(Table parameters) | Returns an Object reference of Object taken from a container (bag/deck/chip stack) and placed into the world. | [<span class="i"></span>](#takeobject)
+Function Name | Description | Return | &nbsp; 
+-- | -- | -- | --
+call(String func_name,Table func_params) | Used to call a Lua function on this Object. | [<span class="ret var"></span>](typeandclass) | [<span class="i"></span>](#call)
+flip() | Flip Object over. | [<span class="ret boo"></span>](typeandclass) | 
+clone(Table parameters) | Copy/Paste this Object, returning a reference to the new Object. | [<span class="ret obj"></span>](typeandclass) | [<span class="i"></span>](#clone)
+cut() | Cuts (splits in half) a deck or stack Object. | [<span class="ret boo"></span>](typeandclass) | 
+deal(Int number,String player_color, Int index) | Deals Objects. Will deal from decks/bags/stacks/individual items. | [<span class="ret obj"></span>](typeandclass) | [<span class="i"></span>](#deal)
+dealToColorWithOffset(Vector, Bool flip, String player_color) | Deals from a deck to a position relative to the hand zone. | [<span class="ret obj"></span>](typeandclass) | [<span class="i"></span>](#dealtocolorwithoffset)
+destruct() | Destroys Object. Allows for `self.destruct()`. | [<span class="ret boo"></span>](typeandclass) | 
+highlightOn(Color, Float duration) | Creates a highlight around an Object. | [<span class="ret boo"></span>](typeandclass) | 
+highlightOff(Color) | Removes a highlight from around an Object. | [<span class="ret boo"></span>](typeandclass) |
+putObject(Object put_object) | Places an object into a container (chip stacks/bags/decks). | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#putobject)
+randomize() | Shuffles deck/bag, rolls dice/coin, lifts other objects into the air. Same as pressing `R` by default. | [<span class="ret boo"></span>](typeandclass) | 
+reload() | Returns Object reference of itself after it respawns itself. | [<span class="ret obj"></span>](typeandclass) | [<span class="i"></span>](#reload)
+roll() | Rolls dice/coins. | [<span class="ret boo"></span>](typeandclass) | 
+shuffle() | Shuffles/shakes up contents of a deck or bag. | [<span class="ret boo"></span>](typeandclass) |
+shuffleStates() | Returns an Object reference to a new [state](http://berserk-games.com/knowledgebase/creating-states/) after randomly selecting and changing to one. | [<span class="ret obj"></span>](typeandclass) | 
+takeObject(Table parameters) | Returns an Object reference of Object taken from a container (bag/deck/chip stack) and placed into the world. | [<span class="ret obj"></span>](typeandclass) | [<span class="i"></span>](#takeobject)
 
 ---
 

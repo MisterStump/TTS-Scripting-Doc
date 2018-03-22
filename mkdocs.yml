@@ -4,7 +4,7 @@ theme:
   palette:
     primary: 'indigo'
     accent: 'indigo'
-  logo: 'img/Icon-Dice.png'
+  logo: 'img/TSIcon.png'
   favicon: 'img/Icon-Dice.png'
   custom_dir: 'theme'
 extra_css:

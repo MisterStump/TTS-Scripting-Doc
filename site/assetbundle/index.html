@@ -94,7 +94,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href=".." title="Tabletop Simulator Scripting Documentation" class="md-header-nav__button md-logo">
           
-            <img src="../img/Icon-Dice.png" width="24" height="24">
+            <img src="../img/TSIcon.png" width="24" height="24">
           
         </a>
       </div>
@@ -166,7 +166,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        <img src="../img/Icon-Dice.png" width="24" height="24">
+        <img src="../img/TSIcon.png" width="24" height="24">
       
     </span>
     Tabletop Simulator Scripting Documentation
@@ -384,13 +384,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#getloopingeffectindex" title="getLoopingEffectIndex()" class="md-nav__link">
-    getLoopingEffectIndex()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#getloopingeffects" title="getLoopingEffects()" class="md-nav__link">
     getLoopingEffects()
   </a>
@@ -400,20 +393,6 @@
           <li class="md-nav__item">
   <a href="#gettriggereffects" title="getTriggerEffects()" class="md-nav__link">
     getTriggerEffects()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#playloopingeffect" title="playLoopingEffect(...)" class="md-nav__link">
-    playLoopingEffect(...)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#playtriggereffect" title="playTriggerEffect(...)" class="md-nav__link">
-    playTriggerEffect(...)
   </a>
   
 </li>
@@ -630,13 +609,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#getloopingeffectindex" title="getLoopingEffectIndex()" class="md-nav__link">
-    getLoopingEffectIndex()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#getloopingeffects" title="getLoopingEffects()" class="md-nav__link">
     getLoopingEffects()
   </a>
@@ -646,20 +618,6 @@
           <li class="md-nav__item">
   <a href="#gettriggereffects" title="getTriggerEffects()" class="md-nav__link">
     getTriggerEffects()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#playloopingeffect" title="playLoopingEffect(...)" class="md-nav__link">
-    playLoopingEffect(...)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#playtriggereffect" title="playTriggerEffect(...)" class="md-nav__link">
-    playTriggerEffect(...)
   </a>
   
 </li>
@@ -688,7 +646,7 @@
                 
                   <h1>AssetBundle</h1>
                 
-                <p>AssetBundle is a special <a href="../object">Object</a> type that has access to assetbundle related functions like looping and trigger effects. </p>
+                <p>AssetBundle is a special <a href="../object">Object</a> type that has access to <a href="http://berserk-games.com/knowledgebase/assetbundles/">custom AssetBundle</a> related functions like looping and trigger effects. </p>
 <p>Example Usage: <code class="codehilite">self.AssetBundle.getLoopingEffects()</code></p>
 <h2 id="function-summary">Function Summary<a class="headerlink" href="#function-summary" title="Permanent link">&para;</a></h2>
 <h3 id="object-functions">Object Functions<a class="headerlink" href="#object-functions" title="Permanent link">&para;</a></h3>
@@ -697,41 +655,47 @@
 <tr>
 <th>Function Name</th>
 <th>Description</th>
+<th>Return</th>
+<th>&nbsp;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>getLoopingEffectIndex()</td>
-<td><a href="#getloopingeffectindex">Returns the index of the currently looping effect.</a></td>
+<td>Index of the currently looping effect. Indexs starts at 0.</td>
+<td><a href="../typeandclass"><span class="ret int"></span></a></td>
+<td></td>
 </tr>
 <tr>
 <td>getLoopingEffects()</td>
-<td><a href="#getloopingeffects">Returns a Table with the keys "index" and "name" for each looping effect.</a></td>
+<td>Returns a Table with the keys "index" and "name" for each looping effect.</td>
+<td><a href="../typeandclass"><span class="ret tab"></span></a></td>
+<td><a href="#getloopingeffects"><span class="i"></span></a></td>
 </tr>
 <tr>
 <td>getTriggerEffects()</td>
-<td><a href="#gettriggereffects">Returns a Table with the keys "index" and "name" for each trigger effect.</a></td>
+<td>Returns a Table with the keys "index" and "name" for each trigger effect.</td>
+<td><a href="../typeandclass"><span class="ret tab"></span></a></td>
+<td><a href="#gettriggereffects"><span class="i"></span></a></td>
 </tr>
 <tr>
-<td>playLoopingEffect(Int index)</td>
-<td><a href="#playloopingeffect">Starts playing a looping effect. Index starts at 0.</a></td>
+<td>playLoopingEffect(<a href="../typeandclass"><span class="tag int"></span></a>&nbsp; index)</td>
+<td>Starts playing a looping effect. Indexs starts at 0.</td>
+<td><a href="../typeandclass"><span class="ret nil"></span></a></td>
+<td></td>
 </tr>
 <tr>
-<td>playTriggerEffect(Int index)</td>
-<td><a href="#playtriggereffect">Starts playing a trigger effect. Index starts at 0.</a></td>
+<td>playTriggerEffect(<a href="../typeandclass"><span class="tag int"></span></a>&nbsp; index)</td>
+<td>Starts playing a trigger effect. Indexs starts at 0.</td>
+<td><a href="../typeandclass"><span class="ret nil"></span></a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="function-details">Function Details<a class="headerlink" href="#function-details" title="Permanent link">&para;</a></h2>
-<h3 id="getloopingeffectindex">getLoopingEffectIndex()<a class="headerlink" href="#getloopingeffectindex" title="Permanent link">&para;</a></h3>
-<p>Returns the <code class="codehilite">int</code> of the index of the currently looping effect.</p>
-<div class="codehilite"><pre><span></span>    <span class="n">index</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">getLoopingEffectIndex</span><span class="p">()</span>
-</pre></div>
-
-<hr />
 <h3 id="getloopingeffects">getLoopingEffects()<a class="headerlink" href="#getloopingeffects" title="Permanent link">&para;</a></h3>
-<p>Returns a <code class="codehilite">table</code> with the keys "index" and "name" for each looping effect.</p>
+<p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns a Table with the keys "index" and "name" for each looping effect.</p>
 <p><div class="codehilite"><pre><span></span>    <span class="c1">--Example usage</span>
     <span class="n">effectTable</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">getLoopingEffects</span><span class="p">()</span>
 </pre></div>
@@ -743,7 +707,7 @@
 </pre></div></p>
 <hr />
 <h3 id="gettriggereffects">getTriggerEffects()<a class="headerlink" href="#gettriggereffects" title="Permanent link">&para;</a></h3>
-<p>Returns a <code class="codehilite">table</code> with the keys "index" and "name" for each trigger effect.</p>
+<p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns a Table with the keys "index" and "name" for each trigger effect.</p>
 <p><div class="codehilite"><pre><span></span>    <span class="c1">--Example usage</span>
     <span class="n">effectTable</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">getTriggerEffects</span><span class="p">()</span>
 </pre></div>
@@ -753,31 +717,6 @@
         <span class="p">{</span><span class="n">index</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Effect Name 2&quot;</span><span class="p">},</span>
     <span class="p">}</span>
 </pre></div></p>
-<hr />
-<h3 id="playloopingeffect">playLoopingEffect(...)<a class="headerlink" href="#playloopingeffect" title="Permanent link">&para;</a></h3>
-<p>Starts playing a looping effect. Indexes for AssetBundles start at 0.</p>
-<div class="admonition info">
-<p class="admonition-title">playLoopingEffect(Int index)</p>
-<ul>
-<li><strong>Int index</strong>: Numeric index for the effect.</li>
-</ul>
-</div>
-<div class="codehilite"><pre><span></span>    <span class="n">self</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">playLoopingEffect</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-
-<hr />
-<h3 id="playtriggereffect">playTriggerEffect(...)<a class="headerlink" href="#playtriggereffect" title="Permanent link">&para;</a></h3>
-<p>Starts playing a trigger effect. Indexes for AssetBundles start at 0.</p>
-<div class="admonition info">
-<p class="admonition-title">playTriggerEffect(Int index)</p>
-<ul>
-<li><strong>Int index</strong>: Numeric index for the effect.</li>
-</ul>
-</div>
-<div class="codehilite"><pre><span></span>    <span class="n">self</span><span class="p">.</span><span class="n">AssetBundle</span><span class="p">.</span><span class="n">playTriggerEffect</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-
-<hr />
                 
                   
                 
@@ -814,81 +753,8 @@
 
 
 
-<!-- Application footer -->
-<footer class="md-footer">
-
-  <!-- Link to previous and/or next page -->
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-
-        <!-- Link to previous page -->
-        
-          <a href="../object/"
-              title="Object"
-              class="md-flex md-footer-nav__link md-footer-nav__link--prev"
-              rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back
-                    md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch
-                  md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Object
-              </span>
-            </div>
-          </a>
-        
-
-        <!-- Link to next page -->
-        
-          <a href="../clock/" title="Clock"
-              class="md-flex md-footer-nav__link md-footer-nav__link--next"
-              rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch
-                  md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Clock
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward
-                    md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
-  
-
-  <!-- Further information -->
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-
-      <!-- Copyright and theme information 
-      <div class="md-footer-copyright">
-        
-        powered by
-        <a href="http://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
-      </div>-->
-
-      <!-- Social links 
-      
-        
-      -->
-    </div>
-  </div>
-</footer>
+<!--This is empty because it is killing the default footer-->
+<!--Do not remove.-->
       
     </div>
     

@@ -27,7 +27,7 @@ Team | The team of the player.<br>Options: `"None", "Clubs", "Diamonds", "Hearts
 ###Class Functions
 
 Function Name | Description | Return | &nbsp; 
--- | -- | -- | --:
+-- | -- | -- | --
 attachCameraToObject([<span class="tag tab"></span>](typeandclass)&nbsp; parameters) | Makes a Player's camera follow an Object. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#attachcameratoobject)
 broadcast([<span class="tag str"></span>](typeandclass)&nbsp; message, [<span class="tag str"></span>](typeandclass)&nbsp; Color) | Print message on Player's screen and their game chat log. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#broadcast)
 changeColor([<span class="tag str"></span>](typeandclass)&nbsp; player_color) | Changes player to this [Player Color](player-color). | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#changecolor)

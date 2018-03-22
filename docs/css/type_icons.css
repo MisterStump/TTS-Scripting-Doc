@@ -1,9 +1,10 @@
 /*General Icon Formatting, used by all tag type icons*/
 .tag {
+    font-family: 'Inconsolata', 'Monaco', 'Consolas', 'Courier New', 'Courier';
     /*background-color:rgba(1, 0, 0, 0.2);*/
     font-weight: normal;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     display: inline-block;
     /*border-radius: 6px;
     padding: 1px 4px;
@@ -16,7 +17,7 @@
     
     word-break: normal;
 
-    width: 42px;
+    width: 45px;
     line-height: 1;
 }
 .tag:hover {
@@ -25,6 +26,7 @@
 
 /*General Return Formatting, used by all return type icons*/
 .ret {
+    font-family: 'Inconsolata', 'Monaco', 'Consolas', 'Courier New', 'Courier';
     /*background-color:rgba(1, 0, 0, 0.2);*/
     font-style: italic;
     text-align: center;
@@ -44,7 +46,7 @@
 
 
     float: left;
-    width: 40px;
+    width: 45px;
     /*Squeezes lines together vertically*/
     line-height: 1;
 }
@@ -129,7 +131,7 @@
     background-color: #37474f;*/
 }
 .obj:after {
-    content: "object";
+    content: "obj";
 }
 
 /*Var*/

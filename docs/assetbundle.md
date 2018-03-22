@@ -1,4 +1,4 @@
-AssetBundle is a special [Object](object) type that has access to assetbundle related functions like looping and trigger effects. 
+AssetBundle is a special [Object](object) type that has access to [custom AssetBundle](http://berserk-games.com/knowledgebase/assetbundles/) related functions like looping and trigger effects. 
 
 Example Usage: `self.AssetBundle.getLoopingEffects()`
 
@@ -6,32 +6,21 @@ Example Usage: `self.AssetBundle.getLoopingEffects()`
 
 ###Object Functions
 
-Function Name | Description
--- | --
-getLoopingEffectIndex()  |  [Returns the index of the currently looping effect.](#getloopingeffectindex)
-getLoopingEffects()  |  [Returns a Table with the keys "index" and "name" for each looping effect.](#getloopingeffects)
-getTriggerEffects()  |  [Returns a Table with the keys "index" and "name" for each trigger effect.](#gettriggereffects)
-playLoopingEffect(Int index)  |  [Starts playing a looping effect. Index starts at 0.](#playloopingeffect)
-playTriggerEffect(Int index)  |  [Starts playing a trigger effect. Index starts at 0.](#playtriggereffect)
+Function Name | Description | Return | &nbsp;
+-- | -- | -- | --
+getLoopingEffectIndex()  |  Index of the currently looping effect. Indexs starts at 0. | [<span class="ret int"></span>](typeandclass) 
+getLoopingEffects()  |  Returns a Table with the keys "index" and "name" for each looping effect. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#getloopingeffects)
+getTriggerEffects()  |  Returns a Table with the keys "index" and "name" for each trigger effect. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#gettriggereffects)
+playLoopingEffect([<span class="tag int"></span>](typeandclass)&nbsp; index)  |  Starts playing a looping effect. Indexs starts at 0. | [<span class="ret nil"></span>](typeandclass) | 
+playTriggerEffect([<span class="tag int"></span>](typeandclass)&nbsp; index)  |  Starts playing a trigger effect. Indexs starts at 0. | [<span class="ret nil"></span>](typeandclass) | 
 
 ---
 
 ##Function Details
 
-###getLoopingEffectIndex()
-
-Returns the `int` of the index of the currently looping effect.
-
-```Lua
-	index = self.AssetBundle.getLoopingEffectIndex()
-```
-
----
-
-
 ###getLoopingEffects()
 
-Returns a `table` with the keys "index" and "name" for each looping effect.
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns a Table with the keys "index" and "name" for each looping effect.
 
 ``` Lua
 	--Example usage
@@ -50,8 +39,7 @@ Returns a `table` with the keys "index" and "name" for each looping effect.
 
 ###getTriggerEffects()
 
-
-Returns a `table` with the keys "index" and "name" for each trigger effect.
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns a Table with the keys "index" and "name" for each trigger effect.
 
 ``` Lua
 	--Example usage
@@ -64,34 +52,3 @@ Returns a `table` with the keys "index" and "name" for each trigger effect.
 		{index=1, name="Effect Name 2"},
 	}
 ```
-
----
-
-
-###playLoopingEffect(...)
-
-Starts playing a looping effect. Indexes for AssetBundles start at 0.
-
-!!!info "playLoopingEffect(Int index)"
-	* **Int index**: Numeric index for the effect.
-
-``` Lua
-	self.AssetBundle.playLoopingEffect(0)
-```
-
----
-	
-
-###playTriggerEffect(...)
-
-Starts playing a trigger effect. Indexes for AssetBundles start at 0.
-
-!!!info "playTriggerEffect(Int index)"
-	* **Int index**: Numeric index for the effect.
-
-
-``` Lua
-	self.AssetBundle.playTriggerEffect(0)
-```
-
----
