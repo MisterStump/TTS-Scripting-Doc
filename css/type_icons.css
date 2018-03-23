@@ -49,6 +49,8 @@
     width: 45px;
     /*Squeezes lines together vertically*/
     line-height: 1;
+    
+    word-break: keep-all;
 }
 .ret:hover {
     opacity: 0.75;
