@@ -1996,12 +1996,12 @@
 <h2 id="function-details">Function Details<a class="headerlink" href="#function-details" title="Permanent link">&para;</a></h2>
 <h3 id="transform-function-details">Transform Function Details<a class="headerlink" href="#transform-function-details" title="Permanent link">&para;</a></h3>
 <h4 id="addforce">addForce(...)<a class="headerlink" href="#addforce" title="Permanent link">&para;</a></h4>
-<p>Adds force to an object in a directional Vector.</p>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Adds force to an object in a directional Vector.</p>
 <div class="admonition info">
-<p class="admonition-title">addForce(Vector, Int force_type)</p>
+<p class="admonition-title">addForce(<a href="../typeandclass"><span class="tag tab"></span></a> Vector, <a href="../typeandclass"><span class="tag int"></span></a> force_type)</p>
 <ul>
-<li><strong>Vector</strong>: A Vector of the direction and magnitude of force.</li>
-<li><strong>Force Type</strong>: An Int representing the force type to apply. Options below.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>Vector</strong>: A Vector of the direction and magnitude of force.</li>
+<li><a href="../typeandclass"><span class="tag int"></span></a> <strong>force_type</strong>: An Int representing the force type to apply. Options below.<ul>
 <li><span class="critic comment">Optional, defaults to 3.</span></li>
 <li><strong>1</strong>: Continuous force, uses mass. <em>(Force)</em></li>
 <li><strong>2</strong>: Continuous acceleration, ignores mass. <em>(Acceleration)</em></li>
@@ -2013,12 +2013,12 @@
 </div>
 <hr />
 <h4 id="addtorque">addTorque(...)<a class="headerlink" href="#addtorque" title="Permanent link">&para;</a></h4>
-<p>Adds torque to an object in a rotational Vector.</p>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Adds torque to an object in a rotational Vector.</p>
 <div class="admonition info">
-<p class="admonition-title">addTorque(Vector, Int force_type)</p>
+<p class="admonition-title">addTorque(<a href="../typeandclass"><span class="tag tab"></span></a> Vector, <a href="../typeandclass"><span class="tag int"></span></a>  force_type)</p>
 <ul>
-<li><strong>Vector</strong>: A Vector of the direction and magnitude of rotational force.</li>
-<li><strong>Force Type</strong>: An Int representing the force type to apply. Options below.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>Vector</strong>: A Vector of the direction and magnitude of rotational force.</li>
+<li><a href="../typeandclass"><span class="tag int"></span></a> <strong>Force Type</strong>: An Int representing the force type to apply. Options below.<ul>
 <li><span class="critic comment">Optional, defaults to 3.</span></li>
 <li><strong>1</strong>: Continuous force, uses mass. <em>(Force)</em></li>
 <li><strong>2</strong>: Continuous acceleration, ignores mass. <em>(Acceleration)</em></li>
@@ -2030,13 +2030,13 @@
 </div>
 <hr />
 <h4 id="getbounds">getBounds()<a class="headerlink" href="#getbounds" title="Permanent link">&para;</a></h4>
-<p>Returns a Table of Vector information describing the size of an object in Global terms. <a href="https://docs.unity3d.com/ScriptReference/Bounds.html">Bounds</a> are part of Unity, and represent an imaginary square box that can be drawn around an object. Unlike scale, it can help indicate the size of an object in in-game units, not just relative model size.</p>
+<p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns a Table of Vector information describing the size of an object in Global terms. <a href="https://docs.unity3d.com/ScriptReference/Bounds.html">Bounds</a> are part of Unity, and represent an imaginary square box that can be drawn around an object. Unlike scale, it can help indicate the size of an object in in-game units, not just relative model size.</p>
 <div class="admonition info">
 <p class="admonition-title">Return Table</p>
 <ul>
-<li><strong>center</strong>: The center of the bounding box.</li>
-<li><strong>size</strong>: The size of the bounding box.</li>
-<li><strong>offset</strong>: The offset of the center of the bounding box from the middle of the Object model.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>center</strong>: The Vector of the center of the bounding box.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>size</strong>: The Vector of the size of the bounding box.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>offset</strong>: The Vector of the offset of the center of the bounding box from the middle of the Object model.</li>
 </ul>
 </div>
 <div class="codehilite"><pre><span></span><span class="c1">--Example returned Table</span>
@@ -2049,13 +2049,13 @@
 
 <hr />
 <h4 id="getboundsnormalized">getBoundsNormalized()<a class="headerlink" href="#getboundsnormalized" title="Permanent link">&para;</a></h4>
-<p>Returns a Table of Vector information describing the size of an object in Global terms, as if it was rotated to {0,0,0}. <a href="https://docs.unity3d.com/ScriptReference/Bounds.html">Bounds</a> are part of Unity, and represent an imaginary square box that can be drawn around an object. Unlike scale, it can help indicate the size of an object in in-game units, not just relative model size.</p>
+<p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns a Table of Vector information describing the size of an object in Global terms, as if it was rotated to {0,0,0}. <a href="https://docs.unity3d.com/ScriptReference/Bounds.html">Bounds</a> are part of Unity, and represent an imaginary square box that can be drawn around an object. Unlike scale, it can help indicate the size of an object in in-game units, not just relative model size.</p>
 <div class="admonition info">
 <p class="admonition-title">Return Table</p>
 <ul>
-<li><strong>center</strong>: The center of the bounding box.</li>
-<li><strong>size</strong>: The size of the bounding box.</li>
-<li><strong>offset</strong>: The offset of the center of the bounding box from the middle of the Object model.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>center</strong>: The Vector of the center of the bounding box.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>size</strong>: The Vector of the size of the bounding box.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>offset</strong>: The Vector of the offset of the center of the bounding box from the middle of the Object model.</li>
 </ul>
 </div>
 <div class="codehilite"><pre><span></span><span class="c1">--Example returned Table</span>
@@ -2068,10 +2068,10 @@
 
 <hr />
 <h4 id="getscale">getScale()<a class="headerlink" href="#getscale" title="Permanent link">&para;</a></h4>
-<p>Returns a Vector of the current scale. Scale is not an absolute measurement, it is a multiple of the Object's default model size. So {x=2, y=2, z=2} would be a model twice its default size, not 2 units large.</p>
+<p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns a Vector of the current scale. Scale is not an absolute measurement, it is a multiple of the Object's default model size. So {x=2, y=2, z=2} would be a model twice its default size, not 2 units large.</p>
 <hr />
 <h4 id="gettransformforward">getTransformForward()<a class="headerlink" href="#gettransformforward" title="Permanent link">&para;</a></h4>
-<p>Returns a Vector of the forward direction of this Object. The direction is relative to how the object is facing.</p>
+<p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns a Vector of the forward direction of this Object. The direction is relative to how the object is facing.</p>
 <div class="codehilite"><pre><span></span><span class="c1">--Example of moving forward 5 units</span>
 <span class="kr">function</span> <span class="nf">onLoad</span><span class="p">()</span>
     <span class="n">distance</span> <span class="o">=</span> <span class="mi">5</span>
@@ -2088,7 +2088,7 @@
 
 <hr />
 <h4 id="gettransformright">getTransformRight()<a class="headerlink" href="#gettransformright" title="Permanent link">&para;</a></h4>
-<p>Returns a Vector of the forward direction of this object. The direction is relative to how the object is facing.</p>
+<p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns a Vector of the forward direction of this object. The direction is relative to how the object is facing.</p>
 <div class="codehilite"><pre><span></span><span class="c1">--Example of moving right 5 units</span>
 <span class="kr">function</span> <span class="nf">onLoad</span><span class="p">()</span>
     <span class="n">distance</span> <span class="o">=</span> <span class="mi">5</span>
@@ -2105,7 +2105,7 @@
 
 <hr />
 <h4 id="gettransformup">getTransformUp()<a class="headerlink" href="#gettransformup" title="Permanent link">&para;</a></h4>
-<p>Returns a Vector of the up direction of this Object. The direction is relative to how the object is facing.</p>
+<p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns a Vector of the up direction of this Object. The direction is relative to how the object is facing.</p>
 <div class="codehilite"><pre><span></span><span class="c1">--Example of moving up 5 units</span>
 <span class="kr">function</span> <span class="nf">onLoad</span><span class="p">()</span>
     <span class="n">distance</span> <span class="o">=</span> <span class="mi">5</span>
@@ -2122,30 +2122,30 @@
 
 <hr />
 <h4 id="positiontolocal">positionToLocal(...)<a class="headerlink" href="#positiontolocal" title="Permanent link">&para;</a></h4>
-<p>Returns a Vector after converting a world vector to a local Vector. A world Vector is a positional Vector using the world's coordinate system. A Local Vector is a positional Vector that is relative to the position of the given object.</p>
+<p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns a Vector after converting a world vector to a local Vector. A world Vector is a positional Vector using the world's coordinate system. A Local Vector is a positional Vector that is relative to the position of the given object.</p>
 <div class="admonition tip">
 <p class="admonition-title">Object Scale</p>
 <p>This function takes the Object's scale into account, as the Object is the key relative point.</p>
 </div>
 <hr />
 <h4 id="positiontoworld">positionToWorld(...)<a class="headerlink" href="#positiontoworld" title="Permanent link">&para;</a></h4>
-<p>Returns a Vector after converting a local Vector to a world Vector. A world Vector is a positional Vector using the world's coordinate system. A Local Vector is a positional Vector that is relative to the position of the given object.</p>
+<p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns a Vector after converting a local Vector to a world Vector. A world Vector is a positional Vector using the world's coordinate system. A Local Vector is a positional Vector that is relative to the position of the given object.</p>
 <div class="admonition tip">
 <p class="admonition-title">Object Scale</p>
 <p>This function takes the Object's scale into account, as the Object is the key relative point.</p>
 </div>
 <hr />
 <h4 id="rotatevector">rotate(Vector)<a class="headerlink" href="#rotatevector" title="Permanent link">&para;</a></h4>
-<p>Rotates Object smoothly in the direction of the given Vector. This does not set the Object to face a specific rotation, it rotates the Object around by the number of degrees given for x/y/z.</p>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Rotates Object smoothly in the direction of the given Vector. This does not set the Object to face a specific rotation, it rotates the Object around by the number of degrees given for x/y/z.</p>
 <div class="codehilite"><pre><span></span><span class="c1">--Rotates object 90 degrees around its Y axis</span>
 <span class="n">self</span><span class="p">.</span><span class="n">rotate</span><span class="p">({</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">})</span>
 </pre></div>
 
 <hr />
 <h4 id="scale">scale(...)<a class="headerlink" href="#scale" title="Permanent link">&para;</a></h4>
-<p>Scales Object by a multiple. This does not set the Object to a specific scale, it scales the Object by the given multiple.</p>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Scales Object by a multiple. This does not set the Object to a specific scale, it scales the Object by the given multiple.</p>
 <div class="admonition info">
-<p class="admonition-title">scale(Vector or Float)</p>
+<p class="admonition-title">scale(<a href="../typeandclass"><span class="tag tab"></span></a> Vector or <a href="../typeandclass"><span class="tag flo"></span></a> factor)</p>
 <p>This function accepts either a Vector or Float as a parameter. If you use a Float, it will multiple the Object's x/y/z by that number.</p>
 </div>
 <div class="codehilite"><pre><span></span><span class="c1">--Both examples work to scale an object to be twice its current scale</span>
@@ -2155,30 +2155,30 @@
 
 <hr />
 <h4 id="setpositionsmooth">setPositionSmooth(...)<a class="headerlink" href="#setpositionsmooth" title="Permanent link">&para;</a></h4>
-<p>Moves the Object smoothly to the given Vector.</p>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Moves the Object smoothly to the given Vector.</p>
 <div class="admonition info">
-<p class="admonition-title">setPositionSmooth(Vector, Bool collide, Bool fast)</p>
+<p class="admonition-title">setPositionSmooth(<a href="../typeandclass"><span class="tag tab"></span></a> Vector, <a href="../typeandclass"><span class="tag boo"></span></a> collide, <a href="../typeandclass"><span class="tag boo"></span></a> fast)</p>
 <ul>
-<li><strong>Vector</strong>: A positional Vector.</li>
-<li><strong>Bool collide</strong>: A Bool for if the Object will collide with other Objects while moving.</li>
-<li><strong>Bool fast</strong>: A Bool for if the Object is moved quickly.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>Vector</strong>: A positional Vector.</li>
+<li><a href="../typeandclass"><span class="tag boo"></span></a> <strong>collide</strong>: If the Object will collide with other Objects while moving.</li>
+<li><a href="../typeandclass"><span class="tag boo"></span></a> <strong>fast</strong>: If the Object is moved quickly.</li>
 </ul>
 </div>
 <hr />
 <h4 id="setrotationsmooth">setRotationSmooth(...)<a class="headerlink" href="#setrotationsmooth" title="Permanent link">&para;</a></h4>
-<p>Rotates the Object smoothly to the given Vector.</p>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Rotates the Object smoothly to the given Vector.</p>
 <div class="admonition info">
-<p class="admonition-title">setRotationSmooth(Vector, Bool collide, Bool fast)</p>
+<p class="admonition-title">setRotationSmooth(<a href="../typeandclass"><span class="tag tab"></span></a> Vector, <a href="../typeandclass"><span class="tag boo"></span></a> collide, <a href="../typeandclass"><span class="tag boo"></span></a> fast)</p>
 <ul>
-<li><strong>Vector</strong>: A rotational Vector.</li>
-<li><strong>Bool collide</strong>: A Bool for if the Object will collide with other Objects while rotating.</li>
-<li><strong>Bool fast</strong>: A Bool for if the Object is rotated quickly.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>Vector</strong>: A rotational Vector.</li>
+<li><a href="../typeandclass"><span class="tag boo"></span></a> <strong>collide</strong>: If the Object will collide with other Objects while rotating.</li>
+<li><a href="../typeandclass"><span class="tag boo"></span></a> <strong>fast</strong>: If the Object is rotated quickly.</li>
 </ul>
 </div>
 <hr />
 <h3 id="ui-function-details">UI Function Details<a class="headerlink" href="#ui-function-details" title="Permanent link">&para;</a></h3>
 <h4 id="createbutton">createButton(...)<a class="headerlink" href="#createbutton" title="Permanent link">&para;</a></h4>
-<p>Creates a scripted button attached to the Object. Scripted buttons are buttons that can be clicked while in-game that trigger a function in a script.</p>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Creates a scripted button attached to the Object. Scripted buttons are buttons that can be clicked while in-game that trigger a function in a script.</p>
 <details class="tip"><summary>Button Tips</summary><ul><li>Buttons can not be clicked from their back side.</li><li>Buttons can not be clicked if there is another object between the pointer and the button. This does not include the Object the button is attached to.</li><li>Buttons are placed relative to the Object they are attached to.</li><li>The maximum font size is capped at 1000.</li><li>The minimum width/height is 60. Any lower number (besides 0) will appear to be 60. This prevents visual glitches involving the corner rounding.</li><li>A button width/height of 0 will cause the button not to be drawn, but its label will be. This can be a way to attach text to an Object.</li><li>You cannot assign an index to a button. It is given one automatically.</li></ul></details><div class="admonition info">
 <p class="admonition-title">createButton(Table parameters)</p>
 <ul>
@@ -2269,7 +2269,7 @@
 </div>
 <hr />
 <h4 id="createinput">createInput(...)<a class="headerlink" href="#createinput" title="Permanent link">&para;</a></h4>
-<p>Creates a scripted input attached to the Object. Scripted inputs are boxes you can click inside of in-game to input/edit text. Every letter typed triggers the function. The bool that is returned as part of the input_function allows you to determine when a player has finished editing the input.</p>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Creates a scripted input attached to the Object. Scripted inputs are boxes you can click inside of in-game to input/edit text. Every letter typed triggers the function. The bool that is returned as part of the input_function allows you to determine when a player has finished editing the input.</p>
 <details class="tip"><summary>Input Tips</summary><ul><li>Inputs can not be clicked from their back side.</li><li>Inputs can not be clicked if there is another object between the pointer and the inputs. This does not include the Object the input is attached to.</li><li>Inputs are placed relative to the Object they are attached to.</li><li>The maximum font size is capped at 1000.</li><li>The minimum width/height is 60. Any lower number (besides 0) will appear to be 60. This prevents visual glitches involving the corner rounding.</li><li>Font that does not fit in the input window's width/height does NOT display. To know how much height you need for each line, the formula is <code class="codehilite">(font_size * # of lines) + 23</code>. In other words, multiply how many lines of text you want to display by your font_size and add 23. That is your height value.</li><li>You cannot assign an index to an input. It is given one automatically.</li></ul></details><div class="admonition info">
 <p class="admonition-title">createInput(Table parameters)</p>
 <ul>
@@ -2387,7 +2387,7 @@
 
 <hr />
 <h4 id="editbutton">editButton(...)<a class="headerlink" href="#editbutton" title="Permanent link">&para;</a></h4>
-<p>Modify an existing button. The only parameter that is required is the index. The rest are optional, and not using them will cause the edited button's element to remain. Indexes start at 0. The first button on any given Object has an index of 0, the next button on it has an index of 1, etc. Each Object has its own indexes.</p>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Modify an existing button. The only parameter that is required is the index. The rest are optional, and not using them will cause the edited button's element to remain. Indexes start at 0. The first button on any given Object has an index of 0, the next button on it has an index of 1, etc. Each Object has its own indexes.</p>
 <div class="admonition info">
 <p class="admonition-title">editButton(Table parameters)</p>
 <ul>
@@ -2414,25 +2414,26 @@
 
 <hr />
 <h4 id="editinput">editInput(...)<a class="headerlink" href="#editinput" title="Permanent link">&para;</a></h4>
-<p>Modify an existing input. The only parameter that is required is the index. The rest are optional, and not using them will cause the edited input's element to remain. Indexes start at 0. The first input on any given Object has an index of 0, the next input on it has an index of 1, etc. Each Object has its own indexes.</p>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Modify an existing input. The only parameter that is required is the index. The rest are optional, and not using them will cause the edited input's element to remain. Indexes start at 0. The first input on any given Object has an index of 0, the next input on it has an index of 1, etc. Each Object has its own indexes.</p>
 <div class="admonition info">
-<p class="admonition-title">editInput(Table parameters)</p>
+<p class="admonition-title">editInput(<a href="../typeandclass"><span class="tag tab"></span></a> parameters)</p>
+<p>All fields besides <code class="codehilite">index</code> are optional. If not used, the element will default to its current setting.</p>
 <ul>
-<li><strong>Table parameters</strong>: A Table containing the information used to spawn the input.<ul>
-<li><strong>parameters.index</strong>: An Int of the index of the input you want to edit.</li>
-<li><strong>parameters.input_function</strong>: A String of the function's name that will be run when a key is used or when it is deselected.</li>
-<li><strong>parameters.function_owner</strong>: The Object which contains the input_function function.</li>
-<li><strong>parameters.label</strong>: A String of text that appears as greyed out text when there is no value in the input.</li>
-<li><strong>parameters.position</strong>: A Vector of where the input appears, relative to the Object's center.</li>
-<li><strong>parameters.rotation</strong>: A Vector of how the input is rotated, relative to the Object's rotation.</li>
-<li><strong>parameters.scale</strong>: A Vector of the scale of the input, relative to the Object's scale.</li>
-<li><strong>parameters.width</strong>: An Int of how wide the input will be, relative to the Object.</li>
-<li><strong>parameters.height</strong>: An Int of how tall the input will be, relative to the Object.</li>
-<li><strong>parameters.font_size</strong>: An Int of the size the label/value font will be, relative to the Object.</li>
-<li><strong>parameters.color</strong>: A Color for the input's background.</li>
-<li><strong>parameters.font_color</strong>: A Color for the value text.</li>
-<li><strong>parameters.tooltip</strong>: A String for a popup of text, similar to how an Object's name is displayed on mouseover.</li>
-<li><strong>parameters.alignment</strong>: An Int for how text is aligned in the input box.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>parameters</strong>: A Table containing the information used to spawn the input.<ul>
+<li><a href="../typeandclass"><span class="tag int"></span></a> <strong>parameters.index</strong>: Index of the input you want to edit.</li>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>parameters.input_function</strong>: The function's name that will be run when the input is selected.</li>
+<li><a href="../typeandclass"><span class="tag obj"></span></a> <strong>parameters.function_owner</strong>: The Object which contains the input_function function.</li>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>parameters.label</strong>: Text that appears as greyed out text when there is no value in the input.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>parameters.position</strong>: Position Vector of the input, relative to the Object's center.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>parameters.rotation</strong>: Rotation Vector of the input, relative to the Object's rotation.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>parameters.scale</strong>: Scale Vector of the input, relative to the Object's scale.</li>
+<li><a href="../typeandclass"><span class="tag flo"></span></a> <strong>parameters.width</strong>: How wide the input will be, relative to the Object.</li>
+<li><a href="../typeandclass"><span class="tag flo"></span></a> <strong>parameters.height</strong>: How tall the input will be, relative to the Object.</li>
+<li><a href="../typeandclass"><span class="tag flo"></span></a> <strong>parameters.font_size</strong>: Size the label/value font will be, relative to the Object.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>parameters.color</strong>: A Color for the input's background.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>parameters.font_color</strong>: A Color for the value text.</li>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>parameters.tooltip</strong>: A popup of text, similar to how an Object's name is displayed on mouseover.</li>
+<li><a href="../typeandclass"><span class="tag int"></span></a> <strong>parameters.alignment</strong>: How text is aligned in the input box.<ul>
 <li><strong>1</strong>: Automatic</li>
 <li><strong>2</strong>: Left</li>
 <li><strong>3</strong>: Center</li>
@@ -2440,8 +2441,8 @@
 <li><strong>5</strong>: Justified</li>
 </ul>
 </li>
-<li><strong>parameters.value</strong>: A String of the text entered into the input.</li>
-<li><strong>parameters.validation</strong>: An Int which determines what characters can be input into the value.<ul>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>parameters.value</strong>: A String of the text entered into the input.</li>
+<li><a href="../typeandclass"><span class="tag int"></span></a> <strong>parameters.validation</strong>: An Int which determines what characters can be input into the value.<ul>
 <li><strong>1</strong>: None</li>
 <li><strong>2</strong>: Integer</li>
 <li><strong>3</strong>: Float</li>
@@ -2450,7 +2451,7 @@
 <li><strong>6</strong>: Name</li>
 </ul>
 </li>
-<li><strong>parameters.tab</strong>: An Int which determines how pressing tab is handled when inputting.<ul>
+<li><a href="../typeandclass"><span class="tag int"></span></a> <strong>parameters.tab</strong>: An Int which determines how pressing tab is handled when inputting.<ul>
 <li><strong>1</strong>: None</li>
 <li><strong>2</strong>: Select Next Input</li>
 <li><strong>3</strong>: Indent</li>
@@ -2459,42 +2460,42 @@
 </ul>
 </li>
 </ul>
+</div>
 <div class="codehilite"><pre><span></span><span class="n">self</span><span class="p">.</span><span class="n">editInput</span><span class="p">({</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;New Value&quot;</span><span class="p">})</span>
 </pre></div>
 
-</div>
 <hr />
 <h4 id="getbuttons">getButtons()<a class="headerlink" href="#getbuttons" title="Permanent link">&para;</a></h4>
-<p>Returns a Table of all buttons on this Object. The Table contains parameters tables with the same keys as seen in the <a href="#createbutton">createButton</a> section, except each Table of parameters also contains an <strong>index</strong> entry. This is used to identify each button, used by <a href="#editbutton">editButton</a> and <a href="#removebutton">removeButton</a>.</p>
+<p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns a Table of all buttons on this Object. The Table contains parameters tables with the same keys as seen in the <a href="#createbutton">createButton</a> section, except each Table of parameters also contains an <strong>index</strong> entry. This is used to identify each button, used by <a href="#editbutton">editButton</a> and <a href="#removebutton">removeButton</a>.</p>
 <p>Indexes start at 0.</p>
 <hr />
 <h4 id="getinputs">getInputs()<a class="headerlink" href="#getinputs" title="Permanent link">&para;</a></h4>
-<p>Returns a Table of all inputs on this Object. The Table contains parameters tables with the same keys as seen in the <a href="#createinput">createInput</a> section, except each Table of parameters also contains an <strong>index</strong> entry. This is used to identify each input, used by <a href="#editinput">editInput</a> and <a href="#removeinput">removeInput</a>.</p>
+<p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns a Table of all inputs on this Object. The Table contains parameters tables with the same keys as seen in the <a href="#createinput">createInput</a> section, except each Table of parameters also contains an <strong>index</strong> entry. This is used to identify each input, used by <a href="#editinput">editInput</a> and <a href="#removeinput">removeInput</a>.</p>
 <p>Indexes start at 0.</p>
 <hr />
 <h4 id="removebutton">removeButton(...)<a class="headerlink" href="#removebutton" title="Permanent link">&para;</a></h4>
-<p>Removes a specific button. Indexes start at 0. The first button on any given Object has an index of 0, the next button on it has an index of 1, etc. Each Object has its own indexes.</p>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Removes a specific button. Indexes start at 0. The first button on any given Object has an index of 0, the next button on it has an index of 1, etc. Each Object has its own indexes.</p>
 <p>Removing an index instantly causes all other higher indexes to shift down 1.</p>
 <div class="admonition info">
-<p class="admonition-title">removeButton(Int index)</p>
+<p class="admonition-title">removeButton(<a href="../typeandclass"><span class="tag int"></span></a> index)</p>
 <ul>
-<li><strong>Int index</strong>: An Int of the button's index to remove.</li>
+<li><a href="../typeandclass"><span class="tag int"></span></a> <strong>index</strong>: Button index to remove.</li>
 </ul>
 </div>
 <hr />
 <h4 id="removeinput">removeInput(...)<a class="headerlink" href="#removeinput" title="Permanent link">&para;</a></h4>
-<p>Removes a specific input. Indexes start at 0. The first button on any given Object has an index of 0, the next input on it has an index of 1, etc. Each Object has its own indexes.</p>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Removes a specific input. Indexes start at 0. The first button on any given Object has an index of 0, the next input on it has an index of 1, etc. Each Object has its own indexes.</p>
 <p>Removing an index instantly causes all other higher indexes to shift down 1.</p>
 <div class="admonition info">
-<p class="admonition-title">removeInput(Int index)</p>
+<p class="admonition-title">removeInput(<a href="../typeandclass"><span class="tag int"></span></a> index)</p>
 <ul>
-<li><strong>Int index</strong>: An Int of the input's index to remove.</li>
+<li><a href="../typeandclass"><span class="tag int"></span></a> <strong>index</strong>: Input index to remove.</li>
 </ul>
 </div>
 <hr />
 <h3 id="get-function-details">Get Function Details<a class="headerlink" href="#get-function-details" title="Permanent link">&para;</a></h3>
 <h4 id="getcustomobject">getCustomObject()<a class="headerlink" href="#getcustomobject" title="Permanent link">&para;</a></h4>
-<p>Returns a Table with the Custom Object information of a Custom Object. See the <a href="../spawnableobject">Spawnable Objects</a> page for the kind of information returned.</p>
+<p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns a Table with the Custom Object information of a Custom Object. See the <a href="../spawnableobject">Spawnable Objects</a> page for the kind of information returned.</p>
 <div class="codehilite"><pre><span></span><span class="c1">--Example returned Table for a custom token</span>
 <span class="p">{</span>
     <span class="n">image</span> <span class="o">=</span> <span class="s2">&quot;SOME URL HERE&quot;</span><span class="p">,</span>
@@ -2506,7 +2507,7 @@
 
 <hr />
 <h4 id="getobjects">getObjects()<a class="headerlink" href="#getobjects" title="Permanent link">&para;</a></h4>
-<p>Returns a Table of objects in the script zone/bag/deck. What it returns varies depending on the type of Object it is used on.</p>
+<p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns a Table of objects in the script zone/bag/deck. What it returns varies depending on the type of Object it is used on.</p>
 <p>If an Object is inside of a container, it does not exist in-game. As a result, you only get data on each Object, not an Object reference.</p>
 <div class="admonition info">
 <p class="admonition-title">Return Table by Object Type</p>
@@ -2524,14 +2525,16 @@
 <p class="admonition-title">Bag</p>
 <p>Returns a Table of sub-Tables, each sub-Table containing data on 1 bagged item. Indexes start at 0.</p>
 <ul>
-<li><strong>String name</strong>: A String of the name of the Object.</li>
-<li><strong>String guid</strong>: A String of the GUID of the Object.</li>
-<li><strong>Int index</strong>: A String of the index of the Object, represents the Object's place in the bag.</li>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>name</strong>: Name of the Object.</li>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>guid</strong>: GUID of the Object.</li>
+<li><a href="../typeandclass"><span class="tag int"></span></a> <strong>index</strong>: Index of the Object, represents the Object's place in the bag.</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="n">name</span>  <span class="o">=</span> <span class="s2">&quot;Object Name&quot;</span><span class="p">,</span>
-    <span class="n">guid</span>  <span class="o">=</span> <span class="s2">&quot;AAA111&quot;</span><span class="p">,</span>
-    <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>  
+    <span class="p">{</span>
+        <span class="n">name</span>  <span class="o">=</span> <span class="s2">&quot;Object Name&quot;</span><span class="p">,</span>
+        <span class="n">guid</span>  <span class="o">=</span> <span class="s2">&quot;AAA111&quot;</span><span class="p">,</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>  
+    <span class="p">},</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -2540,18 +2543,20 @@
 <p class="admonition-title">Deck</p>
 <p>Returns a Table of sub-Tables, each sub-Table containing data on 1 card. Indexes start at 0.</p>
 <ul>
-<li><strong>String nickname</strong>: A String of the name of the card.</li>
-<li><strong>String description</strong>: A String of the description of the card.</li>
-<li><strong>String guid</strong>: A String of the guid of the card.</li>
-<li><strong>Int index</strong>: An Int of the index of the card, represents the card's order in the deck.</li>
-<li><strong>String lua_script</strong>: A String of any Lua scripting saved on the card.</li>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>nickname</strong>: Name of the card.</li>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>description</strong>: Description of the card.</li>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>guid</strong>: GUID of the card.</li>
+<li><a href="../typeandclass"><span class="tag int"></span></a> <strong>index</strong>: Index of the card, represents the card's order in the deck.</li>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>lua_script</strong>: Any Lua scripting saved on the card.</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="n">nickname</span>    <span class="o">=</span> <span class="s2">&quot;Object Name&quot;</span><span class="p">,</span>
-    <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Object Descripotion&quot;</span><span class="p">,</span>
-    <span class="n">guid</span>        <span class="o">=</span> <span class="s2">&quot;AAA111&quot;</span><span class="p">,</span>
-    <span class="n">index</span>       <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="n">lua_script</span>  <span class="o">=</span> <span class="s2">&quot;Any Lua Script On This Card&quot;</span><span class="p">,</span>
+    <span class="p">{</span>
+        <span class="n">nickname</span>    <span class="o">=</span> <span class="s2">&quot;Object Name&quot;</span><span class="p">,</span>
+        <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Object Descripotion&quot;</span><span class="p">,</span>
+        <span class="n">guid</span>        <span class="o">=</span> <span class="s2">&quot;AAA111&quot;</span><span class="p">,</span>
+        <span class="n">index</span>       <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">lua_script</span>  <span class="o">=</span> <span class="s2">&quot;Any Lua Script On This Card&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -2560,14 +2565,14 @@
 <p>This function is often used with <a href="#takeobject">takeObject(...)</a> to remove objects from containers.</p>
 <hr />
 <h4 id="getrotationvalues">getRotationValues()<a class="headerlink" href="#getrotationvalues" title="Permanent link">&para;</a></h4>
-<p>Returns a Table of rotation values. Rotation values are used to give value to different rotations (like dice) based on which side is pointed "up". It works by checking all of the rotation values assigned to an object and determining which one of them is closest to pointing up, and then displaying the value associated with that rotation.</p>
+<p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns a Table of rotation values. Rotation values are used to give value to different rotations (like dice) based on which side is pointed "up". It works by checking all of the rotation values assigned to an object and determining which one of them is closest to pointing up, and then displaying the value associated with that rotation.</p>
 <p>You can manually assign rotation values to objects using the Rotation Value Gizmo tool (in the left side Gizmo menu) or using <a href="../setrotationvalues">setRotationValues(...)</a>.</p>
 <div class="admonition info">
 <p class="admonition-title">Return Table</p>
 <p>The returned Table contains sub-Tables, each sub-Table containing these 2 key/value pairs.</p>
 <ul>
-<li><strong>Var value</strong>: A Var of what value is associated with a given rotation. Often a String or Int.</li>
-<li><strong>Vector rotation</strong>: A Vector of the rotation of the object  that best represents the given value.</li>
+<li><a href="../typeandclass"><span class="tag var"></span></a> <strong>value</strong>: What value is associated with a given rotation. Often a String or Int.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>rotation</strong>: A Vector of the rotation of the Object that best represents the given value.</li>
 </ul>
 </div>
 <div class="codehilite"><pre><span></span><span class="c1">--Example returned Table for a coin</span>
@@ -2579,13 +2584,13 @@
 
 <hr />
 <h4 id="getstates">getStates()<a class="headerlink" href="#getstates" title="Permanent link">&para;</a></h4>
-<p>Returns a Table of information on the <a href="http://berserk-games.com/knowledgebase/creating-states/">states</a> of an Object. Stated Objects have ids (indexes) starting with 1.</p>
+<p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns a Table of information on the <a href="http://berserk-games.com/knowledgebase/creating-states/">states</a> of an Object. Stated Objects have ids (indexes) starting with 1.</p>
 <div class="admonition info">
 <p class="admonition-title">Return Table</p>
 <ul>
-<li><strong>String name</strong>: A String of name of the Object.</li>
-<li><strong>String guid</strong>: A String of the GUID of the Object.</li>
-<li><strong>Int id</strong>: An Int of the id (index) of the state.</li>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>name</strong>: Name of the Object.</li>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>guid</strong>: GUID of the Object.</li>
+<li><a href="../typeandclass"><span class="tag int"></span></a> <strong>id</strong>: ID (index) of the state.</li>
 </ul>
 </div>
 <div class="codehilite"><pre><span></span><span class="c1">--Example returned Table</span>
@@ -2605,7 +2610,7 @@
 
 <hr />
 <h4 id="getvalue">getValue()<a class="headerlink" href="#getvalue" title="Permanent link">&para;</a></h4>
-<p>Returns an Int as the value. What the value represents depends on what type of Object this function is used on.</p>
+<p><a href="../typeandclass"><span class="ret int"></span></a>&nbsp; Gets a value. What the value represents depends on what type of Object this function is used on.</p>
 <table>
 <thead>
 <tr>
@@ -2643,7 +2648,7 @@
 <hr />
 <h3 id="set-function-details">Set Function Details<a class="headerlink" href="#set-function-details" title="Permanent link">&para;</a></h3>
 <h4 id="setcustomobject">setCustomObject(...)<a class="headerlink" href="#setcustomobject" title="Permanent link">&para;</a></h4>
-<p>Sets a custom Object's properties. It can be used after <a href="../base#spawnobject">spawnObject</a> or on an already existing custom Object. If used on an already existing custom Object, you must use <a href="#reload">reload</a> on the object after setCustomObject for the changes to be displayed.</p>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Sets a custom Object's properties. It can be used after <a href="../base#spawnobject">spawnObject</a> or on an already existing custom Object. If used on an already existing custom Object, you must use <a href="#reload">reload</a> on the object after setCustomObject for the changes to be displayed.</p>
 <div class="admonition info">
 <p class="admonition-title">setCustomObject(Table parameters)</p>
 <p>The Table of parameters varies, depending on which type of custom Object it is. See the <a href="../spawnableobject">Spawnable Object</a> page for the parameters needed.</p>
@@ -2660,13 +2665,13 @@
 
 <hr />
 <h4 id="setrotationvalues">setRotationValues(...)<a class="headerlink" href="#setrotationvalues" title="Permanent link">&para;</a></h4>
-<p>Sets rotation values of an object. Rotation values are used to give value to different rotations (like dice). It works by checking all of the rotation values assigned to an object and determining which one of them is closest to pointing up, and then displaying the value associated with that rotation.</p>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Sets rotation values of an object. Rotation values are used to give value to different rotations (like dice). It works by checking all of the rotation values assigned to an object and determining which one of them is closest to pointing up, and then displaying the value associated with that rotation.</p>
 <div class="admonition info">
-<p class="admonition-title">setRotationValues(Table rotation_values)</p>
+<p class="admonition-title">setRotationValues(<a href="../typeandclass"><span class="tag tab"></span></a> rotation_values)</p>
 <ul>
-<li><strong>Table rotation_values</strong>: A Table containing Tables with the following values. 1 sub-Table per "face".<ul>
-<li><strong>rotation_values.value</strong>: A Var of what value is associated with a given rotation. Often a String or Int.</li>
-<li><strong>rotation_values.rotation</strong>: A Vector of the rotation of the object  that best represents the given value.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>rotation_values</strong>: A Table containing Tables with the following values. 1 sub-Table per "face".<ul>
+<li><a href="../typeandclass"><span class="tag var"></span></a> <strong>rotation_values.value</strong>: What value is associated with a given rotation. Often a String or Int.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>rotation_values.rotation</strong>: The rotation Vector of the Object that best represents the given value pointing up.</li>
 </ul>
 </li>
 </ul>
@@ -2681,7 +2686,7 @@
 
 <hr />
 <h4 id="setvalue">setValue(...)<a class="headerlink" href="#setvalue" title="Permanent link">&para;</a></h4>
-<p>Sets an Int as the value of an Object. What the value represents depends on what type of Object it is.</p>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Sets a value on an Object. What the value represents depends on what type of Object it is.</p>
 <table>
 <thead>
 <tr>
@@ -2715,17 +2720,13 @@
 <hr />
 <h3 id="action-function-details">Action Function Details<a class="headerlink" href="#action-function-details" title="Permanent link">&para;</a></h3>
 <h4 id="call">call(...)<a class="headerlink" href="#call" title="Permanent link">&para;</a></h4>
-<p>testFunc
-:  Used to call a Lua function on this Object. This is used to remotely call functions in other scripts, either in Global or Object scripts. <code class="codehilite">Global</code> is the "Object" to use to call a function in the Global script.</p>
-<blockquote>
-<p>Returns Var</p>
-</blockquote>
+<p><a href="../typeandclass"><span class="ret var"></span></a>&nbsp; Used to call a Lua function on this Object. This is used to remotely call functions in other scripts, either in Global or Object scripts. <code class="codehilite">Global</code> is the "Object" to use to call a function in the Global script.</p>
 <p><em>Var is only returned if the function called has a <code class="codehilite">return</code>. Otherwise return is <code class="codehilite">nil</code>. See example.</em></p>
 <div class="admonition info">
-<p class="admonition-title">call(String func_name, Table func_params)</p>
+<p class="admonition-title">call(<a href="../typeandclass"><span class="tag str"></span></a> func_name, <a href="../typeandclass"><span class="tag tab"></span></a> func_params)</p>
 <ul>
-<li><strong>String func_name</strong>: A String of the function name you want to activate.</li>
-<li><strong>Table func_name</strong>: A Table containing any data you want to pass to that function.<ul>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>func_name</strong>: Function name you want to activate.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>func_params</strong>: A Table containing any data you want to pass to that function.<ul>
 <li><span class="critic comment">Optional, will not be sent by default.</span></li>
 </ul>
 </li>
@@ -2747,19 +2748,16 @@
 </pre></div></p>
 <hr />
 <h4 id="clone">clone(...)<a class="headerlink" href="#clone" title="Permanent link">&para;</a></h4>
-<p>Copy/Paste this Object.</p>
-<blockquote>
-<p>Returns Object pasted</p>
-</blockquote>
+<p><a href="../typeandclass"><span class="ret obj"></span></a>&nbsp; Copy/Paste this Object.</p>
 <div class="admonition info">
-<p class="admonition-title">clone(Table parameters)</p>
+<p class="admonition-title">clone(<a href="../typeandclass"><span class="tag tab"></span></a> parameters)</p>
 <ul>
-<li><strong>Table parameters</strong>: A Table with information used when pasting.<ul>
-<li><strong>parameters.position</strong>: A Vector of where the Object is placed.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>parameters</strong>: A Table with information used when pasting.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>parameters.position</strong>: A Vector of where the Object is placed.<ul>
 <li><span class="critic comment">Optional, defaults to {x=0, y=3, z=0}.</span></li>
 </ul>
 </li>
-<li><strong>parameters.snap_to_grid</strong>: A Bool for if the Object snaps to grid.<ul>
+<li><a href="../typeandclass"><span class="tag boo"></span></a> <strong>parameters.snap_to_grid</strong>: If the Object snaps to grid.<ul>
 <li><span class="critic comment">Optional, defaults to false.</span></li>
 </ul>
 </li>
@@ -2769,19 +2767,16 @@
 </div>
 <hr />
 <h4 id="deal">deal(...)<a class="headerlink" href="#deal" title="Permanent link">&para;</a></h4>
-<p>Deals Objects to hand zones. Will deal from decks/bags/stacks as well as individual items. If dealing an individual item to a hand zone, it is a good idea to make sure that its <a href="#member-variables">Member Variable</a> for <code class="codehilite">use_hands</code> is <code class="codehilite">true</code>.</p>
-<blockquote>
-<p>Returns Bool</p>
-</blockquote>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Deals Objects to hand zones. Will deal from decks/bags/stacks as well as individual items. If dealing an individual item to a hand zone, it is a good idea to make sure that its <a href="#member-variables">Member Variable</a> for <code class="codehilite">use_hands</code> is <code class="codehilite">true</code>.</p>
 <div class="admonition info">
-<p class="admonition-title">deal(Int number, String player_color, Int index)</p>
+<p class="admonition-title">deal(<a href="../typeandclass"><span class="tag int"></span></a> number, <a href="../typeandclass"><span class="tag str"></span></a> player_color, <a href="../typeandclass"><span class="tag int"></span></a> index)</p>
 <ul>
-<li><strong>Int number</strong>: An Int of how many to deal.</li>
-<li><strong>String player_color</strong>: A String of the Color to deal to.<ul>
+<li><a href="../typeandclass"><span class="tag int"></span></a> <strong>number</strong>: How many to deal.</li>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>player_color</strong>: The <a href="../player-color">Player Color</a> to deal to.<ul>
 <li><span class="critic comment">Optional, defaults to an empty string. If not supplied, it will attempt to deal to all seated players.</span></li>
 </ul>
 </li>
-<li><strong>Int index</strong>: An Int of which Object to deal from a container.<ul>
+<li><a href="../typeandclass"><span class="tag int"></span></a> <strong>index</strong>: Index of which Object to deal from a container.<ul>
 <li><span class="critic comment">Optional, defaults to 0. If not supplied it will deal in regular order.</span></li>
 </ul>
 </li>
@@ -2789,16 +2784,13 @@
 </div>
 <hr />
 <h4 id="dealtocolorwithoffset">dealToColorWithOffset(...)<a class="headerlink" href="#dealtocolorwithoffset" title="Permanent link">&para;</a></h4>
-<p>Deals from a deck to a position relative to the hand zone.</p>
-<blockquote>
-<p>Returns Object of dealt card</p>
-</blockquote>
+<p><a href="../typeandclass"><span class="ret obj"></span></a>&nbsp; Deals from a deck to a position relative to the hand zone.</p>
 <div class="admonition info">
-<p class="admonition-title">dealToColorWithOffset(Vector, Bool flip, String player_color)</p>
+<p class="admonition-title">dealToColorWithOffset(<a href="../typeandclass"><span class="tag tab"></span></a> Vector, <a href="../typeandclass"><span class="tag boo"></span></a> flip, <a href="../typeandclass"><span class="tag str"></span></a> player_color)</p>
 <ul>
-<li><strong>Vector</strong>: A Vector of the x/y/z offset to deal to around the given hand zone.</li>
-<li><strong>Bool flip</strong>: A Bool for if the card is flipped over when dealt.</li>
-<li><strong>String player_color</strong>: A String of the hand zone Color to offset dealing to.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>Vector</strong>: A Vector of the x/y/z offset to deal to around the given hand zone.</li>
+<li><a href="../typeandclass"><span class="tag boo"></span></a> <strong>flip</strong>: If the card is flipped over when dealt.</li>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>player_color</strong>: Hand zone <a href="../player-color">Player Color</a> to offset dealing to.</li>
 </ul>
 </div>
 <div class="codehilite"><pre><span></span><span class="c1">--Example of dealing 2 cards in front of the White player, face up.</span>
@@ -2807,14 +2799,11 @@
 </pre></div>
 
 <h4 id="putobject">putObject(...)<a class="headerlink" href="#putobject" title="Permanent link">&para;</a></h4>
-<p>Places an object into a container (chip stacks/bags/decks).</p>
-<blockquote>
-<p>Returns Bool</p>
-</blockquote>
+<p><a href="../typeandclass"><span class="ret obj"></span></a>&nbsp; Places an object into a container (chip stacks/bags/decks).</p>
 <div class="admonition info">
-<p class="admonition-title">putObject(Object put_object)</p>
+<p class="admonition-title">putObject(<a href="../typeandclass"><span class="tag obj"></span></a> put_object)</p>
 <ul>
-<li><strong>Object put_object</strong>: An Object to place into the container.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>put_object</strong>: An Object to place into the container.</li>
 </ul>
 </div>
 <div class="codehilite"><pre><span></span><span class="c1">--Example of a script on a bag that places Object into itself</span>
@@ -2824,64 +2813,58 @@
 
 <hr />
 <h4 id="reload">reload()<a class="headerlink" href="#reload" title="Permanent link">&para;</a></h4>
-<p>Returns Object reference of itself after it respawns itself. This function causes the Object to be deleted and respawned instantly to refresh it, so its old Object reference will no longer be valid.</p>
+<p><a href="../typeandclass"><span class="ret obj"></span></a>&nbsp; Returns Object reference of itself after it respawns itself. This function causes the Object to be deleted and respawned instantly to refresh it, so its old Object reference will no longer be valid.</p>
 <p>Most often this is used after using <a href="#setcustomobject">setCustomObject(...)</a> to modify a custom object.</p>
-<blockquote>
-<p>Returns Object of itself after respawn</p>
-</blockquote>
 <hr />
 <h4 id="takeobject">takeObject(...)<a class="headerlink" href="#takeobject" title="Permanent link">&para;</a></h4>
-<p>Takes an object from a container (bag/deck/chip stack) and places it in the world.</p>
-<blockquote>
-<p>Returns Object of the Object taken</p>
-</blockquote>
+<p><a href="../typeandclass"><span class="ret obj"></span></a>&nbsp; Takes an object from a container (bag/deck/chip stack) and places it in the world.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Spawned Objects take a moment to be physically spawned into the game. The purpose of the callback functionality is to allow you to run additional actions after the Object has been initiated fully into the instance. It is also possible to add a delay using a <a href="#startluacoroutine">coroutine</a>.</p>
 </div>
 <div class="admonition info">
-<p class="admonition-title">takeObject(Table parameters)</p>
+<p class="admonition-title">takeObject(<a href="../typeandclass"><span class="tag tab"></span></a> parameters)</p>
 <ul>
-<li><strong>Table parameters</strong>: A Table of parameters used to determine how takeObject will act.<ul>
-<li><strong>parameters.position</strong>: A Table Vector of the position to place Object.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>parameters</strong>: A Table of parameters used to determine how takeObject will act.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>parameters.position</strong>: A Vector of the position to place Object.<ul>
 <li><span class="critic comment">Optional, defaults to container's position + 2 on the x axis.</span></li>
 </ul>
 </li>
-<li><strong>parameters.rotation</strong>: A Table Vector of the rotation of the Object.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>parameters.rotation</strong>: A Vector of the rotation of the Object.<ul>
 <li><span class="critic comment">Optional, defaults to the container's rotation.</span></li>
 </ul>
 </li>
-<li><strong>parameters.flip</strong>: A Bool for if the Object is flipped over.<ul>
+<li><a href="../typeandclass"><span class="tag boo"></span></a> <strong>parameters.flip</strong>: If the Object is flipped over.<ul>
 <li><span class="critic comment">Optional, defaults to false. Only used with decks, not bags/stacks.</span></li>
 <li><span class="critic comment">If rotation is used, flip's Bool will be ignored.</span></li>
 </ul>
 </li>
-<li><strong>parameters.guid</strong>: A String of the GUID of the Object to take.<ul>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>parameters.guid</strong>: GUID of the Object to take.<ul>
 <li><span class="critic comment">Optional,  no default. Only use index or guid, never both.</span></li>
 </ul>
 </li>
-<li><strong>parameters.index</strong>: An Int of the index of the Object to take.<ul>
+<li><a href="../typeandclass"><span class="tag int"></span></a> <strong>parameters.index</strong>: Index of the Object to take.<ul>
 <li><span class="critic comment">Optional,  no default. Only use index or guid, never both.</span></li>
 </ul>
 </li>
-<li><strong>parameters.top</strong>: A Bool for if an object is taken from the top (vs bottom).<ul>
+<li><a href="../typeandclass"><span class="tag boo"></span></a> <strong>parameters.top</strong>: If an object is taken from the top (vs bottom).<ul>
 <li><span class="critic comment">Optional, defaults to true.</span></li>
 </ul>
 </li>
-<li><strong>parameters.smooth</strong>: A Bool for if the taken Object moves smoothly or instantly. <ul>
+<li><a href="../typeandclass"><span class="tag boo"></span></a> <strong>parameters.smooth</strong>: If the taken Object moves smoothly or instantly. <ul>
 <li><span class="critic comment">Optional, defaults to true.</span></li>
 </ul>
 </li>
-<li><strong>parameters.callback</strong>: A String of the function name you want activated once the Object is initiated.<ul>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>parameters.callback</strong>: Function name you want activated once the Object is initiated.<ul>
 <li><span class="critic comment">Optional, no default.</span></li>
 <li><span class="critic comment">A callback function has 2 parameters, the Object spawned and, if used, the Table of params.</span></li>
 </ul>
 </li>
-<li><strong>parameters.callback_owner</strong>: An Object of what Object has the callback function in its script. Global is a valid target.<ul>
+<li><a href="../typeandclass"><span class="tag obj"></span></a> <strong>parameters.callback_owner</strong>: What Object has the callback function in its script. Global is a valid target.<ul>
 <li><span class="critic comment">Optional, defaults to container Object. Serves no purpose if callback is not also used.</span></li>
 </ul>
 </li>
-<li><strong>parameters.params</strong>: A Table of data to send to the callback to use as parameters. See example.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>parameters.params</strong>: Data to send to the callback to use as parameters. See example.<ul>
 <li><span class="critic comment">Optional, no default. Serves no purpose if callback is not also used.</span></li>
 </ul>
 </li>
