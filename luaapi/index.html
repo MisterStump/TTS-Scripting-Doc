@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#in-progress-reference" tabindex="1" class="md-skip">
+      <a href="#guid" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -294,6 +294,13 @@
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#guid" title="GUID" class="md-nav__link">
+    GUID
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#in-progress-reference" title="In progress reference" class="md-nav__link">
@@ -541,6 +548,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#guid" title="GUID" class="md-nav__link">
+    GUID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#in-progress-reference" title="In progress reference" class="md-nav__link">
     In progress reference
   </a>
@@ -567,6 +581,10 @@
                   <h1>Introduction</h1>
                 
                 <p>In this section, you will find details on all events/classes/functions specific to Tabletop Simulator's Lua scripting. For more general information on how the scripting language of Lua works and what it does on its own, you can review the <a href="https://www.lua.org/docs.html">online documentation</a>. </p>
+<h2 id="guid">GUID<a class="headerlink" href="#guid" title="Permanent link">&para;</a></h2>
+<p>A GUID is a unique 6-character <a href="../typeandclass">string</a> which can be used to identify in-game <a href="../object">Objects</a>. GUIDs are automatically assigned when objects exist within the scene.</p>
+<p>If an object is duplicated, it will sometimes have the same GUID for 1 frame before the engine assigns a new GUID to the newer Object. Objects in containers (bags/decks/etc) do not automatically get new GUIDs assigned to them in this way. Only once their contents are moved out into the scene.</p>
+<details class="warning"><summary>Custom Deck Card GUIDs</summary><p>When you first create a custom deck, all cards within the deck share the same GUID. If you need to reference individual GUIDs of cards, then the way to solve this is to lay out all cards from the deck at the same time to allow new GUIDs to be assigned by the game. <a href="http://steamcommunity.com/sharedfiles/filedetails/?id=1180142950">This tool</a> can be used to simplify the process.</p></details><hr />
 <div class="admonition note">
 <p class="admonition-title">TODO:</p>
 <ul>
@@ -583,7 +601,9 @@
 <a href="../typeandclass"><span class="tag nil"></span></a>&nbsp; 
 <a href="../typeandclass"><span class="tag boo"></span></a>&nbsp; 
 <a href="../typeandclass"><span class="tag obj"></span></a>&nbsp; 
-<a href="../typeandclass"><span class="tag var"></span></a>&nbsp; </p>
+<a href="../typeandclass"><span class="tag var"></span></a>&nbsp; 
+<a href="../typeandclass#vector"><span class="tag vec"></span></a>&nbsp; 
+<a href="../typeandclass#color"><span class="tag col"></span></a>&nbsp; </p>
 <p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; 
 <a href="../typeandclass"><span class="ret str"></span></a>&nbsp; 
 <a href="../typeandclass"><span class="ret int"></span></a>&nbsp; 
@@ -591,7 +611,9 @@
 <a href="../typeandclass"><span class="ret nil"></span></a>&nbsp; 
 <a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; 
 <a href="../typeandclass"><span class="ret obj"></span></a>&nbsp;
-<a href="../typeandclass"><span class="ret var"></span></a>&nbsp; </p>
+<a href="../typeandclass"><span class="ret var"></span></a>&nbsp; 
+<a href="../typeandclass#vector"><span class="ret vec"></span></a>&nbsp; 
+<a href="../typeandclass#color"><span class="ret col"></span></a>&nbsp; </p>
                 
                   
                 

@@ -655,11 +655,11 @@
 <tr>
 <td>getGravity()</td>
 <td>Returns directional Vector of the direction gravity is pulling.</td>
-<td><a href="../typeandclass"><span class="ret tab"></span></a></td>
+<td><a href="../typeandclass#vector"><span class="ret vec"></span></a></td>
 <td></td>
 </tr>
 <tr>
-<td>setGravity(<a href="../typeandclass"><span class="tag tab"></span></a> Vector)</td>
+<td>setGravity(<a href="../typeandclass#vector"><span class="tag vec"></span></a> direction)</td>
 <td>Sets the direction gravity gravity pulls.</td>
 <td><a href="../typeandclass"><span class="ret boo"></span></a></td>
 <td></td>
@@ -698,34 +698,34 @@
 <p>Physics casts are somewhat expensive. When running 30+ at once it will cause your game to stutter and/or crash. Do not overuse.</p>
 </div>
 <div class="admonition info">
-<p class="admonition-title">cast(<a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; parameters)</p>
+<p class="admonition-title">cast(<a href="../typeandclass"><span class="tag tab"></span></a> parameters)</p>
 <ul>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>parameters</strong>: A Table of parameters used to guide the function.<ul>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>parameters.origin</strong>: A Vector of the starting point.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>parameters</strong>: A Table of parameters used to guide the function.<ul>
+<li><a href="../typeandclass#vector"><span class="tag vec"></span></a> <strong>parameters.origin</strong>: Position of the starting point.<ul>
 <li><span class="critic comment">Optional, defaults to {x=0, y=0, z=0}.</span></li>
 </ul>
 </li>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>parameters.direction</strong>: A directional Vector for the cast to move in.<ul>
+<li><a href="../typeandclass#vector"><span class="tag vec"></span></a> <strong>parameters.direction</strong>: A direction for the cast to move in.<ul>
 <li><span class="critic comment">Optional, but cast is motionless without a direction.</span></li>
 </ul>
 </li>
-<li><a href="../typeandclass"><span class="tag int"></span></a>&nbsp; <strong>parameters.type</strong>: The type of cast. 1 = Ray, 2 = Sphere, 3= Box.<ul>
+<li><a href="../typeandclass"><span class="tag int"></span></a> <strong>parameters.type</strong>: The type of cast. <span class="critic comment">1 = Ray, 2 = Sphere, 3= Box</span><ul>
 <li><span class="critic comment">Optional, defaults to 1.</span></li>
 </ul>
 </li>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>parameters.size</strong>: A Vector of the size of the cast. Sphere/Box only.<ul>
+<li><a href="../typeandclass#vector"><span class="tag vec"></span></a> <strong>parameters.size</strong>: Size of the cast shape. Sphere/Box only.<ul>
 <li><span class="critic comment">Optional, defaults to {x=0, y=0, z=0}.</span></li>
 </ul>
 </li>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>parameters.orientation</strong>: A rotational Vector of the cast. Box only.<ul>
+<li><a href="../typeandclass#vector"><span class="tag vec"></span></a> <strong>parameters.orientation</strong>: Rotation of the cast shape. Box only.<ul>
 <li><span class="critic comment">Optional, defaults to {x=0, y=0, z=0}.</span></li>
 </ul>
 </li>
-<li><a href="../typeandclass"><span class="tag flo"></span></a>&nbsp; <strong>parameters.max_distance</strong>: How fast the cast will travel.<ul>
+<li><a href="../typeandclass"><span class="tag flo"></span></a> <strong>parameters.max_distance</strong>: How far the cast will travel.<ul>
 <li><span class="critic comment">Optional, defaults to infinity. Won't move without direction.</span></li>
 </ul>
 </li>
-<li><a href="../typeandclass"><span class="tag boo"></span></a>&nbsp; <strong>parameters.debug</strong>: If the cast is visualized for the user.<ul>
+<li><a href="../typeandclass"><span class="tag boo"></span></a> <strong>parameters.debug</strong>: If the cast is visualized for the user.<ul>
 <li><span class="critic comment">Optional, defaults to false.</span></li>
 </ul>
 </li>
@@ -736,11 +736,11 @@
 <div class="admonition info">
 <p class="admonition-title">Returned Table of Hit Objects</p>
 <ul>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>table</strong>: A numerically indexed Table, one entry for each hit Object. Entries are in the order of being hit.<ul>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>table.point</strong>: A Vector of the position the cast impact.</li>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>table.normal</strong>: A Vector of the surface normal of the impact point.</li>
-<li><a href="../typeandclass"><span class="tag flo"></span></a>&nbsp; <strong>table.distance</strong>: A Float of the distance between cast origin and impact point.</li>
-<li><a href="../typeandclass"><span class="tag obj"></span></a>&nbsp; <strong>table.hit_object</strong>: An Object reference to the object hit by the cast.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>table</strong>: A numerically indexed Table, one entry for each hit Object. Entries are in the order of being hit.<ul>
+<li><a href="../typeandclass#vector"><span class="tag vec"></span></a> <strong>table.point</strong>: Position the cast impacted the Object.</li>
+<li><a href="../typeandclass#vector"><span class="tag vec"></span></a> <strong>table.normal</strong>: The surface normal of the impact point.</li>
+<li><a href="../typeandclass"><span class="tag flo"></span></a> <strong>table.distance</strong>: Distance between cast origin and impact point.</li>
+<li><a href="../typeandclass"><span class="tag obj"></span></a> <strong>table.hit_object</strong>: An Object reference to the Object hit by the cast.</li>
 </ul>
 </li>
 </ul>

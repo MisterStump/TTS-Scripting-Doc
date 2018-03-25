@@ -506,8 +506,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#gethandtransformint-hand_index" title="getHandTransform(Int hand_index)" class="md-nav__link">
-    getHandTransform(Int hand_index)
+  <a href="#gethandtransform" title="getHandTransform(...)" class="md-nav__link">
+    getHandTransform(...)
   </a>
   
 </li>
@@ -755,8 +755,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#gethandtransformint-hand_index" title="getHandTransform(Int hand_index)" class="md-nav__link">
-    getHandTransform(Int hand_index)
+  <a href="#gethandtransform" title="getHandTransform(...)" class="md-nav__link">
+    getHandTransform(...)
   </a>
   
 </li>
@@ -967,7 +967,7 @@
 <tr>
 <td>getPointerPosition()</td>
 <td>Returns the Vector of the Player's pointer coordinates.</td>
-<td><a href="../typeandclass"><span class="ret tab"></span></a></td>
+<td><a href="../typeandclass#vector"><span class="ret vec"></span></a></td>
 <td></td>
 </tr>
 <tr>
@@ -995,7 +995,7 @@
 <td></td>
 </tr>
 <tr>
-<td>print(<a href="../typeandclass"><span class="tag str"></span></a> message, <a href="../typeandclass"><span class="tag tab"></span></a> Color)</td>
+<td>print(<a href="../typeandclass"><span class="tag str"></span></a> message, <a href="../typeandclass#color"><span class="tag col"></span></a> message_color)</td>
 <td>Prints a message into the Player's game chat.</td>
 <td><a href="../typeandclass"><span class="ret boo"></span></a></td>
 <td><a href="#print"><span class="i"></span></a></td>
@@ -1016,41 +1016,21 @@
 </table>
 <h3 id="direct-class-functions">Direct Class Functions<a class="headerlink" href="#direct-class-functions" title="Permanent link">&para;</a></h3>
 <p>These functions return direct references to Players, not a Player Color. See details section for usage.</p>
-<table>
-<thead>
-<tr>
-<th>Function Name</th>
-<th>Description</th>
-<th>Return</th>
-<th align="right">&nbsp;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>getPlayers()</td>
-<td>Returns Table of all Players in the instance.</td>
-<td><a href="../typeandclass"><span class="ret tab"></span></a></td>
-<td align="right"><a href="#getplayers"><span class="i"></span></a></td>
-</tr>
-<tr>
-<td>getSpectators()</td>
-<td>Returns Table of all Players in spectator (Grey).</td>
-<td><a href="../typeandclass"><span class="ret tab"></span></a></td>
-<td align="right"><a href="#getspectators"><span class="i"></span></a></td>
-</tr>
-</tbody>
-</table>
+<p>Function Name | Description | Return |<br />
+-- | -- | -- | --:
+getPlayers() | Returns Table of all Players in the instance. | <a href="../typeandclass"><span class="ret tab"></span></a> | <a href="#getplayers"><span class="i"></span></a>
+getSpectators() | Returns Table of all Players in spectator (Grey). | <a href="../typeandclass"><span class="ret tab"></span></a> | <a href="#getspectators"><span class="i"></span></a></p>
 <hr />
 <h2 id="function-details">Function Details<a class="headerlink" href="#function-details" title="Permanent link">&para;</a></h2>
 <h3 id="class-function-details">Class Function Details<a class="headerlink" href="#class-function-details" title="Permanent link">&para;</a></h3>
 <h4 id="attachcameratoobject">attachCameraToObject(...)<a class="headerlink" href="#attachcameratoobject" title="Permanent link">&para;</a></h4>
-<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Makes a Player's camera follow an Object. Returns Bool.</p>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Makes a Player's camera follow an Object.</p>
 <div class="admonition info">
-<p class="admonition-title">attachCameraToObject(<a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; parameters)</p>
+<p class="admonition-title">attachCameraToObject(<a href="../typeandclass"><span class="tag tab"></span></a> parameters)</p>
 <ul>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>parameters</strong>: A Table with parameters which guide the function.<ul>
-<li><a href="../typeandclass"><span class="tag obj"></span></a>&nbsp; <strong>parameters.object</strong>: The Object to attach the camera to.</li>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>parameters.offset</strong>: A Vector to offset the camera by.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>parameters</strong>: A Table with parameters which guide the function.<ul>
+<li><a href="../typeandclass"><span class="tag obj"></span></a> <strong>parameters.object</strong>: The Object to attach the camera to.</li>
+<li><a href="../typeandclass#vector"><span class="tag vec"></span></a> <strong>parameters.offset</strong>: A Vector to offset the camera by.<ul>
 <li><span class="critic comment">Optional, defaults to {x=0, y=0, z=0}.</span></li>
 </ul>
 </li>
@@ -1065,10 +1045,10 @@
 <h4 id="broadcast">broadcast(...)<a class="headerlink" href="#broadcast" title="Permanent link">&para;</a></h4>
 <p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Print message on Player's screen and their game chat log.</p>
 <div class="admonition info">
-<p class="admonition-title">broadcast(<a href="../typeandclass"><span class="tag str"></span></a>&nbsp; message, <a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; Color)</p>
+<p class="admonition-title">broadcast(<a href="../typeandclass"><span class="tag str"></span></a> message, <a href="../typeandclass#color"><span class="tag col"></span></a> message_color)</p>
 <ul>
-<li><a href="../typeandclass"><span class="tag str"></span></a>&nbsp; <strong>message</strong>: The message to be displayed.</li>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>Color</strong>: A <a href="../typeandclass#color">Color</a> table, used to tint the message.<ul>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>message</strong>: The message to be displayed.</li>
+<li><a href="../typeandclass#color"><span class="tag col"></span></a> <strong>message_color</strong>: Tint of the message text.<ul>
 <li><span class="critic comment">Optional, defaults to {r=1, g=1, b=1}.</span></li>
 </ul>
 </li>
@@ -1076,11 +1056,11 @@
 </div>
 <hr />
 <h4 id="changecolor">changeColor(...)<a class="headerlink" href="#changecolor" title="Permanent link">&para;</a></h4>
-<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Changes player to this <a href="../player-color">Player Color</a>.</p>
+<p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Changes player to this <a href="../player-color">Player Color</a> (seat).</p>
 <div class="admonition info">
-<p class="admonition-title">changeColor(<a href="../typeandclass"><span class="tag str"></span></a>&nbsp; player_color)</p>
+<p class="admonition-title">changeColor(<a href="../typeandclass"><span class="tag str"></span></a> player_color)</p>
 <ul>
-<li><a href="../typeandclass"><span class="tag str"></span></a>&nbsp; <strong>player_color</strong>: The <a href="../player-color">player color</a> seat to move the Player to.</li>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>player_color</strong>: The <a href="../player-color">Player Color</a> seat to move the Player to.</li>
 </ul>
 </div>
 <div class="codehilite"><pre><span></span><span class="n">Player</span><span class="p">[</span><span class="s2">&quot;White&quot;</span><span class="p">].</span><span class="n">changeColor</span><span class="p">(</span><span class="s2">&quot;Red&quot;</span><span class="p">)</span>
@@ -1090,9 +1070,9 @@
 <h4 id="gethandobjects">getHandObjects(...)<a class="headerlink" href="#gethandobjects" title="Permanent link">&para;</a></h4>
 <p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns a Table of Objects that are in this <a href="http://berserk-games.com/knowledgebase/hands/">hand zone</a>.</p>
 <div class="admonition info">
-<p class="admonition-title">getHandObjects(<a href="../typeandclass"><span class="tag int"></span></a>&nbsp; hand_index)</p>
+<p class="admonition-title">getHandObjects(<a href="../typeandclass"><span class="tag int"></span></a> hand_index)</p>
 <ul>
-<li><a href="../typeandclass"><span class="tag int"></span></a>&nbsp; <strong>hand_index</strong>: An index, representing which hand zone to return Objects for.<ul>
+<li><a href="../typeandclass"><span class="tag int"></span></a> <strong>hand_index</strong>: An index, representing which hand zone to return Objects for.<ul>
 <li><span class="critic comment">Optional, defaults to 1.</span></li>
 </ul>
 </li>
@@ -1103,12 +1083,12 @@
 <p>Hand indexes start at 1 and are numbered in the order of their creation. Each Player color has its own indexes.</p>
 </div>
 <hr />
-<h4 id="gethandtransformint-hand_index">getHandTransform(Int hand_index)<a class="headerlink" href="#gethandtransformint-hand_index" title="Permanent link">&para;</a></h4>
+<h4 id="gethandtransform">getHandTransform(...)<a class="headerlink" href="#gethandtransform" title="Permanent link">&para;</a></h4>
 <p><a href="../typeandclass"><span class="ret tab"></span></a>&nbsp; Returns a Table of data on this <a href="http://berserk-games.com/knowledgebase/hands/">hand zone</a>.</p>
 <div class="admonition info">
-<p class="admonition-title">getHandTransform(<a href="../typeandclass"><span class="tag int"></span></a>&nbsp; hand_index)</p>
+<p class="admonition-title">getHandTransform(<a href="../typeandclass"><span class="tag int"></span></a> hand_index)</p>
 <ul>
-<li><a href="../typeandclass"><span class="tag int"></span></a>&nbsp; <strong>hand_index</strong>: An index, representing which hand zone to return data on.<ul>
+<li><a href="../typeandclass"><span class="tag int"></span></a> <strong>hand_index</strong>: An index, representing which hand zone to return data on.<ul>
 <li><span class="critic comment">Optional, defaults to 1.</span></li>
 </ul>
 </li>
@@ -1117,13 +1097,13 @@
 <div class="admonition info">
 <p class="admonition-title">Return Data Table</p>
 <ul>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>data</strong>: The Table the data is returned in.<ul>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>data.position</strong>: A Vector of the position of the hand zone.</li>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>data.rotation</strong>: A Vector of the rotation of the hand zone.</li>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>data.scale</strong>: A Vector of the scale of the hand zone.</li>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>data.forward</strong>: A Vector of the forward direction of the hand zone.</li>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>data.right</strong>: A Vector of the right direction of the hand zone.</li>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>data.up</strong>: A Vector of the up direction of the hand zone.</li>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>data</strong>: The Table the data is returned in.<ul>
+<li><a href="../typeandclass#vector"><span class="tag vec"></span></a> <strong>data.position</strong>: Position of the hand zone.</li>
+<li><a href="../typeandclass#vector"><span class="tag vec"></span></a> <strong>data.rotation</strong>: Rotation of the hand zone.</li>
+<li><a href="../typeandclass#vector"><span class="tag vec"></span></a> <strong>data.scale</strong>: Scale of the hand zone.</li>
+<li><a href="../typeandclass#vector"><span class="tag vec"></span></a> <strong>data.forward</strong>: Forward direction of the hand zone.</li>
+<li><a href="../typeandclass#vector"><span class="tag vec"></span></a> <strong>data.right</strong>: Right direction of the hand zone.</li>
+<li><a href="../typeandclass#vector"><span class="tag vec"></span></a> <strong>data.up</strong>: Up direction of the hand zone.</li>
 </ul>
 </li>
 </ul>
@@ -1136,19 +1116,19 @@
 <h4 id="lookat">lookAt(...)<a class="headerlink" href="#lookat" title="Permanent link">&para;</a></h4>
 <p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Moves a Player's camera, forcing 3'rd person camera mode.</p>
 <div class="admonition info">
-<p class="admonition-title">lookAt(<a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; parameters)</p>
+<p class="admonition-title">lookAt(<a href="../typeandclass"><span class="tag tab"></span></a> parameters)</p>
 <ul>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>parameters</strong>: A Table of controlling parameters to point the player camera.<ul>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>parameters.position</strong>: A Vector of the position to center the camera on.</li>
-<li><a href="../typeandclass"><span class="tag flo"></span></a>&nbsp; <strong>parameters.pitch</strong>: The pitch angle of the camera. 0 to 90.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>parameters</strong>: A Table of controlling parameters to point the player camera.<ul>
+<li><a href="../typeandclass#vector"><span class="tag vec"></span></a> <strong>parameters.position</strong>: Position to center the camera on.</li>
+<li><a href="../typeandclass"><span class="tag flo"></span></a> <strong>parameters.pitch</strong>: Pitch angle of the camera. 0 to 90.<ul>
 <li><span class="critic comment">Optional, defaults to 0.</span></li>
 </ul>
 </li>
-<li><a href="../typeandclass"><span class="tag flo"></span></a>&nbsp; <strong>parameters.yaw</strong>: The yaw angle of the camera. -180 to 180.<ul>
+<li><a href="../typeandclass"><span class="tag flo"></span></a> <strong>parameters.yaw</strong>: Yaw angle of the camera. -180 to 180.<ul>
 <li><span class="critic comment">Optional, defaults to 0.</span></li>
 </ul>
 </li>
-<li><a href="../typeandclass"><span class="tag flo"></span></a>&nbsp; <strong>parameters.distance</strong>: The distance the camera is from the position Vector.<ul>
+<li><a href="../typeandclass"><span class="tag flo"></span></a> <strong>parameters.distance</strong>: Distance the camera is from the position Vector.<ul>
 <li><span class="critic comment">Optional, defaults to 40.</span></li>
 </ul>
 </li>
@@ -1169,10 +1149,10 @@
 <h4 id="print">print(...)<a class="headerlink" href="#print" title="Permanent link">&para;</a></h4>
 <p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Prints a message into the Player's game chat.</p>
 <div class="admonition info">
-<p class="admonition-title">print(<a href="../typeandclass"><span class="tag str"></span></a>&nbsp; message, <a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; Color)</p>
+<p class="admonition-title">print(<a href="../typeandclass"><span class="tag str"></span></a> message, <a href="../typeandclass#color"><span class="tag col"></span></a> message_color)</p>
 <ul>
-<li><a href="../typeandclass"><span class="tag str"></span></a>&nbsp; <strong>message</strong>: The text to be displayed.</li>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>Color</strong>: A <a href="../typeandclass#color">Color</a> Table for the text to be tinted.<ul>
+<li><a href="../typeandclass"><span class="tag str"></span></a> <strong>message</strong>: The text to be displayed.</li>
+<li><a href="../typeandclass#color"><span class="tag col"></span></a> <strong>message_color</strong>: Color for the message text to be tinted.<ul>
 <li><span class="critic comment">Optional, defaults to {r=1, g=1, b=1}.</span></li>
 </ul>
 </li>
@@ -1182,24 +1162,24 @@
 <h4 id="sethandtransform">setHandTransform(...)<a class="headerlink" href="#sethandtransform" title="Permanent link">&para;</a></h4>
 <p><a href="../typeandclass"><span class="ret boo"></span></a>&nbsp; Sets transform elements of a <a href="http://berserk-games.com/knowledgebase/hands/">hand zone</a>.</p>
 <div class="admonition info">
-<p class="admonition-title">setHandTransform(<a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; parameters, <a href="../typeandclass"><span class="tag int"></span></a>&nbsp; hand_index)</p>
+<p class="admonition-title">setHandTransform(<a href="../typeandclass"><span class="tag tab"></span></a> parameters, <a href="../typeandclass"><span class="tag int"></span></a> hand_index)</p>
 <ul>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>parameters</strong>: The Table the data to transform the hand zone with.<ul>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>parameters.position</strong>: A Vector of the position of the hand zone.<ul>
+<li><a href="../typeandclass"><span class="tag tab"></span></a> <strong>parameters</strong>: The Table the data to transform the hand zone with.<ul>
+<li><a href="../typeandclass#vector"><span class="tag vec"></span></a> <strong>parameters.position</strong>: Position of the hand zone.<ul>
 <li><span class="critic comment">Optional, defaults to {x=0, y=0, z=0}.</span></li>
 </ul>
 </li>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>parameters.rotation</strong>: A Vector of the rotation of the hand zone.<ul>
+<li><a href="../typeandclass#vector"><span class="tag vec"></span></a> <strong>parameters.rotation</strong>: Rotation of the hand zone.<ul>
 <li><span class="critic comment">Optional, defaults to {x=0, y=0, z=0}.</span></li>
 </ul>
 </li>
-<li><a href="../typeandclass"><span class="tag tab"></span></a>&nbsp; <strong>parameters.scale</strong>: A Vector of the scale of the hand zone.<ul>
+<li><a href="../typeandclass#vector"><span class="tag vec"></span></a> <strong>parameters.scale</strong>: Scale of the hand zone.<ul>
 <li><span class="critic comment">Optional, defaults to {x=0, y=0, z=0}.</span></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="../typeandclass"><span class="tag int"></span></a>&nbsp; <strong>hand_index</strong>: An Int of the index, representing which hand zone to modify.<ul>
+<li><a href="../typeandclass"><span class="tag int"></span></a> <strong>hand_index</strong>: Index, representing which hand zone to modify.<ul>
 <li><span class="critic comment">Optional, defaults to 1.</span></li>
 </ul>
 </li>
