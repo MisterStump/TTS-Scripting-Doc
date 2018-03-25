@@ -17,7 +17,7 @@
     
     word-break: normal;
 
-    width: 45px;
+    width: 50px;
     line-height: 1;
 }
 .tag:hover {
@@ -46,9 +46,11 @@
 
 
     float: left;
-    width: 45px;
+    width: 50px;
     /*Squeezes lines together vertically*/
     line-height: 1;
+    
+    word-break: keep-all;
 }
 .ret:hover {
     opacity: 0.75;
@@ -126,7 +128,7 @@
 /*Object*/
 .obj {
     color: #000000;
-    background-color: #8C99B6;
+    background-color: #b1bfe0;
     /*color: #ffffff;
     background-color: #37474f;*/
 }
@@ -142,4 +144,24 @@
 }
 .var:after {
     content: "var";
+}
+
+/*Vector*/
+.vec {
+    color: #000000;
+    /*background-color: #e74c3c;*/
+    background-color: #f4d29a;
+}
+.vec:after {
+    content: "vector";
+}
+
+/*Color*/
+.col {
+    color: #000000;
+    /*background-color: #e74c3c;*/
+    background-color: #e2bae0
+}
+.col:after {
+    content: "color";
 }

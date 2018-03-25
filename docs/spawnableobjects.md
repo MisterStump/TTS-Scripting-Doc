@@ -163,7 +163,7 @@ You can also use setCustomObject along with [reload()](object#reload) to modify 
 
 ###Custom AssetBundle
 
-* Custom_AssetBundle
+* Custom_Assetbundle
             
 !!!info "Custom Parameters"
     * [<span class="tag tab"></span>](typeandclass)&nbsp; **parameters**: A Table of parameters which determine the properties of the Object.

@@ -60,40 +60,40 @@ TextTool | A [TextTool](texttool), which is an in-game text display system.
 ###Transform Functions
 These functions handle the physical attributes of an Object: Position, Rotation, Scale, Bounds, Velocity. In other words, moving objects around as well as getting information on how they are moving.
 
-Function Name | Description | Return | &nbsp; 
+Function Name | Description | Return | &nbsp;
 -- | -- | -- | --
-addForce([<span class="tag tab"></span>](typeandclass) Vector, [<span class="tag int"></span>](typeandclass) force_type) | Adds force to an object in a directional Vector. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#addforce)
-addTorque([<span class="tag tab"></span>](typeandclass) Vector, [<span class="tag int"></span>](typeandclass) force_type) | Adds torque to an object in a rotational Vector. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#addtorque)
-getAngularVelocity() | Returns a Vector of the current angular velocity. | [<span class="ret tab"></span>](typeandclass)
-getBounds() | Returns a Vector describing the size of an object in Global terms. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#getbounds)
-getBoundsNormalized() | Returns a Vector describing the size of an object in Global terms, as if it was rotated to {0,0,0}. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#getboundsnormalized)
-getPosition() | Returns a Vector of the current world position. | [<span class="ret tab"></span>](typeandclass) 
-getRotation() | Returns a Vector of the current rotation. | [<span class="ret tab"></span>](typeandclass)
-getScale() | Returns a Vector of the current scale. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#getscale)
-getTransformForward() | Returns a Vector of the forward direction of this object. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#gettransformforward)
-getTransformRight() | Returns a Vector of the right direction of this object. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#gettransformright)
-getTransformUp() | Returns a Vector of the up direction of this object. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#gettransformup)
-getVelocity() | Returns a Vector of the current velocity. | [<span class="ret tab"></span>](typeandclass) | 
+addForce([<span class="tag vec"></span>](typeandclass#vector) vector, [<span class="tag int"></span>](typeandclass) force_type) | Adds force to an object in a directional Vector. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#addforce)
+addTorque([<span class="tag vec"></span>](typeandclass#vector) vector, [<span class="tag int"></span>](typeandclass) force_type) | Adds torque to an object in a rotational Vector. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#addtorque)
+getAngularVelocity() | Returns a Vector of the current angular velocity. | [<span class="ret vec"></span>](typeandclass#vector)
+getBounds() | Returns a Vector describing the size of an object in Global terms. | [<span class="ret vec"></span>](typeandclass#vector) | [<span class="i"></span>](#getbounds)
+getBoundsNormalized() | Returns a Vector describing the size of an object in Global terms, as if it was rotated to {0,0,0}. | [<span class="ret vec"></span>](typeandclass#vector) | [<span class="i"></span>](#getboundsnormalized)
+getPosition() | Returns a Vector of the current world position. | [<span class="ret vec"></span>](typeandclass#vector)
+getRotation() | Returns a Vector of the current rotation. | [<span class="ret vec"></span>](typeandclass#vector)
+getScale() | Returns a Vector of the current scale. | [<span class="ret vec"></span>](typeandclass#vector) | [<span class="i"></span>](#getscale)
+getTransformForward() | Returns a Vector of the forward direction of this object. | [<span class="ret vec"></span>](typeandclass#vector) | [<span class="i"></span>](#gettransformforward)
+getTransformRight() | Returns a Vector of the right direction of this object. | [<span class="ret vec"></span>](typeandclass#vector) | [<span class="i"></span>](#gettransformright)
+getTransformUp() | Returns a Vector of the up direction of this object. | [<span class="ret vec"></span>](typeandclass#vector) | [<span class="i"></span>](#gettransformup)
+getVelocity() | Returns a Vector of the current velocity. | [<span class="ret vec"></span>](typeandclass#vector) | 
 isSmoothMoving() | Indicates if an object is traveling as part of a Smooth move. Smooth moving is performed by setPositionSmooth and setRotationSmooth. | [<span class="ret boo"></span>](typeandclass) | 
-positionToLocal([<span class="tag tab"></span>](typeandclass) Vector) | Returns a Vector after converting a world Vector to a local Vector. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#positiontolocal)
-positionToWorld([<span class="tag tab"></span>](typeandclass) Vector) | Returns a Vector after converting a local Vector to a world Vector. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#positiontoworld)
-rotate([<span class="tag tab"></span>](typeandclass) Vector) | Rotates Object smoothly in the direction of the given Vector. | [<span class="ret boo"></span>](typeandclass) | 
-scale([<span class="tag tab"></span>](typeandclass) Vector or [<span class="tag flo"></span>](typeandclass)) | Scales Object by a multiple. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#scale)
-setAngularVelocity([<span class="tag tab"></span>](typeandclass) Vector) | Sets a Vector as the current angular velocity. | [<span class="ret boo"></span>](typeandclass) | 
-setPosition([<span class="tag tab"></span>](typeandclass) Vector) | Instantly moves an Object to the given Vector. | [<span class="ret boo"></span>](typeandclass) | 
-setPositionSmooth([<span class="tag tab"></span>](typeandclass) Vector, [<span class="tag boo"></span>](typeandclass) collide, [<span class="tag boo"></span>](typeandclass) fast) | Moves the Object smoothly to the given Vector. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#setpositionsmooth)
-setRotation([<span class="tag tab"></span>](typeandclass) Vector) | Instantly rotates an Object to the given Vector. | [<span class="ret boo"></span>](typeandclass) | 
-setRotationSmooth([<span class="tag tab"></span>](typeandclass) Vector, [<span class="tag boo"></span>](typeandclass) collide, [<span class="tag boo"></span>](typeandclass) fast) | Rotates the Object smoothly to the given Vector. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#setrotationsmooth)
-setScale([<span class="tag tab"></span>](typeandclass) Vector) | Sets a Vector as the current scale. | [<span class="ret boo"></span>](typeandclass) | 
-setVelocity([<span class="tag tab"></span>](typeandclass) Vector) | Sets a Vector as the current velocity. | [<span class="ret boo"></span>](typeandclass) | 
-translate([<span class="tag tab"></span>](typeandclass) Vector) | Smoothly moves Object by the given Vector offset. | [<span class="ret boo"></span>](typeandclass) | 
+positionToLocal([<span class="tag vec"></span>](typeandclass#vector) vector) | Returns a Vector after converting a world Vector to a local Vector. | [<span class="ret vec"></span>](typeandclass#vector) | [<span class="i"></span>](#positiontolocal)
+positionToWorld([<span class="tag vec"></span>](typeandclass#vector) vector) | Returns a Vector after converting a local Vector to a world Vector. | [<span class="ret vec"></span>](typeandclass#vector) | [<span class="i"></span>](#positiontoworld)
+rotate([<span class="tag vec"></span>](typeandclass#vector) vector) | Rotates Object smoothly in the direction of the given Vector. | [<span class="ret boo"></span>](typeandclass) | 
+scale([<span class="tag vec"></span>](typeandclass#vector) vector or [<span class="tag flo"></span>](typeandclass)) | Scales Object by a multiple. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#scale)
+setAngularVelocity([<span class="tag vec"></span>](typeandclass#vector) vector) | Sets a Vector as the current angular velocity. | [<span class="ret boo"></span>](typeandclass) | 
+setPosition([<span class="tag vec"></span>](typeandclass#vector) vector) | Instantly moves an Object to the given Vector. | [<span class="ret boo"></span>](typeandclass) | 
+setPositionSmooth([<span class="tag vec"></span>](typeandclass#vector) vector, [<span class="tag boo"></span>](typeandclass) collide, [<span class="tag boo"></span>](typeandclass) fast) | Moves the Object smoothly to the given Vector. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#setpositionsmooth)
+setRotation([<span class="tag vec"></span>](typeandclass#vector) vector) | Instantly rotates an Object to the given Vector. | [<span class="ret boo"></span>](typeandclass) | 
+setRotationSmooth([<span class="tag vec"></span>](typeandclass#vector) vector, [<span class="tag boo"></span>](typeandclass) collide, [<span class="tag boo"></span>](typeandclass) fast) | Rotates the Object smoothly to the given Vector. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#setrotationsmooth)
+setScale([<span class="tag vec"></span>](typeandclass#vector) vector) | Sets a Vector as the current scale. | [<span class="ret boo"></span>](typeandclass) | 
+setVelocity([<span class="tag vec"></span>](typeandclass#vector) vector) | Sets a Vector as the current velocity. | [<span class="ret boo"></span>](typeandclass) | 
+translate([<span class="tag vec"></span>](typeandclass#vector) vector) | Smoothly moves Object by the given Vector offset. | [<span class="ret boo"></span>](typeandclass) | 
 
 
 
 ###UI Functions
 These functions allow for the creation/editing/removal of functional buttons and text inputs which themselves trigger code within your scripts.
 
-Function Name | Description | Return | &nbsp; 
+Function Name | Description | Return | &nbsp;
 -- | -- | -- | --
 clearButtons() | Removes all scripted buttons. | [<span class="ret boo"></span>](typeandclass) | 
 clearInputs() | Removes all scripted inputs. | [<span class="ret boo"></span>](typeandclass) | 
@@ -111,9 +111,9 @@ removeInput([<span class="tag int"></span>](typeandclass) index) | Removes a spe
 ###Get Functions
 These functions obtain information from an object.
 
-Function Name | Description | Return | &nbsp; 
+Function Name | Description | Return | &nbsp;
 -- | -- | -- | --
-getColorTint() | Returns Color tint. | [<span class="ret tab"></span>](typeandclass) | 
+getColorTint() | Returns Color tint. | [<span class="ret col"></span>](typeandclass#color) | 
 getCustomObject() | Returns a Table with the Custom Object information of a Custom Object. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#getcustomobject)
 getLock() | Returns bool representing if the Object is locked. | [<span class="ret boo"></span>](typeandclass) | 
 getObjects() | Returns a Table of Objects in the script zone/bag/deck. | [<span class="ret tab"></span>](typeandclass) | [<span class="i"></span>](#getobjects)
@@ -128,9 +128,9 @@ getValue() | Returns an Int as the value. What the value represents depends on w
 ###Set Functions
 These functions apply action to an object. They take some property in order to work.
 
-Function Name | Description | Return | &nbsp; 
+Function Name | Description | Return | &nbsp;
 -- | -- | -- | --
-setColorTint([<span class="tag tab"></span>](typeandclass) Color) | Sets the Color tint. | [<span class="ret boo"></span>](typeandclass) | 
+setColorTint([<span class="tag col"></span>](typeandclass#color) Color) | Sets the Color tint. | [<span class="ret boo"></span>](typeandclass) | 
 setCustomObject([<span class="tag tab"></span>](typeandclass) parameters) | Sets a custom Object's properties. | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#setcustomobject)
 setLock([<span class="tag boo"></span>](typeandclass) lock) | Sets if an object is locked in place. | [<span class="ret boo"></span>](typeandclass) | 
 setRotationValues([<span class="tag tab"></span>](typeandclass) rotation_values) | Sets rotation values of an object. Rotation values are used to give value to different rotations (like dice). | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#setrotationvalues)
@@ -142,24 +142,24 @@ setValue([<span class="tag var"></span>](typeandclass) value) | Sets an Int as t
 ###Action Function
 These functions perform general actions on objects and do not require any input parameters.
 
-Function Name | Description | Return | &nbsp; 
+Function Name | Description | Return | &nbsp;
 -- | -- | -- | --
-call(String func_name,Table func_params) | Used to call a Lua function on this Object. | [<span class="ret var"></span>](typeandclass) | [<span class="i"></span>](#call)
+call([<span class="tag str"></span>](typeandclass) func_name, [<span class="tag tab"></span>](typeandclass) func_params) | Used to call a Lua function on this Object. | [<span class="ret var"></span>](typeandclass) | [<span class="i"></span>](#call)
 flip() | Flip Object over. | [<span class="ret boo"></span>](typeandclass) | 
-clone(Table parameters) | Copy/Paste this Object, returning a reference to the new Object. | [<span class="ret obj"></span>](typeandclass) | [<span class="i"></span>](#clone)
+clone([<span class="tag tab"></span>](typeandclass) parameters) | Copy/Paste this Object, returning a reference to the new Object. | [<span class="ret obj"></span>](typeandclass) | [<span class="i"></span>](#clone)
 cut() | Cuts (splits in half) a deck or stack Object. | [<span class="ret boo"></span>](typeandclass) | 
-deal(Int number,String player_color, Int index) | Deals Objects. Will deal from decks/bags/stacks/individual items. | [<span class="ret obj"></span>](typeandclass) | [<span class="i"></span>](#deal)
-dealToColorWithOffset(Vector, Bool flip, String player_color) | Deals from a deck to a position relative to the hand zone. | [<span class="ret obj"></span>](typeandclass) | [<span class="i"></span>](#dealtocolorwithoffset)
+deal([<span class="tag int"></span>](typeandclass) number, [<span class="tag str"></span>](typeandclass) player_color, [<span class="tag int"></span>](typeandclass) index) | Deals Objects. Will deal from decks/bags/stacks/individual items. | [<span class="ret obj"></span>](typeandclass) | [<span class="i"></span>](#deal)
+dealToColorWithOffset([<span class="tag vec"></span>](typeandclass#vector) offset, [<span class="tag boo"></span>](typeandclass) flip, [<span class="tag str"></span>](typeandclass) player_color) | Deals from a deck to a position relative to the hand zone. | [<span class="ret obj"></span>](typeandclass) | [<span class="i"></span>](#dealtocolorwithoffset)
 destruct() | Destroys Object. Allows for `self.destruct()`. | [<span class="ret boo"></span>](typeandclass) | 
-highlightOn(Color, Float duration) | Creates a highlight around an Object. | [<span class="ret boo"></span>](typeandclass) | 
-highlightOff(Color) | Removes a highlight from around an Object. | [<span class="ret boo"></span>](typeandclass) |
-putObject(Object put_object) | Places an object into a container (chip stacks/bags/decks). | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#putobject)
+highlightOn([<span class="tag col"></span>](typeandclass#color) color, [<span class="tag flo"></span>](typeandclass) duration) | Creates a highlight around an Object. | [<span class="ret boo"></span>](typeandclass) | 
+highlightOff([<span class="tag col"></span>](typeandclass#color) color) | Removes a highlight from around an Object. | [<span class="ret boo"></span>](typeandclass) |
+putObject([<span class="tag obj"></span>](typeandclass) put_object) | Places an object into a container (chip stacks/bags/decks). | [<span class="ret boo"></span>](typeandclass) | [<span class="i"></span>](#putobject)
 randomize() | Shuffles deck/bag, rolls dice/coin, lifts other objects into the air. Same as pressing `R` by default. | [<span class="ret boo"></span>](typeandclass) | 
 reload() | Returns Object reference of itself after it respawns itself. | [<span class="ret obj"></span>](typeandclass) | [<span class="i"></span>](#reload)
 roll() | Rolls dice/coins. | [<span class="ret boo"></span>](typeandclass) | 
 shuffle() | Shuffles/shakes up contents of a deck or bag. | [<span class="ret boo"></span>](typeandclass) |
 shuffleStates() | Returns an Object reference to a new [state](http://berserk-games.com/knowledgebase/creating-states/) after randomly selecting and changing to one. | [<span class="ret obj"></span>](typeandclass) | 
-takeObject(Table parameters) | Returns an Object reference of Object taken from a container (bag/deck/chip stack) and placed into the world. | [<span class="ret obj"></span>](typeandclass) | [<span class="i"></span>](#takeobject)
+takeObject([<span class="tag tab"></span>](typeandclass) parameters) | Returns an Object reference of Object taken from a container (bag/deck/chip stack) and placed into the world. | [<span class="ret obj"></span>](typeandclass) | [<span class="i"></span>](#takeobject)
 
 ---
 
@@ -176,11 +176,11 @@ takeObject(Table parameters) | Returns an Object reference of Object taken from 
 
 ####addForce(...)
 
-Adds force to an object in a directional Vector.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Adds force to an object in a directional Vector.
 
-!!!info "addForce(Vector, Int force_type)"
-	* **Vector**: A Vector of the direction and magnitude of force.
-    * **Force Type**: An Int representing the force type to apply. Options below.
+!!!info "addForce([<span class="tag vec"></span>](typeandclass#vector) vector, [<span class="tag int"></span>](typeandclass) force_type)"
+	* [<span class="tag tab"></span>](typeandclass) **Vector**: A Vector of the direction and magnitude of force.
+    * [<span class="tag int"></span>](typeandclass) **force_type**: An Int representing the force type to apply. Options below.
 		* {>>Optional, defaults to 3.<<}
         * **1**: Continuous force, uses mass. *(Force)*
         * **2**: Continuous acceleration, ignores mass. *(Acceleration)*
@@ -192,11 +192,11 @@ Adds force to an object in a directional Vector.
 
 ####addTorque(...)
 
-Adds torque to an object in a rotational Vector.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Adds torque to an object in a rotational Vector.
 
-!!!info "addTorque(Vector, Int force_type)"
-	* **Vector**: A Vector of the direction and magnitude of rotational force.
-	* **Force Type**: An Int representing the force type to apply. Options below.
+!!!info "addTorque([<span class="tag vec"></span>](typeandclass#vector) vector, [<span class="tag int"></span>](typeandclass)  force_type)"
+	* [<span class="tag tab"></span>](typeandclass) **Vector**: A Vector of the direction and magnitude of rotational force.
+	* [<span class="tag int"></span>](typeandclass) **Force Type**: An Int representing the force type to apply. Options below.
 		* {>>Optional, defaults to 3.<<}
         * **1**: Continuous force, uses mass. *(Force)*
         * **2**: Continuous acceleration, ignores mass. *(Acceleration)*
@@ -209,12 +209,12 @@ Adds torque to an object in a rotational Vector.
 
 ####getBounds()
 
-Returns a Table of Vector information describing the size of an object in Global terms. [Bounds](https://docs.unity3d.com/ScriptReference/Bounds.html) are part of Unity, and represent an imaginary square box that can be drawn around an object. Unlike scale, it can help indicate the size of an object in in-game units, not just relative model size.
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns a Table of Vector information describing the size of an object in Global terms. [Bounds](https://docs.unity3d.com/ScriptReference/Bounds.html) are part of Unity, and represent an imaginary square box that can be drawn around an object. Unlike scale, it can help indicate the size of an object in in-game units, not just relative model size.
 
 !!!info "Return Table"
-	* **center**: The center of the bounding box.
-	* **size**: The size of the bounding box.
-	* **offset**: The offset of the center of the bounding box from the middle of the Object model.
+	* [<span class="tag tab"></span>](typeandclass) **center**: The Vector of the center of the bounding box.
+	* [<span class="tag tab"></span>](typeandclass) **size**: The Vector of the size of the bounding box.
+	* [<span class="tag tab"></span>](typeandclass) **offset**: The Vector of the offset of the center of the bounding box from the middle of the Object model.
 
 ``` Lua
 --Example returned Table
@@ -230,12 +230,12 @@ Returns a Table of Vector information describing the size of an object in Global
 
 ####getBoundsNormalized()
 
-Returns a Table of Vector information describing the size of an object in Global terms, as if it was rotated to {0,0,0}. [Bounds](https://docs.unity3d.com/ScriptReference/Bounds.html) are part of Unity, and represent an imaginary square box that can be drawn around an object. Unlike scale, it can help indicate the size of an object in in-game units, not just relative model size.
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns a Table of Vector information describing the size of an object in Global terms, as if it was rotated to {0,0,0}. [Bounds](https://docs.unity3d.com/ScriptReference/Bounds.html) are part of Unity, and represent an imaginary square box that can be drawn around an object. Unlike scale, it can help indicate the size of an object in in-game units, not just relative model size.
 
 !!!info "Return Table"
-	* **center**: The center of the bounding box.
-	* **size**: The size of the bounding box.
-	* **offset**: The offset of the center of the bounding box from the middle of the Object model.
+	* [<span class="tag tab"></span>](typeandclass) **center**: The Vector of the center of the bounding box.
+	* [<span class="tag tab"></span>](typeandclass) **size**: The Vector of the size of the bounding box.
+	* [<span class="tag tab"></span>](typeandclass) **offset**: The Vector of the offset of the center of the bounding box from the middle of the Object model.
 
 ``` Lua
 --Example returned Table
@@ -251,14 +251,14 @@ Returns a Table of Vector information describing the size of an object in Global
 
 ####getScale()
 
-Returns a Vector of the current scale. Scale is not an absolute measurement, it is a multiple of the Object's default model size. So {x=2, y=2, z=2} would be a model twice its default size, not 2 units large.
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns a Vector of the current scale. Scale is not an absolute measurement, it is a multiple of the Object's default model size. So {x=2, y=2, z=2} would be a model twice its default size, not 2 units large.
 
 ---
 
 
 ####getTransformForward()
 
-Returns a Vector of the forward direction of this Object. The direction is relative to how the object is facing.
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns a Vector of the forward direction of this Object. The direction is relative to how the object is facing.
 
 ``` Lua
 --Example of moving forward 5 units
@@ -280,7 +280,7 @@ end
 
 ####getTransformRight()
 
-Returns a Vector of the forward direction of this object. The direction is relative to how the object is facing.
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns a Vector of the forward direction of this object. The direction is relative to how the object is facing.
 
 ``` Lua
 --Example of moving right 5 units
@@ -302,7 +302,7 @@ end
 
 ####getTransformUp()
 
-Returns a Vector of the up direction of this Object. The direction is relative to how the object is facing.
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns a Vector of the up direction of this Object. The direction is relative to how the object is facing.
 
 ``` Lua
 --Example of moving up 5 units
@@ -324,7 +324,7 @@ end
 
 ####positionToLocal(...)
 
-Returns a Vector after converting a world vector to a local Vector. A world Vector is a positional Vector using the world's coordinate system. A Local Vector is a positional Vector that is relative to the position of the given object.
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns a Vector after converting a world vector to a local Vector. A world Vector is a positional Vector using the world's coordinate system. A Local Vector is a positional Vector that is relative to the position of the given object.
 
 !!!tip "Object Scale"
 	This function takes the Object's scale into account, as the Object is the key relative point.
@@ -334,7 +334,7 @@ Returns a Vector after converting a world vector to a local Vector. A world Vect
 
 ####positionToWorld(...)
 
-Returns a Vector after converting a local Vector to a world Vector. A world Vector is a positional Vector using the world's coordinate system. A Local Vector is a positional Vector that is relative to the position of the given object.
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns a Vector after converting a local Vector to a world Vector. A world Vector is a positional Vector using the world's coordinate system. A Local Vector is a positional Vector that is relative to the position of the given object.
 
 !!!tip "Object Scale"
 	This function takes the Object's scale into account, as the Object is the key relative point.
@@ -344,7 +344,7 @@ Returns a Vector after converting a local Vector to a world Vector. A world Vect
 
 ####rotate(Vector)
 
-Rotates Object smoothly in the direction of the given Vector. This does not set the Object to face a specific rotation, it rotates the Object around by the number of degrees given for x/y/z.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Rotates Object smoothly in the direction of the given Vector. This does not set the Object to face a specific rotation, it rotates the Object around by the number of degrees given for x/y/z.
 
 ``` Lua
 --Rotates object 90 degrees around its Y axis
@@ -356,9 +356,9 @@ self.rotate({x=0, y=90, z=0})
 
 ####scale(...)
 
-Scales Object by a multiple. This does not set the Object to a specific scale, it scales the Object by the given multiple.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Scales Object by a multiple. This does not set the Object to a specific scale, it scales the Object by the given multiple.
 
-!!!info "scale(Vector or Float)"
+!!!info "scale([<span class="tag vec"></span>](typeandclass#vector) vector or [<span class="tag flo"></span>](typeandclass) factor)"
 	This function accepts either a Vector or Float as a parameter. If you use a Float, it will multiple the Object's x/y/z by that number.
 
 ``` Lua
@@ -372,24 +372,24 @@ self.scale(2)
 
 ####setPositionSmooth(...)
 
-Moves the Object smoothly to the given Vector.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Moves the Object smoothly to the given Vector.
 
-!!!info "setPositionSmooth(Vector, Bool collide, Bool fast)"
-	* **Vector**: A positional Vector.
-	* **Bool collide**: A Bool for if the Object will collide with other Objects while moving.
-	* **Bool fast**: A Bool for if the Object is moved quickly.
+!!!info "setPositionSmooth([<span class="tag vec"></span>](typeandclass#vector) vector, [<span class="tag boo"></span>](typeandclass) collide, [<span class="tag boo"></span>](typeandclass) fast)"
+	* [<span class="tag tab"></span>](typeandclass) **Vector**: A positional Vector.
+	* [<span class="tag boo"></span>](typeandclass) **collide**: If the Object will collide with other Objects while moving.
+	* [<span class="tag boo"></span>](typeandclass) **fast**: If the Object is moved quickly.
 	
 ---
 
 
 ####setRotationSmooth(...)
 
-Rotates the Object smoothly to the given Vector.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Rotates the Object smoothly to the given Vector.
 
-!!!info "setRotationSmooth(Vector, Bool collide, Bool fast)"
-	* **Vector**: A rotational Vector.
-	* **Bool collide**: A Bool for if the Object will collide with other Objects while rotating.
-	* **Bool fast**: A Bool for if the Object is rotated quickly.
+!!!info "setRotationSmooth([<span class="tag vec"></span>](typeandclass#vector) vector, [<span class="tag boo"></span>](typeandclass) collide, [<span class="tag boo"></span>](typeandclass) fast)"
+	* [<span class="tag tab"></span>](typeandclass) **Vector**: A rotational Vector.
+	* [<span class="tag boo"></span>](typeandclass) **collide**: If the Object will collide with other Objects while rotating.
+	* [<span class="tag boo"></span>](typeandclass) **fast**: If the Object is rotated quickly.
 
 ---
 
@@ -398,7 +398,7 @@ Rotates the Object smoothly to the given Vector.
 
 ####createButton(...)
 
-Creates a scripted button attached to the Object. Scripted buttons are buttons that can be clicked while in-game that trigger a function in a script.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Creates a scripted button attached to the Object. Scripted buttons are buttons that can be clicked while in-game that trigger a function in a script.
 
 ???tip "Button Tips"
 	* Buttons can not be clicked from their back side.
@@ -409,37 +409,37 @@ Creates a scripted button attached to the Object. Scripted buttons are buttons t
 	* A button width/height of 0 will cause the button not to be drawn, but its label will be. This can be a way to attach text to an Object.
 	* You cannot assign an index to a button. It is given one automatically.
 
-!!!info "createButton(Table parameters)"
-	* **Table parameters**: A Table containing the information used to spawn the button.
-		* **parameters.click_function**: A String of the function's name that will be run when button is clicked.
-		* **parameters.function_owner**: The Object which contains the click_function function.
+!!!info "createButton([<span class="tag tab"></span>](typeandclass) parameters)"
+	* [<span class="tag tab"></span>](typeandclass) **parameters**: A Table containing the information used to spawn the button.
+		* [<span class="tag str"></span>](typeandclass) **parameters.click_function**: A String of the function's name that will be run when button is clicked.
+		* [<span class="tag str"></span>](typeandclass) **parameters.function_owner**: The Object which contains the click_function function.
 			* {>>Optional, Defaults to Global.<<}
-		* **parameters.label**: A String of text that appears on the button.
+		* [<span class="tag str"></span>](typeandclass) **parameters.label**: Text that appears on the button.
 			* {>>Optional, defaults to an empty string.<<}
-		* **parameters.position**: A Vector of where the button appears, relative to the Object's center.
+		* [<span class="tag vec"></span>](typeandclass#vector) **parameters.position**: Where the button appears, relative to the Object's center.
 			* {>>Optional, defaults to {x=0, y=0, z=0}.<<}
-		* **parameters.rotation**: A Vector of how the button is rotated, relative to the Object's rotation.
+		* [<span class="tag vec"></span>](typeandclass#vector) **parameters.rotation**: How the button is rotated, relative to the Object's rotation.
 			* {>>Optional, defaults to {x=0, y=0, z=0}.<<}
-		* **parameters.scale**: A Vector of the scale of the button, relative to the Object's scale.
+		* [<span class="tag vec"></span>](typeandclass#vector) **parameters.scale**: Scale of the button, relative to the Object's scale.
 			* {>>Optional, defaults to {x=1, y=1, z=1}.<<}
-		* **parameters.width**: An Int of how wide the button will be, relative to the Object.
+		* [<span class="tag flo"></span>](typeandclass) **parameters.width**: How wide the button will be, relative to the Object.
 			* {>>Optional, defaults to 100.<<}
-		* **parameters.height**: An Int of how tall the button will be, relative to the Object.
+		* [<span class="tag flo"></span>](typeandclass) **parameters.height**: How tall the button will be, relative to the Object.
 			* {>>Optional, defaults to 100.<<}
-		* **parameters.font_size**: An Int of the size the label font will be, relative to the Object.
+		* [<span class="tag flo"></span>](typeandclass) **parameters.font_size**: Size the label font will be, relative to the Object.
 			* {>>Optional, defaults to 100.<<}
-		* **parameters.color**: A Color for the clickable button.
+		* [<span class="tag col"></span>](typeandclass#color) **parameters.color**: A Color for the clickable button.
 			* {>>Optional, defaults to {r=1, g=1, b=1}.<<}
-		* **parameters.font_color**: A Color for the label text.
+		* [<span class="tag col"></span>](typeandclass#color) **parameters.font_color**: A Color for the label text.
 			* {>>Optional, defaults to {r=0, g=0, b=0}.<<}
-		* **parameters.tooltip**: A String for a popup of text, similar to how an Object's name is displayed on mouseover.
+		* [<span class="tag str"></span>](typeandclass) **parameters.tooltip**: Popup of text, similar to how an Object's name is displayed on mouseover.
 			* {>>Optional, defaults to an empty string.<<}
 			
-!!!info "click_function(Object obj, String player_clicker_color)"
+!!!info "click_function([<span class="tag obj"></span>](typeandclass) obj, [<span class="tag str"></span>](typeandclass) player_clicker_color)"
 	The click function which is activated by clicking this button has its own parameters it is passed automatically.
 	
-	* **Object obj**: The Object the button is attached to.
-	* **String player_clicker_color**: A String of the Color of the player that pressed the button.
+	* [<span class="tag obj"></span>](typeandclass) **obj**: The Object the button is attached to.
+	* [<span class="tag str"></span>](typeandclass) **player_clicker_color**: [Player Color](player-color) of the player that pressed the button.
 
 ``` Lua
 function onLoad()
@@ -473,7 +473,7 @@ end
 
 ####createInput(...)
 
-Creates a scripted input attached to the Object. Scripted inputs are boxes you can click inside of in-game to input/edit text. Every letter typed triggers the function. The bool that is returned as part of the input_function allows you to determine when a player has finished editing the input.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Creates a scripted input attached to the Object. Scripted inputs are boxes you can click inside of in-game to input/edit text. Every letter typed triggers the function. The bool that is returned as part of the input_function allows you to determine when a player has finished editing the input.
 
 ???tip "Input Tips"
 	* Inputs can not be clicked from their back side.
@@ -484,41 +484,41 @@ Creates a scripted input attached to the Object. Scripted inputs are boxes you c
 	* Font that does not fit in the input window's width/height does NOT display. To know how much height you need for each line, the formula is `(font_size * # of lines) + 23`. In other words, multiply how many lines of text you want to display by your font_size and add 23. That is your height value.
 	* You cannot assign an index to an input. It is given one automatically.
 
-!!!info "createInput(Table parameters)"
-	* **Table parameters**: A Table containing the information used to spawn the input.
-		* **parameters.input_function**: A String of the function's name that will be run when a key is used or when it is deselected.
-		* **parameters.function_owner**: The Object which contains the input_function function.
+!!!info "createInput([<span class="tag tab"></span>](typeandclass) parameters)"
+	* [<span class="tag tab"></span>](typeandclass) **parameters**: A Table containing the information used to spawn the input.
+		* [<span class="tag str"></span>](typeandclass) **parameters.input_function**: A String of the function's name that will be run when a key is used or when it is deselected.
+		* [<span class="tag obj"></span>](typeandclass) **parameters.function_owner**: The Object which contains the input_function function.
 			* {>>Optional, Defaults to Global.<<}
-		* **parameters.label**: A String of text that appears as greyed out text when there is no value in the input.
+		* [<span class="tag str"></span>](typeandclass) **parameters.label**: Text that appears as greyed out text when there is no value in the input.
 			* {>>Optional, defaults to an empty string.<<}
-		* **parameters.position**: A Vector of where the input appears, relative to the Object's center.
+		* [<span class="tag vec"></span>](typeandclass#vector) **parameters.position**: Where the input appears, relative to the Object's center.
 			* {>>Optional, defaults to {x=0, y=0, z=0}.<<}
-		* **parameters.rotation**: A Vector of how the input is rotated, relative to the Object's rotation.
+		* [<span class="tag vec"></span>](typeandclass#vector) **parameters.rotation**: How the input is rotated, relative to the Object's rotation.
 			* {>>Optional, defaults to {x=0, y=0, z=0}.<<}
-		* **parameters.scale**: A Vector of the scale of the input, relative to the Object's scale.
+		* [<span class="tag vec"></span>](typeandclass#vector) **parameters.scale**: Scale of the input, relative to the Object's scale.
 			* {>>Optional, defaults to {x=1, y=1, z=1}.<<}
-		* **parameters.width**: An Int of how wide the input will be, relative to the Object.
+		* [<span class="tag flo"></span>](typeandclass) **parameters.width**: How wide the input will be, relative to the Object.
 			* {>>Optional, defaults to 100.<<}
-		* **parameters.height**: An Int of how tall the input will be, relative to the Object.
+		* [<span class="tag flo"></span>](typeandclass) **parameters.height**: How tall the input will be, relative to the Object.
 			* {>>Optional, defaults to 100.<<}
-		* **parameters.font_size**: An Int of the size the label/value font will be, relative to the Object.
+		* [<span class="tag flo"></span>](typeandclass) **parameters.font_size**: Size the label/value font will be, relative to the Object.
 			* {>>Optional, defaults to 100.<<}
-		* **parameters.color**: A Color for the input's background.
+		* [<span class="tag col"></span>](typeandclass#color) **parameters.color**: A Color for the input's background.
 			* {>>Optional, defaults to {r=1, g=1, b=1}.<<}
-		* **parameters.font_color**: A Color for the value text.
+		* [<span class="tag col"></span>](typeandclass#color) **parameters.font_color**: A Color for the value text.
 			* {>>Optional, defaults to {r=0, g=0, b=0}.<<}
-		* **parameters.tooltip**: A String for a popup of text, similar to how an Object's name is displayed on mouseover.
+		* [<span class="tag str"></span>](typeandclass) **parameters.tooltip**: A popup of text, similar to how an Object's name is displayed on mouseover.
 			* {>>Optional, defaults to an empty string.<<}
-		* **parameters.alignment**: An Int for how text is aligned in the input box.
+		* [<span class="tag int"></span>](typeandclass) **parameters.alignment**: How text is aligned in the input box.
 			* {>>Optional, defaults to 1.<<}
 			* **1**: Automatic
 			* **2**: Left
 			* **3**: Center
 			* **4**: Right
 			* **5**: Justified
-		* **parameters.value**: A String of the text entered into the input.
+		* [<span class="tag str"></span>](typeandclass) **parameters.value**: Text entered into the input.
 			* {>>Optional, defaults to an empty string.<<}
-		* **parameters.validation**: An Int which determines what characters can be input into the value.
+		* [<span class="tag int"></span>](typeandclass) **parameters.validation**: What characters can be input into the input value field.
 			* {>>Optional, defaults to 1.<<}
 			* **1**: None
 			* **2**: Integer
@@ -526,19 +526,19 @@ Creates a scripted input attached to the Object. Scripted inputs are boxes you c
 			* **4**: Alphanumeric
 			* **5**: Username
 			* **6**: Name
-		* **parameters.tab**: An Int which determines how pressing tab is handled when inputting.
+		* [<span class="tag int"></span>](typeandclass) **parameters.tab**: How the pressing of "tab" is handled when inputting.
 			* {>>Optional, defaults to 1.<<}
 			* **1**: None
 			* **2**: Select Next Input
 			* **3**: Indent
 
-!!!info "input_function(Object obj, String player_clicker_color, String input_value, Bool selected)"
-	The click function which is activated by clicking this button has its own parameters it is passed automatically.
+!!!info "input_function([<span class="tag obj"></span>](typeandclass) obj, [<span class="tag str"></span>](typeandclass) player_clicker_color, [<span class="tag str"></span>](typeandclass) input_value, [<span class="tag boo"></span>](typeandclass) selected)"
+	*The click function which is activated by clicking this button has its own parameters it is passed automatically.*
 	
-	* **Object obj**: The Object the input is attached to.
-	* **String player_clicker_color**: A String of the Color of the player that has selected/edited the input.
-	* **String input_value**: A String of the text currently in the input.
-	* **Bool selected**: A Bool for if the value box is still being edited or not.
+	* [<span class="tag obj"></span>](typeandclass) **obj**: The Object the input is attached to.
+	* [<span class="tag str"></span>](typeandclass) **player_clicker_color**: [Player Color](player-color) of the player that has selected/edited the input.
+	* [<span class="tag str"></span>](typeandclass) **input_value**: Text currently in the input.
+	* [<span class="tag boo"></span>](typeandclass) **selected**: If the value box is still being edited or not.
 	
 ``` Lua
 function onLoad()
@@ -568,23 +568,23 @@ end
 
 ####editButton(...)
 
-Modify an existing button. The only parameter that is required is the index. The rest are optional, and not using them will cause the edited button's element to remain. Indexes start at 0. The first button on any given Object has an index of 0, the next button on it has an index of 1, etc. Each Object has its own indexes.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Modify an existing button. The only parameter that is required is the index. The rest are optional, and not using them will cause the edited button's element to remain. Indexes start at 0. The first button on any given Object has an index of 0, the next button on it has an index of 1, etc. Each Object has its own indexes.
 
-!!!info "editButton(Table parameters)"
-	* **Table parameters**: A Table containing the information used to spawn the button.
-		* **parameters.index**: An Int of the index of the button you want to edit.
-		* **parameters.click_function**: A String of the function's name that will be run when button is clicked.
-		* **parameters.function_owner**: The Object which contains the click_function function.
-		* **parameters.label**: A String of text that appears on the button.
-		* **parameters.position**: A Vector of where the button appears, relative to the Object's center.
-		* **parameters.rotation**: A Vector of how the button is rotated, relative to the Object's rotation.
-		* **parameters.scale**: A Vector of the scale of the button, relative to the Object's scale.
-		* **parameters.width**: An Int of how wide the button will be, relative to the Object.
-		* **parameters.height**: An Int of how tall the button will be, relative to the Object.
-		* **parameters.font_size**: An Int of the size the label font will be, relative to the Object.
-		* **parameters.color**: A Color for the clickable button.
-		* **parameters.font_color**: A Color for the label text.
-		* **parameters.tooltip**: A String for a popup of text, similar to how an Object's name is displayed on mouseover.
+!!!info "editButton([<span class="tag tab"></span>](typeandclass) parameters)"
+	* [<span class="tag tab"></span>](typeandclass) **parameters**: A Table containing the information used to spawn the button.
+		* [<span class="tag int"></span>](typeandclass) **parameters.index**: Index of the button you want to edit.
+		* [<span class="tag str"></span>](typeandclass) **parameters.click_function**: Function's name that will be run when button is clicked.
+		* [<span class="tag obj"></span>](typeandclass) **parameters.function_owner**: The Object which contains the click_function function.
+		* [<span class="tag str"></span>](typeandclass) **parameters.label**: Text that appears on the button.
+		* [<span class="tag vec"></span>](typeandclass#vector) **parameters.position**: Where the button appears, relative to the Object's center.
+		* [<span class="tag vec"></span>](typeandclass#vector) **parameters.rotation**: How the button is rotated, relative to the Object's rotation.
+		* [<span class="tag vec"></span>](typeandclass#vector) **parameters.scale**: Scale of the button, relative to the Object's scale.
+		* [<span class="tag flo"></span>](typeandclass) **parameters.width**: How wide the button will be, relative to the Object.
+		* [<span class="tag flo"></span>](typeandclass) **parameters.height**: How tall the button will be, relative to the Object.
+		* [<span class="tag clo"></span>](typeandclass) **parameters.font_size**: Size the label font will be, relative to the Object.
+		* [<span class="tag col"></span>](typeandclass#color) **parameters.color**: A Color for the clickable button.
+		* [<span class="tag col"></span>](typeandclass#color) **parameters.font_color**: A Color for the label text.
+		* [<span class="tag str"></span>](typeandclass) **parameters.tooltip**: Text of a popup of text, similar to how an Object's name is displayed on mouseover.
 
 ``` Lua
 self.editButton({index=0, label="New Label"})
@@ -595,52 +595,54 @@ self.editButton({index=0, label="New Label"})
 
 ####editInput(...)
 
-Modify an existing input. The only parameter that is required is the index. The rest are optional, and not using them will cause the edited input's element to remain. Indexes start at 0. The first input on any given Object has an index of 0, the next input on it has an index of 1, etc. Each Object has its own indexes.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Modify an existing input. The only parameter that is required is the index. The rest are optional, and not using them will cause the edited input's element to remain. Indexes start at 0. The first input on any given Object has an index of 0, the next input on it has an index of 1, etc. Each Object has its own indexes.
 
-!!!info "editInput(Table parameters)"
-	* **Table parameters**: A Table containing the information used to spawn the input.
-		* **parameters.index**: An Int of the index of the input you want to edit.
-		* **parameters.input_function**: A String of the function's name that will be run when a key is used or when it is deselected.
-		* **parameters.function_owner**: The Object which contains the input_function function.
-		* **parameters.label**: A String of text that appears as greyed out text when there is no value in the input.
-		* **parameters.position**: A Vector of where the input appears, relative to the Object's center.
-		* **parameters.rotation**: A Vector of how the input is rotated, relative to the Object's rotation.
-		* **parameters.scale**: A Vector of the scale of the input, relative to the Object's scale.
-		* **parameters.width**: An Int of how wide the input will be, relative to the Object.
-		* **parameters.height**: An Int of how tall the input will be, relative to the Object.
-		* **parameters.font_size**: An Int of the size the label/value font will be, relative to the Object.
-		* **parameters.color**: A Color for the input's background.
-		* **parameters.font_color**: A Color for the value text.
-		* **parameters.tooltip**: A String for a popup of text, similar to how an Object's name is displayed on mouseover.
-		* **parameters.alignment**: An Int for how text is aligned in the input box.
+!!!info "editInput([<span class="tag tab"></span>](typeandclass) parameters)"
+	*All fields besides `index` are optional. If not used, the element will default to the element's current setting.*
+
+	* [<span class="tag tab"></span>](typeandclass) **parameters**: A Table containing the information used to spawn the input.
+		* [<span class="tag int"></span>](typeandclass) **parameters.index**: Index of the input you want to edit.
+		* [<span class="tag str"></span>](typeandclass) **parameters.input_function**: The function's name that will be run when the input is selected.
+		* [<span class="tag obj"></span>](typeandclass) **parameters.function_owner**: The Object which contains the input_function function.
+		* [<span class="tag str"></span>](typeandclass) **parameters.label**: Text that appears as greyed out text when there is no value in the input.
+		* [<span class="tag vec"></span>](typeandclass#vector) **parameters.position**: Where the input appears, relative to the Object's center.
+		* [<span class="tag vec"></span>](typeandclass#vector) **parameters.rotation**: How the input is rotated, relative to the Object's rotation.
+		* [<span class="tag vec"></span>](typeandclass#vector) **parameters.scale**: Scale of the input, relative to the Object's scale.
+		* [<span class="tag flo"></span>](typeandclass) **parameters.width**: How wide the input will be, relative to the Object.
+		* [<span class="tag flo"></span>](typeandclass) **parameters.height**: How tall the input will be, relative to the Object.
+		* [<span class="tag flo"></span>](typeandclass) **parameters.font_size**: Size the label/value font will be, relative to the Object.
+		* [<span class="tag col"></span>](typeandclass#color) **parameters.color**: A Color for the input's background.
+		* [<span class="tag col"></span>](typeandclass#color) **parameters.font_color**: A Color for the value text.
+		* [<span class="tag str"></span>](typeandclass) **parameters.tooltip**: A popup of text, similar to how an Object's name is displayed on mouseover.
+		* [<span class="tag int"></span>](typeandclass) **parameters.alignment**: How text is aligned in the input box.
 			* **1**: Automatic
 			* **2**: Left
 			* **3**: Center
 			* **4**: Right
 			* **5**: Justified
-		* **parameters.value**: A String of the text entered into the input.
-		* **parameters.validation**: An Int which determines what characters can be input into the value.
+		* [<span class="tag str"></span>](typeandclass) **parameters.value**: A String of the text entered into the input.
+		* [<span class="tag int"></span>](typeandclass) **parameters.validation**: An Int which determines what characters can be input into the value.
 			* **1**: None
 			* **2**: Integer
 			* **3**: Float
 			* **4**: Alphanumeric
 			* **5**: Username
 			* **6**: Name
-		* **parameters.tab**: An Int which determines how pressing tab is handled when inputting.
+		* [<span class="tag int"></span>](typeandclass) **parameters.tab**: An Int which determines how pressing tab is handled when inputting.
 			* **1**: None
 			* **2**: Select Next Input
 			* **3**: Indent
 			
-	``` Lua
-	self.editInput({index=0, value="New Value"})
-	```
+``` Lua
+self.editInput({index=0, value="New Value"})
+```
 
 ---
 
 
 ####getButtons()
 
-Returns a Table of all buttons on this Object. The Table contains parameters tables with the same keys as seen in the [createButton](#createbutton) section, except each Table of parameters also contains an __index__ entry. This is used to identify each button, used by [editButton](#editbutton) and [removeButton](#removebutton).
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns a Table of all buttons on this Object. The Table contains parameters tables with the same keys as seen in the [createButton](#createbutton) section, except each Table of parameters also contains an __index__ entry. This is used to identify each button, used by [editButton](#editbutton) and [removeButton](#removebutton).
 
 Indexes start at 0.
 
@@ -649,7 +651,7 @@ Indexes start at 0.
 
 ####getInputs()
 
-Returns a Table of all inputs on this Object. The Table contains parameters tables with the same keys as seen in the [createInput](#createinput) section, except each Table of parameters also contains an __index__ entry. This is used to identify each input, used by [editInput](#editinput) and [removeInput](#removeinput).
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns a Table of all inputs on this Object. The Table contains parameters tables with the same keys as seen in the [createInput](#createinput) section, except each Table of parameters also contains an __index__ entry. This is used to identify each input, used by [editInput](#editinput) and [removeInput](#removeinput).
 
 Indexes start at 0.
 
@@ -658,24 +660,24 @@ Indexes start at 0.
 
 ####removeButton(...)
 
-Removes a specific button. Indexes start at 0. The first button on any given Object has an index of 0, the next button on it has an index of 1, etc. Each Object has its own indexes.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Removes a specific button. Indexes start at 0. The first button on any given Object has an index of 0, the next button on it has an index of 1, etc. Each Object has its own indexes.
 
 Removing an index instantly causes all other higher indexes to shift down 1.
 
-!!!info "removeButton(Int index)"
-	* **Int index**: An Int of the button's index to remove.
+!!!info "removeButton([<span class="tag int"></span>](typeandclass) index)"
+	* [<span class="tag int"></span>](typeandclass) **index**: Button index to remove.
 
 ---
 
 
 ####removeInput(...)
 
-Removes a specific input. Indexes start at 0. The first button on any given Object has an index of 0, the next input on it has an index of 1, etc. Each Object has its own indexes.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Removes a specific input. Indexes start at 0. The first button on any given Object has an index of 0, the next input on it has an index of 1, etc. Each Object has its own indexes.
 
 Removing an index instantly causes all other higher indexes to shift down 1.
 
-!!!info "removeInput(Int index)"
-	* **Int index**: An Int of the input's index to remove.
+!!!info "removeInput([<span class="tag int"></span>](typeandclass) index)"
+	* [<span class="tag int"></span>](typeandclass) **index**: Input index to remove.
 
 ---
 
@@ -685,7 +687,7 @@ Removing an index instantly causes all other higher indexes to shift down 1.
 
 ####getCustomObject()
 
-Returns a Table with the Custom Object information of a Custom Object. See the [Spawnable Objects](spawnableobject) page for the kind of information returned.
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns a Table with the Custom Object information of a Custom Object. See the [Spawnable Objects](spawnableobject) page for the kind of information returned.
 
 ``` Lua
 --Example returned Table for a custom token
@@ -702,7 +704,7 @@ Returns a Table with the Custom Object information of a Custom Object. See the [
 
 ####getObjects()
 
-Returns a Table of objects in the script zone/bag/deck. What it returns varies depending on the type of Object it is used on.
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns a Table of objects in the script zone/bag/deck. What it returns varies depending on the type of Object it is used on.
 
 If an Object is inside of a container, it does not exist in-game. As a result, you only get data on each Object, not an Object reference.
 
@@ -720,34 +722,38 @@ If an Object is inside of a container, it does not exist in-game. As a result, y
 	!!!info "Bag"
 		Returns a Table of sub-Tables, each sub-Table containing data on 1 bagged item. Indexes start at 0.
 		
-		* **String name**: A String of the name of the Object.
-		* **String guid**: A String of the GUID of the Object.
-		* **Int index**: A String of the index of the Object, represents the Object's place in the bag.
+		* [<span class="tag str"></span>](typeandclass) **name**: Name of the Object.
+		* [<span class="tag str"></span>](typeandclass) **guid**: GUID of the Object.
+		* [<span class="tag int"></span>](typeandclass) **index**: Index of the Object, represents the Object's place in the bag.
 		
 		``` Lua
 		{
-			name  = "Object Name",
-			guid  = "AAA111",
-			index = 0,	
+			{
+				name  = "Object Name",
+				guid  = "AAA111",
+				index = 0,	
+			},
 		}
 		```
 
 	!!!info "Deck"
 		Returns a Table of sub-Tables, each sub-Table containing data on 1 card. Indexes start at 0.
 		
-		* **String nickname**: A String of the name of the card.
-		* **String description**: A String of the description of the card.
-		* **String guid**: A String of the guid of the card.
-		* **Int index**: An Int of the index of the card, represents the card's order in the deck.
-		* **String lua_script**: A String of any Lua scripting saved on the card.
+		* [<span class="tag str"></span>](typeandclass) **nickname**: Name of the card.
+		* [<span class="tag str"></span>](typeandclass) **description**: Description of the card.
+		* [<span class="tag str"></span>](typeandclass) **guid**: GUID of the card.
+		* [<span class="tag int"></span>](typeandclass) **index**: Index of the card, represents the card's order in the deck.
+		* [<span class="tag str"></span>](typeandclass) **lua_script**: Any Lua scripting saved on the card.
 		
 		``` Lua
 		{
-			nickname    = "Object Name",
-			description = "Object Descripotion",
-			guid        = "AAA111",
-			index       = 0,
-			lua_script  = "Any Lua Script On This Card",
+			{
+				nickname    = "Object Name",
+				description = "Object Descripotion",
+				guid        = "AAA111",
+				index       = 0,
+				lua_script  = "Any Lua Script On This Card",
+			},
 		}
 		```
 
@@ -758,15 +764,15 @@ This function is often used with [takeObject(...)](#takeobject) to remove object
 
 ####getRotationValues()
 
-Returns a Table of rotation values. Rotation values are used to give value to different rotations (like dice) based on which side is pointed "up". It works by checking all of the rotation values assigned to an object and determining which one of them is closest to pointing up, and then displaying the value associated with that rotation.
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns a Table of rotation values. Rotation values are used to give value to different rotations (like dice) based on which side is pointed "up". It works by checking all of the rotation values assigned to an object and determining which one of them is closest to pointing up, and then displaying the value associated with that rotation.
 
 You can manually assign rotation values to objects using the Rotation Value Gizmo tool (in the left side Gizmo menu) or using [setRotationValues(...)](setrotationvalues).
 
 !!!info "Return Table"
 	The returned Table contains sub-Tables, each sub-Table containing these 2 key/value pairs.
 	
-	* **Var value**: A Var of what value is associated with a given rotation. Often a String or Int.
-	* **Vector rotation**: A Vector of the rotation of the object  that best represents the given value.
+	* [<span class="tag var"></span>](typeandclass) **value**: What value is associated with a given rotation. Often a String or Int.
+	* [<span class="tag vec"></span>](typeandclass#vector) **rotation**: Rotation of the Object that best represents the given value pointing up.
 
 ``` Lua
 --Example returned Table for a coin
@@ -781,12 +787,12 @@ You can manually assign rotation values to objects using the Rotation Value Gizm
 
 ####getStates()
 
-Returns a Table of information on the [states](http://berserk-games.com/knowledgebase/creating-states/) of an Object. Stated Objects have ids (indexes) starting with 1.
+[<span class="ret tab"></span>](typeandclass)&nbsp; Returns a Table of information on the [states](http://berserk-games.com/knowledgebase/creating-states/) of an Object. Stated Objects have ids (indexes) starting with 1.
 
 !!!info "Return Table"
-	* **String name**: A String of name of the Object.
-	* **String guid**: A String of the GUID of the Object.
-	* **Int id**: An Int of the id (index) of the state.
+	* [<span class="tag str"></span>](typeandclass) **name**: Name of the Object.
+	* [<span class="tag str"></span>](typeandclass) **guid**: GUID of the Object.
+	* [<span class="tag int"></span>](typeandclass) **id**: ID (index) of the state.
 	
 ``` Lua
 --Example returned Table
@@ -809,7 +815,7 @@ Returns a Table of information on the [states](http://berserk-games.com/knowledg
 
 ####getValue()
 
-Returns an Int as the value. What the value represents depends on what type of Object this function is used on.
+[<span class="ret int"></span>](typeandclass)&nbsp; Gets a value. What the value represents depends on what type of Object this function is used on.
 
 Object | Value
 -- | --
@@ -827,7 +833,7 @@ Tablet | Returns String of the current URL.
 
 ####setCustomObject(...)
 
-Sets a custom Object's properties. It can be used after [spawnObject](base#spawnobject) or on an already existing custom Object. If used on an already existing custom Object, you must use [reload](#reload) on the object after setCustomObject for the changes to be displayed.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Sets a custom Object's properties. It can be used after [spawnObject](base#spawnobject) or on an already existing custom Object. If used on an already existing custom Object, you must use [reload](#reload) on the object after setCustomObject for the changes to be displayed.
 
 !!!info "setCustomObject(Table parameters)"
 	The Table of parameters varies, depending on which type of custom Object it is. See the [Spawnable Object](spawnableobject) page for the parameters needed.
@@ -848,12 +854,12 @@ obj.setCustomObject(params)
 
 ####setRotationValues(...)
 
-Sets rotation values of an object. Rotation values are used to give value to different rotations (like dice). It works by checking all of the rotation values assigned to an object and determining which one of them is closest to pointing up, and then displaying the value associated with that rotation.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Sets rotation values of an object. Rotation values are used to give value to different rotations (like dice). It works by checking all of the rotation values assigned to an object and determining which one of them is closest to pointing up, and then displaying the value associated with that rotation.
 
-!!!info "setRotationValues(Table rotation_values)"
-	* **Table rotation_values**: A Table containing Tables with the following values. 1 sub-Table per "face".
-		* **rotation_values.value**: A Var of what value is associated with a given rotation. Often a String or Int.
-		* **rotation_values.rotation**: A Vector of the rotation of the object  that best represents the given value.
+!!!info "setRotationValues([<span class="tag tab"></span>](typeandclass) rotation_values)"
+	* [<span class="tag tab"></span>](typeandclass) **rotation_values**: A Table containing Tables with the following values. 1 sub-Table per "face".
+		* [<span class="tag var"></span>](typeandclass) **rotation_values.value**: What value is associated with a given rotation. Often a String or Int.
+		* [<span class="tag vec"></span>](typeandclass#vector) **rotation_values.rotation**: The rotation Vector of the Object that best represents the given value pointing up.
 
 ``` Lua
 --Example setting of rotation values for a coin
@@ -869,7 +875,7 @@ self.setRotationValues(rotation_values)
 
 ####setValue(...)
 
-Sets an Int as the value of an Object. What the value represents depends on what type of Object it is.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Sets a value on an Object. What the value represents depends on what type of Object it is.
 
 Object | Value
 -- | --
@@ -886,16 +892,13 @@ Tablet | Set String for the current URL.
 
 ####call(...)
 
-testFunc
-:  Used to call a Lua function on this Object. This is used to remotely call functions in other scripts, either in Global or Object scripts. `Global` is the "Object" to use to call a function in the Global script.
-
-> Returns Var
+[<span class="ret var"></span>](typeandclass)&nbsp; Used to call a Lua function on this Object. This is used to remotely call functions in other scripts, either in Global or Object scripts. `Global` is the "Object" to use to call a function in the Global script.
 
 *Var is only returned if the function called has a `return`. Otherwise return is `nil`. See example.*
 
-!!!info "call(String func_name, Table func_params)"
-	* **String func_name**: A String of the function name you want to activate.
-	* **Table func_name**: A Table containing any data you want to pass to that function.
+!!!info "call([<span class="tag str"></span>](typeandclass) func_name, [<span class="tag tab"></span>](typeandclass) func_params)"
+	* [<span class="tag str"></span>](typeandclass) **func_name**: Function name you want to activate.
+	* [<span class="tag tab"></span>](typeandclass) **func_params**: A Table containing any data you want to pass to that function.
 		* {>>Optional, will not be sent by default.<<}
 
 ``` Lua
@@ -920,15 +923,13 @@ end
 
 ####clone(...)
 
-Copy/Paste this Object.
+[<span class="ret obj"></span>](typeandclass)&nbsp; Copy/Paste this Object.
 
-> Returns Object pasted
-
-!!!info "clone(Table parameters)"
-	* **Table parameters**: A Table with information used when pasting.
-		* **parameters.position**: A Vector of where the Object is placed.
+!!!info "clone([<span class="tag tab"></span>](typeandclass) parameters)"
+	* [<span class="tag tab"></span>](typeandclass) **parameters**: A Table with information used when pasting.
+		* [<span class="tag vec"></span>](typeandclass#vector) **parameters.position**: Where the Object is placed.
 			* {>>Optional, defaults to {x=0, y=3, z=0}.<<}
-		* **parameters.snap_to_grid**: A Bool for if the Object snaps to grid.
+		* [<span class="tag boo"></span>](typeandclass) **parameters.snap_to_grid**: If the Object snaps to grid.
 			* {>>Optional, defaults to false.<<}
 
 ---
@@ -936,15 +937,13 @@ Copy/Paste this Object.
 
 ####deal(...)
 
-Deals Objects to hand zones. Will deal from decks/bags/stacks as well as individual items. If dealing an individual item to a hand zone, it is a good idea to make sure that its [Member Variable](#member-variables) for `use_hands` is `true`.
+[<span class="ret boo"></span>](typeandclass)&nbsp; Deals Objects to hand zones. Will deal from decks/bags/stacks as well as individual items. If dealing an individual item to a hand zone, it is a good idea to make sure that its [Member Variable](#member-variables) for `use_hands` is `true`.
 
-> Returns Bool
-
-!!!info "deal(Int number, String player_color, Int index)"
-	* **Int number**: An Int of how many to deal.
-	* **String player_color**: A String of the Color to deal to.
+!!!info "deal([<span class="tag int"></span>](typeandclass) number, [<span class="tag str"></span>](typeandclass) player_color, [<span class="tag int"></span>](typeandclass) index)"
+	* [<span class="tag int"></span>](typeandclass) **number**: How many to deal.
+	* [<span class="tag str"></span>](typeandclass) **player_color**: The [Player Color](player-color) to deal to.
 		* {>>Optional, defaults to an empty string. If not supplied, it will attempt to deal to all seated players.<<}
-	* **Int index**: An Int of which Object to deal from a container.
+	* [<span class="tag int"></span>](typeandclass) **index**: Index of which Object to deal from a container.
 		* {>>Optional, defaults to 0. If not supplied it will deal in regular order.<<}
 
 ---
@@ -952,14 +951,12 @@ Deals Objects to hand zones. Will deal from decks/bags/stacks as well as individ
 
 ####dealToColorWithOffset(...)
 
-Deals from a deck to a position relative to the hand zone.
+[<span class="ret obj"></span>](typeandclass)&nbsp; Deals from a deck to a position relative to the hand zone.
 
-> Returns Object of dealt card
-
-!!!info "dealToColorWithOffset(Vector, Bool flip, String player_color)"
-	* **Vector**: A Vector of the x/y/z offset to deal to around the given hand zone.
-	* **Bool flip**: A Bool for if the card is flipped over when dealt.
-	* **String player_color**: A String of the hand zone Color to offset dealing to.
+!!!info "dealToColorWithOffset([<span class="tag vec"></span>](typeandclass#vector) offset, [<span class="tag boo"></span>](typeandclass) flip, [<span class="tag str"></span>](typeandclass) player_color)"
+	* [<span class="tag vec"></span>](typeandclass#vector) **offset**: The x/y/z offset to deal to around the given hand zone.
+	* [<span class="tag boo"></span>](typeandclass) **flip**: If the card is flipped over when dealt.
+	* [<span class="tag str"></span>](typeandclass) **player_color**: Hand zone [Player Color](player-color) to offset dealing to.
 
 ``` Lua
 --Example of dealing 2 cards in front of the White player, face up.
@@ -970,12 +967,10 @@ self.dealToColorWithOffset({ 2,0,5}, true, "White")
 
 ####putObject(...)
 
-Places an object into a container (chip stacks/bags/decks).
+[<span class="ret obj"></span>](typeandclass)&nbsp; Places an object into a container (chip stacks/bags/decks).
 
-> Returns Bool
-
-!!!info "putObject(Object put_object)"
-	* **Object put_object**: An Object to place into the container.
+!!!info "putObject([<span class="tag obj"></span>](typeandclass) put_object)"
+	* [<span class="tag obj"></span>](typeandclass) **put_object**: An Object to place into the container.
 
 ``` Lua
 --Example of a script on a bag that places Object into itself
@@ -988,47 +983,43 @@ self.putObject(obj)
 
 ####reload()
 
-Returns Object reference of itself after it respawns itself. This function causes the Object to be deleted and respawned instantly to refresh it, so its old Object reference will no longer be valid.
+[<span class="ret obj"></span>](typeandclass)&nbsp; Returns Object reference of itself after it respawns itself. This function causes the Object to be deleted and respawned instantly to refresh it, so its old Object reference will no longer be valid.
 
 Most often this is used after using [setCustomObject(...)](#setcustomobject) to modify a custom object.
-
-> Returns Object of itself after respawn
 
 ---
 
 
 ####takeObject(...)
 
-Takes an object from a container (bag/deck/chip stack) and places it in the world.
-
-> Returns Object of the Object taken
+[<span class="ret obj"></span>](typeandclass)&nbsp; Takes an object from a container (bag/deck/chip stack) and places it in the world.
 
 !!!tip
 	Spawned Objects take a moment to be physically spawned into the game. The purpose of the callback functionality is to allow you to run additional actions after the Object has been initiated fully into the instance. It is also possible to add a delay using a [coroutine](#startluacoroutine).
 	
-!!!info "takeObject(Table parameters)"
-	* **Table parameters**: A Table of parameters used to determine how takeObject will act.
-		* **parameters.position**: A Table Vector of the position to place Object.
+!!!info "takeObject([<span class="tag tab"></span>](typeandclass) parameters)"
+	* [<span class="tag tab"></span>](typeandclass) **parameters**: A Table of parameters used to determine how takeObject will act.
+		* [<span class="tag vec"></span>](typeandclass#vector) **parameters.position**: A Vector of the position to place Object.
 			* {>>Optional, defaults to container's position + 2 on the x axis.<<}
-		* **parameters.rotation**: A Table Vector of the rotation of the Object.
+		* [<span class="tag vec"></span>](typeandclass#vector) **parameters.rotation**: A Vector of the rotation of the Object.
 			* {>>Optional, defaults to the container's rotation.<<}
-		* **parameters.flip**: A Bool for if the Object is flipped over.
+		* [<span class="tag boo"></span>](typeandclass) **parameters.flip**: If the Object is flipped over.
 			* {>>Optional, defaults to false. Only used with decks, not bags/stacks.<<}
 			* {>>If rotation is used, flip's Bool will be ignored.<<}
-		* **parameters.guid**: A String of the GUID of the Object to take.
+		* [<span class="tag str"></span>](typeandclass) **parameters.guid**: GUID of the Object to take.
 			* {>>Optional,  no default. Only use index or guid, never both.<<}
-		* **parameters.index**: An Int of the index of the Object to take.
+		* [<span class="tag int"></span>](typeandclass) **parameters.index**: Index of the Object to take.
 			* {>>Optional,  no default. Only use index or guid, never both.<<}
-		* **parameters.top**: A Bool for if an object is taken from the top (vs bottom).
+		* [<span class="tag boo"></span>](typeandclass) **parameters.top**: If an object is taken from the top (vs bottom).
 			* {>>Optional, defaults to true.<<}
-		* **parameters.smooth**: A Bool for if the taken Object moves smoothly or instantly. 
+		* [<span class="tag boo"></span>](typeandclass) **parameters.smooth**: If the taken Object moves smoothly or instantly. 
 			* {>>Optional, defaults to true.<<}
-		* **parameters.callback**: A String of the function name you want activated once the Object is initiated.
+		* [<span class="tag str"></span>](typeandclass) **parameters.callback**: Function name you want activated once the Object is initiated.
 			* {>>Optional, no default.<<}
 			* {>>A callback function has 2 parameters, the Object spawned and, if used, the Table of params.<<}
-		* **parameters.callback_owner**: An Object of what Object has the callback function in its script. Global is a valid target.
+		* [<span class="tag obj"></span>](typeandclass) **parameters.callback_owner**: What Object has the callback function in its script. Global is a valid target.
 			* {>>Optional, defaults to container Object. Serves no purpose if callback is not also used.<<}
-		* **parameters.params**: A Table of data to send to the callback to use as parameters. See example.
+		* [<span class="tag tab"></span>](typeandclass) **parameters.params**: Data to send to the callback to use as parameters. See example.
 			* {>>Optional, no default. Serves no purpose if callback is not also used.<<}
 
 ``` Lua

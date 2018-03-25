@@ -80,8 +80,6 @@ As an example, an Object with a white color tint would return this table:
 
 Notice it does not contain the `a` or `4` keys. This is because currently only scripted buttons and scripted inputs utilize the alpha channel (transparency).
 
----
-
 ####Mixed Keys
 
 Only one type of key, number or letter, is required. If both a are present in a Table, the numeric key is ignored and only the **letter key** is used.
@@ -104,6 +102,8 @@ self.setColorTint({50/255, 83/255, 199/255})
 ```
 
 ---
+
+
 
 ###Vector
 Vector is a type of Table that is used to define a position, rotation or direction. 
@@ -129,8 +129,6 @@ As an example, An Object at coordinate X=5, Y=2, Z=-1 would return this table:
 }
 ```
 
----
-
 ####Mixed Keys
 
 
@@ -145,8 +143,6 @@ Only one type of key, number or letter, is required. If both a are present in a 
 {x=1, y=0, z=0, 0, 0, 1}
 ```
 
----
-
 ####Value Range
 
 The range of values depend on the type of Vector you are using.
@@ -156,8 +152,6 @@ Type | Description | Range
 Position | A point in space. | Any number within the bounds of the world.
 Rotation | Angle, in degrees. | -180 to 180.
 Direction | Vector direction. | -1 to 1.
-
----
 
 ####Type Details
 
@@ -169,8 +163,6 @@ Type | Description
 -- | --
 World | The center of the instance is `{x=0, y=0, z=0}`. That is usually near the tabletop's center.
 Local | The center of the Object's model is `{x=0, y=0, z=0}`. The center of an Object is determined by the model's creator.
-
-
 
 ???tip "Conversion Between World/Local" 
      [positionToWorld(...)](object#positiontoworld) and [positionToLocal(...)](object#positiontolocal) can be used to convert between the two types.
